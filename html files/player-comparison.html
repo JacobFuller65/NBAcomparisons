@@ -109,8 +109,8 @@
         // Fetch the list of players from the backend
         async function fetchPlayers() {
             try {
-                const response = await fetch('/players');
-                const players = await response.json();
+                const response = await fetch('/players'); // Fetch from the backend
+                const players = await response.json(); // Parse the JSON response
                 return players;
             } catch (error) {
                 console.error('Error fetching players:', error);
