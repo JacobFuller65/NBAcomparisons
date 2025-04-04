@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Player Comparison Tool</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script> <!-- Include SheetJS -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -35,6 +37,19 @@
             border: 1px solid #ccc;
             display: inline-block;
             text-align: left;
+            width: 45%;
+            vertical-align: top;
+        }
+        .comparison-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .chart-container {
+            margin-top: 3rem;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
@@ -44,65 +59,175 @@
     </header>
     <div class="content">
         <div class="dropdowns">
-            <label for="player-select">Select Player:</label>
-            <select id="player-select">
+            <h3>Player 1</h3>
+            <label for="player1-select">Select Player:</label>
+            <select id="player1-select" onchange="loadYears('player1')">
                 <option value="">--Choose a Player--</option>
-                <option value="LeBron James">LeBron James</option>
-                <option value="Stephen Curry">Stephen Curry</option>
-                <option value="Kevin Durant">Kevin Durant</option>
-                <!-- Add more players as needed -->
             </select>
 
-            <label for="year-select">Select Year:</label>
-            <select id="year-select">
+            <label for="year1-select">Select Year:</label>
+            <select id="year1-select">
                 <option value="">--Choose a Year--</option>
-                <option value="2023">2023</option>
-                <option value="2022">2022</option>
-                <option value="2021">2021</option>
-                <!-- Add more years as needed -->
             </select>
         </div>
 
-        <button onclick="displayStats()">Show Stats</button>
+        <div class="dropdowns">
+            <h3>Player 2</h3>
+            <label for="player2-select">Select Player:</label>
+            <select id="player2-select" onchange="loadYears('player2')">
+                <option value="">--Choose a Player--</option>
+            </select>
 
-        <div id="stats-display" class="stats-display" style="display: none;">
-            <h3>Player Stats</h3>
-            <p id="stats-content">Select a player and year to view stats.</p>
+            <label for="year2-select">Select Year:</label>
+            <select id="year2-select">
+                <option value="">--Choose a Year--</option>
+            </select>
+        </div>
+
+        <button onclick="displayStats()">Compare Players</button>
+
+        <div class="comparison-container">
+            <div id="stats-display1" class="stats-display" style="display: none;">
+                <h3>Player 1 Stats</h3>
+                <p id="stats-content1">Select a player and year to view stats.</p>
+            </div>
+            <div id="stats-display2" class="stats-display" style="display: none;">
+                <h3>Player 2 Stats</h3>
+                <p id="stats-content2">Select a player and year to view stats.</p>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="comparisonChart"></canvas>
         </div>
     </div>
 
     <script>
-        function displayStats() {
-            const player = document.getElementById('player-select').value;
-            const year = document.getElementById('year-select').value;
-            const statsDisplay = document.getElementById('stats-display');
-            const statsContent = document.getElementById('stats-content');
+        const playerStats = {}; // Object to store stats
+        const years = ["2021", "2022", "2023"]; // Predefined years
 
-            if (player && year) {
-                // Example stats data (replace with real data or API integration)
-                const stats = {
-                    "LeBron James": {
-                        "2023": "Points: 25.3, Rebounds: 7.9, Assists: 7.1",
-                        "2022": "Points: 30.3, Rebounds: 8.2, Assists: 6.2"
-                    },
-                    "Stephen Curry": {
-                        "2023": "Points: 29.4, Rebounds: 6.1, Assists: 6.3",
-                        "2022": "Points: 25.5, Rebounds: 5.2, Assists: 6.3"
-                    },
-                    "Kevin Durant": {
-                        "2023": "Points: 29.1, Rebounds: 6.7, Assists: 5.0",
-                        "2022": "Points: 29.9, Rebounds: 7.4, Assists: 6.4"
-                    }
-                };
-
-                const playerStats = stats[player]?.[year] || "Stats not available for this selection.";
-                statsContent.textContent = `${player} (${year}): ${playerStats}`;
-                statsDisplay.style.display = "block";
-            } else {
-                statsContent.textContent = "Please select both a player and a year.";
-                statsDisplay.style.display = "block";
+        // Fetch the list of players from the backend
+        async function fetchPlayers() {
+            try {
+                const response = await fetch('/players');
+                const players = await response.json();
+                return players;
+            } catch (error) {
+                console.error('Error fetching players:', error);
+                alert('Failed to load players. Please try again later.');
+                return [];
             }
         }
+
+        // Populate player dropdowns dynamically
+        async function populatePlayers() {
+            const player1Select = document.getElementById('player1-select');
+            const player2Select = document.getElementById('player2-select');
+
+            // Fetch players from the backend
+            const players = await fetchPlayers();
+
+            // Populate the dropdowns
+            players.forEach(player => {
+                const option1 = document.createElement('option');
+                option1.value = player;
+                option1.textContent = player;
+
+                const option2 = option1.cloneNode(true);
+
+                player1Select.appendChild(option1);
+                player2Select.appendChild(option2);
+            });
+        }
+
+        // Populate year dropdowns based on selected player
+        function loadYears(player) {
+            const playerSelect = document.getElementById(`${player}-select`).value;
+            const yearSelect = document.getElementById(`${player}-year-select`);
+
+            // Clear existing options
+            yearSelect.innerHTML = '<option value="">--Choose a Year--</option>';
+
+            if (playerSelect) {
+                years.forEach(year => {
+                    const option = document.createElement('option');
+                    option.value = year;
+                    option.textContent = year;
+                    yearSelect.appendChild(option);
+                });
+            }
+        }
+
+        // Fetch and parse Excel file for the selected player
+        async function fetchPlayerStats(player, year) {
+            const filePath = `Player Data/${player}.xlsx`; // Path to the player's Excel file
+            const response = await fetch(filePath);
+            const arrayBuffer = await response.arrayBuffer();
+            const workbook = XLSX.read(arrayBuffer, { type: 'array' });
+            const sheetName = workbook.SheetNames[0]; // Assuming the first sheet contains the data
+            const sheet = workbook.Sheets[sheetName];
+            const jsonData = XLSX.utils.sheet_to_json(sheet);
+
+            // Find stats for the selected year
+            const yearStats = jsonData.find(row => row.Year == year);
+
+            if (!yearStats) {
+                throw new Error(`No stats found for ${player} in ${year}`);
+            }
+
+            // Return the stats for the selected year
+            return yearStats;
+        }
+
+        async function displayStats() {
+            const player1 = document.getElementById('player1-select').value;
+            const year1 = document.getElementById('year1-select').value;
+            const player2 = document.getElementById('player2-select').value;
+            const year2 = document.getElementById('year2-select').value;
+
+            const statsDisplay1 = document.getElementById('stats-display1');
+            const statsContent1 = document.getElementById('stats-content1');
+            const statsDisplay2 = document.getElementById('stats-display2');
+            const statsContent2 = document.getElementById('stats-content2');
+
+            try {
+                if (player1 && year1) {
+                    const stats1 = await fetchPlayerStats(player1, year1);
+                    statsContent1.innerHTML = `
+                        <strong>${player1} (${year1})</strong><br>
+                        Team: ${stats1.Team}<br>
+                        Games Played: ${stats1["Games Played"]}<br>
+                        Points Per Game: ${stats1["Points Per Game"]}<br>
+                        Rebounds Per Game: ${stats1["Rebounds Per Game"]}<br>
+                        Assists Per Game: ${stats1["Assists Per Game"]}<br>
+                        Steals Per Game: ${stats1["Steals Per Game"]}<br>
+                        Blocks Per Game: ${stats1["Blocks Per Game"]}
+                    `;
+                    statsDisplay1.style.display = "block";
+                }
+
+                if (player2 && year2) {
+                    const stats2 = await fetchPlayerStats(player2, year2);
+                    statsContent2.innerHTML = `
+                        <strong>${player2} (${year2})</strong><br>
+                        Team: ${stats2.Team}<br>
+                        Games Played: ${stats2["Games Played"]}<br>
+                        Points Per Game: ${stats2["Points Per Game"]}<br>
+                        Rebounds Per Game: ${stats2["Rebounds Per Game"]}<br>
+                        Assists Per Game: ${stats2["Assists Per Game"]}<br>
+                        Steals Per Game: ${stats2["Steals Per Game"]}<br>
+                        Blocks Per Game: ${stats2["Blocks Per Game"]}
+                    `;
+                    statsDisplay2.style.display = "block";
+                }
+            } catch (error) {
+                console.error(error);
+                alert(error.message);
+            }
+        }
+
+        // Initialize dropdowns on page load
+        populatePlayers();
     </script>
 </body>
 </html>
