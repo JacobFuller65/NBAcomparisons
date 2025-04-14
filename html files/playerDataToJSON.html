@@ -16,7 +16,10 @@
 
         function handleFile(event) {
             const file = event.target.files[0];
-            if (!file) return;
+            if (!file) {
+                console.error("No file selected.");
+                return;
+            }
 
             const reader = new FileReader();
             reader.onload = function (e) {
@@ -39,8 +42,24 @@
                 // Debug: Check the raw data
                 console.log('Raw Data:', rawData);
 
+                if (rawData.length === 0) {
+                    console.error("The raw data is empty. Check the Excel file for issues.");
+                    document.getElementById('output').textContent = "Error: The raw data is empty. Check the Excel file for issues.";
+                    return;
+                }
+
+                // Trim column headers and process data
+                const trimmedRawData = rawData.map(row => {
+                    const trimmedRow = {};
+                    Object.keys(row).forEach(key => {
+                        trimmedRow[key.trim()] = row[key];
+                    });
+                    return trimmedRow;
+                });
+                console.log('Trimmed Raw Data:', trimmedRawData);
+
                 // Transform raw data into the desired format
-                const formattedData = rawData.reduce((acc, row, index) => {
+                const formattedData = trimmedRawData.reduce((acc, row, index) => {
                     // Debug: Check each row being processed
                     console.log(`Processing row ${index + 2}:`, row);
 
@@ -48,8 +67,13 @@
                     const season = row["Season"];
 
                     // Error handling: Check for missing required fields
-                    if (!playerName || !season) {
-                        console.warn(`Row ${index + 2} is missing required fields (Player or Season). Skipping row.`);
+                    if (!playerName || typeof playerName !== "string") {
+                        console.warn(`Row ${index + 2} has an invalid or missing Player field. Skipping row.`);
+                        console.log('Problematic Row:', row); // Debug: Log the problematic row
+                        return acc; // Skip this row
+                    }
+                    if (!season || typeof season !== "string") {
+                        console.warn(`Row ${index + 2} has an invalid or missing Season field. Skipping row.`);
                         console.log('Problematic Row:', row); // Debug: Log the problematic row
                         return acc; // Skip this row
                     }
@@ -74,6 +98,12 @@
 
                 // Debug: Check the formatted data
                 console.log('Formatted Data:', formattedData);
+
+                if (Object.keys(formattedData).length === 0) {
+                    console.error("The formatted data is empty. Check the Excel file for issues.");
+                    document.getElementById('output').textContent = "Error: The formatted data is empty. Check the Excel file for issues.";
+                    return;
+                }
 
                 // Display formatted JSON in the <pre> element
                 document.getElementById('output').textContent = JSON.stringify(formattedData, null, 2);
