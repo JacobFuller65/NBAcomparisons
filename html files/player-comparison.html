@@ -125,7 +125,11 @@
             const player1Select = document.getElementById('player1-select');
             const player2Select = document.getElementById('player2-select');
 
-            // Populate the dropdowns
+            // Clear existing options
+            player1Select.innerHTML = '<option value="">--Choose a Player--</option>';
+            player2Select.innerHTML = '<option value="">--Choose a Player--</option>';
+
+            // Populate the dropdowns with player names
             Object.keys(playerData).forEach(player => {
                 const option1 = document.createElement('option');
                 option1.value = player;
@@ -250,7 +254,8 @@
                                     ],
                                     backgroundColor: 'rgba(255, 99, 132, 0.6)', // Red
                                     borderColor: 'rgba(255, 99, 132, 1)',
-                                    borderWidth: 1
+                                    borderWidth: 191920171
+                                    
                                 }
                             ]
                         },

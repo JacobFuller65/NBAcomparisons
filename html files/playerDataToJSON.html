@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel to JSON</title>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <h1>Convert Excel to JSON</h1>
+    <input type="file" id="uploadExcel" />
+    <pre id="output"></pre>
+
+    <script>
+        document.getElementById('uploadExcel').addEventListener('change', handleFile);
+
+        function handleFile(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const data = new Uint8Array(e.target.result);
+                const workbook = XLSX.read(data, { type: 'array' });
+
+                // Assuming the first sheet contains the data
+                const sheetName = workbook.SheetNames[0];
+                const sheet = workbook.Sheets[sheetName];
+
+                // Convert sheet to JSON
+                const rawData = XLSX.utils.sheet_to_json(sheet);
+
+                // Map raw data to match the desired format
+                const formattedData = rawData.map(row => ({
+                    Season: row["Season"] || "",
+                    Age: row["Age"] || "",
+                    Team: row["Team"] || "",
+                    Pos: row["Pos"] || "",
+                    G: row["G"] || "",
+                    PTS: row["PTS"] || "",
+                    AST: row["AST"] || "",
+                    TRB: row["TRB"] || "",
+                    Awards: row["Awards"] || ""
+                }));
+
+                // Display formatted JSON in the <pre> element
+                document.getElementById('output').textContent = JSON.stringify(formattedData, null, 2);
+
+                // Log formatted JSON to the console
+                console.log(formattedData);
+            };
+
+            reader.readAsArrayBuffer(file);
+        }
+    </script>
+</body>
+</html>
