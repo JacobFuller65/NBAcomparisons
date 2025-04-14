@@ -23,31 +23,60 @@
                 const data = new Uint8Array(e.target.result);
                 const workbook = XLSX.read(data, { type: 'array' });
 
+                // Debug: Check if the workbook is loaded
+                console.log('Workbook:', workbook);
+
                 // Assuming the first sheet contains the data
                 const sheetName = workbook.SheetNames[0];
                 const sheet = workbook.Sheets[sheetName];
 
+                // Debug: Check the sheet data
+                console.log('Sheet Data:', sheet);
+
                 // Convert sheet to JSON
                 const rawData = XLSX.utils.sheet_to_json(sheet);
 
-                // Map raw data to match the desired format
-                const formattedData = rawData.map(row => ({
-                    Season: row["Season"] || "",
-                    Age: row["Age"] || "",
-                    Team: row["Team"] || "",
-                    Pos: row["Pos"] || "",
-                    G: row["G"] || "",
-                    PTS: row["PTS"] || "",
-                    AST: row["AST"] || "",
-                    TRB: row["TRB"] || "",
-                    Awards: row["Awards"] || ""
-                }));
+                // Debug: Check the raw data
+                console.log('Raw Data:', rawData);
+
+                // Transform raw data into the desired format
+                const formattedData = rawData.reduce((acc, row, index) => {
+                    // Debug: Check each row being processed
+                    console.log(`Processing row ${index + 2}:`, row);
+
+                    const playerName = row["Player"];
+                    const season = row["Season"];
+
+                    // Error handling: Check for missing required fields
+                    if (!playerName || !season) {
+                        console.warn(`Row ${index + 2} is missing required fields (Player or Season). Skipping row.`);
+                        console.log('Problematic Row:', row); // Debug: Log the problematic row
+                        return acc; // Skip this row
+                    }
+
+                    if (!acc[playerName]) {
+                        acc[playerName] = {};
+                    }
+
+                    acc[playerName][season] = {
+                        Age: row["Age"] || "",
+                        Team: row["Team"] || "",
+                        Pos: row["Pos"] || "",
+                        G: row["G"] || "",
+                        PTS: row["PTS"] || "",
+                        AST: row["AST"] || "",
+                        TRB: row["TRB"] || "",
+                        Awards: row["Awards"] || ""
+                    };
+
+                    return acc;
+                }, {});
+
+                // Debug: Check the formatted data
+                console.log('Formatted Data:', formattedData);
 
                 // Display formatted JSON in the <pre> element
                 document.getElementById('output').textContent = JSON.stringify(formattedData, null, 2);
-
-                // Log formatted JSON to the console
-                console.log(formattedData);
             };
 
             reader.readAsArrayBuffer(file);
