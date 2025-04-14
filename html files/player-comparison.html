@@ -51,6 +51,14 @@
             margin-left: auto;
             margin-right: auto;
         }
+        .player-image {
+            width: 150px; /* Set a fixed width */
+            height: 150px; /* Set a fixed height */
+            object-fit: cover; /* Ensures the image fills the area without distortion */
+            border-radius: 50%; /* Makes the image circular */
+            display: block;
+            margin: 0 auto 1rem; /* Centers the image and adds spacing below */
+        }
     </style>
 </head>
 <body>
@@ -89,10 +97,12 @@
         <div class="comparison-container">
             <div id="stats-display1" class="stats-display" style="display: none;">
                 <h3>Player 1 Stats</h3>
+                <img id="player1-image" class="player-image" src="" alt="Player 1 Image">
                 <p id="stats-content1">Select a player and year to view stats.</p>
             </div>
             <div id="stats-display2" class="stats-display" style="display: none;">
                 <h3>Player 2 Stats</h3>
+                <img id="player2-image" class="player-image" src="" alt="Player 2 Image">
                 <p id="stats-content2">Select a player and year to view stats.</p>
             </div>
         </div>
@@ -177,38 +187,52 @@
 
             const statsDisplay1 = document.getElementById('stats-display1');
             const statsContent1 = document.getElementById('stats-content1');
+            const player1Image = document.getElementById('player1-image');
             const statsDisplay2 = document.getElementById('stats-display2');
             const statsContent2 = document.getElementById('stats-content2');
+            const player2Image = document.getElementById('player2-image');
 
             try {
                 let stats1, stats2;
 
                 if (player1 && year1) {
                     stats1 = fetchPlayerStats(player1, year1);
+
+                    // Set the player image
+                    player1Image.src = `images/${player1.replace(/ /g, "_")}.jpg`;
+                    player1Image.alt = `${player1} Image`;
+
                     statsContent1.innerHTML = `
                         <strong>${player1} (${year1})</strong><br>
-                        Team: ${stats1.Team}<br>
-                        Games Played: ${stats1["Games Played"]}<br>
-                        Points Per Game: ${stats1["Points Per Game"]}<br>
-                        Rebounds Per Game: ${stats1["Rebounds Per Game"]}<br>
-                        Assists Per Game: ${stats1["Assists Per Game"]}<br>
-                        Steals Per Game: ${stats1["Steals Per Game"]}<br>
-                        Blocks Per Game: ${stats1["Blocks Per Game"]}
+                        Age: ${stats1.Age || "N/A"}<br>
+                        Team: ${stats1.Team || "N/A"}<br>
+                        Position: ${stats1.Pos || "N/A"}<br>
+                        Games Played: ${stats1.G || "N/A"}<br>
+                        Points Per Game: ${stats1.PTS || "N/A"}<br>
+                        Assists Per Game: ${stats1.AST || "N/A"}<br>
+                        Rebounds Per Game: ${stats1.TRB || "N/A"}<br>
+                        Awards: ${stats1.Awards || "N/A"}
                     `;
                     statsDisplay1.style.display = "block";
                 }
 
                 if (player2 && year2) {
                     stats2 = fetchPlayerStats(player2, year2);
+
+                    // Set the player image
+                    player2Image.src = `images/${player2.replace(/ /g, "_")}.jpg`;
+                    player2Image.alt = `${player2} Image`;
+
                     statsContent2.innerHTML = `
                         <strong>${player2} (${year2})</strong><br>
-                        Team: ${stats2.Team}<br>
-                        Games Played: ${stats2["Games Played"]}<br>
-                        Points Per Game: ${stats2["Points Per Game"]}<br>
-                        Rebounds Per Game: ${stats2["Rebounds Per Game"]}<br>
-                        Assists Per Game: ${stats2["Assists Per Game"]}<br>
-                        Steals Per Game: ${stats2["Steals Per Game"]}<br>
-                        Blocks Per Game: ${stats2["Blocks Per Game"]}
+                        Age: ${stats2.Age || "N/A"}<br>
+                        Team: ${stats2.Team || "N/A"}<br>
+                        Position: ${stats2.Pos || "N/A"}<br>
+                        Games Played: ${stats2.G || "N/A"}<br>
+                        Points Per Game: ${stats2.PTS || "N/A"}<br>
+                        Assists Per Game: ${stats2.AST || "N/A"}<br>
+                        Rebounds Per Game: ${stats2.TRB || "N/A"}<br>
+                        Awards: ${stats2.Awards || "N/A"}
                     `;
                     statsDisplay2.style.display = "block";
                 }
@@ -217,7 +241,7 @@
                 if (stats1 && stats2) {
                     const ctx = document.getElementById('comparisonChart').getContext('2d');
 
-                    console.log('Current chart instance:', window.comparisonChart);
+                    // Destroy the previous chart instance if it exists
                     if (window.comparisonChart instanceof Chart) {
                         window.comparisonChart.destroy();
                     }
@@ -226,17 +250,15 @@
                     window.comparisonChart = new Chart(ctx, {
                         type: 'bar',
                         data: {
-                            labels: ['Games Played', 'Points Per Game', 'Rebounds Per Game', 'Assists Per Game', 'Steals Per Game', 'Blocks Per Game'],
+                            labels: ['Games Played', 'Points Per Game', 'Rebounds Per Game', 'Assists Per Game'],
                             datasets: [
                                 {
                                     label: `${player1} (${year1})`,
                                     data: [
-                                        stats1["Games Played"],
-                                        stats1["Points Per Game"],
-                                        stats1["Rebounds Per Game"],
-                                        stats1["Assists Per Game"],
-                                        stats1["Steals Per Game"],
-                                        stats1["Blocks Per Game"]
+                                        stats1.G || 0,
+                                        stats1.PTS || 0,
+                                        stats1.TRB || 0,
+                                        stats1.AST || 0
                                     ],
                                     backgroundColor: 'rgba(54, 162, 235, 0.6)', // Blue
                                     borderColor: 'rgba(54, 162, 235, 1)',
@@ -245,17 +267,14 @@
                                 {
                                     label: `${player2} (${year2})`,
                                     data: [
-                                        stats2["Games Played"],
-                                        stats2["Points Per Game"],
-                                        stats2["Rebounds Per Game"],
-                                        stats2["Assists Per Game"],
-                                        stats2["Steals Per Game"],
-                                        stats2["Blocks Per Game"]
+                                        stats2.G || 0,
+                                        stats2.PTS || 0,
+                                        stats2.TRB || 0,
+                                        stats2.AST || 0
                                     ],
                                     backgroundColor: 'rgba(255, 99, 132, 0.6)', // Red
                                     borderColor: 'rgba(255, 99, 132, 1)',
-                                    borderWidth: 191920171
-                                    
+                                    borderWidth: 1
                                 }
                             ]
                         },

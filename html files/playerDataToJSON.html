@@ -48,12 +48,14 @@
                     return;
                 }
 
-                // Trim column headers and process data
+                // Add a hardcoded Player name to each row
+                const playerName = "Player Name"; // Replace with the actual player's name
                 const trimmedRawData = rawData.map(row => {
                     const trimmedRow = {};
                     Object.keys(row).forEach(key => {
                         trimmedRow[key.trim()] = row[key];
                     });
+                    trimmedRow["Player"] = playerName; // Add the Player name
                     return trimmedRow;
                 });
                 console.log('Trimmed Raw Data:', trimmedRawData);
@@ -63,15 +65,9 @@
                     // Debug: Check each row being processed
                     console.log(`Processing row ${index + 2}:`, row);
 
-                    const playerName = row["Player"];
                     const season = row["Season"];
 
                     // Error handling: Check for missing required fields
-                    if (!playerName || typeof playerName !== "string") {
-                        console.warn(`Row ${index + 2} has an invalid or missing Player field. Skipping row.`);
-                        console.log('Problematic Row:', row); // Debug: Log the problematic row
-                        return acc; // Skip this row
-                    }
                     if (!season || typeof season !== "string") {
                         console.warn(`Row ${index + 2} has an invalid or missing Season field. Skipping row.`);
                         console.log('Problematic Row:', row); // Debug: Log the problematic row
