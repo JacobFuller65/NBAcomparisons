@@ -171,5 +171,1459 @@
             "TRB": 2.8,
             "Awards": ""
         }
+    },
+    "Lebron James": {
+    "2003-04": {
+      "Age": 19,
+      "Team": "CLE",
+      "Pos": "SG",
+      "G": 79,
+      "PTS": 20.9,
+      "AST": 5.9,
+      "TRB": 5.5,
+      "Awards": "MVP-9,ROY-1"
+    },
+    "2004-05": {
+      "Age": 20,
+      "Team": "CLE",
+      "Pos": "SF",
+      "G": 80,
+      "PTS": 27.2,
+      "AST": 7.2,
+      "TRB": 7.4,
+      "Awards": "MVP-6,AS,NBA2"
+    },
+    "2005-06": {
+      "Age": 21,
+      "Team": "CLE",
+      "Pos": "SF",
+      "G": 79,
+      "PTS": 31.4,
+      "AST": 6.6,
+      "TRB": 7,
+      "Awards": "MVP-2,AS,NBA1"
+    },
+    "2006-07": {
+      "Age": 22,
+      "Team": "CLE",
+      "Pos": "SF",
+      "G": 78,
+      "PTS": 27.3,
+      "AST": 6,
+      "TRB": 6.7,
+      "Awards": "MVP-5,AS,NBA2"
+    },
+    "2007-08": {
+      "Age": 23,
+      "Team": "CLE",
+      "Pos": "SF",
+      "G": 75,
+      "PTS": 30,
+      "AST": 7.2,
+      "TRB": 7.9,
+      "Awards": "MVP-4,AS,NBA1"
+    },
+    "2008-09": {
+      "Age": 24,
+      "Team": "CLE",
+      "Pos": "SF",
+      "G": 81,
+      "PTS": 28.4,
+      "AST": 7.2,
+      "TRB": 7.6,
+      "Awards": "MVP-1,DPOY-2,AS,NBA1"
+    },
+    "2009-10": {
+      "Age": 25,
+      "Team": "CLE",
+      "Pos": "SF",
+      "G": 76,
+      "PTS": 29.7,
+      "AST": 8.6,
+      "TRB": 7.3,
+      "Awards": "MVP-1,DPOY-4,AS,NBA1"
+    },
+    "2010-11": {
+      "Age": 26,
+      "Team": "MIA",
+      "Pos": "SF",
+      "G": 79,
+      "PTS": 26.7,
+      "AST": 7,
+      "TRB": 7.5,
+      "Awards": "MVP-3,DPOY-9,AS,NBA1"
+    },
+    "2011-12": {
+      "Age": 27,
+      "Team": "MIA",
+      "Pos": "SF",
+      "G": 62,
+      "PTS": 27.1,
+      "AST": 6.2,
+      "TRB": 7.9,
+      "Awards": "MVP-1,DPOY-4,AS,NBA1"
+    },
+    "2012-13": {
+      "Age": 28,
+      "Team": "MIA",
+      "Pos": "PF",
+      "G": 76,
+      "PTS": 26.8,
+      "AST": 7.3,
+      "TRB": 8,
+      "Awards": "MVP-1,DPOY-2,AS,NBA1"
+    },
+    "2013-14": {
+      "Age": 29,
+      "Team": "MIA",
+      "Pos": "PF",
+      "G": 77,
+      "PTS": 27.1,
+      "AST": 6.3,
+      "TRB": 6.9,
+      "Awards": "MVP-2,DPOY-6,AS,NBA1"
+    },
+    "2014-15": {
+      "Age": 30,
+      "Team": "CLE",
+      "Pos": "SF",
+      "G": 69,
+      "PTS": 25.3,
+      "AST": 7.4,
+      "TRB": 6,
+      "Awards": "MVP-3,DPOY-13,AS,NBA1"
+    },
+    "2015-16": {
+      "Age": 31,
+      "Team": "CLE",
+      "Pos": "SF",
+      "G": 76,
+      "PTS": 25.3,
+      "AST": 6.8,
+      "TRB": 7.4,
+      "Awards": "MVP-3,DPOY-11,AS,NBA1"
+    },
+    "2016-17": {
+      "Age": 32,
+      "Team": "CLE",
+      "Pos": "SF",
+      "G": 74,
+      "PTS": 26.4,
+      "AST": 8.7,
+      "TRB": 8.6,
+      "Awards": "MVP-4,DPOY-5,AS,NBA1"
+    },
+    "2017-18": {
+      "Age": 33,
+      "Team": "CLE",
+      "Pos": "PF",
+      "G": 82,
+      "PTS": 27.5,
+      "AST": 9.1,
+      "TRB": 8.6,
+      "Awards": "MVP-2,AS,NBA1"
+    },
+    "2018-19": {
+      "Age": 34,
+      "Team": "LAL",
+      "Pos": "SF",
+      "G": 55,
+      "PTS": 27.4,
+      "AST": 8.3,
+      "TRB": 8.5,
+      "Awards": "MVP-11,AS,NBA3"
+    },
+    "2019-20": {
+      "Age": 35,
+      "Team": "LAL",
+      "Pos": "PG",
+      "G": 67,
+      "PTS": 25.3,
+      "AST": 10.2,
+      "TRB": 7.8,
+      "Awards": "MVP-2,AS,NBA1"
+    },
+    "2020-21": {
+      "Age": 36,
+      "Team": "LAL",
+      "Pos": "PG",
+      "G": 45,
+      "PTS": 25,
+      "AST": 7.8,
+      "TRB": 7.7,
+      "Awards": "MVP-13,AS,NBA2"
+    },
+    "2021-22": {
+      "Age": 37,
+      "Team": "LAL",
+      "Pos": "C",
+      "G": 56,
+      "PTS": 30.3,
+      "AST": 6.2,
+      "TRB": 8.2,
+      "Awards": "MVP-10,AS,NBA3"
+    },
+    "2022-23": {
+      "Age": 38,
+      "Team": "LAL",
+      "Pos": "PF",
+      "G": 55,
+      "PTS": 28.9,
+      "AST": 6.8,
+      "TRB": 8.3,
+      "Awards": "AS,NBA3"
+    },
+    "2023-24": {
+      "Age": 39,
+      "Team": "LAL",
+      "Pos": "PF",
+      "G": 71,
+      "PTS": 25.7,
+      "AST": 8.3,
+      "TRB": 7.3,
+      "Awards": "CPOY-10,AS,NBA3"
+    },
+    "2024-25": {
+      "Age": 40,
+      "Team": "LAL",
+      "Pos": "SF",
+      "G": 70,
+      "PTS": 24.4,
+      "AST": 8.2,
+      "TRB": 7.8,
+      "Awards": ""
+    },
+    "22 Yrs": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 1562,
+      "PTS": 27,
+      "AST": 7.4,
+      "TRB": 7.5,
+      "Awards": ""
+    },
+    "CLE (11 Yrs)": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 849,
+      "PTS": 27.2,
+      "AST": 7.3,
+      "TRB": 7.3,
+      "Awards": ""
+    },
+    "LAL (7 Yrs)": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 419,
+      "PTS": 26.6,
+      "AST": 8.1,
+      "TRB": 7.9,
+      "Awards": ""
+    },
+    "MIA (4 Yrs)": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 294,
+      "PTS": 26.9,
+      "AST": 6.7,
+      "TRB": 7.6,
+      "Awards": ""
     }
+  },
+    "Nikola Jokic": {
+    "2015-16": {
+      "Age": 20,
+      "Team": "DEN",
+      "Pos": "C",
+      "G": 80,
+      "PTS": 10,
+      "AST": 2.4,
+      "TRB": 7,
+      "Awards": "ROY-3"
+    },
+    "2016-17": {
+      "Age": 21,
+      "Team": "DEN",
+      "Pos": "C",
+      "G": 73,
+      "PTS": 16.7,
+      "AST": 4.9,
+      "TRB": 9.8,
+      "Awards": ""
+    },
+    "2017-18": {
+      "Age": 22,
+      "Team": "DEN",
+      "Pos": "C",
+      "G": 75,
+      "PTS": 18.5,
+      "AST": 6.1,
+      "TRB": 10.7,
+      "Awards": ""
+    },
+    "2018-19": {
+      "Age": 23,
+      "Team": "DEN",
+      "Pos": "C",
+      "G": 80,
+      "PTS": 20.1,
+      "AST": 7.3,
+      "TRB": 10.8,
+      "Awards": "MVP-4,AS,NBA1"
+    },
+    "2019-20": {
+      "Age": 24,
+      "Team": "DEN",
+      "Pos": "C",
+      "G": 73,
+      "PTS": 19.9,
+      "AST": 7,
+      "TRB": 9.7,
+      "Awards": "MVP-9,AS,NBA2"
+    },
+    "2020-21": {
+      "Age": 25,
+      "Team": "DEN",
+      "Pos": "C",
+      "G": 72,
+      "PTS": 26.4,
+      "AST": 8.3,
+      "TRB": 10.8,
+      "Awards": "MVP-1,AS,NBA1"
+    },
+    "2021-22": {
+      "Age": 26,
+      "Team": "DEN",
+      "Pos": "C",
+      "G": 74,
+      "PTS": 27.1,
+      "AST": 7.9,
+      "TRB": 13.8,
+      "Awards": "MVP-1,AS,NBA1"
+    },
+    "2022-23": {
+      "Age": 27,
+      "Team": "DEN",
+      "Pos": "C",
+      "G": 69,
+      "PTS": 24.5,
+      "AST": 9.8,
+      "TRB": 11.8,
+      "Awards": "MVP-2,CPOY-13,AS,NBA2"
+    },
+    "2023-24": {
+      "Age": 28,
+      "Team": "DEN",
+      "Pos": "C",
+      "G": 79,
+      "PTS": 26.4,
+      "AST": 9,
+      "TRB": 12.4,
+      "Awards": "MVP-1,CPOY-4,AS,NBA1"
+    },
+    "2024-25": {
+      "Age": 29,
+      "Team": "DEN",
+      "Pos": "C",
+      "G": 70,
+      "PTS": 29.6,
+      "AST": 10.2,
+      "TRB": 12.7,
+      "Awards": ""
+    },
+    "10 Yrs": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 745,
+      "PTS": 21.8,
+      "AST": 7.2,
+      "TRB": 10.9,
+      "Awards": ""
+    }
+  },
+    "Giannis Antetokounmpo": {
+    "2013-14": {
+      "Age": 19,
+      "Team": "MIL",
+      "Pos": "SF",
+      "G": 77,
+      "PTS": 6.8,
+      "AST": 1.9,
+      "TRB": 4.4,
+      "Awards": "ROY-7"
+    },
+    "2014-15": {
+      "Age": 20,
+      "Team": "MIL",
+      "Pos": "SG",
+      "G": 81,
+      "PTS": 12.7,
+      "AST": 2.6,
+      "TRB": 6.7,
+      "Awards": ""
+    },
+    "2015-16": {
+      "Age": 21,
+      "Team": "MIL",
+      "Pos": "PG",
+      "G": 80,
+      "PTS": 16.9,
+      "AST": 4.3,
+      "TRB": 7.7,
+      "Awards": ""
+    },
+    "2016-17": {
+      "Age": 22,
+      "Team": "MIL",
+      "Pos": "SF",
+      "G": 80,
+      "PTS": 22.9,
+      "AST": 5.4,
+      "TRB": 8.8,
+      "Awards": "MVP-7,MIP-1,AS,NBA2"
+    },
+    "2017-18": {
+      "Age": 23,
+      "Team": "MIL",
+      "Pos": "PF",
+      "G": 75,
+      "PTS": 26.9,
+      "AST": 4.8,
+      "TRB": 10,
+      "Awards": "MVP-6,AS,NBA2"
+    },
+    "2018-19": {
+      "Age": 24,
+      "Team": "MIL",
+      "Pos": "PF",
+      "G": 72,
+      "PTS": 27.7,
+      "AST": 5.9,
+      "TRB": 12.5,
+      "Awards": "MVP-1,DPOY-2,AS,NBA1"
+    },
+    "2019-20": {
+      "Age": 25,
+      "Team": "MIL",
+      "Pos": "PF",
+      "G": 63,
+      "PTS": 29.5,
+      "AST": 5.6,
+      "TRB": 13.6,
+      "Awards": "MVP-1,DPOY-1,AS,NBA1"
+    },
+    "2020-21": {
+      "Age": 26,
+      "Team": "MIL",
+      "Pos": "PF",
+      "G": 61,
+      "PTS": 28.1,
+      "AST": 5.9,
+      "TRB": 11,
+      "Awards": "MVP-4,DPOY-5,AS,NBA1"
+    },
+    "2021-22": {
+      "Age": 27,
+      "Team": "MIL",
+      "Pos": "PF",
+      "G": 67,
+      "PTS": 29.9,
+      "AST": 5.8,
+      "TRB": 11.6,
+      "Awards": "MVP-3,DPOY-6,AS,NBA1"
+    },
+    "2022-23": {
+      "Age": 28,
+      "Team": "MIL",
+      "Pos": "PF",
+      "G": 63,
+      "PTS": 31.1,
+      "AST": 5.7,
+      "TRB": 11.8,
+      "Awards": "MVP-3,DPOY-6,AS,NBA1"
+    },
+    "2023-24": {
+      "Age": 29,
+      "Team": "MIL",
+      "Pos": "PF",
+      "G": 73,
+      "PTS": 30.4,
+      "AST": 6.5,
+      "TRB": 11.5,
+      "Awards": "MVP-4,DPOY-9,CPOY-12,AS,NBA1"
+    },
+    "2024-25": {
+      "Age": 30,
+      "Team": "MIL",
+      "Pos": "PF",
+      "G": 67,
+      "PTS": 30.4,
+      "AST": 6.5,
+      "TRB": 11.9,
+      "Awards": ""
+    },
+    "12 Yrs": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 859,
+      "PTS": 23.9,
+      "AST": 5,
+      "TRB": 9.9,
+      "Awards": ""
+    }
+  },    
+    "Jayson Tatum": {
+    "2017-18": {
+      "Age": 19,
+      "Team": "BOS",
+      "Pos": "SF",
+      "G": 80,
+      "PTS": 13.9,
+      "AST": 1.6,
+      "TRB": 5,
+      "Awards": "ROY-3"
+    },
+    "2018-19": {
+      "Age": 20,
+      "Team": "BOS",
+      "Pos": "SF",
+      "G": 79,
+      "PTS": 15.7,
+      "AST": 2.1,
+      "TRB": 6,
+      "Awards": ""
+    },
+    "2019-20": {
+      "Age": 21,
+      "Team": "BOS",
+      "Pos": "PF",
+      "G": 66,
+      "PTS": 23.4,
+      "AST": 3,
+      "TRB": 7,
+      "Awards": "MVP-12,AS,NBA3"
+    },
+    "2020-21": {
+      "Age": 22,
+      "Team": "BOS",
+      "Pos": "SF",
+      "G": 64,
+      "PTS": 26.4,
+      "AST": 4.3,
+      "TRB": 7.4,
+      "Awards": "AS"
+    },
+    "2021-22": {
+      "Age": 23,
+      "Team": "BOS",
+      "Pos": "SF",
+      "G": 76,
+      "PTS": 26.9,
+      "AST": 4.4,
+      "TRB": 8,
+      "Awards": "MVP-6,AS,NBA1"
+    },
+    "2022-23": {
+      "Age": 24,
+      "Team": "BOS",
+      "Pos": "SF",
+      "G": 74,
+      "PTS": 30.1,
+      "AST": 4.6,
+      "TRB": 8.8,
+      "Awards": "MVP-4,CPOY-10,AS,NBA1"
+    },
+    "2023-24": {
+      "Age": 25,
+      "Team": "BOS",
+      "Pos": "PF",
+      "G": 74,
+      "PTS": 26.9,
+      "AST": 4.9,
+      "TRB": 8.1,
+      "Awards": "MVP-6,CPOY-9,AS,NBA1"
+    },
+    "2024-25": {
+      "Age": 26,
+      "Team": "BOS",
+      "Pos": "PF",
+      "G": 72,
+      "PTS": 26.8,
+      "AST": 6,
+      "TRB": 8.7,
+      "Awards": ""
+    },
+    "8 Yrs": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 585,
+      "PTS": 23.6,
+      "AST": 3.8,
+      "TRB": 7.3,
+      "Awards": ""
+    }
+  },
+    "Jalen Brunson": {
+    "2018-19": {
+      "Age": 22,
+      "Team": "DAL",
+      "Pos": "PG",
+      "G": 73,
+      "PTS": 9.3,
+      "AST": 3.2,
+      "TRB": 2.3,
+      "Awards": ""
+    },
+    "2019-20": {
+      "Age": 23,
+      "Team": "DAL",
+      "Pos": "PG",
+      "G": 57,
+      "PTS": 8.2,
+      "AST": 3.3,
+      "TRB": 2.4,
+      "Awards": ""
+    },
+    "2020-21": {
+      "Age": 24,
+      "Team": "DAL",
+      "Pos": "PG",
+      "G": 68,
+      "PTS": 12.6,
+      "AST": 3.5,
+      "TRB": 3.4,
+      "Awards": "6MOY-4"
+    },
+    "2021-22": {
+      "Age": 25,
+      "Team": "DAL",
+      "Pos": "SG",
+      "G": 79,
+      "PTS": 16.3,
+      "AST": 4.8,
+      "TRB": 3.9,
+      "Awards": ""
+    },
+    "2022-23": {
+      "Age": 26,
+      "Team": "NYK",
+      "Pos": "PG",
+      "G": 68,
+      "PTS": 24,
+      "AST": 6.2,
+      "TRB": 3.5,
+      "Awards": "MVP-12,CPOY-4"
+    },
+    "2023-24": {
+      "Age": 27,
+      "Team": "NYK",
+      "Pos": "PG",
+      "G": 77,
+      "PTS": 28.7,
+      "AST": 6.7,
+      "TRB": 3.6,
+      "Awards": "MVP-5,CPOY-5,AS,NBA2"
+    },
+    "2024-25": {
+      "Age": 28,
+      "Team": "NYK",
+      "Pos": "PG",
+      "G": 65,
+      "PTS": 26,
+      "AST": 7.3,
+      "TRB": 2.9,
+      "Awards": ""
+    },
+    "7 Yrs": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 487,
+      "PTS": 18.1,
+      "AST": 5,
+      "TRB": 3.2,
+      "Awards": ""
+    },
+    "DAL (4 Yrs)": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 277,
+      "PTS": 11.9,
+      "AST": 3.7,
+      "TRB": 3,
+      "Awards": ""
+    },
+    "NYK (3 Yrs)": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 210,
+      "PTS": 26.4,
+      "AST": 6.7,
+      "TRB": 3.4,
+      "Awards": ""
+    }
+  },
+  "Anthony Davis": {
+    "2012-13": {
+      "Age": 19,
+      "Team": "NOH",
+      "Pos": "PF",
+      "G": 64,
+      "PTS": 13.5,
+      "AST": 1,
+      "TRB": 8.2,
+      "Awards": "ROY-2"
+    },
+    "2013-14": {
+      "Age": 20,
+      "Team": "NOP",
+      "Pos": "PF",
+      "G": 67,
+      "PTS": 20.8,
+      "AST": 1.6,
+      "TRB": 10,
+      "Awards": "DPOY-8,AS"
+    },
+    "2014-15": {
+      "Age": 21,
+      "Team": "NOP",
+      "Pos": "PF",
+      "G": 68,
+      "PTS": 24.4,
+      "AST": 2.2,
+      "TRB": 10.2,
+      "Awards": "MVP-5,DPOY-4,AS,NBA1"
+    },
+    "2015-16": {
+      "Age": 22,
+      "Team": "NOP",
+      "Pos": "C",
+      "G": 61,
+      "PTS": 24.3,
+      "AST": 1.9,
+      "TRB": 10.3,
+      "Awards": "DPOY-9,AS"
+    },
+    "2016-17": {
+      "Age": 23,
+      "Team": "NOP",
+      "Pos": "C",
+      "G": 75,
+      "PTS": 28,
+      "AST": 2.1,
+      "TRB": 11.8,
+      "Awards": "MVP-9,AS,NBA1"
+    },
+    "2017-18": {
+      "Age": 24,
+      "Team": "NOP",
+      "Pos": "PF",
+      "G": 75,
+      "PTS": 28.1,
+      "AST": 2.3,
+      "TRB": 11.1,
+      "Awards": "MVP-3,DPOY-3,AS,NBA1"
+    },
+    "2018-19": {
+      "Age": 25,
+      "Team": "NOP",
+      "Pos": "C",
+      "G": 56,
+      "PTS": 25.9,
+      "AST": 3.9,
+      "TRB": 12,
+      "Awards": "AS"
+    },
+    "2019-20": {
+      "Age": 26,
+      "Team": "LAL",
+      "Pos": "PF",
+      "G": 62,
+      "PTS": 26.1,
+      "AST": 3.2,
+      "TRB": 9.3,
+      "Awards": "MVP-6,DPOY-2,AS,NBA1"
+    },
+    "2020-21": {
+      "Age": 27,
+      "Team": "LAL",
+      "Pos": "PF",
+      "G": 36,
+      "PTS": 21.8,
+      "AST": 3.1,
+      "TRB": 7.9,
+      "Awards": "AS"
+    },
+    "2021-22": {
+      "Age": 28,
+      "Team": "LAL",
+      "Pos": "C",
+      "G": 40,
+      "PTS": 23.2,
+      "AST": 3.1,
+      "TRB": 9.9,
+      "Awards": ""
+    },
+    "2022-23": {
+      "Age": 29,
+      "Team": "LAL",
+      "Pos": "C",
+      "G": 56,
+      "PTS": 25.9,
+      "AST": 2.6,
+      "TRB": 12.5,
+      "Awards": ""
+    },
+    "2023-24": {
+      "Age": 30,
+      "Team": "LAL",
+      "Pos": "C",
+      "G": 76,
+      "PTS": 24.7,
+      "AST": 3.5,
+      "TRB": 12.6,
+      "Awards": "DPOY-4,AS,NBA2"
+    },
+    "2024-25": {
+      "Age": 31,
+      "Team": "DAL",
+      "Pos": "PF",
+      "G": 9,
+      "PTS": 20,
+      "AST": 4.4,
+      "TRB": 10.1,
+      "Awards": ""
+    },
+    "13 Yrs": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 787,
+      "PTS": 24.1,
+      "AST": 2.6,
+      "TRB": 10.7,
+      "Awards": ""
+    },
+    "NOH (7 Yrs)": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 466,
+      "PTS": 23.7,
+      "AST": 2.1,
+      "TRB": 10.5,
+      "Awards": ""
+    },
+    "LAL (6 Yrs)": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 312,
+      "PTS": 24.8,
+      "AST": 3.2,
+      "TRB": 11,
+      "Awards": ""
+    },
+    "DAL (1 Yr)": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 9,
+      "PTS": 20,
+      "AST": 4.4,
+      "TRB": 10.1,
+      "Awards": ""
+    }
+  },
+  "Victor Wembanyama": {
+    "2023-24": {
+      "Age": 20,
+      "Team": "SAS",
+      "Pos": "C",
+      "G": 71,
+      "PTS": 21.4,
+      "AST": 3.9,
+      "TRB": 10.6,
+      "Awards": "ROY-1,DPOY-2"
+    },
+    "2024-25": {
+      "Age": 21,
+      "Team": "SAS",
+      "Pos": "C",
+      "G": 46,
+      "PTS": 24.3,
+      "AST": 3.7,
+      "TRB": 11,
+      "Awards": ""
+    },
+    "2 Yrs": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 117,
+      "PTS": 22.5,
+      "AST": 3.8,
+      "TRB": 10.8,
+      "Awards": ""
+    }
+  },
+  "Kevin Durant": {
+    "2007-08": {
+      "Age": 19,
+      "Team": "SEA",
+      "Pos": "SG",
+      "G": 80,
+      "PTS": 20.3,
+      "AST": 2.4,
+      "TRB": 4.4,
+      "Awards": "ROY-1"
+    },
+    "2008-09": {
+      "Age": 20,
+      "Team": "OKC",
+      "Pos": "SF",
+      "G": 74,
+      "PTS": 25.3,
+      "AST": 2.8,
+      "TRB": 6.5,
+      "Awards": ""
+    },
+    "2009-10": {
+      "Age": 21,
+      "Team": "OKC",
+      "Pos": "SF",
+      "G": 82,
+      "PTS": 30.1,
+      "AST": 2.8,
+      "TRB": 7.6,
+      "Awards": "MVP-2,AS,NBA1"
+    },
+    "2010-11": {
+      "Age": 22,
+      "Team": "OKC",
+      "Pos": "SF",
+      "G": 78,
+      "PTS": 27.7,
+      "AST": 2.7,
+      "TRB": 6.8,
+      "Awards": "MVP-5,AS,NBA1"
+    },
+    "2011-12": {
+      "Age": 23,
+      "Team": "OKC",
+      "Pos": "SF",
+      "G": 66,
+      "PTS": 28,
+      "AST": 3.5,
+      "TRB": 8,
+      "Awards": "MVP-2,AS,NBA1"
+    },
+    "2012-13": {
+      "Age": 24,
+      "Team": "OKC",
+      "Pos": "SF",
+      "G": 81,
+      "PTS": 28.1,
+      "AST": 4.6,
+      "TRB": 7.9,
+      "Awards": "MVP-2,AS,NBA1"
+    },
+    "2013-14": {
+      "Age": 25,
+      "Team": "OKC",
+      "Pos": "SF",
+      "G": 81,
+      "PTS": 32,
+      "AST": 5.5,
+      "TRB": 7.4,
+      "Awards": "MVP-1,AS,NBA1"
+    },
+    "2014-15": {
+      "Age": 26,
+      "Team": "OKC",
+      "Pos": "SF",
+      "G": 27,
+      "PTS": 25.4,
+      "AST": 4.1,
+      "TRB": 6.6,
+      "Awards": "AS"
+    },
+    "2015-16": {
+      "Age": 27,
+      "Team": "OKC",
+      "Pos": "SF",
+      "G": 72,
+      "PTS": 28.2,
+      "AST": 5,
+      "TRB": 8.2,
+      "Awards": "MVP-5,AS,NBA2"
+    },
+    "2016-17": {
+      "Age": 28,
+      "Team": "GSW",
+      "Pos": "PF",
+      "G": 62,
+      "PTS": 25.1,
+      "AST": 4.8,
+      "TRB": 8.3,
+      "Awards": "MVP-9,AS,NBA2"
+    },
+    "2017-18": {
+      "Age": 29,
+      "Team": "GSW",
+      "Pos": "SF",
+      "G": 68,
+      "PTS": 26.4,
+      "AST": 5.4,
+      "TRB": 6.8,
+      "Awards": "MVP-7,DPOY-9,AS,NBA1"
+    },
+    "2018-19": {
+      "Age": 30,
+      "Team": "GSW",
+      "Pos": "SF",
+      "G": 78,
+      "PTS": 26,
+      "AST": 5.9,
+      "TRB": 6.4,
+      "Awards": "MVP-8,AS,NBA2"
+    },
+    "2019-20": {
+      "Age": "Did not play - injury",
+      "Team": "",
+      "Pos": "",
+      "G": "",
+      "PTS": "",
+      "AST": "",
+      "TRB": "",
+      "Awards": ""
+    },
+    "2020-21": {
+      "Age": 32,
+      "Team": "BRK",
+      "Pos": "PF",
+      "G": 35,
+      "PTS": 26.9,
+      "AST": 5.6,
+      "TRB": 7.1,
+      "Awards": "AS"
+    },
+    "2021-22": {
+      "Age": 33,
+      "Team": "BRK",
+      "Pos": "PF",
+      "G": 55,
+      "PTS": 29.9,
+      "AST": 6.4,
+      "TRB": 7.4,
+      "Awards": "MVP-10,AS,NBA2"
+    },
+    "2022-23": {
+      "Age": 34,
+      "Team": "PHO",
+      "Pos": "PF",
+      "G": 8,
+      "PTS": 26,
+      "AST": 3.5,
+      "TRB": 6.4,
+      "Awards": ""
+    },
+    "2023-24": {
+      "Age": 35,
+      "Team": "PHO",
+      "Pos": "PF",
+      "G": 75,
+      "PTS": 27.1,
+      "AST": 5,
+      "TRB": 6.6,
+      "Awards": "MVP-9,AS,NBA2"
+    },
+    "2024-25": {
+      "Age": 36,
+      "Team": "PHO",
+      "Pos": "PF",
+      "G": 62,
+      "PTS": 26.6,
+      "AST": 4.2,
+      "TRB": 6,
+      "Awards": ""
+    },
+    "17 Yrs": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 1123,
+      "PTS": 27.2,
+      "AST": 4.4,
+      "TRB": 7,
+      "Awards": ""
+    },
+    "OKC (9 Yrs)": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 641,
+      "PTS": 27.4,
+      "AST": 3.7,
+      "TRB": 7,
+      "Awards": ""
+    },
+    "GSW (3 Yrs)": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 208,
+      "PTS": 25.8,
+      "AST": 5.4,
+      "TRB": 7.1,
+      "Awards": ""
+    },
+    "PHO (3 Yrs)": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 145,
+      "PTS": 26.8,
+      "AST": 4.6,
+      "TRB": 6.3,
+      "Awards": ""
+    },
+    "BRK (3 Yrs)": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 129,
+      "PTS": 29,
+      "AST": 5.8,
+      "TRB": 7.1,
+      "Awards": ""
+    }
+  },
+  "Tyrese Haliburton": {
+    "2020-21": {
+      "Age": 20,
+      "Team": "SAC",
+      "Pos": "PG",
+      "G": 58,
+      "PTS": 13,
+      "AST": 5.3,
+      "TRB": 3,
+      "Awards": "ROY-3"
+    },
+    "2021-22": {
+      "Age": 21,
+      "Team": "IND",
+      "Pos": "PG",
+      "G": 26,
+      "PTS": 17.5,
+      "AST": 9.6,
+      "TRB": 4.3,
+      "Awards": ""
+    },
+    "2022-23": {
+      "Age": 22,
+      "Team": "IND",
+      "Pos": "PG",
+      "G": 56,
+      "PTS": 20.7,
+      "AST": 10.4,
+      "TRB": 3.7,
+      "Awards": "AS"
+    },
+    "2023-24": {
+      "Age": 23,
+      "Team": "IND",
+      "Pos": "PG",
+      "G": 69,
+      "PTS": 20.1,
+      "AST": 10.9,
+      "TRB": 3.9,
+      "Awards": "AS,NBA3"
+    },
+    "2024-25": {
+      "Age": 24,
+      "Team": "IND",
+      "Pos": "PG",
+      "G": 73,
+      "PTS": 18.6,
+      "AST": 9.2,
+      "TRB": 3.5,
+      "Awards": ""
+    },
+    "5 Yrs": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 333,
+      "PTS": 17.5,
+      "AST": 8.8,
+      "TRB": 3.7,
+      "Awards": ""
+    },
+    "IND (4 Yrs)": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 224,
+      "PTS": 19.5,
+      "AST": 10.1,
+      "TRB": 3.8,
+      "Awards": ""
+    },
+    "SAC (2 Yrs)": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 109,
+      "PTS": 13.6,
+      "AST": 6.3,
+      "TRB": 3.4,
+      "Awards": ""
+    }
+  },
+  "Stephen Curry": {
+    "2009-10": {
+      "Age": 21,
+      "Team": "GSW",
+      "Pos": "PG",
+      "G": 80,
+      "PTS": 17.5,
+      "AST": 5.9,
+      "TRB": 4.5,
+      "Awards": "ROY-2"
+    },
+    "2010-11": {
+      "Age": 22,
+      "Team": "GSW",
+      "Pos": "PG",
+      "G": 74,
+      "PTS": 18.6,
+      "AST": 5.8,
+      "TRB": 3.9,
+      "Awards": ""
+    },
+    "2011-12": {
+      "Age": 23,
+      "Team": "GSW",
+      "Pos": "PG",
+      "G": 26,
+      "PTS": 14.7,
+      "AST": 5.3,
+      "TRB": 3.4,
+      "Awards": ""
+    },
+    "2012-13": {
+      "Age": 24,
+      "Team": "GSW",
+      "Pos": "PG",
+      "G": 78,
+      "PTS": 22.9,
+      "AST": 6.9,
+      "TRB": 4,
+      "Awards": "MVP-11"
+    },
+    "2013-14": {
+      "Age": 25,
+      "Team": "GSW",
+      "Pos": "PG",
+      "G": 78,
+      "PTS": 24,
+      "AST": 8.5,
+      "TRB": 4.3,
+      "Awards": "MVP-6,AS,NBA2"
+    },
+    "2014-15": {
+      "Age": 26,
+      "Team": "GSW",
+      "Pos": "PG",
+      "G": 80,
+      "PTS": 23.8,
+      "AST": 7.7,
+      "TRB": 4.3,
+      "Awards": "MVP-1,AS,NBA1"
+    },
+    "2015-16": {
+      "Age": 27,
+      "Team": "GSW",
+      "Pos": "PG",
+      "G": 79,
+      "PTS": 30.1,
+      "AST": 6.7,
+      "TRB": 5.4,
+      "Awards": "MVP-1,AS,NBA1"
+    },
+    "2016-17": {
+      "Age": 28,
+      "Team": "GSW",
+      "Pos": "PG",
+      "G": 79,
+      "PTS": 25.3,
+      "AST": 6.6,
+      "TRB": 4.5,
+      "Awards": "MVP-6,AS,NBA2"
+    },
+    "2017-18": {
+      "Age": 29,
+      "Team": "GSW",
+      "Pos": "PG",
+      "G": 51,
+      "PTS": 26.4,
+      "AST": 6.1,
+      "TRB": 5.1,
+      "Awards": "MVP-10,AS,NBA3"
+    },
+    "2018-19": {
+      "Age": 30,
+      "Team": "GSW",
+      "Pos": "PG",
+      "G": 69,
+      "PTS": 27.3,
+      "AST": 5.2,
+      "TRB": 5.3,
+      "Awards": "MVP-5,AS,NBA1"
+    },
+    "2019-20": {
+      "Age": 31,
+      "Team": "GSW",
+      "Pos": "PG",
+      "G": 5,
+      "PTS": 20.8,
+      "AST": 6.6,
+      "TRB": 5.2,
+      "Awards": ""
+    },
+    "2020-21": {
+      "Age": 32,
+      "Team": "GSW",
+      "Pos": "PG",
+      "G": 63,
+      "PTS": 32,
+      "AST": 5.8,
+      "TRB": 5.5,
+      "Awards": "MVP-3,AS,NBA1"
+    },
+    "2021-22": {
+      "Age": 33,
+      "Team": "GSW",
+      "Pos": "PG",
+      "G": 64,
+      "PTS": 25.5,
+      "AST": 6.3,
+      "TRB": 5.2,
+      "Awards": "MVP-8,AS,NBA2"
+    },
+    "2022-23": {
+      "Age": 34,
+      "Team": "GSW",
+      "Pos": "PG",
+      "G": 56,
+      "PTS": 29.4,
+      "AST": 6.3,
+      "TRB": 6.1,
+      "Awards": "MVP-9,CPOY-9,AS,NBA2"
+    },
+    "2023-24": {
+      "Age": 35,
+      "Team": "GSW",
+      "Pos": "PG",
+      "G": 74,
+      "PTS": 26.4,
+      "AST": 5.1,
+      "TRB": 4.5,
+      "Awards": "CPOY-1,AS,NBA3"
+    },
+    "2024-25": {
+      "Age": 36,
+      "Team": "GSW",
+      "Pos": "PG",
+      "G": 70,
+      "PTS": 24.5,
+      "AST": 6,
+      "TRB": 4.4,
+      "Awards": ""
+    },
+    "16 Yrs": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 1026,
+      "PTS": 24.7,
+      "AST": 6.4,
+      "TRB": 4.7,
+      "Awards": ""
+    }
+  },
+  "Tyrese Maxey": {
+    "2020-21": {
+      "Age": 20,
+      "Team": "PHI",
+      "Pos": "SG",
+      "G": 61,
+      "PTS": 8,
+      "AST": 2,
+      "TRB": 1.7,
+      "Awards": ""
+    },
+    "2021-22": {
+      "Age": 21,
+      "Team": "PHI",
+      "Pos": "PG",
+      "G": 75,
+      "PTS": 17.5,
+      "AST": 4.3,
+      "TRB": 3.2,
+      "Awards": ""
+    },
+    "2022-23": {
+      "Age": 22,
+      "Team": "PHI",
+      "Pos": "SG",
+      "G": 60,
+      "PTS": 20.3,
+      "AST": 3.5,
+      "TRB": 2.9,
+      "Awards": ""
+    },
+    "2023-24": {
+      "Age": 23,
+      "Team": "PHI",
+      "Pos": "PG",
+      "G": 70,
+      "PTS": 25.9,
+      "AST": 6.2,
+      "TRB": 3.7,
+      "Awards": "MIP-1,AS"
+    },
+    "2024-25": {
+      "Age": 24,
+      "Team": "PHI",
+      "Pos": "PG",
+      "G": 52,
+      "PTS": 26.3,
+      "AST": 6.1,
+      "TRB": 3.3,
+      "Awards": ""
+    },
+    "5 Yrs": {
+      "Age": "",
+      "Team": "",
+      "Pos": "",
+      "G": 318,
+      "PTS": 19.5,
+      "AST": 4.4,
+      "TRB": 3,
+      "Awards": ""
+    }
+  }
+
+
 }
