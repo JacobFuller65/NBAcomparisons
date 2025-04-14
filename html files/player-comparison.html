@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Player Comparison Tool</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script> <!-- Include Data Labels Plugin -->
     <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script> <!-- Include SheetJS -->
     <style>
         body {
@@ -297,6 +298,14 @@
                                 },
                                 tooltip: {
                                     enabled: true
+                                },
+                                datalabels: {
+                                    anchor: 'end',
+                                    align: 'top',
+                                    formatter: (value) => value, // Display the value
+                                    font: {
+                                        weight: 'bold'
+                                    }
                                 }
                             },
                             scales: {
@@ -322,7 +331,8 @@
                                     }
                                 }
                             }
-                        }
+                        },
+                        plugins: [ChartDataLabels] // Enable the Data Labels plugin
                     });
 
                     // Render the percentage comparison chart
@@ -371,6 +381,14 @@
                                 },
                                 tooltip: {
                                     enabled: true
+                                },
+                                datalabels: {
+                                    anchor: 'end',
+                                    align: 'top',
+                                    formatter: (value) => value, // Display the value
+                                    font: {
+                                        weight: 'bold'
+                                    }
                                 }
                             },
                             scales: {
@@ -382,7 +400,8 @@
                                     }
                                 }
                             }
-                        }
+                        },
+                        plugins: [ChartDataLabels] // Enable the Data Labels plugin
                     });
                 }
             } catch (error) {
