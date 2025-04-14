@@ -1,0 +1,10 @@
+{
+    "LeBron James": {
+        "2021": { "Team": "Lakers", "Games Played": 45, "Points Per Game": 25.0, "Rebounds Per Game": 7.9, "Assists Per Game": 7.8, "Steals Per Game": 1.1, "Blocks Per Game": 0.6 },
+        "2022": { "Team": "Lakers", "Games Played": 56, "Points Per Game": 30.3, "Rebounds Per Game": 8.2, "Assists Per Game": 6.2, "Steals Per Game": 1.3, "Blocks Per Game": 0.9 }
+    },
+    "Stephen Curry": {
+        "2021": { "Team": "Warriors", "Games Played": 63, "Points Per Game": 32.0, "Rebounds Per Game": 5.5, "Assists Per Game": 5.8, "Steals Per Game": 1.2, "Blocks Per Game": 0.1 },
+        "2022": { "Team": "Warriors", "Games Played": 64, "Points Per Game": 25.5, "Rebounds Per Game": 5.2, "Assists Per Game": 6.3, "Steals Per Game": 1.3, "Blocks Per Game": 0.4 }
+    }
+}

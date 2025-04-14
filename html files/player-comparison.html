@@ -103,32 +103,29 @@
     </div>
 
     <script>
-        const playerStats = {}; // Object to store stats
-        const years = ["2021", "2022", "2023"]; // Predefined years
+        let playerData = {};
 
-        // Fetch the list of players from the backend
-        async function fetchPlayers() {
+        // Load player data from JSON file
+        async function loadPlayerData() {
             try {
-                const response = await fetch('/players'); // Fetch from the backend
-                const players = await response.json(); // Parse the JSON response
-                return players;
+                const response = await fetch('player-data.json');
+                playerData = await response.json();
+                populatePlayers();
             } catch (error) {
-                console.error('Error fetching players:', error);
-                alert('Failed to load players. Please try again later.');
-                return [];
+                console.error('Error loading player data:', error);
             }
         }
 
+        // Hardcoded player data
+        const years = ["2021", "2022"]; // Predefined years
+
         // Populate player dropdowns dynamically
-        async function populatePlayers() {
+        function populatePlayers() {
             const player1Select = document.getElementById('player1-select');
             const player2Select = document.getElementById('player2-select');
 
-            // Fetch players from the backend
-            const players = await fetchPlayers();
-
             // Populate the dropdowns
-            players.forEach(player => {
+            Object.keys(playerData).forEach(player => {
                 const option1 = document.createElement('option');
                 option1.value = player;
                 option1.textContent = player;
@@ -148,8 +145,8 @@
             // Clear existing options
             yearSelect.innerHTML = '<option value="">--Choose a Year--</option>';
 
-            if (playerSelect) {
-                years.forEach(year => {
+            if (playerSelect && playerData[playerSelect]) {
+                Object.keys(playerData[playerSelect]).forEach(year => {
                     const option = document.createElement('option');
                     option.value = year;
                     option.textContent = year;
@@ -158,25 +155,13 @@
             }
         }
 
-        // Fetch and parse Excel file for the selected player
-        async function fetchPlayerStats(player, year) {
-            const filePath = `Player Data/${player}.xlsx`; // Path to the player's Excel file
-            const response = await fetch(filePath);
-            const arrayBuffer = await response.arrayBuffer();
-            const workbook = XLSX.read(arrayBuffer, { type: 'array' });
-            const sheetName = workbook.SheetNames[0]; // Assuming the first sheet contains the data
-            const sheet = workbook.Sheets[sheetName];
-            const jsonData = XLSX.utils.sheet_to_json(sheet);
-
-            // Find stats for the selected year
-            const yearStats = jsonData.find(row => row.Year == year);
-
-            if (!yearStats) {
+        // Fetch player stats from local data
+        function fetchPlayerStats(player, year) {
+            if (playerData[player] && playerData[player][year]) {
+                return playerData[player][year];
+            } else {
                 throw new Error(`No stats found for ${player} in ${year}`);
             }
-
-            // Return the stats for the selected year
-            return yearStats;
         }
 
         async function displayStats() {
@@ -192,7 +177,7 @@
 
             try {
                 if (player1 && year1) {
-                    const stats1 = await fetchPlayerStats(player1, year1);
+                    const stats1 = fetchPlayerStats(player1, year1);
                     statsContent1.innerHTML = `
                         <strong>${player1} (${year1})</strong><br>
                         Team: ${stats1.Team}<br>
@@ -207,7 +192,7 @@
                 }
 
                 if (player2 && year2) {
-                    const stats2 = await fetchPlayerStats(player2, year2);
+                    const stats2 = fetchPlayerStats(player2, year2);
                     statsContent2.innerHTML = `
                         <strong>${player2} (${year2})</strong><br>
                         Team: ${stats2.Team}<br>
@@ -226,9 +211,8 @@
             }
         }
 
-        // Initialize dropdowns on page load
-        //testing
-        populatePlayers();
+        // Call loadPlayerData on page load
+        loadPlayerData();
     </script>
 </body>
 </html>
