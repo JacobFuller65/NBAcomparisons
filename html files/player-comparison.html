@@ -177,8 +177,10 @@
             const statsContent2 = document.getElementById('stats-content2');
 
             try {
+                let stats1, stats2;
+
                 if (player1 && year1) {
-                    const stats1 = fetchPlayerStats(player1, year1);
+                    stats1 = fetchPlayerStats(player1, year1);
                     statsContent1.innerHTML = `
                         <strong>${player1} (${year1})</strong><br>
                         Team: ${stats1.Team}<br>
@@ -193,7 +195,7 @@
                 }
 
                 if (player2 && year2) {
-                    const stats2 = fetchPlayerStats(player2, year2);
+                    stats2 = fetchPlayerStats(player2, year2);
                     statsContent2.innerHTML = `
                         <strong>${player2} (${year2})</strong><br>
                         Team: ${stats2.Team}<br>
@@ -205,6 +207,70 @@
                         Blocks Per Game: ${stats2["Blocks Per Game"]}
                     `;
                     statsDisplay2.style.display = "block";
+                }
+
+                // Render the chart if both players and years are selected
+                if (stats1 && stats2) {
+                    const ctx = document.getElementById('comparisonChart').getContext('2d');
+
+                    // Destroy the previous chart instance if it exists
+                    if (window.comparisonChart) {
+                        window.comparisonChart.destroy();
+                    }
+
+                    // Create a new chart
+                    window.comparisonChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Games Played', 'Points Per Game', 'Rebounds Per Game', 'Assists Per Game', 'Steals Per Game', 'Blocks Per Game'],
+                            datasets: [
+                                {
+                                    label: `${player1} (${year1})`,
+                                    data: [
+                                        stats1["Games Played"],
+                                        stats1["Points Per Game"],
+                                        stats1["Rebounds Per Game"],
+                                        stats1["Assists Per Game"],
+                                        stats1["Steals Per Game"],
+                                        stats1["Blocks Per Game"]
+                                    ],
+                                    backgroundColor: 'rgba(54, 162, 235, 0.6)', // Blue
+                                    borderColor: 'rgba(54, 162, 235, 1)',
+                                    borderWidth: 1
+                                },
+                                {
+                                    label: `${player2} (${year2})`,
+                                    data: [
+                                        stats2["Games Played"],
+                                        stats2["Points Per Game"],
+                                        stats2["Rebounds Per Game"],
+                                        stats2["Assists Per Game"],
+                                        stats2["Steals Per Game"],
+                                        stats2["Blocks Per Game"]
+                                    ],
+                                    backgroundColor: 'rgba(255, 99, 132, 0.6)', // Red
+                                    borderColor: 'rgba(255, 99, 132, 1)',
+                                    borderWidth: 1
+                                }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    position: 'top'
+                                },
+                                tooltip: {
+                                    enabled: true
+                                }
+                            },
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
                 }
             } catch (error) {
                 console.error(error);
