@@ -8,7 +8,8 @@
 </head>
 <body>
     <h1>Convert Excel to JSON</h1>
-    <input type="file" id="uploadExcel" />
+    <label for="uploadExcel">Upload Excel File:</label>
+    <input type="file" id="uploadExcel" title="Choose an Excel file to upload" />
     <pre id="output"></pre>
 
     <script>
@@ -86,6 +87,10 @@
                         PTS: row["PTS"] || "",
                         AST: row["AST"] || "",
                         TRB: row["TRB"] || "",
+                        FG_Percentage: row["FG%"] || "", // Add FG%
+                        ThreeP_Percentage: row["3P%"] || "", // Add 3P%
+                        FT_Percentage: row["FT%"] || "", // Add FT%
+                        eFG_Percentage: row["eFG%"] || "", // Add eFG%
                         Awards: row["Awards"] || ""
                     };
 

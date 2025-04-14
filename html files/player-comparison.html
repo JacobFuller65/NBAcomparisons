@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Player Comparison Tool</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script> <!-- Include Data Labels Plugin -->
     <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script> <!-- Include SheetJS -->
     <style>
         body {
@@ -108,7 +109,16 @@
         </div>
 
         <div class="chart-container">
+            <canvas id="player1Chart"></canvas>
+            <canvas id="player2Chart"></canvas>
+        </div>
+
+        <div class="chart-container">
             <canvas id="comparisonChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="percentageComparisonChart"></canvas>
         </div>
     </div>
 
@@ -237,7 +247,7 @@
                     statsDisplay2.style.display = "block";
                 }
 
-                // Render the chart if both players and years are selected
+                // Render the main comparison chart
                 if (stats1 && stats2) {
                     const ctx = document.getElementById('comparisonChart').getContext('2d');
 
@@ -246,7 +256,7 @@
                         window.comparisonChart.destroy();
                     }
 
-                    // Create a new chart
+                    // Create a new chart with dual axes
                     window.comparisonChart = new Chart(ctx, {
                         type: 'bar',
                         data: {
@@ -262,7 +272,8 @@
                                     ],
                                     backgroundColor: 'rgba(54, 162, 235, 0.6)', // Blue
                                     borderColor: 'rgba(54, 162, 235, 1)',
-                                    borderWidth: 1
+                                    borderWidth: 1,
+                                    yAxisID: 'y1' // Assign to the first y-axis
                                 },
                                 {
                                     label: `${player2} (${year2})`,
@@ -271,6 +282,90 @@
                                         stats2.PTS || 0,
                                         stats2.TRB || 0,
                                         stats2.AST || 0
+                                    ],
+                                    backgroundColor: 'rgba(255, 99, 132, 0.6)', // Red
+                                    borderColor: 'rgba(255, 99, 132, 1)',
+                                    borderWidth: 1,
+                                    yAxisID: 'y2' // Assign to the second y-axis
+                                }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    position: 'top'
+                                },
+                                tooltip: {
+                                    enabled: true
+                                },
+                                datalabels: {
+                                    anchor: 'end',
+                                    align: 'top',
+                                    formatter: (value) => value, // Display the value
+                                    font: {
+                                        weight: 'bold'
+                                    }
+                                }
+                            },
+                            scales: {
+                                y1: {
+                                    type: 'linear',
+                                    position: 'left',
+                                    beginAtZero: true,
+                                    title: {
+                                        display: true,
+                                        text: `${player1} Stats`
+                                    }
+                                },
+                                y2: {
+                                    type: 'linear',
+                                    position: 'right',
+                                    beginAtZero: true,
+                                    title: {
+                                        display: true,
+                                        text: `${player2} Stats`
+                                    },
+                                    grid: {
+                                        drawOnChartArea: false // Prevent grid lines from overlapping
+                                    }
+                                }
+                            }
+                        },
+                        plugins: [ChartDataLabels] // Enable the Data Labels plugin
+                    });
+
+                    // Render the percentage comparison chart
+                    const percentageCtx = document.getElementById('percentageComparisonChart').getContext('2d');
+
+                    // Destroy the previous percentage chart instance if it exists
+                    if (window.percentageComparisonChart instanceof Chart) {
+                        window.percentageComparisonChart.destroy();
+                    }
+
+                    // Create a new chart for percentage comparison
+                    window.percentageComparisonChart = new Chart(percentageCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Field Goal %', 'Free Throw %', '3-Point %'],
+                            datasets: [
+                                {
+                                    label: `${player1} (${year1})`,
+                                    data: [
+                                        stats1.FG_Percentage || 0,
+                                        stats1.FT_Percentage || 0,
+                                        stats1.ThreeP_Percentage || 0
+                                    ],
+                                    backgroundColor: 'rgba(54, 162, 235, 0.6)', // Blue
+                                    borderColor: 'rgba(54, 162, 235, 1)',
+                                    borderWidth: 1
+                                },
+                                {
+                                    label: `${player2} (${year2})`,
+                                    data: [
+                                        stats2.FG_Percentage || 0,
+                                        stats2.FT_Percentage || 0,
+                                        stats2.ThreeP_Percentage || 0
                                     ],
                                     backgroundColor: 'rgba(255, 99, 132, 0.6)', // Red
                                     borderColor: 'rgba(255, 99, 132, 1)',
@@ -286,14 +381,27 @@
                                 },
                                 tooltip: {
                                     enabled: true
+                                },
+                                datalabels: {
+                                    anchor: 'end',
+                                    align: 'top',
+                                    formatter: (value) => value, // Display the value
+                                    font: {
+                                        weight: 'bold'
+                                    }
                                 }
                             },
                             scales: {
                                 y: {
-                                    beginAtZero: true
+                                    beginAtZero: true,
+                                    title: {
+                                        display: true,
+                                        text: 'Percentage (%)'
+                                    }
                                 }
                             }
-                        }
+                        },
+                        plugins: [ChartDataLabels] // Enable the Data Labels plugin
                     });
                 }
             } catch (error) {
