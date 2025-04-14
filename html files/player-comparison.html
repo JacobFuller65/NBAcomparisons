@@ -110,6 +110,7 @@
             try {
                 const response = await fetch('player-data.json');
                 playerData = await response.json();
+                console.log('Player Data Loaded:', playerData); // Debugging line
                 populatePlayers();
             } catch (error) {
                 console.error('Error loading player data:', error);
@@ -140,7 +141,7 @@
         // Populate year dropdowns based on selected player
         function loadYears(player) {
             const playerSelect = document.getElementById(`${player}-select`).value;
-            const yearSelect = document.getElementById(`${player}-year-select`);
+            const yearSelect = document.getElementById(`${player === 'player1' ? 'year1-select' : 'year2-select'}`);
 
             // Clear existing options
             yearSelect.innerHTML = '<option value="">--Choose a Year--</option>';
