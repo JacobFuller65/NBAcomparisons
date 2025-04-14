@@ -213,8 +213,8 @@
                 if (stats1 && stats2) {
                     const ctx = document.getElementById('comparisonChart').getContext('2d');
 
-                    // Destroy the previous chart instance if it exists
-                    if (window.comparisonChart) {
+                    console.log('Current chart instance:', window.comparisonChart);
+                    if (window.comparisonChart instanceof Chart) {
                         window.comparisonChart.destroy();
                     }
 
