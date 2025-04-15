@@ -1,11 +1,11 @@
 # NBA Comparison Tool
-# What makes a player an MVP?
+## What makes a player an MVP?
 
 
 
 
 
-###  I asked various colleagues, casual fans, coaches, and former players the question "What makes an NBA player an MVP from a statistical standpoint." 
+####  I asked various colleagues, casual fans, coaches, and former players the question "What makes an NBA player an MVP from a statistical standpoint." 
 The responses contained: 
 * "+/- , defensive net rating, team success, their team needs to be top 5-10, or they need to do something absolutely historic"
 
