@@ -1,4 +1,4 @@
-# NBAcomparisons
+# NBA Comparison Tool
 # What makes a player an MVP?
 
 
