@@ -20,6 +20,15 @@ Anyone can shoot 3/4 and look efficient, but effeciency when shooting at a volum
 
 Some key statistics I will be exploring (with pros and cons) :
 
+Points / Rebounds / Assists: 
+
+The standard big 3 stats, we all see them on a regular basis, and are the foundation of many additional stats. 
+
+Pros:
+
+Cons:
+
+
 PIE Rating- Contribution to a game, perentage that single player contributed to a game.
 22.4% would mean player produces 22.4%
 
