@@ -43,6 +43,29 @@ Per 100 possessions how many points your team scores while player is on the floo
 
 This can be skewed by having a really good team around said player 
 
+For example, Isaiah Joe had a 16.0 last year, because he was on the 2nd team lineup for OKC, playing against other backups
+
+## True shooting %: 
+
+Calculates how good you are at field goals, free throws, and 3 pointers, averages out all shots based on how many points they are worth. 
+
+## Effective Field Goal %: 
+
+Same concept as True Shooting %, but without free throws. 
+
+## Per 36: 
+
+Extrapolates stats as if they played 36 minutes per game
+
+## Offensive Rating: 
+
+How many points your team scores with player on the court per 100 possessions. 
+
+Depends on pace of play usually
+
+## Defensive Rating: 
+
+How many points the opposing team scores with player on the court per 100 possesions. 
 
 
 
