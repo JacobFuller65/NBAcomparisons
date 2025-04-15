@@ -33,3 +33,20 @@ Jokic had 32.5 highest of all time.
 
 Usage Rate: 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+References: 
+
+NBA Advanced Stats for DUMMIES -whatslaps on Youtube
