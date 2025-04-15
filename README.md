@@ -49,6 +49,40 @@ Doesnt' tell us about the rest of the offense player works with
 
 Doesn't measure shooting ability, doesn't take into consideration quality of shots
 
+Traditional metric for shooting
+
+Pros:
+
+Cons:
+
+Overall makes picture cloudy by blending 3pt and 2pt shots together, while not averaging free throws. 
+
+Lower % doesn't necessarily mean inefficiency
+
+Doesn't factor where players take their shots from , 33% from 3pt is the same as 50% from 2. 
+
+
+
+## Points per shot:
+
+Ex, player scores 20 points off of 14 "effective attempts"- Free throws attempted + 3pt Attempted + 2pt Attempted. They scored 1.43/ shot. 
+
+True Shooting %: 
+
+This means they would need to shoot 71% from 2 point to match this efficiency. 
+
+
+
+
+## Scoring Volume vs Efficiency: 
+
+Some player's efficiency will go down at a higher volume than others
+
+Tends to be a downward slope, the higher the volume, the lower the efficiency. 
+
+
+
+
 
 ## PIE Rating- Contribution to a game, perentage that single player contributed to a game.
 22.4% would mean player produces 22.4%
@@ -89,7 +123,13 @@ Cons:
 
 Calculates how good you are at field goals, free throws, and 3 pointers, averages out all shots based on how many points they are worth. 
 
+Attempts to convert all shot types into 2pt %
+
+True shot estimation tends to be extremely accurate to actual TS%
+
 Pros:
+
+True shooting % is the best way of quantifying scoring efficiency, because it shows points per scoring attempt, factoring 2s, 3s, and FTs.
 
 Cons:
 
@@ -97,6 +137,9 @@ Cons:
 ## Effective Field Goal %: 
 
 Same concept as True Shooting %, but without free throws. 
+eFG%: Takes into account points based on 
+"2pt % based on points" 
+
 
 Pros:
 
