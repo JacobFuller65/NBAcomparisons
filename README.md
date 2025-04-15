@@ -31,7 +31,17 @@ Jokic had 32.5 highest of all time.
 * 15-20- Role player
 * 10-15- Bench player
 
-Usage Rate: 
+## Usage Rate: 
+
+How many of possessions ended in said player's hands
+
+Percentage of possesions ending in a shot, turnover, or free throw. 
+
+## Net Rating: 
+
+Per 100 possessions how many points your team scores while player is on the floor, subtracted by the amount of points the other team scores while player is in the game. 
+
+This can be skewed by having a really good team around said player 
 
 
 
