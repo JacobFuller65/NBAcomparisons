@@ -15,7 +15,20 @@ Anyone can shoot 3/4 and look efficient, but effeciency when shooting at a volum
 * A former college player said, "Personally I say their impact while on the floor. Stats are difficult because they don't necessarily tell the teams/players play styles. The important stats to me are +/- , efficiency, total shot % are important."
 
 
+* Stats are measurements, 
 
+Think about 
+1. What are we measuring?
+
+2. How does it impact winning?
+
+* Stats require context
+1. How can teammates impact stats
+2. How do team/league tactics & strategies impact the measurements?
+
+* What question are we asking, and what might be missing?
+  1. "shooting skill" is not the same as field goal percentage
+  2. Player value is not equal to per game pts/reb/ast
 
 
 Some key statistics I will be exploring (with pros and cons) :
@@ -27,12 +40,20 @@ The standard big 3 stats, we all see them on a regular basis, and are the founda
 Pros:
 
 Cons:
+Doesn't tell us much about defense, (other than rebounds) 
+Doesn't address quality of scoring / where they come from 
+Assists don't tell us quality of passes
+Doesnt' tell us about the rest of the offense player works with
+
+## Field Goal %: 
+
+Doesn't measure shooting ability, doesn't take into consideration quality of shots
 
 
-PIE Rating- Contribution to a game, perentage that single player contributed to a game.
+## PIE Rating- Contribution to a game, perentage that single player contributed to a game.
 22.4% would mean player produces 22.4%
 
-PER Rating- Player efficiency rating, measures against players on their own team
+## PER Rating- Player efficiency rating, measures against players on their own team
 League average is 15.0
 Jokic had 32.5 highest of all time. 
 * 30-35 Runaway MVP 
