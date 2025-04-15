@@ -18,7 +18,7 @@ Anyone can shoot 3/4 and look efficient, but effeciency when shooting at a volum
 
 
 
-Some key statistics I will be exploring:
+Some key statistics I will be exploring (with pros and cons) :
 
 PIE Rating- Contribution to a game, perentage that single player contributed to a game.
 22.4% would mean player produces 22.4%
@@ -118,3 +118,5 @@ Cons:
 References: 
 
 NBA Advanced Stats for DUMMIES -whatslaps on Youtube
+NBA Stats 101 Series- Thinking Basketball on Youtube
+
