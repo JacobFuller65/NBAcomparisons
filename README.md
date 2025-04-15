@@ -14,3 +14,22 @@ Anyone can shoot 3/4 and look efficient, but effeciency when shooting at a volum
 
 * A former college player said, "Personally I say their impact while on the floor. Stats are difficult because they don't necessarily tell the teams/players play styles. The important stats to me are +/- , efficiency, total shot % are important."
 
+
+
+
+
+Some key statistics I will be exploring:
+
+PIE Rating- Contribution to a game, perentage that single player contributed to a game.
+22.4% would mean player produces 22.4%
+
+PER Rating- Player efficiency rating, measures against players on their own team
+League average is 15.0
+Jokic had 32.5 highest of all time. 
+* 30-35 Runaway MVP 
+* 20-25 - All star
+* 15-20- Role player
+* 10-15- Bench player
+
+Usage Rate: 
+
