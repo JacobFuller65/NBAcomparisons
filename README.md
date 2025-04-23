@@ -97,13 +97,39 @@ Jokic had 32.5 highest of all time.
 
 ## Usage Rate: 
 
+Usage rate is a stat that hels show how much a team leans on a player to create offense. 
+
 How many of possessions ended in said player's hands
 
 Percentage of possesions ending in a shot, turnover, or free throw. 
 
+USG%=100× 
+Minutes×(TeamFGA+0.44×TeamFTA+TeamTOV)
+(FGA+0.44×FTA+TOV)×(TeamMinutes)
+
+* It estimates the percentage of team plays that ended with that player shooting, getting fouled (and taking free throws), or turning it over while they were on the court.
+
+* So if a guy has a 30% usage rate, roughly 30% of his team’s offensive possessions while he's on the floor end with him making a "usage action" (shot, FT, TO).
+​
+
 Pros:
 
+* Great for understanding a player’s role—stars usually have high usage rates.
+
+Contextualizes Volume
+
+* Helps explain why some players have high raw stats—they're just getting more touches.
+
+Identifying Playmakers
+
+* Useful to separate role players from primary ball-handlers/scorers.
+
+Highlights System Fit
+
+* Tells you how a player might function in a different system—low-usage scorers might thrive in higher-usage roles, and vice versa.
+
 Cons:
+
 
 
 ## Net Rating: 
