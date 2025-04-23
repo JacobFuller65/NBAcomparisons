@@ -15,9 +15,10 @@ Anyone can shoot 3/4 and look efficient, but effeciency when shooting at a volum
 * A former college player said, "Personally I say their impact while on the floor. Stats are difficult because they don't necessarily tell the teams/players play styles. The important stats to me are +/- , efficiency, total shot % are important."
 
 
-* Stats are measurements, 
+  # Stats are Measurements
+  
+* With measurements, we need to think about the following factors:
 
-Think about 
 1. What are we measuring?
 
 2. How does it impact winning?
@@ -33,17 +34,18 @@ Think about
 
 Some key statistics I will be exploring (with pros and cons) :
 
-Points / Rebounds / Assists: 
+# Points / Rebounds / Assists (PRA): 
 
-The standard big 3 stats, we all see them on a regular basis, and are the foundation of many additional stats. 
+* The standard big 3 stats, we all see them on a regular basis, and are the foundation of many additional stats. 
 
 Pros:
-
+* Easy to read for a quick, surface level recap of a players performance on a given night / season
+  
 Cons:
-Doesn't tell us much about defense, (other than rebounds) 
-Doesn't address quality of scoring / where they come from 
-Assists don't tell us quality of passes
-Doesnt' tell us about the rest of the offense player works with
+* Doesn't tell us much about defense, (other than rebounds) 
+* Doesn't address quality of scoring / where they come from 
+* Assists don't tell us quality of passes
+* Doesnt' tell us about the rest of the offense player works with
 
 ## Field Goal %: 
 
