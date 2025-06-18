@@ -2,19 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NBA Nickname Guessing Game</title>
-  <style>
-    body { font-family: Arial, sans-serif; background: #f8fafc; text-align: center; padding: 2rem; }
-    .game-container { background: #fff; border-radius: 12px; box-shadow: 0 4px 16px #0001; display: inline-block; padding: 2rem; }
-    #timer-bar-container { width: 100%; background: #e5e7eb; border-radius: 8px; height: 24px; margin-bottom: 1rem; overflow: hidden; }
-    #timer-bar { height: 100%; width: 100%; background: #6366f1; transition: width 1s linear; }
-    #timer-label { font-size: 1.2rem; margin-bottom: 1rem; }
-    #answer { font-size: 1.1rem; padding: 0.5rem; width: 60%; }
-    #submit-btn, #pause-btn, #play-again-btn { padding: 0.5rem 1.5rem; font-size: 1.1rem; border-radius: 6px; border: none; background: #6366f1; color: #fff; cursor: pointer; margin: 0.5rem; }
-    #submit-btn:disabled, #answer:disabled, #pause-btn:disabled, #play-again-btn:disabled { background: #ccc; cursor: not-allowed; }
-    #result { margin-top: 1rem; font-weight: bold; }
-    #nickname { font-size: 1.5rem; margin-bottom: 1rem; color: #22223b; }
-  </style>
+  <title>NBA Fast Break Game</title>
+  <link rel="stylesheet" href="../Nickname Game/nickNameGame.css">
 </head>
 <body>
   <div class="game-container">
@@ -22,141 +11,16 @@
     <div id="timer-bar-container">
       <div id="timer-bar"></div>
     </div>
-    <div id="nickname">Nickname: <span id="nickname-text"></span></div>
-    <input type="text" id="answer" placeholder="Guess the player...">
+    <div id="question"></div>
+    <ul id="answers-list"></ul>
+    <input type="text" id="answer" placeholder="Enter a player's name...">
     <button id="submit-btn">Submit</button>
     <button id="pause-btn">Pause</button>
     <button id="play-again-btn" style="display:none;">Play Again</button>
     <div id="result"></div>
   </div>
-  <script>
-    // Example nickname/player pairs
-    const questions = [
-      { nickname: "The Black Mamba", answer: "kobe bryant" },
-      { nickname: "King James", answer: "lebron james" },
-      { nickname: "The Greek Freak", answer: "giannis antetokounmpo" },
-      { nickname: "Chef Curry", answer: "stephen curry" },
-      { nickname: "The Beard", answer: "james harden" }
-    ];
-
-    let totalTime = 90; // seconds
-    let timeLeft, timer, paused, current, usedQuestions;
-
-    const timerText = document.getElementById('timer-text');
-    const timerBar = document.getElementById('timer-bar');
-    const answerEl = document.getElementById('answer');
-    const submitBtn = document.getElementById('submit-btn');
-    const pauseBtn = document.getElementById('pause-btn');
-    const playAgainBtn = document.getElementById('play-again-btn');
-    const resultEl = document.getElementById('result');
-    const nicknameText = document.getElementById('nickname-text');
-
-    function capitalize(str) {
-      return str.split(' ').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
-    }
-
-    function pickQuestion() {
-      if (usedQuestions.length === questions.length) usedQuestions = [];
-      let available = questions.filter(q => !usedQuestions.includes(q.nickname));
-      let q = available[Math.floor(Math.random() * available.length)];
-      usedQuestions.push(q.nickname);
-      return q;
-    }
-
-    function updateTimerDisplay() {
-      let min = String(Math.floor(timeLeft / 60)).padStart(2, '0');
-      let sec = String(timeLeft % 60).padStart(2, '0');
-      timerText.textContent = `${min}:${sec}`;
-      timerBar.style.width = `${(timeLeft / totalTime) * 100}%`;
-    }
-
-    function startTimer() {
-      paused = false;
-      pauseBtn.textContent = "Pause";
-      timer = setInterval(() => {
-        if (!paused) {
-          timeLeft--;
-          updateTimerDisplay();
-          if (timeLeft <= 0) {
-            clearInterval(timer);
-            timerText.textContent = "00:00";
-            timerBar.style.width = "0%";
-            answerEl.disabled = true;
-            submitBtn.disabled = true;
-            pauseBtn.disabled = true;
-            playAgainBtn.style.display = "";
-            resultEl.textContent = `Time's up! The correct answer was: ${capitalize(current.answer)}`;
-          }
-        }
-      }, 1000);
-    }
-
-    function pauseTimer() {
-      paused = true;
-      pauseBtn.textContent = "Resume";
-    }
-
-    function resumeTimer() {
-      paused = false;
-      pauseBtn.textContent = "Pause";
-    }
-
-    function resetGame(newRound = false) {
-      if (!newRound) usedQuestions = [];
-      current = pickQuestion();
-      nicknameText.textContent = current.nickname;
-      answerEl.value = "";
-      resultEl.textContent = "";
-      answerEl.disabled = false;
-      submitBtn.disabled = false;
-      pauseBtn.disabled = false;
-      playAgainBtn.style.display = "none";
-      timeLeft = totalTime;
-      updateTimerDisplay();
-      if (timer) clearInterval(timer);
-      paused = false;
-      pauseBtn.textContent = "Pause";
-      startTimer();
-      answerEl.focus();
-    }
-
-    // Initial setup
-    usedQuestions = [];
-    resetGame();
-
-    submitBtn.onclick = function() {
-      const guess = answerEl.value.trim().toLowerCase();
-      if (guess === current.answer) {
-        resultEl.textContent = "Correct! Starting next round...";
-        clearInterval(timer);
-        answerEl.disabled = true;
-        submitBtn.disabled = true;
-        pauseBtn.disabled = true;
-        setTimeout(() => resetGame(true), 1500);
-      } else {
-        resultEl.textContent = "Incorrect, try again!";
-        answerEl.value = "";
-        answerEl.focus();
-      }
-    };
-
-    answerEl.addEventListener("keyup", function(event) {
-      if (event.key === "Enter" && !submitBtn.disabled) {
-        submitBtn.click();
-      }
-    });
-
-    pauseBtn.onclick = function() {
-      if (paused) {
-        resumeTimer();
-      } else {
-        pauseTimer();
-      }
-    };
-
-    playAgainBtn.onclick = function() {
-      resetGame();
-    };
+  <script src="../Nickname Game/nickNameGame.js"></script>
+    
   </script>
 </body>
 </html>

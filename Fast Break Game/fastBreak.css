@@ -1,0 +1,91 @@
+ body {
+     font-family: Arial, sans-serif;
+     background: #f8fafc;
+     text-align: center;
+     padding: 2rem;
+ }
+
+ .game-container {
+     background: #fff;
+     border-radius: 12px;
+     box-shadow: 0 4px 16px #0001;
+     display: inline-block;
+     padding: 2rem;
+ }
+
+ #timer-bar-container {
+     width: 100%;
+     background: #e5e7eb;
+     border-radius: 8px;
+     height: 24px;
+     margin-bottom: 1rem;
+     overflow: hidden;
+ }
+
+ #timer-bar {
+     height: 100%;
+     width: 100%;
+     background: #6366f1;
+     transition: width 1s linear;
+ }
+
+ #timer-label {
+     font-size: 1.2rem;
+     margin-bottom: 1rem;
+ }
+
+ #answer {
+     font-size: 1.1rem;
+     padding: 0.5rem;
+     width: 60%;
+ }
+
+ #submit-btn,
+ #pause-btn,
+ #play-again-btn {
+     padding: 0.5rem 1.5rem;
+     font-size: 1.1rem;
+     border-radius: 6px;
+     border: none;
+     background: #6366f1;
+     color: #fff;
+     cursor: pointer;
+     margin: 0.5rem;
+ }
+
+ #submit-btn:disabled,
+ #answer:disabled,
+ #pause-btn:disabled,
+ #play-again-btn:disabled {
+     background: #ccc;
+     cursor: not-allowed;
+ }
+
+ #result {
+     margin-top: 1rem;
+     font-weight: bold;
+ }
+
+ #answers-list {
+     list-style: none;
+     padding: 0;
+     margin: 1rem 0;
+ }
+
+ #answers-list li {
+     background: #e0e7ff;
+     margin: 0.5rem 0;
+     padding: 0.5rem;
+     border-radius: 6px;
+     font-size: 1.1rem;
+ }
+
+ #answers-list .filled {
+     background: #bbf7d0;
+     font-weight: bold;
+ }
+
+ #question {
+     font-size: 1.3rem;
+     margin-bottom: 1rem;
+ }

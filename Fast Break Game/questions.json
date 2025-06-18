@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Name the top 5 scorers in the NBA for 2023-24",
+    "answers": [
+      "luka doncic",
+      "shai gilgeous-alexander",
+      "giannis antetokounmpo",
+      "kevin durant",
+      "jayson tatum"
+    ]
+  },
+  {
+    "question": "Name the top 5 NBA players in career assists",
+    "answers": [
+      "john stockton",
+      "jason kidd",
+      "chris paul",
+      "lebron james",
+      "steve nash"
+    ]
+  },
+  {
+    "question": "Name the top 5 NBA players in career rebounds",
+    "answers": [
+      "wilt chamberlain",
+      "bill russell",
+      "kareem abdul-jabbar",
+      "elvin hayes",
+      "moses malone"
+    ]
+  }
+]

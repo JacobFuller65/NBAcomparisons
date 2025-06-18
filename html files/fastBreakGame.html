@@ -2,22 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NBA Top 5 Scorers Game</title>
-  <style>
-    body { font-family: Arial, sans-serif; background: #f8fafc; text-align: center; padding: 2rem; }
-    .game-container { background: #fff; border-radius: 12px; box-shadow: 0 4px 16px #0001; display: inline-block; padding: 2rem; }
-    #timer-bar-container { width: 100%; background: #e5e7eb; border-radius: 8px; height: 24px; margin-bottom: 1rem; overflow: hidden; }
-    #timer-bar { height: 100%; width: 100%; background: #6366f1; transition: width 1s linear; }
-    #timer-label { font-size: 1.2rem; margin-bottom: 1rem; }
-    #answer { font-size: 1.1rem; padding: 0.5rem; width: 60%; }
-    #submit-btn, #pause-btn, #play-again-btn { padding: 0.5rem 1.5rem; font-size: 1.1rem; border-radius: 6px; border: none; background: #6366f1; color: #fff; cursor: pointer; margin: 0.5rem; }
-    #submit-btn:disabled, #answer:disabled, #pause-btn:disabled, #play-again-btn:disabled { background: #ccc; cursor: not-allowed; }
-    #result { margin-top: 1rem; font-weight: bold; }
-    #answers-list { list-style: none; padding: 0; margin: 1rem 0; }
-    #answers-list li { background: #e0e7ff; margin: 0.5rem 0; padding: 0.5rem; border-radius: 6px; font-size: 1.1rem; }
-    #answers-list .filled { background: #bbf7d0; font-weight: bold; }
-    #question { font-size: 1.3rem; margin-bottom: 1rem; }
-  </style>
+  <title>NBA Fast Break Game</title>
+  <link rel="stylesheet" href="../Fast Break Game/fastBreak.css">
 </head>
 <body>
   <div class="game-container">
@@ -25,7 +11,7 @@
     <div id="timer-bar-container">
       <div id="timer-bar"></div>
     </div>
-    <div id="question">Name the top 5 scorers in the NBA for 2023-24</div>
+    <div id="question"></div>
     <ul id="answers-list"></ul>
     <input type="text" id="answer" placeholder="Enter a player's name...">
     <button id="submit-btn">Submit</button>
@@ -33,202 +19,8 @@
     <button id="play-again-btn" style="display:none;">Play Again</button>
     <div id="result"></div>
   </div>
-  <script>
-    // 1. Define your questions and answers
-    const questions = [
-      {
-        question: "Name the top 5 scorers in the NBA for 2023-24",
-        answers: [
-          "luka doncic",
-          "shai gilgeous-alexander",
-          "giannis antetokounmpo",
-          "kevin durant",
-          "jayson tatum"
-        ]
-      },
-      {
-        question: "Name the top 5 NBA players in career assists",
-        answers: [
-          "john stockton",
-          "jason kidd",
-          "chris paul",
-          "lebron james",
-          "steve nash"
-        ]
-      },
-      {
-        question: "Name the top 5 NBA players in career rebounds",
-        answers: [
-          "wilt chamberlain",
-          "bill russell",
-          "kareem abdul-jabbar",
-          "elvin hayes",
-          "moses malone"
-        ]
-      }
-      // Add more questions as needed
-    ];
-
-    let currentQuestion, correctAnswers, filled, usedGuesses;
-    let totalTime = 90;
-    let timeLeft, timer, paused;
-
-    const timerText = document.getElementById('timer-text');
-    const timerBar = document.getElementById('timer-bar');
-    const answerEl = document.getElementById('answer');
-    const submitBtn = document.getElementById('submit-btn');
-    const pauseBtn = document.getElementById('pause-btn');
-    const playAgainBtn = document.getElementById('play-again-btn');
-    const resultEl = document.getElementById('result');
-    const answersList = document.getElementById('answers-list');
-
-    function capitalize(str) {
-      return str.split(' ').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
-    }
-
-    function updateTimerDisplay() {
-      let min = String(Math.floor(timeLeft / 60)).padStart(2, '0');
-      let sec = String(timeLeft % 60).padStart(2, '0');
-      timerText.textContent = `${min}:${sec}`;
-      timerBar.style.width = `${(timeLeft / totalTime) * 100}%`;
-    }
-
-    function renderAnswers() {
-      answersList.innerHTML = "";
-      for (let i = 0; i < correctAnswers.length; i++) {
-        const li = document.createElement('li');
-        if (filled[i]) {
-          li.textContent = capitalize(filled[i]);
-          li.className = "filled";
-        } else {
-          li.textContent = `#${i + 1}`;
-        }
-        answersList.appendChild(li);
-      }
-    }
-
-    function startTimer() {
-      paused = false;
-      pauseBtn.textContent = "Pause";
-      timer = setInterval(() => {
-        if (!paused) {
-          timeLeft--;
-          updateTimerDisplay();
-          if (timeLeft <= 0) {
-            clearInterval(timer);
-            timerText.textContent = "00:00";
-            timerBar.style.width = "0%";
-            answerEl.disabled = true;
-            submitBtn.disabled = true;
-            pauseBtn.disabled = true;
-            playAgainBtn.style.display = "";
-            // Show missed answers
-            for (let i = 0; i < correctAnswers.length; i++) {
-              if (!filled[i]) filled[i] = capitalize(correctAnswers[i]);
-            }
-            renderAnswers();
-            resultEl.textContent = "Time's up! Here are the answers.";
-          }
-        }
-      }, 1000);
-    }
-
-    function pauseTimer() {
-      paused = true;
-      pauseBtn.textContent = "Resume";
-    }
-
-    function resumeTimer() {
-      paused = false;
-      pauseBtn.textContent = "Pause";
-    }
-
-    function resetGame() {
-      // 3. Update your resetGame() to call pickRandomQuestion()
-      pickRandomQuestion();
-      answerEl.value = "";
-      resultEl.textContent = "";
-      answerEl.disabled = false;
-      submitBtn.disabled = false;
-      pauseBtn.disabled = false;
-      playAgainBtn.style.display = "none";
-      timeLeft = totalTime;
-      updateTimerDisplay();
-      if (timer) clearInterval(timer);
-      paused = false;
-      pauseBtn.textContent = "Pause";
-      // 4. In your submit handler, use correctAnswers and filled as before
-      renderAnswers();
-      startTimer();
-      answerEl.focus();
-    }
-
-    // 2. Pick a random question at the start of each game/round
-    function pickRandomQuestion() {
-      currentQuestion = questions[Math.floor(Math.random() * questions.length)];
-      correctAnswers = currentQuestion.answers;
-      filled = Array(correctAnswers.length).fill("");
-      usedGuesses = [];
-      document.getElementById('question').textContent = currentQuestion.question;
-      renderAnswers();
-    }
-
-    // Initial setup
-    resetGame();
-
-    submitBtn.onclick = function() {
-      let guess = answerEl.value.trim().toLowerCase();
-      if (!guess) return;
-      if (usedGuesses.includes(guess)) {
-        resultEl.textContent = "Already guessed!";
-        answerEl.value = "";
-        answerEl.focus();
-        return;
-      }
-      let found = false;
-      for (let i = 0; i < correctAnswers.length; i++) {
-        if (guess === correctAnswers[i] && !filled[i]) {
-          filled[i] = correctAnswers[i];
-          found = true;
-        }
-      }
-      usedGuesses.push(guess);
-      renderAnswers();
-      if (found) {
-        resultEl.textContent = "Correct!";
-      } else {
-        resultEl.textContent = "Incorrect, try again!";
-      }
-      answerEl.value = "";
-      answerEl.focus();
-      // Check if all filled
-      if (filled.every(Boolean)) {
-        clearInterval(timer);
-        answerEl.disabled = true;
-        submitBtn.disabled = true;
-        pauseBtn.disabled = true;
-        playAgainBtn.style.display = "";
-        resultEl.textContent = "You got them all! Great job!";
-      }
-    };
-
-    answerEl.addEventListener("keyup", function(event) {
-      if (event.key === "Enter" && !submitBtn.disabled) {
-        submitBtn.click();
-      }
-    });
-
-    pauseBtn.onclick = function() {
-      if (paused) {
-        resumeTimer();
-      } else {
-        pauseTimer();
-      }
-    };
-
-    playAgainBtn.onclick = function() {
-      resetGame();
-    };
+  <script src="../Fast Break Game/fastBreak.js"></script>
+    
   </script>
 </body>
 </html>
