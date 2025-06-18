@@ -267,5 +267,45 @@ let playerData = {};
             }
         }
 
+        // Example: get unique player names from your data
+        const playerNames = [...new Set(Object.keys(playerData))];
+
+        const searchInput = document.getElementById('player-search');
+        const resultsList = document.getElementById('player-search-results');
+        const playerSelect = document.getElementById('player1-select'); // or whichever select you want to update
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            resultsList.innerHTML = '';
+            if (!query) return;
+
+            const matches = playerNames.filter(name => name.toLowerCase().includes(query));
+            matches.forEach(name => {
+                const li = document.createElement('li');
+                li.textContent = name;
+                li.addEventListener('click', function() {
+                    searchInput.value = name;
+                    resultsList.innerHTML = '';
+                    // Optionally, set the select dropdown to this player
+                    for (let i = 0; i < playerSelect.options.length; i++) {
+                        if (playerSelect.options[i].value === name) {
+                            playerSelect.selectedIndex = i;
+                            break;
+                        }
+                    }
+                    // Optionally, trigger any change event or update function
+                    playerSelect.dispatchEvent(new Event('change'));
+                });
+                resultsList.appendChild(li);
+            });
+        });
+
+        // Hide results when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!searchInput.contains(e.target) && !resultsList.contains(e.target)) {
+                resultsList.innerHTML = '';
+            }
+        });
+
         // Call loadPlayerData on page load
         loadPlayerData();
