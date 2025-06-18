@@ -84,7 +84,21 @@
       "eFG_Percentage": 0.573,
       "Awards": "MVP-3,CPOY-6,AS,NBA1"
     },
-    "2024-25": {
+    "2024-25 (Mavericks)":{
+      "Age":25,
+      "Team":"DAL",
+      "Pos":"PG",
+      "G":22,
+      "PTS":28.1,
+      "AST":7.8,
+      "TRB":8.3,
+      "FG_Percentage":0.464,
+      "ThreeP_Percentage":0.354,
+      "FT_Percentage":0.767,
+      "eFG_Percentage":0.544,
+      "Awards":""
+    },
+    "2024-25 (Lakers)": {
       "Age": 25,
       "Team": "LAL",
       "Pos": "PG",
@@ -98,6 +112,16 @@
       "eFG_Percentage": 0.498,
       "Awards": ""
     },
+    "2024-2025":{
+      "Age":25,
+      "Team":"2TM",
+      "Pos":"PG",
+      "G":50,
+      "PTS":28.2,
+      "AST":7.7
+
+    },
+
     "7 Yrs": {
       "Age": "",
       "Team": "",

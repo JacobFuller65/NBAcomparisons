@@ -256,37 +256,33 @@
                         window.comparisonChart.destroy();
                     }
 
-                    // Create a new chart with dual axes
+                    // Create a new chart with a single y-axis
                     window.comparisonChart = new Chart(ctx, {
                         type: 'bar',
                         data: {
-                            labels: ['Games Played', 'Points Per Game', 'Rebounds Per Game', 'Assists Per Game'],
+                            labels: ['Points Per Game', 'Rebounds Per Game', 'Assists Per Game'],
                             datasets: [
                                 {
                                     label: `${player1} (${year1})`,
                                     data: [
-                                        stats1.G || 0,
                                         stats1.PTS || 0,
                                         stats1.TRB || 0,
                                         stats1.AST || 0
                                     ],
                                     backgroundColor: 'rgba(54, 162, 235, 0.6)', // Blue
                                     borderColor: 'rgba(54, 162, 235, 1)',
-                                    borderWidth: 1,
-                                    yAxisID: 'y1' // Assign to the first y-axis
+                                    borderWidth: 1
                                 },
                                 {
                                     label: `${player2} (${year2})`,
                                     data: [
-                                        stats2.G || 0,
                                         stats2.PTS || 0,
                                         stats2.TRB || 0,
                                         stats2.AST || 0
                                     ],
                                     backgroundColor: 'rgba(255, 99, 132, 0.6)', // Red
                                     borderColor: 'rgba(255, 99, 132, 1)',
-                                    borderWidth: 1,
-                                    yAxisID: 'y2' // Assign to the second y-axis
+                                    borderWidth: 1
                                 }
                             ]
                         },
@@ -302,32 +298,18 @@
                                 datalabels: {
                                     anchor: 'end',
                                     align: 'top',
-                                    formatter: (value) => value, // Display the value
+                                    formatter: (value) => value.toFixed(1),
                                     font: {
                                         weight: 'bold'
                                     }
                                 }
                             },
                             scales: {
-                                y1: {
-                                    type: 'linear',
-                                    position: 'left',
+                                y: {
                                     beginAtZero: true,
                                     title: {
                                         display: true,
-                                        text: `${player1} Stats`
-                                    }
-                                },
-                                y2: {
-                                    type: 'linear',
-                                    position: 'right',
-                                    beginAtZero: true,
-                                    title: {
-                                        display: true,
-                                        text: `${player2} Stats`
-                                    },
-                                    grid: {
-                                        drawOnChartArea: false // Prevent grid lines from overlapping
+                                        text: 'Stats'
                                     }
                                 }
                             }
@@ -343,29 +325,31 @@
                         window.percentageComparisonChart.destroy();
                     }
 
-                    // Create a new chart for percentage comparison
+                    // Create a new chart for percentages
                     window.percentageComparisonChart = new Chart(percentageCtx, {
                         type: 'bar',
                         data: {
-                            labels: ['Field Goal %', 'Free Throw %', '3-Point %'],
+                            labels: ['Field Goal %', 'Three-Point %', 'Free Throw %', 'True Shooting %'],
                             datasets: [
                                 {
                                     label: `${player1} (${year1})`,
                                     data: [
-                                        stats1.FG_Percentage || 0,
-                                        stats1.FT_Percentage || 0,
-                                        stats1.ThreeP_Percentage || 0
+                                        stats1.FG_Percentage * 100 || 0,
+                                        stats1.ThreeP_Percentage * 100 || 0,
+                                        stats1.FT_Percentage * 100 || 0,
+                                        stats1.TS_Percentage * 100 || 0 // Add TS%
                                     ],
-                                    backgroundColor: 'rgba(54, 162, 235, 0.6)', // Blue
+                                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
                                     borderColor: 'rgba(54, 162, 235, 1)',
                                     borderWidth: 1
                                 },
                                 {
                                     label: `${player2} (${year2})`,
                                     data: [
-                                        stats2.FG_Percentage || 0,
-                                        stats2.FT_Percentage || 0,
-                                        stats2.ThreeP_Percentage || 0
+                                        stats2.FG_Percentage * 100 || 0,
+                                        stats2.ThreeP_Percentage * 100 || 0,
+                                        stats2.FT_Percentage * 100 || 0,
+                                        stats2.TS_Percentage * 100 || 0 // Add TS%
                                     ],
                                     backgroundColor: 'rgba(255, 99, 132, 0.6)', // Red
                                     borderColor: 'rgba(255, 99, 132, 1)',
@@ -385,7 +369,7 @@
                                 datalabels: {
                                     anchor: 'end',
                                     align: 'top',
-                                    formatter: (value) => value, // Display the value
+                                    formatter: (value) => `${value.toFixed(1)}%`,
                                     font: {
                                         weight: 'bold'
                                     }
