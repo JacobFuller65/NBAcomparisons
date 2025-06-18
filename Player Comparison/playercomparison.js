@@ -202,15 +202,15 @@ let playerData = {};
                     window.percentageComparisonChart = new Chart(percentageCtx, {
                         type: 'bar',
                         data: {
-                            labels: ['Field Goal %', 'Three-Point %', 'Free Throw %', 'True Shooting %'],
+                            labels: ['Field Goal %', 'Three-Point %', 'Free Throw %', 'Effective FG %'],
                             datasets: [
                                 {
                                     label: `${player1} (${year1})`,
                                     data: [
-                                        stats1.FG_Percentage * 100 || 0,
-                                        stats1.ThreeP_Percentage * 100 || 0,
-                                        stats1.FT_Percentage * 100 || 0,
-                                        stats1.TS_Percentage * 100 || 0 // Add TS%
+                                        (stats1["FG%"] || 0) * 100,
+                                        (stats1["3P%"] || 0) * 100,
+                                        (stats1["FT%"] || 0) * 100,
+                                        (stats1["eFG%"] || 0) * 100
                                     ],
                                     backgroundColor: 'rgba(54, 162, 235, 0.6)',
                                     borderColor: 'rgba(54, 162, 235, 1)',
@@ -219,10 +219,10 @@ let playerData = {};
                                 {
                                     label: `${player2} (${year2})`,
                                     data: [
-                                        stats2.FG_Percentage * 100 || 0,
-                                        stats2.ThreeP_Percentage * 100 || 0,
-                                        stats2.FT_Percentage * 100 || 0,
-                                        stats2.TS_Percentage * 100 || 0 // Add TS%
+                                        (stats2["FG%"] || 0) * 100,
+                                        (stats2["3P%"] || 0) * 100,
+                                        (stats2["FT%"] || 0) * 100,
+                                        (stats2["eFG%"] || 0) * 100
                                     ],
                                     backgroundColor: 'rgba(255, 99, 132, 0.6)', // Red
                                     borderColor: 'rgba(255, 99, 132, 1)',
@@ -242,19 +242,14 @@ let playerData = {};
                                 datalabels: {
                                     anchor: 'end',
                                     align: 'top',
-                                    formatter: (value) => `${value.toFixed(1)}%`,
-                                    font: {
-                                        weight: 'bold'
-                                    }
+                                    formatter: value => `${value.toFixed(1)}%`,
+                                    font: { weight: 'bold' }
                                 }
                             },
                             scales: {
                                 y: {
                                     beginAtZero: true,
-                                    title: {
-                                        display: true,
-                                        text: 'Percentage (%)'
-                                    }
+                                    title: { display: true, text: 'Percentage (%)' }
                                 }
                             }
                         },
@@ -345,3 +340,5 @@ let playerData = {};
                 allowClear: true
             });
         });
+
+        console.log(playerNames); // or your array of player names

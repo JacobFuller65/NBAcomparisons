@@ -46,94 +46,44 @@
                 console.log("Headers:", headers);
                 console.log("First 5 rows:", rows.slice(0,5));
 
+                // Example: let playerName = "Kobe Bryant";
+                const playerData = {}; // Final output object
+
                 const seasonPattern = /^\d{4}-\d{2}$/i;
-                seasonStats = [];
-                let careerStats = null;
+                const playerName = document.getElementById('player-name-input').value;
+                playerData[playerName] = {};
 
                 rows.forEach(row => {
                     if (!row || !row.length) return;
                     const season = row[0] ? String(row[0]).trim() : "";
                     let obj = {};
-                    headers.forEach((header, i) => obj[header] = row[i]);
+                    headers.forEach((header, i) => {
+                        if (header && row[i] !== undefined && row[i] !== null && row[i] !== "") {
+                            obj[header] = row[i];
+                        }
+                    });
+
                     if (seasonPattern.test(season)) {
-                        seasonStats.push(obj);
+                        playerData[playerName][season] = obj;
                     } else if (/career|totals|yrs/i.test(season.toLowerCase())) {
-                        obj.Season = "Career";
-                        careerStats = obj;
+                        playerData[playerName]["Career"] = obj;
                     }
                 });
 
-                // Add career stats at the end
-                if (careerStats) seasonStats.push(careerStats);
-
-                // Now seasonStats contains all seasons and career at the end
-                console.log(JSON.stringify(seasonStats, null, 2));
-                // Now you have both seasonStats and careerStats
-                console.log("Seasons:", seasonStats);
-                console.log("Career:", careerStats);
-
-                // Transform raw data into the desired format
-                const formattedData = seasonStats.reduce((acc, row, index) => {
-                    // Debug: Check each row being processed
-                    console.log(`Processing row ${index + 2}:`, row);
-
-                    const season = row["Season"];
-
-                    // Error handling: Check for missing required fields
-                    if (!season || typeof season !== "string") {
-                        console.warn(`Row ${index + 2} has an invalid or missing Season field. Skipping row.`);
-                        console.log('Problematic Row:', row); // Debug: Log the problematic row
-                        return acc; // Skip this row
-                    }
-
-                    const playerName = document.getElementById('player-name-input').value;
-                    if (!acc[playerName]) {
-                        acc[playerName] = {};
-                    }
-
-                    acc[playerName][season] = {
-                        Age: row["Age"] || "",
-                        Team: row["Team"] || "",
-                        Pos: row["Pos"] || "",
-                        G: row["G"] || "",
-                        PTS: row["PTS"] || "",
-                        AST: row["AST"] || "",
-                        TRB: row["TRB"] || "",
-                        FG_Percentage: row["FG%"] || "", // Add FG%
-                        ThreeP_Percentage: row["3P%"] || "", // Add 3P%
-                        FT_Percentage: row["FT%"] || "", // Add FT%
-                        eFG_Percentage: row["eFG%"] || "", // Add eFG%
-                        Awards: row["Awards"] || ""
-                    };
-
-                    return acc;
-                }, {});
-
-                // Debug: Check the formatted data
-                console.log('Formatted Data:', formattedData);
-
-                if (Object.keys(formattedData).length === 0) {
-                    console.error("The formatted data is empty. Check the Excel file for issues.");
-                    document.getElementById('output').textContent = "Error: The formatted data is empty. Check the Excel file for issues.";
-                    return;
-                }
-
-                // Add a marker to distinguish career stats, if you like:
-                careerStats.season = "Career";
-
-                // Add career stats as the last entry:
-                if (
-                    careerStats &&
-                    (!seasonStats.length || seasonStats[seasonStats.length - 1].Season !== "Career")
-                ) {
-                    seasonStats.push(careerStats);
-                }
-
-                // Now seasonStats contains all seasons, with career stats at the end
-                console.log(JSON.stringify(seasonStats, null, 2));
+                // To download as JSON:
+                const jsonStr = JSON.stringify(playerData, null, 2);
+                const blob = new Blob([jsonStr], { type: "application/json" });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = playerName.replace(/[^a-z0-9]/gi, '_') + '.json';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
 
                 // Display formatted JSON in the <pre> element
-                document.getElementById('output').textContent = JSON.stringify(formattedData, null, 2);
+                document.getElementById('output').textContent = JSON.stringify(playerData, null, 2);
             };
 
             reader.readAsArrayBuffer(file);
