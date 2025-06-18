@@ -15,8 +15,12 @@
 
     <label for="player-name-input">Player Name:</label>
     <input type="text" id="player-name-input" placeholder="Enter player name">
+    <button id="download-json-btn">Download JSON</button>
 
     <script>
+        const output = [];
+        let seasonStats = []; // your array for season stats
+        let careerStats = null;
         document.getElementById('convert-btn').addEventListener('click', handleFile);
 
         function handleFile() {
@@ -39,25 +43,31 @@
                 const headers = rawRows[0];
                 const rows = rawRows.slice(1);
 
-                const seasonPattern = /^\d{4}-\d{2}$/;
-                let seasonStats = [];
+                console.log("Headers:", headers);
+                console.log("First 5 rows:", rows.slice(0,5));
+
+                const seasonPattern = /^\d{4}-\d{2}$/i;
+                seasonStats = [];
                 let careerStats = null;
 
                 rows.forEach(row => {
-                    const season = row[0];
-                    if (season && seasonPattern.test(season)) {
-                        // Regular season row
-                        let obj = {};
-                        headers.forEach((header, i) => obj[header] = row[i]);
+                    if (!row || !row.length) return;
+                    const season = row[0] ? String(row[0]).trim() : "";
+                    let obj = {};
+                    headers.forEach((header, i) => obj[header] = row[i]);
+                    if (seasonPattern.test(season)) {
                         seasonStats.push(obj);
-                    } else if (season && /career|totals|yrs/i.test(season)) {
-                        // Career/summary row
-                        let obj = {};
-                        headers.forEach((header, i) => obj[header] = row[i]);
+                    } else if (/career|totals|yrs/i.test(season.toLowerCase())) {
+                        obj.Season = "Career";
                         careerStats = obj;
                     }
                 });
 
+                // Add career stats at the end
+                if (careerStats) seasonStats.push(careerStats);
+
+                // Now seasonStats contains all seasons and career at the end
+                console.log(JSON.stringify(seasonStats, null, 2));
                 // Now you have both seasonStats and careerStats
                 console.log("Seasons:", seasonStats);
                 console.log("Career:", careerStats);
@@ -112,7 +122,12 @@
                 careerStats.season = "Career";
 
                 // Add career stats as the last entry:
-                seasonStats.push(careerStats);
+                if (
+                    careerStats &&
+                    (!seasonStats.length || seasonStats[seasonStats.length - 1].Season !== "Career")
+                ) {
+                    seasonStats.push(careerStats);
+                }
 
                 // Now seasonStats contains all seasons, with career stats at the end
                 console.log(JSON.stringify(seasonStats, null, 2));
@@ -123,6 +138,26 @@
 
             reader.readAsArrayBuffer(file);
         }
+
+        document.getElementById('download-json-btn').addEventListener('click', function() {
+            // Optionally, get the player name for the file name
+            const playerName = document.getElementById('player-name-input')?.value.trim() || "player";
+            const fileName = playerName.replace(/[^a-z0-9]/gi, '_') + '.json';
+
+            // Use the exact output as in your console.log
+            const jsonStr = JSON.stringify(seasonStats, null, 2);
+            const blob = new Blob([jsonStr], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+
+            // Create a temporary link and trigger download
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
     </script>
 </body>
 </html>
