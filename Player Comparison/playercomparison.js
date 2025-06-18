@@ -84,9 +84,8 @@ let playerData = {};
                     stats1 = fetchPlayerStats(player1, year1);
 
                     // Set the player image
-                    player1Image.src = `html files/images/${player1.replace(/ /g, "_")}.jpg`;
+                    player1Image.src = `../images/${player1.replace(/ /g, "_")}.jpg`;
                     player1Image.alt = `${player1} Image`;
-
                     statsContent1.innerHTML = `
                         <strong>${player1} (${year1})</strong><br>
                         Age: ${stats1.Age || "N/A"}<br>
@@ -105,7 +104,7 @@ let playerData = {};
                     stats2 = fetchPlayerStats(player2, year2);
 
                     // Set the player image
-                    player2Image.src = `html files/images/${player2.replace(/ /g, "_")}.jpg`;
+                    player2Image.src = `../images/${player2.replace(/ /g, "_")}.jpg`;
                     player2Image.alt = `${player2} Image`;
                     statsContent2.innerHTML = `
                         <strong>${player2} (${year2})</strong><br>
