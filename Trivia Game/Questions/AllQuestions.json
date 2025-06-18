@@ -1,0 +1,212 @@
+[
+  {
+    "question": "Which NBA player has won the most MVP awards?",
+    "answer": "Kareem Abdul-Jabbar",
+    "choices": [
+      "Michael Jordan",
+      "LeBron James",
+      "Kareem Abdul-Jabbar",
+      "Bill Russell"
+    ],
+    "additional info": "Kareem Abdul-Jabbar won 6 MVP awards during his career, the most in NBA history.",
+    "difficulty": "Medium",
+    "era": "All Time",
+    "image": "Images/Kareem_Abdul-Jabbar.jpg"
+  },
+  {
+    "question": "Who was the first player to be drafted straight out of high school?",
+    "answer": "Moses Malone",
+    "choices": [
+      "Kevin Garnett",
+      "Kobe Bryant",
+      "Moses Malone",
+      "LeBron James"
+    ],
+    "additional info": "Moses Malone was drafted in the 1974 ABA Draft.",
+    "difficulty": "Hard",
+    "era": "All Time",
+    "image": "Images/Moses_Malone.jpg"
+  },
+  {
+    "question": "Which team holds the record for the most wins in a single regular season?",
+    "answer": "The Golden State Warriors",
+    "choices": [
+      "Chicago Bulls",
+      "Los Angeles Lakers",
+      "The Golden State Warriors",
+      "San Antonio Spurs"
+    ],
+    "additional info": "The Golden State Warriors achieved 73 wins in the 2015-2016 season.",
+    "difficulty": "Medium",
+    "era": "All Time",
+    "image": "./Images/73 Win Warriors.jpg"
+  },
+  {
+    "question": "Who is the all-time leading scorer in NBA history?",
+    "answer": "LeBron James",
+    "choices": [
+      "Kareem Abdul-Jabbar",
+      "Karl Malone",
+      "LeBron James",
+      "Michael Jordan"
+    ],
+    "additional info": "LeBron James has scored over 40,474 points in his career.",
+    "difficulty": "Medium",
+    "era": "All Time",
+    "image": "./Images/LeBron All Time Scoring Graphic.png"
+  },
+  {
+    "question": "Which player scored 100 points in a single NBA game?",
+    "answer": "Wilt Chamberlain",
+    "choices": [
+      "Wilt Chamberlain",
+      "Kobe Bryant",
+      "Michael Jordan",
+      "Elgin Baylor"
+    ],
+    "additional info": "Wilt Chamberlain scored 100 points on March 2, 1962.",
+    "difficulty": "Medium",
+    "era": "All Time",
+    "image": "Images/Wilt Chamberlain 100 Point Game.jpg"
+  },
+  {
+    "question": "What is the name of the NBA trophy awarded to the champions?",
+    "answer": "The Larry O’Brien Championship Trophy",
+    "choices": [
+      "The Larry O’Brien Championship Trophy",
+      "The Bill Russell Trophy",
+      "The Red Auerbach Trophy",
+      "The NBA Finals Trophy"
+    ],
+    "additional info": "The Larry O’Brien Championship Trophy is awarded to the NBA champions.",
+    "difficulty": "Medium",
+    "era": "All Time",
+    "image": "Images/Larry O'Brien Trophy.jpg"
+  },
+  {
+    "question": "Which NBA team has the most championships?",
+    "answer": "The Boston Celtics",
+    "choices": [
+      "The Boston Celtics",
+      "The Los Angeles Lakers",
+      "The Chicago Bulls",
+      "The Golden State Warriors"
+    ],
+    "additional info": "The Boston Celtics have won 18 championships.",
+    "difficulty": "Medium",
+    "era": "All Time",
+    "image": "Images/Boston Celtics 18 Banner.jpg"
+  },
+  {
+    "question": "Who was the youngest player to score 30,000 points in his career?",
+    "answer": "LeBron James",
+    "choices": [
+      "Kobe Bryant",
+      "Michael Jordan",
+      "LeBron James",
+      "Wilt Chamberlain"
+    ],
+    "additional info": "LeBron James became the youngest player to score 30,000 points in 2018.",
+    "difficulty": "Hard",
+    "era": "All Time",
+    "image": "Images/Young Lebron James.jpg"
+  },
+  {
+    "question": "Which player has the most career assists in NBA history?",
+    "answer": "John Stockton",
+    "choices": [
+      "Magic Johnson",
+      "Jason Kidd",
+      "John Stockton",
+      "Chris Paul"
+    ],
+    "additional info": "John Stockton holds the record with 15,806 career assists.",
+    "difficulty": "Medium",
+    "era": "All Time",
+    "image": "Images/John Stockton.jpg"
+  },
+  {
+    "question": "Who is the only active guard to average a triple-double for an entire season, and how many times has he done it?",
+    "answer": "Russell Westbrook",
+    "choices": [
+      "Oscar Robertson",
+      "Russell Westbrook",
+      "Magic Johnson",
+      "LeBron James"
+    ],
+    "additional info": "Russell Westbrook averaged a triple-double four times in his career.",
+    "difficulty": "Medium",
+    "era": "All Time",
+    "image": "Images/Russell Westbrook.jpg"
+  },
+  {
+    "question": "Who was the first non-American player to be named NBA MVP?",
+    "answer": "Hakeem Olajuwon",
+    "choices": [
+      "Dirk Nowitzki",
+      "Hakeem Olajuwon",
+      "Steve Nash",
+      "Giannis Antetokounmpo"
+    ],
+    "additional info": "Hakeem Olajuwon, from Nigeria, won the MVP award in 1994.",
+    "difficulty": "Hard",
+    "era": "All Time",
+    "image": "Images/Hakeem Olajuwon.jpg"
+  },
+  {
+    "question": "Which player holds the record for most points scored in a single playoff game?",
+    "answer": "Michael Jordan",
+    "choices": [
+      "Michael Jordan",
+      "Elgin Baylor",
+      "LeBron James",
+      "Wilt Chamberlain"
+    ],
+    "additional info": "Michael Jordan scored 63 points against the Boston Celtics on April 20, 1986.",
+    "difficulty": "Medium",
+    "era": "All Time",
+    "image": "Images/Michael Jordan 63 points.jpg"
+  },
+  {
+    "question": "What year was the NBA founded?",
+    "answer": "1946",
+    "choices": [
+      "1946",
+      "1950",
+      "1939",
+      "1949"
+    ],
+    "additional info": "The NBA was founded on June 6, 1946, as the Basketball Association of America (BAA).",
+    "difficulty": "Hard",
+    "era": "All Time",
+    "image": "./Images/NBA Founding.jpg"
+  },
+  {
+    "question": "Who was the first player in NBA history to be unanimously voted MVP?",
+    "answer": "Stephen Curry",
+    "choices": [
+      "Michael Jordan",
+      "LeBron James",
+      "Stephen Curry",
+      "Shaquille O'Neal"
+    ],
+    "additional info": "Stephen Curry was unanimously voted MVP in the 2015-2016 season.",
+    "difficulty": "Medium",
+    "era": "All Time",
+    "image": "Images/Steph Curry Unanimous MVP.jpg"
+  },
+  {
+    "question": "Which NBA coach has the most career wins?",
+    "answer": "Gregg Popovich",
+    "choices": [
+      "Phil Jackson",
+      "Pat Riley",
+      "Gregg Popovich",
+      "Don Nelson"
+    ],
+    "additional info": "Gregg Popovich has over 1,388 career wins as an NBA coach.",
+    "difficulty": "Hard",
+    "era": "All Time",
+    "image": "Images/Gregg Popovich Career Wins.jpg"
+  }
+]

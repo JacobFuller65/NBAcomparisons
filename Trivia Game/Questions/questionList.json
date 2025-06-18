@@ -1,0 +1,122 @@
+{
+  "NBA_Trivia_Questions_and_Answers": [
+    {
+      "question": "Which NBA player has won the most MVP awards?",
+      "answer": "Kareem Abdul-Jabbar, with 6 MVP awards."
+    },
+    {
+      "question": "Who was the first player to be drafted straight out of high school?",
+      "answer": "Moses Malone, in the 1974 ABA Draft."
+    },
+    {
+      "question": "Which team holds the record for the most wins in a single regular season?",
+      "answer": "The Golden State Warriors, with 73 wins in the 2015-2016 season."
+    },
+    {
+      "question": "Who is the all-time leading scorer in NBA history?",
+      "answer": "LeBron James, with 40,474 points."
+    },
+    {
+      "question": "Which player scored 100 points in a single NBA game?",
+      "answer": "Wilt Chamberlain, on March 2, 1962."
+    },
+    {
+      "question": "What is the name of the NBA trophy awarded to the champions?",
+      "answer": "The Larry O’Brien Championship Trophy."
+    },
+    {
+      "question": "Which NBA team has the most championships?",
+      "answer": "The Boston Celtics with 18 championships."
+    },
+    {
+      "question": "Who was the youngest player to score 30,000 points in his career?",
+      "answer": "LeBron James."
+    },
+    {
+      "question": "Which player has the most career assists in NBA history?",
+      "answer": "John Stockton, with over 15,000 assists."
+    },
+    {
+      "question": "Who is the only player to average a triple-double for an entire season, and how many times has he done it?",
+      "answer": "Oscar Robertson (once, 1961-1962) and Russell Westbrook (four times: 2016-2017, 2017-2018, 2018-2019, and 2020-2021)."
+    },
+    {
+      "question": "Who was the first non-American player to be named NBA MVP?",
+      "answer": "Hakeem Olajuwon in 1994."
+    },
+    {
+      "question": "Which player holds the record for most points scored in a single playoff game?",
+      "answer": "Michael Jordan, with 63 points against the Boston Celtics on April 20, 1986."
+    },
+    {
+      "question": "What year was the NBA founded?",
+      "answer": "1946."
+    },
+    {
+      "question": "Who was the first player in NBA history to be unanimously voted MVP?",
+      "answer": "Stephen Curry, in the 2015-2016 season."
+    },
+    {
+      "question": "Which NBA coach has the most career wins?",
+      "answer": "Gregg Popovich with 1,388 wins."
+    }
+  ],
+  "NBA_History": [
+    {
+      "question": "Who was the first player to score 70 points in an NBA game?",
+      "answer": "Elgin Baylor, scoring 71 points on November 15, 1960."
+    },
+    {
+      "question": "Which team won the first NBA championship?",
+      "answer": "The Philadelphia Warriors, in 1947."
+    },
+    {
+      "question": "Who was the first African American player to be drafted by an NBA team?",
+      "answer": "Chuck Cooper, drafted by the Boston Celtics in 1950."
+    },
+    {
+      "question": "Which team was the first to go undefeated in an entire playoff run?",
+      "answer": "The Golden State Warriors, with a 16-1 record in the 2017 playoffs."
+    },
+    {
+      "question": "Who was the first player in NBA history to be named MVP, Rookie of the Year and All-Star Game MVP in the same season?",
+      "answer": "Wilt Chamberlain, in the 1959-1960 season."
+    },
+    {
+      "question": "Who was the first player to win the NBA Finals MVP award?",
+      "answer": "Jerry West, in 1969."
+    },
+    {
+      "question": "Which team did the NBA’s first official game feature?",
+      "answer": "The New York Knickerbockers (Knicks) and the Toronto Huskies, on November 1, 1946."
+    },
+    {
+      "question": "Who was the first coach to win an NBA championship with two different teams?",
+      "answer": "Alex Hannum, with the St. Louis Hawks in 1958 and the Philadelphia 76ers in 1967."
+    },
+    {
+      "question": "Who was the first player in NBA history to record a quadruple-double?",
+      "answer": "Nate Thurmond, on October 18, 1974."
+    },
+    {
+      "question": "Which NBA team drafted Larry Bird?",
+      "answer": "The Boston Celtics, in 1978."
+    },
+    {
+      "question": "Which player holds the record for most consecutive games played in NBA history?",
+      "answer": "A.C. Green, with 1,192 consecutive games."
+    },
+    {
+      "question": "Who was the first foreign-born player to be selected first overall in the NBA Draft?",
+      "answer": "Hakeem Olajuwon, from Nigeria, selected first overall in 1984."
+    },
+    {
+      "question": "Which team holds the record for the longest winning streak in NBA history?",
+      "answer": "The Los Angeles Lakers, with 33 consecutive wins in the 1971-1972 season."
+    },
+    {
+      "question": "Who is the player to be named to the most All-NBA Teams?",
+      "answer": "LeBron James."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+[
+    {
+    "question": "Who is the current leader in PTS per game?",
+    "answer": "Shai Gilgeous-Alexander",
+    "choices": [
+      "Giannis Antetokounmpo",
+      "Anthony Edwards",
+      "Shai Gilgeous-Alexander",
+      "Jayson Tatum"
+    ],
+    "additional info": "Shai Gilgeous-Alexander is currently leading the league in points per game.",
+    "difficulty": "Medium",
+    "era": "Modern",
+    "image": "Images/Shai_Gilgeous-Alexander.jpg"
+  },
+  {
+    "question": "Who is the current leader in REB per game?",
+    "answer": "Domantas Sabonis",
+    "choices": [
+      "Karl-Anthony Towns",
+      "Nikola Jokić",
+      "Domantas Sabonis",
+      "Walker Kessler"
+    ],
+    "additional info": "Domantas Sabonis is currently leading the league in rebounds per game.",
+    "difficulty": "Medium",
+    "era": "Modern",
+    "image": "Images/Domantas Sabonis.jpg"
+  },
+{
+    "question": "Who is the current leader in AST per game?",
+    "answer": "Trae Young",
+    "choices": [
+      "Tyrese Haliburton",
+      "Cade Cunningham",
+      "James Harden",
+      "Trae Young"
+    ],
+    "additional info": "Trae Young is currently leading the league in assists per game.",
+    "difficulty": "Medium",
+    "era": "Modern",
+    "image": "Images/Trae_Young.jpg"
+  }
+]

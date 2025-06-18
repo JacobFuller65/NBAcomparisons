@@ -1,0 +1,534 @@
+[
+    {
+        "question": "Who is the current leader in PTS per game?",
+        "answer": "Shai Gilgeous-Alexander",
+        "choices": [
+            "Giannis Antetokounmpo",
+            "Anthony Edwards",
+            "Shai Gilgeous-Alexander",
+            "Jayson Tatum"
+        ],
+        "additional info": "Shai Gilgeous-Alexander is currently leading the league in points per game.",
+        "difficulty": "Medium",
+        "era": "Modern",
+        "image": "Images/Shai Gilgeous-Alexander.jpg"
+    },
+    {
+        "question": "Who is the current leader in REB per game?",
+        "answer": "Domantas Sabonis",
+        "choices": [
+            "Karl-Anthony Towns",
+            "Nikola Jokić",
+            "Domantas Sabonis",
+            "Walker Kessler"
+        ],
+        "additional info": "Domantas Sabonis is currently leading the league in rebounds per game.",
+        "difficulty": "Medium",
+        "era": "Modern",
+        "image": "Images/Domantas Sabonis.jpg"
+    },
+    {
+        "question": "Who is the current leader in AST per game?",
+        "answer": "Trae Young",
+        "choices": [
+            "Tyrese Haliburton",
+            "Cade Cunningham",
+            "James Harden",
+            "Trae Young"
+        ],
+        "additional info": "Trae Young is currently leading the league in assists per game.",
+        "difficulty": "Medium",
+        "era": "Modern",
+        "image": "Images/Trae Young.jpg"
+    },
+    {
+        "question": "Which NBA player has won the most MVP awards?",
+        "answer": "Kareem Abdul-Jabbar",
+        "choices": [
+            "Michael Jordan",
+            "LeBron James",
+            "Kareem Abdul-Jabbar",
+            "Bill Russell"
+        ],
+        "additional info": "Kareem Abdul-Jabbar won 6 MVP awards during his career, the most in NBA history.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "./Images/Kareem Abdul-Jabbar.jpg"
+    },
+    {
+        "question": "Which team holds the record for the most wins in a single regular season?",
+        "answer": "The Golden State Warriors",
+        "choices": [
+            "Chicago Bulls",
+            "Los Angeles Lakers",
+            "The Golden State Warriors",
+            "San Antonio Spurs"
+        ],
+        "additional info": "The Golden State Warriors achieved 73 wins in the 2015-2016 season.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "./Images/73 Win Warriors.jpg"
+    },
+    {
+        "question": "Who is the all-time leading scorer in NBA history?",
+        "answer": "LeBron James",
+        "choices": [
+            "Kareem Abdul-Jabbar",
+            "Karl Malone",
+            "LeBron James",
+            "Michael Jordan"
+        ],
+        "additional info": "LeBron James has scored over 40,474 points in his career.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "./Images/LeBron All Time Scoring Graphic.png"
+    },
+    {
+        "question": "Which player scored 100 points in a single NBA game?",
+        "answer": "Wilt Chamberlain",
+        "choices": [
+            "Wilt Chamberlain",
+            "Kobe Bryant",
+            "Michael Jordan",
+            "Elgin Baylor"
+        ],
+        "additional info": "Wilt Chamberlain scored 100 points on March 2, 1962.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "./Images/Wilt Chamberlain 100 Point Game.jpg"
+    },
+    {
+        "question": "What is the name of the NBA trophy awarded to the champions?",
+        "answer": "The Larry O’Brien Championship Trophy",
+        "choices": [
+            "The Larry O’Brien Championship Trophy",
+            "The Bill Russell Trophy",
+            "The Red Auerbach Trophy",
+            "The NBA Finals Trophy"
+        ],
+        "additional info": "The Larry O’Brien Championship Trophy is awarded to the NBA champions.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "./Images/Larry O'Brien Trophy.jpg"
+    },
+    {
+        "question": "Which NBA team has the most championships?",
+        "answer": "The Boston Celtics",
+        "choices": [
+            "The Boston Celtics",
+            "The Los Angeles Lakers",
+            "The Chicago Bulls",
+            "The Golden State Warriors"
+        ],
+        "additional info": "The Boston Celtics have won 18 championships.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "./Images/Boston Celtics 18 Banner.jpg"
+    },
+    {
+        "question": "Which player has the most career assists in NBA history?",
+        "answer": "John Stockton",
+        "choices": [
+            "Magic Johnson",
+            "Jason Kidd",
+            "John Stockton",
+            "Chris Paul"
+        ],
+        "additional info": "John Stockton holds the record with 15,806 career assists.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "./Images/John Stockton.jpg"
+    },
+    {
+        "question": "Who is the only active guard to average a triple-double for an entire season, and how many times has he done it?",
+        "answer": "Russell Westbrook",
+        "choices": [
+            "Oscar Robertson",
+            "Russell Westbrook",
+            "Magic Johnson",
+            "LeBron James"
+        ],
+        "additional info": "Russell Westbrook averaged a triple-double four times in his career.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "./Images/Russell Westbrook.jpg"
+    },
+    {
+        "question": "Which player holds the record for most points scored in a single playoff game?",
+        "answer": "Michael Jordan",
+        "choices": [
+            "Michael Jordan",
+            "Elgin Baylor",
+            "LeBron James",
+            "Wilt Chamberlain"
+        ],
+        "additional info": "Michael Jordan scored 63 points against the Boston Celtics on April 20, 1986.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "Images/Michael Jordan 63 points.jpg"
+    },
+    {
+        "question": "Who was the first player in NBA history to be unanimously voted MVP?",
+        "answer": "Stephen Curry",
+        "choices": [
+            "Michael Jordan",
+            "LeBron James",
+            "Stephen Curry",
+            "Shaquille O'Neal"
+        ],
+        "additional info": "Stephen Curry was unanimously voted MVP in the 2015-2016 season.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "./Images/Steph Curry Unanimous MVP.jpg"
+    },
+    {
+        "question": "Which player has the most career steals in NBA history?",
+        "answer": "John Stockton",
+        "choices": [
+            "Michael Jordan",
+            "Gary Payton",
+            "John Stockton",
+            "Chris Paul"
+        ],
+        "additional info": "John Stockton holds the record with 3,265 career steals.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "Add image here"
+    },
+    {
+        "question": "Which player has the most career assists in a single season?",
+        "answer": "Magic Johnson",
+        "choices": [
+            "John Stockton",
+            "Magic Johnson",
+            "Chris Paul",
+            "Steve Nash"
+        ],
+        "additional info": "Magic Johnson holds the record with 1,164 assists in the 1986-1987 season.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "Add image here"
+    },
+    {
+        "question": "Which player has the most career blocks in NBA history?",
+        "answer": "Hakeem Olajuwon",
+        "choices": [
+            "Dikembe Mutombo",
+            "Hakeem Olajuwon",
+            "Kareem Abdul-Jabbar",
+            "Rudy Gobert"
+        ],
+        "additional info": "Hakeem Olajuwon holds the record with 3,830 career blocks.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "Add image here"
+    },
+    {
+        "question": "Which player has the most career three-pointers made in NBA history?",
+        "answer": "Stephen Curry",
+        "choices": [
+            "Ray Allen",
+            "Klay Thompson",
+            "Stephen Curry",
+            "Reggie Miller"
+        ],
+        "additional info": "Stephen Curry holds the record with over 3,000 career three-pointers made.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "Add image here"
+    },
+    {
+        "question": "Who is the only player to win the NBA Finals MVP award three times?",
+        "answer": "LeBron James",
+        "choices": [
+            "Michael Jordan",
+            "LeBron James",
+            "Kareem Abdul-Jabbar",
+            "Bill Russell"
+        ],
+        "additional info": "LeBron James won the Finals MVP award three times in 2012, 2013, and 2016.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "Add image here"
+    },
+    {
+        "question": "Which player has the most career rebounds in NBA history?",
+        "answer": "Wilt Chamberlain",
+        "choices": [
+            "Bill Russell",
+            "Wilt Chamberlain",
+            "Kareem Abdul-Jabbar",
+            "Dennis Rodman"
+        ],
+        "additional info": "Wilt Chamberlain holds the record with 23,924 career rebounds.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "Add image here"
+    },
+    {
+        "question": "Who is the only player to win the NBA MVP award and the NBA Finals MVP award in the same season?",
+        "answer": "Michael Jordan",
+        "choices": [
+            "Michael Jordan",
+            "LeBron James",
+            "Kareem Abdul-Jabbar",
+            "Larry Bird"
+        ],
+        "additional info": "Michael Jordan achieved this feat in 1991.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "Add image here"
+    },
+    {
+        "question": "Which player has the most career games played in NBA history?",
+        "answer": "Robert Parish",
+        "choices": [
+            "Robert Parish",
+            "Kareem Abdul-Jabbar",
+            "LeBron James",
+            "Vince Carter"
+        ],
+        "additional info": "Robert Parish holds the record with 1,611 career games played.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "Add image here"
+    },
+    {
+        "question": "Which player has the most career turnovers in NBA history?",
+        "answer": "John Stockton",
+        "choices": [
+            "LeBron James",
+            "John Stockton",
+            "Kobe Bryant",
+            "Michael Jordan"
+        ],
+        "additional info": "John Stockton holds the record with 4,244 career turnovers.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "Add image here"
+    },
+    {
+        "question": "Which player has the most career field goals made in NBA history?",
+        "answer": "Kareem Abdul-Jabbar",
+        "choices": [
+            "Kareem Abdul-Jabbar",
+            "Michael Jordan",
+            "Karl Malone",
+            "LeBron James"
+        ],
+        "additional info": "Kareem Abdul-Jabbar holds the record with 15,837 career field goals made.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "Add image here"
+    },
+    {
+        "question": "Which player has the most career free throws made in NBA history?",
+        "answer": "Kareem Abdul-Jabbar",
+        "choices": [
+            "Michael Jordan",
+            "Kareem Abdul-Jabbar",
+            "Karl Malone",
+            "LeBron James"
+        ],
+        "additional info": "Kareem Abdul-Jabbar holds the record with 7,444 career free throws made.",
+        "difficulty": "Medium",
+        "era": "All Time",
+        "image": "Add image here"
+    },
+    {
+        "question": "Who has the most Minutes Played in the 2024-2025 NBA season?",
+        "answer": "Bridges NYK",
+        "choices": [
+            "Bridges NYK",
+            "Shai Gilgeous-Alexander OKC",
+            "Giannis Antetokounmpo MIL",
+            "Anthony Edwards MIN"
+        ],
+        "additional info": "Bridges NYK has played the most minutes in the 2024-2025 NBA season.",
+        "difficulty": "Medium",
+        "era": "Modern",
+        "image": "Images/Bridges NYK.jpg"
+    },
+    {
+        "question": "Who has the most Field Goals Made in the 2024-2025 NBA season?",
+        "answer": "Shai Gilgeous-Alexander OKC",
+        "choices": [
+            "Shai Gilgeous-Alexander OKC",
+            "Giannis Antetokounmpo MIL",
+            "Anthony Edwards MIN",
+            "Bridges NYK"
+        ],
+        "additional info": "Shai Gilgeous-Alexander OKC has made the most field goals in the 2024-2025 NBA season.",
+        "difficulty": "Medium",
+        "era": "Modern",
+        "image": "Images/Shai Gilgeous-Alexander.jpg"
+    },
+    {
+        "question": "Who has the most Field Goal Attempts in the 2024-2025 NBA season?",
+        "answer": "Shai Gilgeous-Alexander OKC",
+        "choices": [
+            "Shai Gilgeous-Alexander OKC",
+            "Giannis Antetokounmpo MIL",
+            "Anthony Edwards MIN",
+            "Bridges NYK"
+        ],
+        "additional info": "Shai Gilgeous-Alexander OKC has attempted the most field goals in the 2024-2025 NBA season.",
+        "difficulty": "Medium",
+        "era": "Modern",
+        "image": "./Images/Shai Gilgeous-Alexander.jpg"
+    },
+    {
+        "question": "Who has the most 2-Pt Field Goals Made in the 2024-2025 NBA season?",
+        "answer": "Giannis Antetokounmpo MIL",
+        "choices": [
+            "Giannis Antetokounmpo MIL",
+            "Shai Gilgeous-Alexander OKC",
+            "Anthony Edwards MIN",
+            "Bridges NYK"
+        ],
+        "additional info": "Giannis Antetokounmpo MIL has made the most 2-point field goals in the 2024-2025 NBA season.",
+        "difficulty": "Medium",
+        "era": "Modern",
+        "image": "./Images/Giannis Antetokounmpo.jpg"
+    },
+    {
+        "question": "Who has the most 3-Pt Field Goals Made in the 2024-2025 NBA season?",
+        "answer": "Anthony Edwards MIN",
+        "choices": [
+            "Anthony Edwards MIN",
+            "Shai Gilgeous-Alexander OKC",
+            "Giannis Antetokounmpo MIL",
+            "Bridges NYK"
+        ],
+        "additional info": "Anthony Edwards MIN has made the most 3-point field goals in the 2024-2025 NBA season.",
+        "difficulty": "Medium",
+        "era": "Modern",
+        "image": "./Images/Anthony Edwards.jpg"
+    },
+    {
+        "question": "Who has the most Free Throws Made in the 2024-2025 NBA season?",
+        "answer": "Shai Gilgeous-Alexander OKC",
+        "choices": [
+            "Shai Gilgeous-Alexander OKC",
+            "Giannis Antetokounmpo MIL",
+            "Anthony Edwards MIN",
+            "Bridges NYK"
+        ],
+        "additional info": "Shai Gilgeous-Alexander OKC has made the most free throws in the 2024-2025 NBA season.",
+        "difficulty": "Medium",
+        "era": "Modern",
+        "image": "./Images/Shai Gilgeous-Alexander.jpg"
+    },
+    {
+        "question": "Who has the most 3-Pt Field Goals in the 2024-2025 NBA season?",
+        "answer": "Anthony Edwards MIN",
+        "choices": [
+            "Anthony Edwards MIN",
+            "Shai Gilgeous-Alexander OKC",
+            "Giannis Antetokounmpo MIL",
+            "Bridges NYK"
+        ],
+        "additional info": "Anthony Edwards MIN has made 320 3-point field goals in the 2024-2025 NBA season.",
+        "difficulty": "Medium",
+        "era": "Modern",
+        "image": "Add image here"
+    },
+    {
+        "question": "Who has the most 3-Pt Field Goal Attempts in the 2024-2025 NBA season?",
+        "answer": "Anthony Edwards MIN",
+        "choices": [
+            "Anthony Edwards MIN",
+            "Shai Gilgeous-Alexander OKC",
+            "Giannis Antetokounmpo MIL",
+            "Bridges NYK"
+        ],
+        "additional info": "Anthony Edwards MIN has attempted 811 3-point field goals in the 2024-2025 NBA season.",
+        "difficulty": "Medium",
+        "era": "Modern",
+        "image": "Add image here"
+    },
+    {
+        "question": "Who has the most Field Goals Missed in the 2024-2025 NBA season?",
+        "answer": "Anthony Edwards MIN",
+        "choices": [
+            "Anthony Edwards MIN",
+            "Shai Gilgeous-Alexander OKC",
+            "Giannis Antetokounmpo MIL",
+            "Bridges NYK"
+        ],
+        "additional info": "Anthony Edwards MIN has missed 891 field goals in the 2024-2025 NBA season.",
+        "difficulty": "Medium",
+        "era": "Modern",
+        "image": "Add image here"
+    },
+    {
+        "question": "Who has the most Free Throws in the 2024-2025 NBA season?",
+        "answer": "Shai Gilgeous-Alexander OKC",
+        "choices": [
+            "Shai Gilgeous-Alexander OKC",
+            "Giannis Antetokounmpo MIL",
+            "Anthony Edwards MIN",
+            "Bridges NYK"
+        ],
+        "additional info": "Shai Gilgeous-Alexander OKC has made 601 free throws in the 2024-2025 NBA season.",
+        "difficulty": "Medium",
+        "era": "Modern",
+        "image": "Add image here"
+    },
+    {
+        "question": "Who has the most Free Throw Attempts in the 2024-2025 NBA season?",
+        "answer": "Giannis Antetokounmpo MIL",
+        "choices": [
+            "Giannis Antetokounmpo MIL",
+            "Shai Gilgeous-Alexander OKC",
+            "Anthony Edwards MIN",
+            "Bridges NYK"
+        ],
+        "additional info": "Giannis Antetokounmpo MIL has attempted 707 free throws in the 2024-2025 NBA season.",
+        "difficulty": "Medium",
+        "era": "Modern",
+        "image": "Add image here"
+    },
+    {
+        "question": "Who has the most Offensive Rebounds in the 2024-2025 NBA season?",
+        "answer": "Ivica Zubac LAC",
+        "choices": [
+            "Ivica Zubac LAC",
+            "Domantas Sabonis SAC",
+            "Walker Kessler UTA",
+            "Steven Adams HOU"
+        ],
+        "additional info": "Ivica Zubac LAC has grabbed 300 offensive rebounds in the 2024-2025 NBA season.",
+        "difficulty": "Medium",
+        "era": "Modern",
+        "image": "Add image here"
+    },
+    {
+        "question": "Who has the most Defensive Rebounds in the 2024-2025 NBA season?",
+        "answer": "Ivica Zubac LAC",
+        "choices": [
+            "Ivica Zubac LAC",
+            "Domantas Sabonis SAC",
+            "Walker Kessler UTA",
+            "Steven Adams HOU"
+        ],
+        "additional info": "Ivica Zubac LAC has grabbed 710 defensive rebounds in the 2024-2025 NBA season.",
+        "difficulty": "Medium",
+        "era": "Modern",
+        "image": "Add image here"
+    },
+    {
+        "question": "Who has the most Total Rebounds in the 2024-2025 NBA season?",
+        "answer": "Ivica Zubac LAC",
+        "choices": [
+            "Ivica Zubac LAC",
+            "Domantas Sabonis SAC",
+            "Walker Kessler UTA",
+            "Steven Adams HOU"
+        ],
+        "additional info": "Ivica Zubac LAC has grabbed 1,010 total rebounds in the 2024-2025 NBA season.",
+        "difficulty": "Medium",
+        "era": "Modern",
+        "image": "Add image here"
+    }
+]

@@ -1,0 +1,42 @@
+import json
+
+def text_to_json(input_file, output_file):
+    try:
+        with open(input_file, 'r') as file:
+            lines = file.readlines()
+
+        data = []
+        current_section = None
+
+        for line in lines:
+            line = line.strip()
+            if not line:
+                continue  # Skip empty lines
+
+            if line.startswith("Q:"):
+                # New question
+                question = line[3:].strip()
+                data.append({"question": question, "answer": ""})
+            elif line.startswith("A:"):
+                # Answer for the last question
+                if data:
+                    data[-1]["answer"] = line[3:].strip()
+            else:
+                # Section header or unknown format
+                if ":" not in line and not line.startswith("Q:") and not line.startswith("A:"):
+                    current_section = line
+                    data.append({"section": current_section, "questions": []})
+
+        # Save to JSON
+        with open(output_file, 'w') as json_file:
+            json.dump(data, json_file, indent=4)
+        
+        print(f"Successfully converted to JSON and saved to {output_file}!")
+
+    except Exception as e:
+        print(f"Error: {e}")
+
+# Usage
+input_file = "questionConverter.txt"  # Replace with your file path
+output_file = "output.json"           # Replace with your desired output file path
+text_to_json(input_file, output_file)

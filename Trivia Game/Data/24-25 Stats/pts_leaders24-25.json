@@ -1,0 +1,1157 @@
+[
+  {
+    "name": "Shai Gilgeous-Alexander",
+    "team": "OKC",
+    "stat": 32.7
+  },
+  {
+    "name": "Giannis Antetokounmpo",
+    "team": "MIL",
+    "stat": 30.4
+  },
+  {
+    "name": "Nikola Joki\u0107",
+    "team": "DEN",
+    "stat": 29.6
+  },
+  {
+    "name": "Anthony Edwards",
+    "team": "MIN",
+    "stat": 27.6
+  },
+  {
+    "name": "Jayson Tatum",
+    "team": "BOS",
+    "stat": 26.8
+  },
+  {
+    "name": "Kevin Durant",
+    "team": "PHX",
+    "stat": 26.6
+  },
+  {
+    "name": "Cade Cunningham",
+    "team": "DET",
+    "stat": 26.1
+  },
+  {
+    "name": "Jalen Brunson",
+    "team": "NYK",
+    "stat": 26.0
+  },
+  {
+    "name": "Devin Booker",
+    "team": "PHX",
+    "stat": 25.6
+  },
+  {
+    "name": "Damian Lillard",
+    "team": "MIL",
+    "stat": 24.9
+  },
+  {
+    "name": "Stephen Curry",
+    "team": "GSW",
+    "stat": 24.5
+  },
+  {
+    "name": "Karl-Anthony Towns",
+    "team": "NYK",
+    "stat": 24.4
+  },
+  {
+    "name": "LeBron James",
+    "team": "LAL",
+    "stat": 24.4
+  },
+  {
+    "name": "Trae Young",
+    "team": "ATL",
+    "stat": 24.2
+  },
+  {
+    "name": "Franz Wagner",
+    "team": "ORL",
+    "stat": 24.2
+  },
+  {
+    "name": "Donovan Mitchell",
+    "team": "CLE",
+    "stat": 24.0
+  },
+  {
+    "name": "Tyler Herro",
+    "team": "MIA",
+    "stat": 23.9
+  },
+  {
+    "name": "De'Aaron Fox",
+    "team": "SAS",
+    "stat": 23.5
+  },
+  {
+    "name": "Zach LaVine",
+    "team": "SAC",
+    "stat": 23.3
+  },
+  {
+    "name": "James Harden",
+    "team": "LAC",
+    "stat": 22.8
+  },
+  {
+    "name": "DeMar DeRozan",
+    "team": "SAC",
+    "stat": 22.2
+  },
+  {
+    "name": "Jaylen Brown",
+    "team": "BOS",
+    "stat": 22.2
+  },
+  {
+    "name": "Jaren Jackson Jr.",
+    "team": "MEM",
+    "stat": 22.2
+  },
+  {
+    "name": "Norman Powell",
+    "team": "LAC",
+    "stat": 21.8
+  },
+  {
+    "name": "Jalen Williams",
+    "team": "OKC",
+    "stat": 21.6
+  },
+  {
+    "name": "Jamal Murray",
+    "team": "DEN",
+    "stat": 21.4
+  },
+  {
+    "name": "RJ Barrett",
+    "team": "TOR",
+    "stat": 21.1
+  },
+  {
+    "name": "Jalen Green",
+    "team": "HOU",
+    "stat": 21.0
+  },
+  {
+    "name": "Darius Garland",
+    "team": "CLE",
+    "stat": 20.6
+  },
+  {
+    "name": "Jordan Poole",
+    "team": "WAS",
+    "stat": 20.5
+  },
+  {
+    "name": "Coby White",
+    "team": "CHI",
+    "stat": 20.4
+  },
+  {
+    "name": "Miles Bridges",
+    "team": "CHA",
+    "stat": 20.3
+  },
+  {
+    "name": "Pascal Siakam",
+    "team": "IND",
+    "stat": 20.2
+  },
+  {
+    "name": "Austin Reaves",
+    "team": "LAL",
+    "stat": 20.2
+  },
+  {
+    "name": "Scottie Barnes",
+    "team": "TOR",
+    "stat": 19.3
+  },
+  {
+    "name": "Anfernee Simons",
+    "team": "POR",
+    "stat": 19.3
+  },
+  {
+    "name": "Desmond Bane",
+    "team": "MEM",
+    "stat": 19.2
+  },
+  {
+    "name": "Domantas Sabonis",
+    "team": "SAC",
+    "stat": 19.1
+  },
+  {
+    "name": "Alperen Sengun",
+    "team": "HOU",
+    "stat": 19.1
+  },
+  {
+    "name": "Julius Randle",
+    "team": "MIN",
+    "stat": 18.7
+  },
+  {
+    "name": "Tyrese Haliburton",
+    "team": "IND",
+    "stat": 18.6
+  },
+  {
+    "name": "Shaedon Sharpe",
+    "team": "POR",
+    "stat": 18.5
+  },
+  {
+    "name": "Evan Mobley",
+    "team": "CLE",
+    "stat": 18.5
+  },
+  {
+    "name": "Nikola Vu\u010devi\u0107",
+    "team": "CHI",
+    "stat": 18.5
+  },
+  {
+    "name": "Collin Sexton",
+    "team": "UTA",
+    "stat": 18.4
+  },
+  {
+    "name": "Michael Porter Jr.",
+    "team": "DEN",
+    "stat": 18.2
+  },
+  {
+    "name": "Bam Adebayo",
+    "team": "MIA",
+    "stat": 18.1
+  },
+  {
+    "name": "OG Anunoby",
+    "team": "NYK",
+    "stat": 18.0
+  },
+  {
+    "name": "Andrew Wiggins",
+    "team": "MIA",
+    "stat": 18.0
+  },
+  {
+    "name": "Mikal Bridges",
+    "team": "NYK",
+    "stat": 17.6
+  },
+  {
+    "name": "Malik Monk",
+    "team": "SAC",
+    "stat": 17.2
+  },
+  {
+    "name": "De'Andre Hunter",
+    "team": "CLE",
+    "stat": 17.0
+  },
+  {
+    "name": "Deni Avdija",
+    "team": "POR",
+    "stat": 16.9
+  },
+  {
+    "name": "Keyonte George",
+    "team": "UTA",
+    "stat": 16.8
+  },
+  {
+    "name": "Ivica Zubac",
+    "team": "LAC",
+    "stat": 16.8
+  },
+  {
+    "name": "Derrick White",
+    "team": "BOS",
+    "stat": 16.4
+  },
+  {
+    "name": "Malik Beasley",
+    "team": "DET",
+    "stat": 16.3
+  },
+  {
+    "name": "Devin Vassell",
+    "team": "SAS",
+    "stat": 16.3
+  },
+  {
+    "name": "Bennedict Mathurin",
+    "team": "IND",
+    "stat": 16.1
+  },
+  {
+    "name": "Myles Turner",
+    "team": "IND",
+    "stat": 15.6
+  },
+  {
+    "name": "Christian Braun",
+    "team": "DEN",
+    "stat": 15.4
+  },
+  {
+    "name": "Kelly Oubre Jr.",
+    "team": "PHI",
+    "stat": 15.1
+  },
+  {
+    "name": "Kyle Kuzma",
+    "team": "MIL",
+    "stat": 14.8
+  },
+  {
+    "name": "Stephon Castle",
+    "team": "SAS",
+    "stat": 14.7
+  },
+  {
+    "name": "Josh Giddey",
+    "team": "CHI",
+    "stat": 14.6
+  },
+  {
+    "name": "Quentin Grimes",
+    "team": "PHI",
+    "stat": 14.6
+  },
+  {
+    "name": "Payton Pritchard",
+    "team": "BOS",
+    "stat": 14.3
+  },
+  {
+    "name": "Naz Reid",
+    "team": "MIN",
+    "stat": 14.2
+  },
+  {
+    "name": "Dyson Daniels",
+    "team": "ATL",
+    "stat": 14.1
+  },
+  {
+    "name": "Fred VanVleet",
+    "team": "HOU",
+    "stat": 14.1
+  },
+  {
+    "name": "Amen Thompson",
+    "team": "HOU",
+    "stat": 14.1
+  },
+  {
+    "name": "Dillon Brooks",
+    "team": "HOU",
+    "stat": 14.0
+  },
+  {
+    "name": "Klay Thompson",
+    "team": "DAL",
+    "stat": 14.0
+  },
+  {
+    "name": "Tobias Harris",
+    "team": "DET",
+    "stat": 13.7
+  },
+  {
+    "name": "Josh Hart",
+    "team": "NYK",
+    "stat": 13.6
+  },
+  {
+    "name": "Jarrett Allen",
+    "team": "CLE",
+    "stat": 13.5
+  },
+  {
+    "name": "Onyeka Okongwu",
+    "team": "ATL",
+    "stat": 13.4
+  },
+  {
+    "name": "Russell Westbrook",
+    "team": "DEN",
+    "stat": 13.3
+  },
+  {
+    "name": "Naji Marshall",
+    "team": "DAL",
+    "stat": 13.2
+  },
+  {
+    "name": "Rui Hachimura",
+    "team": "LAL",
+    "stat": 13.1
+  },
+  {
+    "name": "Dennis Schr\u00f6der",
+    "team": "DET",
+    "stat": 13.1
+  },
+  {
+    "name": "Brook Lopez",
+    "team": "MIL",
+    "stat": 13.0
+  },
+  {
+    "name": "Alex Sarr",
+    "team": "WAS",
+    "stat": 13.0
+  },
+  {
+    "name": "Keldon Johnson",
+    "team": "SAS",
+    "stat": 12.7
+  },
+  {
+    "name": "Scoot Henderson",
+    "team": "POR",
+    "stat": 12.7
+  },
+  {
+    "name": "D'Angelo Russell",
+    "team": "BKN",
+    "stat": 12.6
+  },
+  {
+    "name": "Zaccharie Risacher",
+    "team": "ATL",
+    "stat": 12.6
+  },
+  {
+    "name": "Ty Jerome",
+    "team": "CLE",
+    "stat": 12.5
+  },
+  {
+    "name": "Santi Aldama",
+    "team": "MEM",
+    "stat": 12.5
+  },
+  {
+    "name": "Keegan Murray",
+    "team": "SAC",
+    "stat": 12.4
+  },
+  {
+    "name": "Harrison Barnes",
+    "team": "SAS",
+    "stat": 12.3
+  },
+  {
+    "name": "Bilal Coulibaly",
+    "team": "WAS",
+    "stat": 12.3
+  },
+  {
+    "name": "Jaden McDaniels",
+    "team": "MIN",
+    "stat": 12.2
+  },
+  {
+    "name": "Caris LeVert",
+    "team": "ATL",
+    "stat": 12.1
+  },
+  {
+    "name": "Rudy Gobert",
+    "team": "MIN",
+    "stat": 12.0
+  },
+  {
+    "name": "Aaron Wiggins",
+    "team": "OKC",
+    "stat": 12.0
+  },
+  {
+    "name": "Jalen Duren",
+    "team": "DET",
+    "stat": 11.8
+  },
+  {
+    "name": "Brandin Podziemski",
+    "team": "GSW",
+    "stat": 11.7
+  },
+  {
+    "name": "Donte DiVincenzo",
+    "team": "MIN",
+    "stat": 11.7
+  },
+  {
+    "name": "Corey Kispert",
+    "team": "WAS",
+    "stat": 11.6
+  },
+  {
+    "name": "Toumani Camara",
+    "team": "POR",
+    "stat": 11.3
+  },
+  {
+    "name": "Gary Trent Jr.",
+    "team": "MIL",
+    "stat": 11.1
+  },
+  {
+    "name": "Buddy Hield",
+    "team": "GSW",
+    "stat": 11.1
+  },
+  {
+    "name": "Jrue Holiday",
+    "team": "BOS",
+    "stat": 11.1
+  },
+  {
+    "name": "Walker Kessler",
+    "team": "UTA",
+    "stat": 11.1
+  },
+  {
+    "name": "Duncan Robinson",
+    "team": "MIA",
+    "stat": 11.0
+  },
+  {
+    "name": "Spencer Dinwiddie",
+    "team": "DAL",
+    "stat": 11.0
+  },
+  {
+    "name": "Guerschon Yabusele",
+    "team": "PHI",
+    "stat": 11.0
+  },
+  {
+    "name": "Tim Hardaway Jr.",
+    "team": "DET",
+    "stat": 11.0
+  },
+  {
+    "name": "Brice Sensabaugh",
+    "team": "UTA",
+    "stat": 10.9
+  },
+  {
+    "name": "Grayson Allen",
+    "team": "PHX",
+    "stat": 10.6
+  },
+  {
+    "name": "Keon Johnson",
+    "team": "BKN",
+    "stat": 10.6
+  },
+  {
+    "name": "Terry Rozier",
+    "team": "MIA",
+    "stat": 10.6
+  },
+  {
+    "name": "Obi Toppin",
+    "team": "IND",
+    "stat": 10.5
+  },
+  {
+    "name": "Ochai Agbaji",
+    "team": "TOR",
+    "stat": 10.4
+  },
+  {
+    "name": "Jaylen Wells",
+    "team": "MEM",
+    "stat": 10.4
+  },
+  {
+    "name": "Jonas Valan\u010di\u016bnas",
+    "team": "SAC",
+    "stat": 10.4
+  },
+  {
+    "name": "Nic Claxton",
+    "team": "BKN",
+    "stat": 10.3
+  },
+  {
+    "name": "Kevin Porter Jr.",
+    "team": "MIL",
+    "stat": 10.3
+  },
+  {
+    "name": "Tyus Jones",
+    "team": "PHX",
+    "stat": 10.2
+  },
+  {
+    "name": "Isaiah Joe",
+    "team": "OKC",
+    "stat": 10.2
+  },
+  {
+    "name": "Derrick Jones Jr.",
+    "team": "LAC",
+    "stat": 10.1
+  },
+  {
+    "name": "Luguentz Dort",
+    "team": "OKC",
+    "stat": 10.1
+  },
+  {
+    "name": "Ausar Thompson",
+    "team": "DET",
+    "stat": 10.1
+  },
+  {
+    "name": "Andrew Nembhard",
+    "team": "IND",
+    "stat": 10.0
+  },
+  {
+    "name": "Ziaire Williams",
+    "team": "BKN",
+    "stat": 10.0
+  },
+  {
+    "name": "Julian Champagnie",
+    "team": "SAS",
+    "stat": 9.9
+  },
+  {
+    "name": "Georges Niang",
+    "team": "ATL",
+    "stat": 9.9
+  },
+  {
+    "name": "Kevin Huerter",
+    "team": "CHI",
+    "stat": 9.9
+  },
+  {
+    "name": "Scotty Pippen Jr.",
+    "team": "MEM",
+    "stat": 9.9
+  },
+  {
+    "name": "Nick Smith Jr.",
+    "team": "CHA",
+    "stat": 9.9
+  },
+  {
+    "name": "Bub Carrington",
+    "team": "WAS",
+    "stat": 9.8
+  },
+  {
+    "name": "Moses Moody",
+    "team": "GSW",
+    "stat": 9.8
+  },
+  {
+    "name": "Amir Coffey",
+    "team": "LAC",
+    "stat": 9.7
+  },
+  {
+    "name": "Max Christie",
+    "team": "DAL",
+    "stat": 9.6
+  },
+  {
+    "name": "Kyle Filipowski",
+    "team": "UTA",
+    "stat": 9.6
+  },
+  {
+    "name": "Miles McBride",
+    "team": "NYK",
+    "stat": 9.5
+  },
+  {
+    "name": "Jalen Wilson",
+    "team": "BKN",
+    "stat": 9.5
+  },
+  {
+    "name": "Anthony Black",
+    "team": "ORL",
+    "stat": 9.4
+  },
+  {
+    "name": "Nickeil Alexander-Walker",
+    "team": "MIN",
+    "stat": 9.4
+  },
+  {
+    "name": "Cole Anthony",
+    "team": "ORL",
+    "stat": 9.4
+  },
+  {
+    "name": "Kel'el Ware",
+    "team": "MIA",
+    "stat": 9.3
+  },
+  {
+    "name": "Zach Edey",
+    "team": "MEM",
+    "stat": 9.2
+  },
+  {
+    "name": "T.J. McConnell",
+    "team": "IND",
+    "stat": 9.1
+  },
+  {
+    "name": "Yves Missi",
+    "team": "NOP",
+    "stat": 9.1
+  },
+  {
+    "name": "Wendell Carter Jr.",
+    "team": "ORL",
+    "stat": 9.1
+  },
+  {
+    "name": "Royce O'Neale",
+    "team": "PHX",
+    "stat": 9.1
+  },
+  {
+    "name": "Dalton Knecht",
+    "team": "LAL",
+    "stat": 9.1
+  },
+  {
+    "name": "Julian Strawther",
+    "team": "DEN",
+    "stat": 9.0
+  },
+  {
+    "name": "Jared Butler",
+    "team": "PHI",
+    "stat": 9.0
+  },
+  {
+    "name": "Draymond Green",
+    "team": "GSW",
+    "stat": 9.0
+  },
+  {
+    "name": "Patrick Williams",
+    "team": "CHI",
+    "stat": 9.0
+  },
+  {
+    "name": "Al Horford",
+    "team": "BOS",
+    "stat": 9.0
+  },
+  {
+    "name": "Johnny Juzang",
+    "team": "UTA",
+    "stat": 8.9
+  },
+  {
+    "name": "Luke Kennard",
+    "team": "MEM",
+    "stat": 8.9
+  },
+  {
+    "name": "Chris Paul",
+    "team": "SAS",
+    "stat": 8.8
+  },
+  {
+    "name": "Justin Champagnie",
+    "team": "WAS",
+    "stat": 8.8
+  },
+  {
+    "name": "Kentavious Caldwell-Pope",
+    "team": "ORL",
+    "stat": 8.7
+  },
+  {
+    "name": "Tyrese Martin",
+    "team": "BKN",
+    "stat": 8.7
+  },
+  {
+    "name": "Dorian Finney-Smith",
+    "team": "LAL",
+    "stat": 8.7
+  },
+  {
+    "name": "Kyshawn George",
+    "team": "WAS",
+    "stat": 8.7
+  },
+  {
+    "name": "Isaiah Collier",
+    "team": "UTA",
+    "stat": 8.7
+  },
+  {
+    "name": "Jaime Jaquez Jr.",
+    "team": "MIA",
+    "stat": 8.6
+  },
+  {
+    "name": "Matas Buzelis",
+    "team": "CHI",
+    "stat": 8.6
+  },
+  {
+    "name": "Sam Hauser",
+    "team": "BOS",
+    "stat": 8.5
+  },
+  {
+    "name": "Cason Wallace",
+    "team": "OKC",
+    "stat": 8.4
+  },
+  {
+    "name": "Brandon Clarke",
+    "team": "MEM",
+    "stat": 8.3
+  },
+  {
+    "name": "Dalano Banton",
+    "team": "POR",
+    "stat": 8.3
+  },
+  {
+    "name": "Keon Ellis",
+    "team": "SAC",
+    "stat": 8.3
+  },
+  {
+    "name": "Taurean Prince",
+    "team": "MIL",
+    "stat": 8.2
+  },
+  {
+    "name": "Mike Conley",
+    "team": "MIN",
+    "stat": 8.2
+  },
+  {
+    "name": "Jalen Smith",
+    "team": "CHI",
+    "stat": 8.2
+  },
+  {
+    "name": "Peyton Watson",
+    "team": "DEN",
+    "stat": 8.1
+  },
+  {
+    "name": "Davion Mitchell",
+    "team": "MIA",
+    "stat": 7.9
+  },
+  {
+    "name": "Terance Mann",
+    "team": "ATL",
+    "stat": 7.7
+  },
+  {
+    "name": "Josh Green",
+    "team": "CHA",
+    "stat": 7.4
+  },
+  {
+    "name": "AJ Green",
+    "team": "MIL",
+    "stat": 7.4
+  },
+  {
+    "name": "Ricky Council IV",
+    "team": "PHI",
+    "stat": 7.3
+  },
+  {
+    "name": "Tristan da Silva",
+    "team": "ORL",
+    "stat": 7.2
+  },
+  {
+    "name": "Goga Bitadze",
+    "team": "ORL",
+    "stat": 7.2
+  },
+  {
+    "name": "Sam Merrill",
+    "team": "CLE",
+    "stat": 7.2
+  },
+  {
+    "name": "Jamal Shead",
+    "team": "TOR",
+    "stat": 7.1
+  },
+  {
+    "name": "Jamison Battle",
+    "team": "TOR",
+    "stat": 7.1
+  },
+  {
+    "name": "Cameron Payne",
+    "team": "NYK",
+    "stat": 6.9
+  },
+  {
+    "name": "Jake LaRavia",
+    "team": "SAC",
+    "stat": 6.9
+  },
+  {
+    "name": "Ryan Dunn",
+    "team": "PHX",
+    "stat": 6.9
+  },
+  {
+    "name": "Jay Huff",
+    "team": "MEM",
+    "stat": 6.9
+  },
+  {
+    "name": "Trayce Jackson-Davis",
+    "team": "GSW",
+    "stat": 6.6
+  },
+  {
+    "name": "Trey Lyles",
+    "team": "SAC",
+    "stat": 6.5
+  },
+  {
+    "name": "Talen Horton-Tucker",
+    "team": "CHI",
+    "stat": 6.5
+  },
+  {
+    "name": "Seth Curry",
+    "team": "CHA",
+    "stat": 6.5
+  },
+  {
+    "name": "Donovan Clingan",
+    "team": "POR",
+    "stat": 6.5
+  },
+  {
+    "name": "Thomas Bryant",
+    "team": "IND",
+    "stat": 6.5
+  },
+  {
+    "name": "Haywood Highsmith",
+    "team": "MIA",
+    "stat": 6.5
+  },
+  {
+    "name": "Gary Payton II",
+    "team": "GSW",
+    "stat": 6.5
+  },
+  {
+    "name": "Ronald Holland II",
+    "team": "DET",
+    "stat": 6.4
+  },
+  {
+    "name": "Kris Dunn",
+    "team": "LAC",
+    "stat": 6.4
+  },
+  {
+    "name": "Gabe Vincent",
+    "team": "LAL",
+    "stat": 6.4
+  },
+  {
+    "name": "Zach Collins",
+    "team": "CHI",
+    "stat": 6.4
+  },
+  {
+    "name": "Jeremiah Robinson-Earl",
+    "team": "NOP",
+    "stat": 6.3
+  },
+  {
+    "name": "Kenrich Williams",
+    "team": "OKC",
+    "stat": 6.3
+  },
+  {
+    "name": "Sandro Mamukelashvili",
+    "team": "SAS",
+    "stat": 6.3
+  },
+  {
+    "name": "Jonathan Mogbo",
+    "team": "TOR",
+    "stat": 6.2
+  },
+  {
+    "name": "Jarace Walker",
+    "team": "IND",
+    "stat": 6.1
+  },
+  {
+    "name": "Isaiah Stewart",
+    "team": "DET",
+    "stat": 6.0
+  },
+  {
+    "name": "Luke Kornet",
+    "team": "BOS",
+    "stat": 6.0
+  },
+  {
+    "name": "Simone Fontecchio",
+    "team": "DET",
+    "stat": 5.9
+  },
+  {
+    "name": "Tidjane Sala\u00fcn",
+    "team": "CHA",
+    "stat": 5.9
+  },
+  {
+    "name": "Kyle Anderson",
+    "team": "MIA",
+    "stat": 5.9
+  },
+  {
+    "name": "Adem Bona",
+    "team": "PHI",
+    "stat": 5.8
+  },
+  {
+    "name": "Moussa Diabat\u00e9",
+    "team": "CHA",
+    "stat": 5.7
+  },
+  {
+    "name": "Aaron Holiday",
+    "team": "HOU",
+    "stat": 5.5
+  },
+  {
+    "name": "Dean Wade",
+    "team": "CLE",
+    "stat": 5.4
+  },
+  {
+    "name": "Jonathan Isaac",
+    "team": "ORL",
+    "stat": 5.4
+  },
+  {
+    "name": "Ben Sheppard",
+    "team": "IND",
+    "stat": 5.3
+  },
+  {
+    "name": "Jabari Walker",
+    "team": "POR",
+    "stat": 5.2
+  },
+  {
+    "name": "Javonte Green",
+    "team": "CLE",
+    "stat": 5.1
+  },
+  {
+    "name": "Neemias Queta",
+    "team": "BOS",
+    "stat": 5.0
+  },
+  {
+    "name": "Julian Phillips",
+    "team": "CHI",
+    "stat": 4.6
+  },
+  {
+    "name": "Drew Eubanks",
+    "team": "LAC",
+    "stat": 4.6
+  },
+  {
+    "name": "Kevon Looney",
+    "team": "GSW",
+    "stat": 4.5
+  },
+  {
+    "name": "Mason Plumlee",
+    "team": "PHX",
+    "stat": 4.5
+  },
+  {
+    "name": "Dalen Terry",
+    "team": "CHI",
+    "stat": 4.5
+  },
+  {
+    "name": "Jett Howard",
+    "team": "ORL",
+    "stat": 4.5
+  },
+  {
+    "name": "Oso Ighodaro",
+    "team": "PHX",
+    "stat": 4.2
+  },
+  {
+    "name": "Kris Murray",
+    "team": "POR",
+    "stat": 4.2
+  },
+  {
+    "name": "Caleb Houstan",
+    "team": "ORL",
+    "stat": 4.1
+  },
+  {
+    "name": "Nicolas Batum",
+    "team": "LAC",
+    "stat": 4.0
+  },
+  {
+    "name": "Steven Adams",
+    "team": "HOU",
+    "stat": 3.9
+  },
+  {
+    "name": "Blake Wesley",
+    "team": "SAS",
+    "stat": 3.7
+  },
+  {
+    "name": "Andre Jackson Jr.",
+    "team": "MIL",
+    "stat": 3.4
+  }
+]

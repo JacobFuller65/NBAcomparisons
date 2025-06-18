@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Question?",
+    "answer": "Answer",
+    "choices": [
+      "Choice 1",
+      "Choice 2",
+        "Choice 3",
+        "Choice 4"
+    ],
+    "additional info": "Additional Info",
+    "difficulty": "Medium",
+    "category": "LAL",
+    "era": "current",
+    "image": ""
+  },
+  {
+    "question": "Question?",
+    "answer": "Answer",
+    "choices": [
+      "Choice 1",
+      "Choice 2",
+        "Choice 3",
+        "Choice 4"
+    ],
+    "additional info": "Additional Info",
+    "difficulty": "Medium",
+    "category": "LAL",
+    "era": "current",
+    "image": ""
+  }
+]
