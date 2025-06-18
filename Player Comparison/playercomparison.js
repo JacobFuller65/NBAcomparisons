@@ -107,7 +107,6 @@ let playerData = {};
                     // Set the player image
                     player2Image.src = `html files/images/${player2.replace(/ /g, "_")}.jpg`;
                     player2Image.alt = `${player2} Image`;
-
                     statsContent2.innerHTML = `
                         <strong>${player2} (${year2})</strong><br>
                         Age: ${stats2.Age || "N/A"}<br>
