@@ -1,134 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player Comparison Tool</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script> <!-- Include Data Labels Plugin -->
-    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script> <!-- Include SheetJS -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        .content {
-            padding: 2rem;
-            text-align: center;
-        }
-        .dropdowns {
-            margin: 1rem 0;
-        }
-        select {
-            padding: 0.5rem;
-            margin: 0 0.5rem;
-        }
-        .stats-display {
-            margin-top: 2rem;
-            padding: 1rem;
-            background-color: white;
-            border: 1px solid #ccc;
-            display: inline-block;
-            text-align: left;
-            width: 45%;
-            vertical-align: top;
-        }
-        .comparison-container {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-        .chart-container {
-            margin-top: 3rem;
-            width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .player-image {
-            width: 150px; /* Set a fixed width */
-            height: 150px; /* Set a fixed height */
-            object-fit: cover; /* Ensures the image fills the area without distortion */
-            border-radius: 50%; /* Makes the image circular */
-            display: block;
-            margin: 0 auto 1rem; /* Centers the image and adds spacing below */
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Player Comparison Tool</h1>
-    </header>
-    <div class="content">
-        <div class="dropdowns">
-            <h3>Player 1</h3>
-            <label for="player1-select">Select Player:</label>
-            <select id="player1-select" onchange="loadYears('player1')">
-                <option value="">--Choose a Player--</option>
-            </select>
-
-            <label for="year1-select">Select Year:</label>
-            <select id="year1-select">
-                <option value="">--Choose a Year--</option>
-            </select>
-        </div>
-
-        <div class="dropdowns">
-            <h3>Player 2</h3>
-            <label for="player2-select">Select Player:</label>
-            <select id="player2-select" onchange="loadYears('player2')">
-                <option value="">--Choose a Player--</option>
-            </select>
-
-            <label for="year2-select">Select Year:</label>
-            <select id="year2-select">
-                <option value="">--Choose a Year--</option>
-            </select>
-        </div>
-
-        <button onclick="displayStats()">Compare Players</button>
-
-        <div class="comparison-container">
-            <div id="stats-display1" class="stats-display" style="display: none;">
-                <h3>Player 1 Stats</h3>
-                <img id="player1-image" class="player-image" src="" alt="Player 1 Image">
-                <p id="stats-content1">Select a player and year to view stats.</p>
-            </div>
-            <div id="stats-display2" class="stats-display" style="display: none;">
-                <h3>Player 2 Stats</h3>
-                <img id="player2-image" class="player-image" src="" alt="Player 2 Image">
-                <p id="stats-content2">Select a player and year to view stats.</p>
-            </div>
-        </div>
-
-        <div class="chart-container">
-            <canvas id="player1Chart"></canvas>
-            <canvas id="player2Chart"></canvas>
-        </div>
-
-        <div class="chart-container">
-            <canvas id="comparisonChart"></canvas>
-        </div>
-
-        <div class="chart-container">
-            <canvas id="percentageComparisonChart"></canvas>
-        </div>
-    </div>
-
-    <script>
-        let playerData = {};
+let playerData = {};
 
         // Load player data from JSON file
         async function loadPlayerData() {
             try {
-                const response = await fetch('player-data.json');
+                const response = await fetch('player-data.json'); // Adjust the path as necessary
                 playerData = await response.json();
                 console.log('Player Data Loaded:', playerData); // Debugging line
                 populatePlayers();
@@ -209,7 +84,7 @@
                     stats1 = fetchPlayerStats(player1, year1);
 
                     // Set the player image
-                    player1Image.src = `images/${player1.replace(/ /g, "_")}.jpg`;
+                    player1Image.src = `html files/images/${player1.replace(/ /g, "_")}.jpg`;
                     player1Image.alt = `${player1} Image`;
 
                     statsContent1.innerHTML = `
@@ -396,6 +271,3 @@
 
         // Call loadPlayerData on page load
         loadPlayerData();
-    </script>
-</body>
-</html>

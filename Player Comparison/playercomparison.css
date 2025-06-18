@@ -1,0 +1,53 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .content {
+            padding: 2rem;
+            text-align: center;
+        }
+        .dropdowns {
+            margin: 1rem 0;
+        }
+        select {
+            padding: 0.5rem;
+            margin: 0 0.5rem;
+        }
+        .stats-display {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: white;
+            border: 1px solid #ccc;
+            display: inline-block;
+            text-align: left;
+            width: 45%;
+            vertical-align: top;
+        }
+        .comparison-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .chart-container {
+            margin-top: 3rem;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .player-image {
+            width: 150px; /* Set a fixed width */
+            height: 150px; /* Set a fixed height */
+            object-fit: cover; /* Ensures the image fills the area without distortion */
+            border-radius: 50%; /* Makes the image circular */
+            display: block;
+            margin: 0 auto 1rem; /* Centers the image and adds spacing below */
+        }
+        
