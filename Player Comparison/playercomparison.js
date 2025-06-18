@@ -105,7 +105,7 @@ let playerData = {};
                     stats2 = fetchPlayerStats(player2, year2);
 
                     // Set the player image
-                    player2Image.src = `images/${player2.replace(/ /g, "_")}.jpg`;
+                    player2Image.src = `html files/images/${player2.replace(/ /g, "_")}.jpg`;
                     player2Image.alt = `${player2} Image`;
 
                     statsContent2.innerHTML = `
