@@ -268,17 +268,18 @@ let playerData = {};
         }
 
         // Example: get unique player names from your data
-        const playerNames = [...new Set(Object.keys(playerData))];
-
-        const searchInput = document.getElementById('player-search');
-        const resultsList = document.getElementById('player-search-results');
-        const playerSelect = document.getElementById('player1-select'); // or whichever select you want to update
+        const playerNames = Object.keys(playerData);
+        const searchInput = document.getElementById('player1-search');
+        const resultsList = document.getElementById('player1-search-results');
+        const playerSelect = document.getElementById('player1-select');
 
         searchInput.addEventListener('input', function() {
             const query = this.value.toLowerCase();
             resultsList.innerHTML = '';
-            if (!query) return;
-
+            if (!query) {
+                resultsList.style.display = 'none';
+                return;
+            }
             const matches = playerNames.filter(name => name.toLowerCase().includes(query));
             matches.forEach(name => {
                 const li = document.createElement('li');
@@ -286,26 +287,61 @@ let playerData = {};
                 li.addEventListener('click', function() {
                     searchInput.value = name;
                     resultsList.innerHTML = '';
-                    // Optionally, set the select dropdown to this player
+                    // Set the select dropdown to this player
                     for (let i = 0; i < playerSelect.options.length; i++) {
                         if (playerSelect.options[i].value === name) {
                             playerSelect.selectedIndex = i;
                             break;
                         }
                     }
-                    // Optionally, trigger any change event or update function
+                    // Trigger any change event or update function
                     playerSelect.dispatchEvent(new Event('change'));
                 });
                 resultsList.appendChild(li);
             });
+            resultsList.style.display = matches.length ? 'block' : 'none';
         });
 
         // Hide results when clicking outside
         document.addEventListener('click', function(e) {
             if (!searchInput.contains(e.target) && !resultsList.contains(e.target)) {
                 resultsList.innerHTML = '';
+                resultsList.style.display = 'none';
             }
         });
 
+        // Populate player dropdowns for the first time
+        function populatePlayerDropdowns(playerData) {
+            // Get unique player names
+            const playerNames = Array.isArray(playerData)
+                ? [...new Set(playerData.map(d => d.player))]
+                : Object.keys(playerData);
+
+            // Clear existing options
+            $('#player1-select').empty();
+            $('#player2-select').empty();
+
+            // Add a placeholder option
+            $('#player1-select').append('<option value="">Select Player 1</option>');
+            $('#player2-select').append('<option value="">Select Player 2</option>');
+
+            // Add player options
+            playerNames.forEach(name => {
+                $('#player1-select').append(`<option value="${name}">${name}</option>`);
+                $('#player2-select').append(`<option value="${name}">${name}</option>`);
+            });
+        }
+
         // Call loadPlayerData on page load
         loadPlayerData();
+
+        $(document).ready(function() {
+            $('#player1-select').select2({
+                placeholder: "Search for Player 1",
+                allowClear: true
+            });
+            $('#player2-select').select2({
+                placeholder: "Search for Player 2",
+                allowClear: true
+            });
+        });

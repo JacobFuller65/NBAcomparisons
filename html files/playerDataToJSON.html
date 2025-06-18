@@ -8,15 +8,20 @@
 </head>
 <body>
     <h1>Convert Excel to JSON</h1>
-    <label for="uploadExcel">Upload Excel File:</label>
-    <input type="file" id="uploadExcel" title="Choose an Excel file to upload" />
+    <!-- File input and convert button -->
+    <input type="file" id="file-input" accept=".xlsx,.xls,.csv">
+    <button id="convert-btn">Convert File</button>
     <pre id="output"></pre>
 
-    <script>
-        document.getElementById('uploadExcel').addEventListener('change', handleFile);
+    <label for="player-name-input">Player Name:</label>
+    <input type="text" id="player-name-input" placeholder="Enter player name">
 
-        function handleFile(event) {
-            const file = event.target.files[0];
+    <script>
+        document.getElementById('convert-btn').addEventListener('click', handleFile);
+
+        function handleFile() {
+            const fileInput = document.getElementById('file-input');
+            const file = fileInput.files[0];
             if (!file) {
                 console.error("No file selected.");
                 return;
@@ -26,43 +31,39 @@
             reader.onload = function (e) {
                 const data = new Uint8Array(e.target.result);
                 const workbook = XLSX.read(data, { type: 'array' });
-
-                // Debug: Check if the workbook is loaded
-                console.log('Workbook:', workbook);
-
-                // Assuming the first sheet contains the data
                 const sheetName = workbook.SheetNames[0];
                 const sheet = workbook.Sheets[sheetName];
 
-                // Debug: Check the sheet data
-                console.log('Sheet Data:', sheet);
+                // Use header: 1 to get raw rows
+                const rawRows = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+                const headers = rawRows[0];
+                const rows = rawRows.slice(1);
 
-                // Convert sheet to JSON
-                const rawData = XLSX.utils.sheet_to_json(sheet);
+                const seasonPattern = /^\d{4}-\d{2}$/;
+                let seasonStats = [];
+                let careerStats = null;
 
-                // Debug: Check the raw data
-                console.log('Raw Data:', rawData);
-
-                if (rawData.length === 0) {
-                    console.error("The raw data is empty. Check the Excel file for issues.");
-                    document.getElementById('output').textContent = "Error: The raw data is empty. Check the Excel file for issues.";
-                    return;
-                }
-
-                // Add a hardcoded Player name to each row
-                const playerName = "Player Name"; // Replace with the actual player's name
-                const trimmedRawData = rawData.map(row => {
-                    const trimmedRow = {};
-                    Object.keys(row).forEach(key => {
-                        trimmedRow[key.trim()] = row[key];
-                    });
-                    trimmedRow["Player"] = playerName; // Add the Player name
-                    return trimmedRow;
+                rows.forEach(row => {
+                    const season = row[0];
+                    if (season && seasonPattern.test(season)) {
+                        // Regular season row
+                        let obj = {};
+                        headers.forEach((header, i) => obj[header] = row[i]);
+                        seasonStats.push(obj);
+                    } else if (season && /career|totals|yrs/i.test(season)) {
+                        // Career/summary row
+                        let obj = {};
+                        headers.forEach((header, i) => obj[header] = row[i]);
+                        careerStats = obj;
+                    }
                 });
-                console.log('Trimmed Raw Data:', trimmedRawData);
+
+                // Now you have both seasonStats and careerStats
+                console.log("Seasons:", seasonStats);
+                console.log("Career:", careerStats);
 
                 // Transform raw data into the desired format
-                const formattedData = trimmedRawData.reduce((acc, row, index) => {
+                const formattedData = seasonStats.reduce((acc, row, index) => {
                     // Debug: Check each row being processed
                     console.log(`Processing row ${index + 2}:`, row);
 
@@ -75,6 +76,7 @@
                         return acc; // Skip this row
                     }
 
+                    const playerName = document.getElementById('player-name-input').value;
                     if (!acc[playerName]) {
                         acc[playerName] = {};
                     }
@@ -105,6 +107,15 @@
                     document.getElementById('output').textContent = "Error: The formatted data is empty. Check the Excel file for issues.";
                     return;
                 }
+
+                // Add a marker to distinguish career stats, if you like:
+                careerStats.season = "Career";
+
+                // Add career stats as the last entry:
+                seasonStats.push(careerStats);
+
+                // Now seasonStats contains all seasons, with career stats at the end
+                console.log(JSON.stringify(seasonStats, null, 2));
 
                 // Display formatted JSON in the <pre> element
                 document.getElementById('output').textContent = JSON.stringify(formattedData, null, 2);

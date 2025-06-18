@@ -9,6 +9,9 @@
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script> <!-- Include Data Labels Plugin -->
     <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script> <!-- Include SheetJS -->
     <script src="playercomparison.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 <body>
     <header>
@@ -18,7 +21,7 @@
         <div class="dropdowns">
             <h3>Player 1</h3>
             <label for="player1-select">Select Player:</label>
-            <select id="player1-select" onchange="loadYears('player1')">
+            <select id="player1-select" style="width:250px" onchange="loadYears('player1')">
                 <option value="">--Choose a Player--</option>
             </select>
 
@@ -31,7 +34,7 @@
         <div class="dropdowns">
             <h3>Player 2</h3>
             <label for="player2-select">Select Player:</label>
-            <select id="player2-select" onchange="loadYears('player2')">
+            <select id="player2-select" style="width:250px" onchange="loadYears('player2')">
                 <option value="">--Choose a Player--</option>
             </select>
 
@@ -67,8 +70,8 @@
         <div id="percentage-chart-container">
             <canvas id="percentageComparisonChart"></canvas>
         </div>
-        <input type="text" id="player-search" placeholder="Search for a player..." autocomplete="off">
-        <ul id="player-search-results" class="search-results"></ul>
+        <input type="text" id="player1-search" placeholder=" " autocomplete="off">
+        <ul id="player1-search-results" class="search-results"></ul>
     </div>
 </body>
 </html>
