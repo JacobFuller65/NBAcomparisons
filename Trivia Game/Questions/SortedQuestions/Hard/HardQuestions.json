@@ -1,0 +1,114 @@
+[
+    {
+        "question": "Who was the first player to be drafted straight out of high school?",
+        "answer": "Moses Malone",
+        "choices": [
+            "Kevin Garnett",
+            "Kobe Bryant",
+            "Moses Malone",
+            "LeBron James"
+        ],
+        "additional info": "Moses Malone was drafted in the 1974 ABA Draft.",
+        "difficulty": "Hard",
+        "era": "All Time",
+        "image": "./Images/Moses Malone.jpg"
+    },
+    {
+        "question": "Who was the youngest player to score 30,000 points in his career?",
+        "answer": "LeBron James",
+        "choices": [
+            "Kobe Bryant",
+            "Michael Jordan",
+            "LeBron James",
+            "Wilt Chamberlain"
+        ],
+        "additional info": "LeBron James became the youngest player to score 30,000 points in 2018.",
+        "difficulty": "Hard",
+        "era": "All Time",
+        "image": "./Images/Young Lebron James.jpg"
+    },
+    {
+        "question": "Who was the first non-American player to be named NBA MVP?",
+        "answer": "Hakeem Olajuwon",
+        "choices": [
+            "Dirk Nowitzki",
+            "Hakeem Olajuwon",
+            "Steve Nash",
+            "Giannis Antetokounmpo"
+        ],
+        "additional info": "Hakeem Olajuwon, from Nigeria, won the MVP award in 1994.",
+        "difficulty": "Hard",
+        "era": "All Time",
+        "image": "./Images/Hakeem Olajuwon.jpg"
+    },
+    {
+        "question": "What year was the NBA founded?",
+        "answer": "1946",
+        "choices": [
+            "1946",
+            "1950",
+            "1939",
+            "1949"
+        ],
+        "additional info": "The NBA was founded on June 6, 1946, as the Basketball Association of America (BAA).",
+        "difficulty": "Hard",
+        "era": "All Time",
+        "image": "./Images/NBA Founding.jpg"
+    },
+    {
+        "question": "Which NBA coach has the most career wins?",
+        "answer": "Gregg Popovich",
+        "choices": [
+            "Phil Jackson",
+            "Pat Riley",
+            "Gregg Popovich",
+            "Don Nelson"
+        ],
+        "additional info": "Gregg Popovich has over 1,388 career wins as an NBA coach.",
+        "difficulty": "Hard",
+        "era": "All Time",
+        "image": "./Images/Gregg Popovich Career Wins.jpg"
+    },
+    {
+        "question": "Who is the only player to win an MVP award, a Finals MVP award, and a Rookie of the Year award in the same season?",
+        "answer": "Magic Johnson",
+        "choices": [
+            "Larry Bird",
+            "Magic Johnson",
+            "Michael Jordan",
+            "LeBron James"
+        ],
+        "additional info": "Magic Johnson achieved this feat in the 1986-1987 season.",
+        "difficulty": "Hard",
+        "era": "All Time",
+        "image": "Add image here"
+    },
+    {
+        "question": "When did the NBA implement the 3 point line?",
+        "answer": "1979",
+        "choices": [
+            "1976",
+            "1979",
+            "1982",
+            "1985"
+        ],
+        "additional info": "The NBA implemented the 3-point line in the 1979-1980 season.",
+        "difficulty": "Hard",
+        "era": "All Time",
+        "image": "Add image here"
+    },
+    {
+        "question": "When did the NBA ban offensive goaltending?",
+        "answer": "1966",
+        "choices": [
+            "1964",
+            "1966",
+            "1968",
+            "1970"
+        ],
+        "additional info": "The NBA banned offensive goaltending in 1966.",
+        "difficulty": "Hard",
+        "era": "All Time",
+        "image": "Add image here"
+    }
+]
