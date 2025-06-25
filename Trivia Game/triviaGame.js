@@ -11,15 +11,15 @@ async function loadQuestions() {
     const team = document.getElementById("teamSelect").value.toLowerCase();
 
     // Decide which file to load
-    let questionsFile = "Questions/AllQuestions.json";
+    let questionsFile = "Trivia Game/Questions/AllQuestions.json";
     if (team === "okc") {
-      questionsFile = "Questions/okcQuestions.json";
+      questionsFile = "Trivia Game/Questions/okcQuestions.json";
     } 
     if (team === "2k25") {
-      questionsFile = "Questions/2k25Questions.json";
+      questionsFile = "Trivia Game/Questions/2k25Questions.json";
     }
     else if (team === "lal") {
-      questionsFile = "Questions/lalQuestions.json";
+      questionsFile = "Trivia Game/Questions/lalQuestions.json";
     }
     console.log("Fetching questions from:", questionsFile);
     const response = await fetch(questionsFile);
