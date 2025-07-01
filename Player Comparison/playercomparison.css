@@ -119,3 +119,27 @@ body {
 .awards-section h4 {
     margin-bottom: 0.5rem;
 }
+.iconic-awards {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.award-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+.award-label {
+  width: 120px;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 1rem;
+}
+.award-count {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  color: #bfa14a;
+}
+.award-row svg {
+  margin-right: 3px;
+  vertical-align: middle;
+}

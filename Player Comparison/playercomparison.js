@@ -371,3 +371,89 @@ let playerData = {};
                 teamList.innerHTML = '<li>No team accomplishments found.</li>';
             }
         }
+
+        function renderAwardIcons(containerId, count, max, svgFunc) {
+          const container = document.getElementById(containerId);
+          container.innerHTML = '';
+          for (let i = 0; i < max; i++) {
+            container.innerHTML += svgFunc(i < count);
+          }
+        }
+
+        // SVG generators for each award
+        function championshipSVG(filled) {
+          return `<svg width="28" height="40" viewBox="0 0 40 60">
+    <circle cx="20" cy="15" r="12" stroke="#bfa14a" stroke-width="3" fill="${filled ? '#bfa14a' : 'none'}"/>
+    <rect x="12" y="27" width="16" height="18" rx="4" stroke="#bfa14a" stroke-width="3" fill="${filled ? '#bfa14a' : 'none'}"/>
+    <rect x="16" y="47" width="8" height="8" rx="2" stroke="#bfa14a" stroke-width="3" fill="${filled ? '#bfa14a' : 'none'}"/>
+  </svg>`;
+        }
+        function mvpSVG(filled) {
+          return `<svg width="28" height="40" viewBox="0 0 40 60">
+    <rect x="10" y="40" width="20" height="10" rx="2" stroke="#bfa14a" stroke-width="3" fill="${filled ? '#bfa14a' : 'none'}"/>
+    <rect x="16" y="25" width="8" height="15" rx="2" stroke="#bfa14a" stroke-width="3" fill="${filled ? '#bfa14a' : 'none'}"/>
+    <circle cx="20" cy="18" r="5" stroke="#bfa14a" stroke-width="3" fill="${filled ? '#bfa14a' : 'none'}"/>
+  </svg>`;
+        }
+        function allnbaSVG(filled) {
+          return `<svg width="28" height="35" viewBox="0 0 40 50">
+    <rect x="8" y="10" width="24" height="30" rx="4" stroke="#bfa14a" stroke-width="3" fill="${filled ? '#bfa14a' : 'none'}"/>
+    <rect x="14" y="40" width="12" height="6" rx="2" stroke="#bfa14a" stroke-width="3" fill="${filled ? '#bfa14a' : 'none'}"/>
+  </svg>`;
+        }
+        function allstarSVG(filled) {
+          return `<svg width="28" height="28" viewBox="0 0 40 40">
+    <polygon points="20,5 24,16 36,16 26,23 30,34 20,27 10,34 14,23 4,16 16,16"
+      stroke="#bfa14a" stroke-width="3" fill="${filled ? '#bfa14a' : 'none'}"/>
+  </svg>`;
+        }
+
+        // Example usage: call this after loading player data
+        function displayPlayerAwards(playerAwards) {
+          renderAwardIcons('championship-icons', playerAwards.championships, 7, championshipSVG);
+          document.getElementById('championship-count').textContent = playerAwards.championships ? `×${playerAwards.championships}` : '';
+          renderAwardIcons('mvp-icons', playerAwards.mvp, 5, mvpSVG);
+          document.getElementById('mvp-count').textContent = playerAwards.mvp ? `×${playerAwards.mvp}` : '';
+          renderAwardIcons('allnba-icons', playerAwards.allnba, 10, allnbaSVG);
+          document.getElementById('allnba-count').textContent = playerAwards.allnba ? `×${playerAwards.allnba}` : '';
+          renderAwardIcons('allstar-icons', playerAwards.allstar, 15, allstarSVG);
+          document.getElementById('allstar-count').textContent = playerAwards.allstar ? `×${playerAwards.allstar}` : '';
+        }
+
+        displayPlayerAwards({
+          championships: 4,
+          mvp: 2,
+          allnba: 10,
+          allstar: 12
+        });
+
+        function parseAwardsString(awardsStr) {
+    // Example: "MVP-1,AS,NBA1"
+    const result = {
+        championships: 0,
+        mvp: 0,
+        allnba: 0,
+        allstar: 0
+    };
+    if (!awardsStr) return result;
+    const awards = awardsStr.split(',').map(a => a.trim().toUpperCase());
+    awards.forEach(a => {
+        if (a.startsWith("MVP-")) {
+            // Only count if MVP-1 (won MVP)
+            if (a === "MVP-1") result.mvp += 1;
+        } else if (a === "MVP") {
+            result.mvp += 1;
+        } else if (a === "AS") {
+            result.allstar += 1;
+        } else if (a.startsWith("NBA1")) {
+            result.allnba += 1;
+        } else if (a.startsWith("NBA2")) {
+            result.allnba += 1;
+        } else if (a.startsWith("NBA3")) {
+            result.allnba += 1;
+        } else if (a.startsWith("CHAMP") || a === "CHAMPIONSHIP" || a === "NBA CHAMPION") {
+            result.championships += 1;
+        }
+    });
+    return result;
+}
