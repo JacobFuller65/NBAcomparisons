@@ -45,11 +45,16 @@ function loadYears(player) {
     yearSelect.innerHTML = '<option value="">--Choose a Year--</option>';
 
     if (playerSelect && playerData[playerSelect]) {
-        Object.keys(playerData[playerSelect]).forEach(year => {
-            const option = document.createElement('option');
-            option.value = year;
-            option.textContent = year;
-            yearSelect.appendChild(option);
+        const seasons = Array.isArray(playerData[playerSelect])
+            ? playerData[playerSelect]
+            : Object.values(playerData[playerSelect]);
+        seasons.forEach(season => {
+            if (season.Season) {
+                const option = document.createElement('option');
+                option.value = season.Season;
+                option.textContent = season.Season;
+                yearSelect.appendChild(option);
+            }
         });
     }
 }
@@ -205,6 +210,14 @@ async function displayStats() {
                     }
                 },
                 plugins: [ChartDataLabels] // Enable the Data Labels plugin
+            });
+            // Move this logic inside displayStats where player1 and player2 are defined
+
+            document.getElementById('player1-select').addEventListener('change', function () {
+                loadYears('player1');
+            });
+            document.getElementById('player2-select').addEventListener('change', function () {
+                loadYears('player2');
             });
 
             // Render the percentage comparison chart
@@ -500,4 +513,3 @@ function getCareerAwards(playerName) {
     return total;
 }
 
-// Move this logic inside displayStats where player1 and player2 are defined
