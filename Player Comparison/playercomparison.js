@@ -3,10 +3,19 @@ let playerData = {};
 // Load player data from JSON file
 async function loadPlayerData() {
     try {
-        const response = await fetch('player-data.json'); // Adjust the path as necessary
+        const response = await fetch('player-data.json'); // Adjust path if needed
         playerData = await response.json();
-        console.log('Player Data Loaded:', playerData); // Debugging line
+        console.log('Player Data Loaded:', playerData);
         populatePlayers();
+        // Add event listeners here, now that playerData is loaded
+        document.getElementById('player1-select').addEventListener('change', function() {
+            loadYears('player1');
+        });
+        document.getElementById('player2-select').addEventListener('change', function() {
+            loadYears('player2');
+        });
+        console.log('Player Data Loaded:', playerData);
+        console.log('Player Names:', Object.keys(playerData));
     } catch (error) {
         console.error('Error loading player data:', error);
 }
@@ -211,14 +220,7 @@ async function displayStats() {
                 },
                 plugins: [ChartDataLabels] // Enable the Data Labels plugin
             });
-            // Move this logic inside displayStats where player1 and player2 are defined
 
-            document.getElementById('player1-select').addEventListener('change', function () {
-                loadYears('player1');
-            });
-            document.getElementById('player2-select').addEventListener('change', function () {
-                loadYears('player2');
-            });
 
             // Render the percentage comparison chart
             const percentageCtx = document.getElementById('percentageComparisonChart').getContext('2d');
@@ -362,7 +364,9 @@ function populatePlayerDropdowns(playerData) {
 }
 
 // Call loadPlayerData on page load
-loadPlayerData();
+console.log("Player Data loaded: ");
+document.addEventListener('DOMContentLoaded', loadPlayerData);
+
 
 $(document).ready(function () {
     $('#player1-select').select2({
