@@ -302,6 +302,8 @@ let playerData = {};
             if (!searchInput.contains(e.target) && !resultsList.contains(e.target)) {
                 resultsList.innerHTML = '';
                 resultsList.style.display = 'none';
+                console.log("Player 1 Awards:",getCareerAwards(player1));
+                console.log("Player 2 Awards:",getCareerAwards(player2));
             }
         });
 
@@ -409,23 +411,16 @@ let playerData = {};
         }
 
         // Example usage: call this after loading player data
-        function displayPlayerAwards(playerAwards) {
-          renderAwardIcons('championship-icons', playerAwards.championships, 7, championshipSVG);
-          document.getElementById('championship-count').textContent = playerAwards.championships ? `×${playerAwards.championships}` : '';
-          renderAwardIcons('mvp-icons', playerAwards.mvp, 5, mvpSVG);
-          document.getElementById('mvp-count').textContent = playerAwards.mvp ? `×${playerAwards.mvp}` : '';
-          renderAwardIcons('allnba-icons', playerAwards.allnba, 10, allnbaSVG);
-          document.getElementById('allnba-count').textContent = playerAwards.allnba ? `×${playerAwards.allnba}` : '';
-          renderAwardIcons('allstar-icons', playerAwards.allstar, 15, allstarSVG);
-          document.getElementById('allstar-count').textContent = playerAwards.allstar ? `×${playerAwards.allstar}` : '';
+        function displayPlayerAwards(playerAwards, suffix = '') {
+          renderAwardIcons(`championship-icons${suffix}`, playerAwards.championships, 7, championshipSVG);
+          document.getElementById(`championship-count${suffix}`).textContent = playerAwards.championships ? `×${playerAwards.championships}` : '';
+          renderAwardIcons(`mvp-icons${suffix}`, playerAwards.mvp, 5, mvpSVG);
+          document.getElementById(`mvp-count${suffix}`).textContent = playerAwards.mvp ? `×${playerAwards.mvp}` : '';
+          renderAwardIcons(`allnba-icons${suffix}`, playerAwards.allnba, 10, allnbaSVG);
+          document.getElementById(`allnba-count${suffix}`).textContent = playerAwards.allnba ? `×${playerAwards.allnba}` : '';
+          renderAwardIcons(`allstar-icons${suffix}`, playerAwards.allstar, 15, allstarSVG);
+          document.getElementById(`allstar-count${suffix}`).textContent = playerAwards.allstar ? `×${playerAwards.allstar}` : '';
         }
-
-        displayPlayerAwards({
-          championships: 4,
-          mvp: 2,
-          allnba: 10,
-          allstar: 12
-        });
 
         function parseAwardsString(awardsStr) {
     // Example: "MVP-1,AS,NBA1"
@@ -457,3 +452,44 @@ let playerData = {};
     });
     return result;
 }
+
+// For Player 1
+//const player1Awards = parseAwardsString(stats1.Awards);
+//displayPlayerAwards(player1Awards);
+
+// For Player 2 (if you want to show both)
+//const player2Awards = parseAwardsString(stats2.Awards);
+//displayPlayerAwards(player2Awards);
+
+function getCareerAwards(playerName) {
+    const playerSeasons = playerData[playerName];
+    const total = {
+        championships: 0,
+        mvp: 0,
+        allnba: 0,
+        allstar: 0
+    };
+    if (!playerSeasons) return total;
+    Object.values(playerSeasons).forEach(season => {
+        if (season && season.Awards) {
+            const seasonAwards = parseAwardsString(season.Awards);
+            total.championships += seasonAwards.championships;
+            total.mvp += seasonAwards.mvp;
+            total.allnba += seasonAwards.allnba;
+            total.allstar += seasonAwards.allstar;
+        }
+    });
+    return total;
+}
+
+if (player1) {
+    const player1CareerAwards = getCareerAwards(player1);
+    displayPlayerAwards(player1CareerAwards, '-1');
+    console.log("Player 1 Awards:",getCareerAwards(player1));
+}
+if (player2) {
+    const player2CareerAwards = getCareerAwards(player2);
+    displayPlayerAwards(player2CareerAwards, '-2');
+    console.log("Player 2 Awards:",getCareerAwards(player2));
+}
+
