@@ -102,3 +102,20 @@ body {
         #player1-search-results {
     display: none;
 }
+.awards-section {
+    margin-top: 2rem;
+    background: #f5f7fa;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+.awards-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+.awards-container > div {
+    flex: 1;
+}
+.awards-section h4 {
+    margin-bottom: 0.5rem;
+}

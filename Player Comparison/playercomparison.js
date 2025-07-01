@@ -342,3 +342,32 @@ let playerData = {};
         });
 
         console.log(playerNames); // or your array of player names
+
+        function displayAwardsAndAccomplishments(playerData) {
+            // Example: playerData.awards = ["MVP (2008)", "All-Star (18x)", ...]
+            //          playerData.teamAccomplishments = ["NBA Champion (5x)", ...]
+            const individualList = document.getElementById('individual-awards-list');
+            const teamList = document.getElementById('team-accomplishments-list');
+            individualList.innerHTML = '';
+            teamList.innerHTML = '';
+
+            if (playerData.awards && playerData.awards.length) {
+                playerData.awards.forEach(award => {
+                    const li = document.createElement('li');
+                    li.textContent = award;
+                    individualList.appendChild(li);
+                });
+            } else {
+                individualList.innerHTML = '<li>No individual awards found.</li>';
+            }
+
+            if (playerData.teamAccomplishments && playerData.teamAccomplishments.length) {
+                playerData.teamAccomplishments.forEach(acc => {
+                    const li = document.createElement('li');
+                    li.textContent = acc;
+                    teamList.appendChild(li);
+                });
+            } else {
+                teamList.innerHTML = '<li>No team accomplishments found.</li>';
+            }
+        }
