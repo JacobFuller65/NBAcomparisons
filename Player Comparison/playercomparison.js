@@ -232,7 +232,59 @@ async function displayStats() {
         alert(error.message);
     }
 }
-
+// Render the defense comparison chart
+const defenseCtx = document.getElementById('defenseComparisonChart').getContext('2d');
+if (window.defenseComparisonChart instanceof Chart) window.defenseComparisonChart.destroy();
+window.defenseComparisonChart = new Chart(defenseCtx, {
+    type: 'bar',
+    data: {
+        labels: ['Steals Per Game', 'Blocks Per Game', 'Defensive Rebounds Per Game'],
+        datasets: [
+            {
+                label: `${player1} (${year1})`,
+                data: [
+                    stats1.STL || 0,
+                    stats1.BLK || 0,
+                    stats1.DRB || 0
+                ],
+                backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            },
+            {
+                label: `${player2} (${year2})`,
+                data: [
+                    stats2.STL || 0,
+                    stats2.BLK || 0,
+                    stats2.DRB || 0
+                ],
+                backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { position: 'top' },
+            tooltip: { enabled: true },
+            datalabels: {
+                anchor: 'end',
+                align: 'top',
+                formatter: value => value.toFixed(1),
+                font: { weight: 'bold' }
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                title: { display: true, text: 'Per Game' }
+            }
+        }
+    },
+    plugins: [ChartDataLabels]
+});
 // Awards and accomplishments display (optional, for text lists)
 function displayAwardsAndAccomplishments(playerData) {
     const individualList = document.getElementById('individual-awards-list');
