@@ -1,0 +1,506 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: repeating-linear-gradient(
+    90deg,
+    #e09c5c 0px,
+    #e09c5c 40px,
+    #d17a22 40px,
+    #d17a22 80px
+  );
+  color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Basketball watermark */
+body::after {
+  content: "🏀";
+  font-size: 10rem;
+  color: rgba(244, 81, 30, 0.07);
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Game container with basketball rim accent */
+.game-container {
+  background: rgba(31, 40, 51, 0.97);
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+  box-sizing: border-box;
+  border: 4px solid #f4511e;
+  box-shadow: 0 0 30px #d17a22, 0 0 0 8px #fff inset;
+}
+
+#config {
+  margin-bottom: 1rem;
+}
+
+select, button {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Basketball-style buttons */
+button, #pauseBtn, #startOverBtn, #startBtn, #popup-close-btn {
+  background: #f4511e;
+  border: none;
+  color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(244, 81, 30, 0.2);
+  transition: background 0.2s, transform 0.2s;
+}
+
+button:hover, #pauseBtn:hover, #startOverBtn:hover, #startBtn:hover, #popup-close-btn:hover {
+  background: #d17a22;
+  transform: scale(1.05);
+}
+
+#timer {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#question {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/* Basketball emoji before question */
+#question::before {
+  content: "🏀 ";
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+#choices button {
+  display: block;
+  margin: 0.5rem auto;
+  width: 80%;
+}
+
+/* Timer progress bar container */
+#timer-container {
+  width: 100%;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+/* Timer progress bar */
+#timer-bar {
+  width: 100%;
+  height: 100%;
+  background-color: #007bff;
+  transition: width 0.1s linear;
+}
+
+/* Popup styles */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup-content {
+  background: white; /* Ensure the background is white for contrast */
+  color: black; /* Set text color to black for visibility */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 80%; /* Ensure it fits smaller screens */
+  word-wrap: break-word; /* Handle long text gracefully */
+}
+
+/* Uniform size for popup images */
+.popup-content img {
+  max-width: 100%; /* Ensure the image doesn't exceed the container width */
+  max-height: 200px; /* Set a maximum height for the image */
+  width: auto; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 10px; /* Add spacing above the image */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+}
+
+#popup-message {
+  font-size: 18px; /* Adjust font size for readability */
+  margin-bottom: 15px;
+}
+
+#popup-close-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #1f78b4; /* Updated blue for consistency */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#popup-close-btn:hover {
+  background: #145a86; /* Updated hover color */
+  color: #f0f0f0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Controls container */
+#controls {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center; /* Center align the buttons */
+  gap: 10px; /* Add spacing between buttons */
+  margin-top: 10px;
+}
+
+/* Pause and Start Over buttons */
+#pauseBtn, #startOverBtn {
+  padding: 10px 20px;
+  background-color: #1f78b4; /* Updated blue */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#pauseBtn:hover, #startOverBtn:hover {
+  background-color: #145a86; /* Updated hover color */
+  color: #f0f0f0;
+}
+
+/* Summary page styles */
+#summary {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Leaderboard styles */
+#leaderboard {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#leaderboard li {
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #007bff; /* Blue background for visibility */
+  color: white; /* White text for contrast */
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#leaderboard li:nth-child(odd) {
+  background-color: #0056b3; /* Slightly darker blue for alternating rows */
+}
+
+#playAgainBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #28a745; /* Green button remains */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#playAgainBtn:hover {
+  background-color: #1e7e34; /* Darker green for hover */
+  color: #f0f0f0;
+}
+
+/* Contact section */
+#contact {
+  position: fixed; /* Fix the position relative to the viewport */
+  bottom: 20px; /* Distance from the bottom of the screen */
+  right: 20px; /* Distance from the right of the screen */
+  z-index: 1000; /* Ensure it stays above other elements */
+  text-align: center;
+  margin-top: 10px; /* Adjust spacing between the controls and the contact button */
+}
+
+#contactBtn {
+  background-color: #1f78b4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visibility */
+}
+
+#contactBtn:hover {
+  background-color: #145a86;
+}
+
+/* OKC Thunder blue and orange theme */
+.okc-theme {
+  background: linear-gradient(135deg, #007ac1 0%, #ef3b24 100%);
+  color: #fff;
+}
+
+.okc-theme .game-container {
+  border: 4px solid #ef3b24;
+  box-shadow: 0 0 24px #007ac1;
+  background: #003366; /* Deep blue for contrast */
+}
+
+.okc-theme #question,
+.okc-theme #score,
+.okc-theme #timer {
+  color: #fff;
+}
+
+.okc-theme #choices button {
+  background: #007ac1;
+  color: #fff;
+  border: 2px solid #ef3b24;
+}
+
+.okc-theme #choices button:hover {
+  background: #ef3b24;
+  color: #fff;
+  border: 2px solid #007ac1;
+}
+
+.okc-theme #pauseBtn,
+.okc-theme #startOverBtn,
+.okc-theme #startBtn,
+.okc-theme #popup-close-btn {
+  background: #ef3b24;
+  color: #fff;
+  border: 2px solid #007ac1;
+}
+
+.okc-theme #pauseBtn:hover,
+.okc-theme #startOverBtn:hover,
+.okc-theme #startBtn:hover,
+.okc-theme #popup-close-btn:hover {
+  background: #007ac1;
+  color: #fff;
+  border: 2px solid #ef3b24;
+}
+
+/* LA Lakers purple and gold theme */
+.lal-theme {
+  background: linear-gradient(135deg, #552583 0%, #FDB927 100%);
+  color: #fff;
+}
+
+.lal-theme .game-container {
+  border: 4px solid #FDB927; /* Gold border */
+  box-shadow: 0 0 24px #552583;
+  background: #301934; /* Deep purple for contrast */
+}
+
+.lal-theme #question,
+.lal-theme #score,
+.lal-theme #timer {
+  color: #fff;
+}
+
+.lal-theme #choices button {
+  background: #552583; /* Lakers purple */
+  color: #fff;
+  border: 2px solid #FDB927; /* Gold border */
+}
+
+.lal-theme #choices button:hover {
+  background: #FDB927; /* Gold on hover */
+  color: #552583;      /* Purple text on gold */
+  border: 2px solid #552583;
+}
+
+.lal-theme #pauseBtn,
+.lal-theme #startOverBtn,
+.lal-theme #startBtn,
+.lal-theme #popup-close-btn {
+  background: #FDB927; /* Gold */
+  color: #552583;      /* Purple text */
+  border: 2px solid #552583;
+}
+
+.lal-theme #pauseBtn:hover,
+.lal-theme #startOverBtn:hover,
+.lal-theme #startBtn:hover,
+.lal-theme #popup-close-btn:hover {
+  background: #552583; /* Purple on hover */
+  color: #FDB927;      /* Gold text */
+  border: 2px solid #FDB927;
+}
+
+/* Improve visibility for Choices.js dropdown */
+.choices__inner,
+.choices__list--dropdown,
+.choices__list--single,
+.choices__item {
+  font-size: 1.1rem !important;
+  font-weight: bold !important;
+  color: #222 !important;
+  background: #fff !important;
+}
+
+.choices__list--dropdown .choices__item--selectable {
+  color: #222 !important;
+  background: #fff !important;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+  background: #f4511e !important; /* Basketball orange highlight */
+  color: #fff !important;
+}
+
+/* Make the Choices.js search box and dropdown narrower */
+.choices {
+  max-width: 275px !important; /* Adjust as needed */
+  width: 100% !important;
+  margin: 0 auto;
+}
+
+.choices__inner {
+  max-width: 275px !important;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+  max-width: 275px !important;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* Make the Choices.js search box and dropdown smaller */
+.choices__inner {
+  min-height: 32px !important;
+  font-size: 0.95rem !important;
+  padding: 4px 8px !important;
+}
+
+.choices__input {
+  min-height: 28px !important;
+  font-size: 0.95rem !important;
+  padding: 2px 6px !important;
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+  font-size: 0.95rem !important;
+}
+
+/* Responsive styles for tablets and smaller devices */
+@media (max-width: 768px) {
+  .game-container {
+    padding: 1.5rem; /* Reduce padding for smaller screens */
+    max-width: 100%; /* Use full width */
+  }
+
+  #timer {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  #question {
+    font-size: 1.2rem; /* Adjust font size for readability */
+  }
+
+  #choices button {
+    font-size: 1rem; /* Adjust button font size */
+    padding: 0.8rem; /* Increase padding for better touch targets */
+    width: 100%; /* Full width for better usability */
+  }
+
+  #popup-message {
+    font-size: 1rem; /* Adjust font size for readability */
+  }
+
+  #popup-close-btn {
+    font-size: 1rem; /* Adjust button font size */
+    padding: 0.8rem 1.5rem; /* Adjust padding for better usability */
+  }
+
+  #leaderboard li {
+    font-size: 0.9rem; /* Slightly smaller font for compact display */
+    padding: 8px; /* Reduce padding for smaller screens */
+  }
+
+  #playAgainBtn {
+    font-size: 1rem; /* Adjust button font size */
+    padding: 0.8rem 1.5rem; /* Adjust padding for better usability */
+    width: 100%; /* Full width for better usability */
+  }
+}
+
+/* Responsive styles for mobile phones */
+@media (max-width: 480px) {
+  body {
+    flex-direction: column; /* Stack elements vertically */
+    padding: 1rem; /* Add padding to prevent content from touching edges */
+  }
+
+  .game-container {
+    padding: 1rem; /* Reduce padding further for smaller screens */
+    max-width: 100%; /* Use full width */
+  }
+
+  #timer {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+
+  #question {
+    font-size: 1rem; /* Adjust font size for readability */
+  }
+
+  #choices button {
+    font-size: 0.9rem; /* Adjust button font size */
+    padding: 0.6rem; /* Adjust padding for smaller touch targets */
+  }
+
+  #popup-message {
+    font-size: 0.9rem; /* Adjust font size for readability */
+  }
+
+  #popup-close-btn {
+    font-size: 0.9rem; /* Adjust button font size */
+    padding: 0.6rem 1rem; /* Adjust padding for smaller screens */
+  }
+
+  #leaderboard li {
+    font-size: 0.8rem; /* Smaller font for compact display */
+    padding: 6px; /* Reduce padding for smaller screens */
+  }
+
+  #playAgainBtn {
+    font-size: 0.9rem; /* Adjust button font size */
+    padding: 0.6rem 1rem; /* Adjust padding for smaller screens */
+  }
+}

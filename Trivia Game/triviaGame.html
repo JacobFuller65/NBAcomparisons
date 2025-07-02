@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NBA Trivia Game</title>
-    <link rel="stylesheet" href="triviaGameStyle.css" />
+    <link rel="stylesheet" href="style.css" />
     <!-- Choices.js CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
 <style>
@@ -18,10 +18,29 @@
     );
     color: #f5f5f5;
   }
+  #home-btn {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    background: #fff;
+    color: #d17a22;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    z-index: 1000;
+    transition: background 0.2s, color 0.2s;
+  }
+  #home-btn:hover {
+    background: #d17a22;
+    color: #fff;
+  }
 </style>
   </head>
 
   <body>
+    <a href="../index.html" id="home-btn" title="Home">🏠 Home</a>
     <div class="game-container">
       <h1>🏀 NBA Trivia</h1>
       <div id="config">
@@ -121,7 +140,7 @@
         window.location.href = "mailto:Jake.Fuller64@gmail.com?subject=NBA Trivia Feedback&body=Hi, I have some feedback about the NBA Trivia Game.";
       });
     </script>
-        <script src="triviaGame.js"></script>
+        <script src="script.js"></script>
     <!-- Choices.js JS -->
 <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 <script>

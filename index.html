@@ -1,42 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NBA Comparisons</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 1rem 2rem;
-            display: block;
-        }
-        nav a:hover {
-            background-color: #555;
-        }
-        .content {
-            padding: 2rem;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <h1>NBA Comparisons</h1>
@@ -48,6 +19,7 @@
         <a href="./html files/player-stats.html">Player Stats</a>
         <a href="./html files/team-stats.html">Team Stats</a>
         <a href="./Trivia Game/triviaGame.html">Trivia Game</a>
+        <a href="./Goat Lineup/goatLineupGame.html">82-0 Lineup Challenge</a>
         <a href="./html files/nicknameGame.html">Nickname Game</a>
         <a href="./html files/fastBreakGame.html">Fast Break Game</a>
     </nav>
@@ -55,5 +27,22 @@
         <h2>Welcome to NBA Comparisons</h2>
         <p>Select a tab above to explore the tools and stats.</p>
     </div>
+    <div class="widgets-row">
+        <div class="widget-col">
+            <div data-widget-type="entityScores" data-entity-type="league" data-entity-id="103" data-lang="en"
+                data-widget-id="55b3df5d-2226-49a6-a362-7176b600a6d7"></div>
+        </div>
+        <div class="widget-col">
+            <div data-widget-type="entityStandings" data-entity-type="league" data-entity-id="103" data-lang="en"
+                data-widget-id="b5502020-323e-4dae-a105-cefa5f5cb77f" data-standings-only-major-columns="true"
+                data-hide-home-away-tabs="true"></div>
+        </div>
+    </div>
+    <div id="powered-by">
+        Powered by
+        <a id="powered-by-link" href="https://www.365scores.com" target="_blank">365Scores.com</a>
+    </div>
+    <script src="https://widgets.365scores.com/main.js"></script>
 </body>
+
 </html>
