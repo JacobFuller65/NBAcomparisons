@@ -62,8 +62,17 @@ function selectPlayer(posKey) {
 function renderTiles() {
     const container = document.getElementById('lineupContainer');
     container.innerHTML = '';
+    // Track already selected player names to avoid duplicates
+    const usedNames = new Set(Object.values(selectedPlayers).map(p => p && p.name));
     positions.forEach(pos => {
-        const player = selectedPlayers[pos.key] || currentTiles[pos.key];
+        let player = selectedPlayers[pos.key] || currentTiles[pos.key];
+        // If the player is already selected for another position, pick a new random one
+        if (player && usedNames.has(player.name) && !selectedPlayers[pos.key]) {
+            // Exclude already selected players
+            const exclude = Array.from(usedNames);
+            player = getRandomPlayerForPosition(pos.key, exclude);
+            currentTiles[pos.key] = player;
+        }
         const isSelected = !!selectedPlayers[pos.key];
         const tile = document.createElement('div');
         tile.className = 'player-tile' + (isSelected ? ' selected' : '');
