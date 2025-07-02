@@ -1,0 +1,101 @@
+
+
+body {
+            background: #181818;
+            color: #fff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 32px;
+            letter-spacing: 2px;
+        }
+        .lineup-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 24px;
+            margin: 48px auto 0 auto;
+            max-width: 1200px;
+            flex-wrap: wrap;
+        }
+        .player-tile {
+            background: #232323;
+            border-radius: 18px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+            width: 170px;
+            min-height: 270px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 18px 10px 10px 10px;
+            position: relative;
+            transition: box-shadow 0.2s;
+        }
+        .player-tile.selected {
+            border: 3px solid #ffd700;
+            box-shadow: 0 0 16px 4px #ffd70055;
+        }
+        .tile-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        .player-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #444;
+            margin-bottom: 10px;
+            background: #111;
+        }
+        .player-name {
+            font-size: 1em;
+            margin-bottom: 8px;
+            text-align: center;
+            min-height: 40px;
+        }
+        .select-btn {
+            background: #ffd700;
+            color: #232323;
+            border: none;
+            border-radius: 14px;
+            padding: 7px 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .select-btn:disabled {
+            background: #aaa;
+            color: #fff;
+            cursor: not-allowed;
+        }
+        .randomize-btn {
+            display: block;
+            margin: 32px auto 0 auto;
+            background: #d17a22;
+            color: #fff;
+            border: none;
+            border-radius: 18px;
+            padding: 12px 32px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .randomize-btn:hover {
+            background: #e09c5c;
+        }
+        .goal-message {
+            text-align: center;
+            margin-top: 32px;
+            font-size: 1.3em;
+            color: #ffd700;
+            font-weight: bold;
+        }
