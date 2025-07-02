@@ -1,11 +1,12 @@
 // Example player pool (add more as needed)
 let playerPool = [];
 
-fetch('./goatPlayers.json')
+fetch('goatPlayers.json')
   .then(response => response.json())
   .then(data => {
     playerPool = data;
-    randomizeTiles(); // Start the game after loading players
+    console.log("Loaded players:", playerPool); // Add this line
+    randomizeTiles();
   });
 
 const positions = [
@@ -21,10 +22,18 @@ let selectedPlayers = {}; // { PG: playerObj, ... }
 let currentTiles = {};    // { PG: playerObj, ... }
 
 function getRandomPlayerForPosition(posKey, excludeNames = []) {
-    // Filter pool for this position and not already selected
-    const pool = playerPool.filter(
-        p => p.pos.includes(posKey) && !excludeNames.includes(p.name)
-    );
+    let pool;
+    if (posKey === "6th") {
+        // For 6th Man, allow any player not already selected
+        pool = playerPool.filter(
+            p => !excludeNames.includes(p.name)
+        );
+    } else {
+        // For other positions, filter by position
+        pool = playerPool.filter(
+            p => p.pos.includes(posKey) && !excludeNames.includes(p.name)
+        );
+    }
     if (pool.length === 0) return null;
     return pool[Math.floor(Math.random() * pool.length)];
 }
@@ -100,6 +109,13 @@ function checkGoal() {
         document.getElementById('goalMessage').textContent =
             "Select one player for each position to build your dream team!";
     }
+}
+
+function restartGame() {
+    selectedPlayers = {};
+    currentTiles = {};
+    randomizeTiles();
+    document.getElementById('goalMessage').textContent = "Select one player for each position to build your dream team!";
 }
 
 // call to randomize the tiles  
