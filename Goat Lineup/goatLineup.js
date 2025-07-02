@@ -1,26 +1,12 @@
 // Example player pool (add more as needed)
-const playerPool = [
-    { name: "Magic Johnson", img: "images/magic_johnson.jpg", pos: ["PG"], score: 16 },
-    { name: "Stephen Curry", img: "images/stephen_curry.jpg", pos: ["PG"], score: 15 },
-    { name: "Oscar Robertson", img: "images/oscar_robertson.jpg", pos: ["PG"], score: 13 },
-    { name: "Michael Jordan", img: "images/michael_jordan.jpg", pos: ["SG"], score: 18 },
-    { name: "Kobe Bryant", img: "images/kobe_bryant.jpg", pos: ["SG"], score: 16 },
-    { name: "Dwyane Wade", img: "images/dwyane_wade.jpg", pos: ["SG"], score: 14 },
-    { name: "LeBron James", img: "images/lebron_james.jpg", pos: ["SF", "PF"], score: 18 },
-    { name: "Larry Bird", img: "images/larry_bird.jpg", pos: ["SF"], score: 15 },
-    { name: "Kevin Durant", img: "images/kevin_durant.jpg", pos: ["SF", "PF"], score: 16 },
-    { name: "Tim Duncan", img: "images/tim_duncan.jpg", pos: ["PF", "C"], score: 17 },
-    { name: "Giannis Antetokounmpo", img: "images/giannis.jpg", pos: ["PF"], score: 15 },
-    { name: "Karl Malone", img: "images/karl_malone.jpg", pos: ["PF"], score: 13 },
-    { name: "Shaquille O'Neal", img: "images/shaquille_oneal.jpg", pos: ["C"], score: 16 },
-    { name: "Kareem Abdul-Jabbar", img: "images/kareem_abdul_jabbar.jpg", pos: ["C"], score: 17 },
-    { name: "Hakeem Olajuwon", img: "images/hakeem_olajuwon.jpg", pos: ["C"], score: 14 },
-    { name: "Manu Ginóbili", img: "images/manu_ginobili.jpg", pos: ["SG", "6th"], score: 11 },
-    { name: "Jamal Crawford", img: "images/jamal_crawford.jpg", pos: ["6th"], score: 10 },
-    { name: "Lou Williams", img: "images/lou_williams.jpg", pos: ["6th"], score: 11 },
-    { name: "Andre Iguodala", img: "images/andre_iguodala.jpg", pos: ["SF", "6th"], score: 10 },
-    // Add more players and images as needed
-];
+let playerPool = [];
+
+fetch('./goatPlayers.json')
+  .then(response => response.json())
+  .then(data => {
+    playerPool = data;
+    randomizeTiles(); // Start the game after loading players
+  });
 
 const positions = [
     { key: "PG", label: "Point Guard (PG)" },
