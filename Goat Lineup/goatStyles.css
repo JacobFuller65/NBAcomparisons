@@ -17,10 +17,10 @@ body {
             align-items: flex-start;
             gap: 20px;
             margin: 32px auto 0 auto;
-            max-width: none;         /* Remove max-width restriction */
-            flex-wrap: nowrap;       /* Prevent wrapping */
+            max-width: none;         
+            flex-wrap: nowrap;       
             padding: 0 10px;
-            overflow-x: auto;        /* Allow horizontal scroll if needed */
+            overflow-x: auto;        
         }
         .player-tile {
             background: #232323;
