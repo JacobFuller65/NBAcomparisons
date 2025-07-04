@@ -11,17 +11,47 @@ body {
             margin-top: 32px;
             letter-spacing: 2px;
         }
-        #lineupContainer {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 20px;
-            margin: 32px auto 0 auto;
-            max-width: none;         
-            flex-wrap: nowrap;       
-            padding: 0 10px;
-            overflow-x: auto;        
-        }
+        /* Desktop: 6 in a row, scroll if needed */
+#lineupContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 10px;
+}
+
+/* Tablet: wrap tiles, smaller size */
+@media (max-width: 900px) {
+    #lineupContainer {
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+    }
+    .player-tile {
+        width: 120px;
+        min-height: 200px;
+    }
+    .player-img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Mobile: stack vertically, full width */
+@media (max-width: 600px) {
+    #lineupContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .player-tile {
+        width: 90vw;
+        max-width: 320px;
+    }
+}
+
         .player-tile {
             background: #232323;
             border-radius: 18px;
@@ -100,30 +130,3 @@ body {
             color: #ffd700;
             font-weight: bold;
         }
-        @media (max-width: 900px) {
-    #lineupContainer {
-        max-width: 100vw;
-        gap: 12px;
-    }
-    .player-tile {
-        width: 120px;
-        min-height: 200px;
-        padding: 10px 4px 8px 4px;
-    }
-    .player-img {
-        width: 70px;
-        height: 70px;
-    }
-}
-
-@media (max-width: 600px) {
-    #lineupContainer {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    .player-tile {
-        width: 90vw;
-        max-width: 320px;
-    }
-}

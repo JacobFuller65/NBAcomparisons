@@ -1,7 +1,7 @@
 // Example player pool (add more as needed)
 let playerPool = [];
 
-fetch('goatPlayers.json')
+fetch('goatPlayers_with_img.json')
   .then(response => response.json())
   .then(data => {
     playerPool = data;
@@ -100,8 +100,10 @@ function getLineupRecord(selectedPlayers) {
             totalScore += player.score || 0;
         }
     });
-    // Wins = totalScore, Losses = 82 - totalScore
-    return { wins: totalScore, losses: 82 - totalScore };
+    // Clamp totalScore to a maximum of 82
+    totalScore = Math.min(totalScore, 82);
+    // Wins = totalScore, Losses = 82 - totalScore (never negative)
+    return { wins: totalScore, losses: Math.max(0, 82 - totalScore) };
 }
 
 function checkGoal() {
