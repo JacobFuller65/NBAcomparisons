@@ -6,13 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NBA Comparisons</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Add in your <head> or before your scripts -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script>
+        // Your Firebase config (from Firebase Console)
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+            // ...other config
+        };
+        firebase.initializeApp(firebaseConfig);
+
+        function login() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            firebase.auth().signInWithEmailAndPassword(email, password)
+                .then(() => document.getElementById('auth-message').textContent = "Logged in!")
+                .catch(e => document.getElementById('auth-message').textContent = e.message);
+        }
+
+        function register() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            firebase.auth().createUserWithEmailAndPassword(email, password)
+                .then(() => document.getElementById('auth-message').textContent = "Account created!")
+                .catch(e => document.getElementById('auth-message').textContent = e.message);
+        }
+
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) {
+                // Show logged-in UI
+                document.getElementById('auth-container').style.display = 'none';
+                document.getElementById('welcome-message').textContent = `Welcome, ${user.email}`;
+            } else {
+                // Show login/register form
+                document.getElementById('auth-container').style.display = 'block';
+                document.getElementById('welcome-message').textContent = '';
+            }
+        });
+    </script>
 </head>
 
 <body>
     <header>
         <h1>NBA Comparisons</h1>
+        <button id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
     </header>
-    <nav>
+    <nav id="main-nav">
         <a href="./Player Comparison/player-comparison.html">Player Comparison Tool</a>
         <a href="./html files/mvp-comparison.html">MVP Comparison Tool</a>
         <a href="./html files/team-comparison.html">Team Comparison Tool</a>
@@ -26,6 +67,7 @@
     <div class="content">
         <h2>Welcome to NBA Comparisons</h2>
         <p>Select a tab above to explore the tools and stats.</p>
+        <div id="welcome-message"></div>
     </div>
     <div class="widgets-row">
         <div class="widget-col">
@@ -43,6 +85,18 @@
         <a id="powered-by-link" href="https://www.365scores.com" target="_blank">365Scores.com</a>
     </div>
     <script src="https://widgets.365scores.com/main.js"></script>
+    <script>
+        document.getElementById('nav-toggle').onclick = function() {
+            document.getElementById('main-nav').classList.toggle('open');
+};
+    </script>
+    <div id="auth-container">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <button onclick="register()">Register</button>
+        <div id="auth-message"></div>
+    </div>
 </body>
 
 </html>

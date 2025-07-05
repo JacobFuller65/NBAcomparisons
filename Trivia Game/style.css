@@ -504,3 +504,45 @@ button:hover, #pauseBtn:hover, #startOverBtn:hover, #startBtn:hover, #popup-clos
     padding: 0.6rem 1rem; /* Adjust padding for smaller screens */
   }
 }
+
+@media (max-width: 600px) {
+    #nav-toggle {
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 300;
+        background: #444;
+        color: #fff;
+        border: none;
+        font-size: 2em;
+        padding: 0.3em 0.7em;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    #main-nav {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 56px;
+        left: 0;
+        width: 100vw;
+        background: #444;
+        z-index: 250;
+    }
+    #main-nav.open {
+        display: flex;
+    }
+    #main-nav a {
+        padding: 1rem 1rem;
+        text-align: center;
+        font-size: 1.1em;
+        border-bottom: 1px solid #555;
+    }
+    body {
+        padding-top: 64px;
+    }
+}
+#nav-toggle {
+    display: none; /* Hide by default, show on mobile */
+}
