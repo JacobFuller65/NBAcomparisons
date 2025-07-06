@@ -5,518 +5,518 @@
       "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/abdulka01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 99,
+        "defense": 92,
+        "playmaking": 80,
+        "athleticism": 88,
+        "clutch": 96,
+        "chemistry": 94
       },
-      "tags": []
+      "tags": ["Post Scorer", "Skyhook", "Dominant Big", "Longevity"]
     },
     {
       "name": "Ray Allen",
       "position": "SG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/allenra02.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 95,
+        "defense": 78,
+        "playmaking": 82,
+        "athleticism": 85,
+        "clutch": 98,
+        "chemistry": 92
       },
-      "tags": []
+      "tags": ["3PT Specialist", "Off-Ball Threat", "Clutch Shooter"]
     },
     {
       "name": "Victor Wembanyama",
-      "position": "",
-      "photo": "",
+      "position": "C",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/wembavi01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 90,
+        "defense": 98,
+        "playmaking": 84,
+        "athleticism": 92,
+        "clutch": 88,
+        "chemistry": 90
       },
-      "tags": []
+      "tags": ["Unicorn", "Rim Protector", "Shot Creator"]
     },
     {
       "name": "Tyrese Maxey",
-      "position": "",
-      "photo": "",
+      "position": "PG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/maxeyty01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 92,
+        "defense": 76,
+        "playmaking": 85,
+        "athleticism": 94,
+        "clutch": 89,
+        "chemistry": 93
       },
-      "tags": []
+      "tags": ["Speedy Guard", "Scoring Threat", "3-Level Scorer"]
     },
     {
       "name": "Giannis Antetokounmpo",
       "position": "PF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/antetgi01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 96,
+        "defense": 97,
+        "playmaking": 88,
+        "athleticism": 99,
+        "clutch": 90,
+        "chemistry": 95
       },
-      "tags": []
+      "tags": ["Slasher", "Transition Threat", "DPOY Candidate", "MVP"]
     },
     {
       "name": "Carmelo Anthony",
       "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/anthoca01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 96,
+        "defense": 72,
+        "playmaking": 78,
+        "athleticism": 84,
+        "clutch": 92,
+        "chemistry": 80
       },
-      "tags": []
+      "tags": ["Isolation Scorer", "Mid-Range Assassin", "Clutch Shooter"]
     },
     {
       "name": "Tiny Archibald",
       "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/architi01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 93,
+        "defense": 75,
+        "playmaking": 94,
+        "athleticism": 89,
+        "clutch": 88,
+        "chemistry": 90
       },
-      "tags": []
+      "tags": ["Floor General", "Speedy Guard", "Scoring PG"]
     },
     {
       "name": "Paul Arizin",
       "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/arizipa01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 92,
+        "defense": 80,
+        "playmaking": 78,
+        "athleticism": 84,
+        "clutch": 87,
+        "chemistry": 88
       },
-      "tags": []
+      "tags": ["Jump Shot Pioneer", "Scoring Wing"]
     },
     {
       "name": "Charles Barkley",
       "position": "PF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/barklch01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 96,
+        "defense": 78,
+        "playmaking": 85,
+        "athleticism": 92,
+        "clutch": 90,
+        "chemistry": 85
       },
-      "tags": []
+      "tags": ["Rebounder", "Inside Scorer", "MVP"]
     },
     {
       "name": "Rick Barry",
       "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/barryri01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 94,
+        "defense": 82,
+        "playmaking": 86,
+        "athleticism": 85,
+        "clutch": 91,
+        "chemistry": 83
       },
-      "tags": []
+      "tags": ["All-Around", "Scoring Wing", "Free Throw Expert"]
     },
     {
       "name": "Elgin Baylor",
       "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/bayloel01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 97,
+        "defense": 80,
+        "playmaking": 84,
+        "athleticism": 93,
+        "clutch": 90,
+        "chemistry": 88
       },
-      "tags": []
+      "tags": ["Slasher", "Hanging Jumpers", "Scoring Machine"]
     },
     {
       "name": "Dave Bing",
       "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/bingda01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 91,
+        "defense": 80,
+        "playmaking": 89,
+        "athleticism": 87,
+        "clutch": 88,
+        "chemistry": 92
       },
-      "tags": []
+      "tags": ["Scoring PG", "Floor General"]
     },
     {
       "name": "Larry Bird",
       "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/birdla01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 98,
+        "defense": 88,
+        "playmaking": 95,
+        "athleticism": 82,
+        "clutch": 99,
+        "chemistry": 97
       },
-      "tags": []
+      "tags": ["All-Around", "High IQ", "Clutch Shooter", "MVP"]
     },
     {
       "name": "Kobe Bryant",
       "position": "SG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/bryanko01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 98,
+        "defense": 93,
+        "playmaking": 88,
+        "athleticism": 94,
+        "clutch": 99,
+        "chemistry": 90
       },
-      "tags": []
+      "tags": ["Mid-Range Assassin", "Clutch Shooter", "Lockdown Defender", "MVP"]
     },
     {
       "name": "Wilt Chamberlain",
       "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/chambwi01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 99,
+        "defense": 94,
+        "playmaking": 81,
+        "athleticism": 98,
+        "clutch": 85,
+        "chemistry": 82
       },
-      "tags": []
+      "tags": ["Dominant Big", "Rebounder", "Scoring Machine", "MVP"]
     },
     {
       "name": "Bob Cousy",
       "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/cousybo01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 88,
+        "defense": 78,
+        "playmaking": 97,
+        "athleticism": 83,
+        "clutch": 90,
+        "chemistry": 96
       },
-      "tags": []
+      "tags": ["Floor General", "Showtime Passer", "High IQ"]
     },
     {
       "name": "Dave Cowens",
       "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/cowenda01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 87,
+        "defense": 89,
+        "playmaking": 84,
+        "athleticism": 90,
+        "clutch": 88,
+        "chemistry": 95
       },
-      "tags": []
+      "tags": ["Hustle Player", "Rebounder", "Versatile Big"]
     },
     {
       "name": "Billy Cunningham",
       "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/cunnibi01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 90,
+        "defense": 81,
+        "playmaking": 83,
+        "athleticism": 86,
+        "clutch": 87,
+        "chemistry": 89
       },
-      "tags": []
+      "tags": ["Kangaroo Kid", "Rebounding Forward"]
     },
     {
       "name": "Stephen Curry",
       "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/curryst01.jpg",
       "stats": {
-        "offense": 98,
-        "defense": 75,
+        "offense": 99,
+        "defense": 78,
         "playmaking": 92,
         "athleticism": 88,
         "clutch": 95,
-        "chemistry": 94
+        "chemistry": 96
       },
-      "tags": ["3PT Specialist", "Off-Ball Threat", "Gravity"]
+      "tags": ["3PT Specialist", "Off-Ball Threat", "Gravity", "MVP"]
     },
     {
       "name": "Anthony Davis",
       "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/davisan01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 94,
+        "defense": 96,
+        "playmaking": 80,
+        "athleticism": 91,
+        "clutch": 87,
+        "chemistry": 88
       },
-      "tags": []
+      "tags": ["Versatile Big", "Rim Protector", "Mid-Range Assassin"]
     },
     {
       "name": "Dave DeBusschere",
       "position": "PF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/debusda01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 84,
+        "defense": 94,
+        "playmaking": 78,
+        "athleticism": 85,
+        "clutch": 88,
+        "chemistry": 95
       },
-      "tags": []
+      "tags": ["Lockdown Defender", "Hustle Player", "Rebounder"]
     },
     {
       "name": "Clyde Drexler",
       "position": "SG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/drexlcl01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 93,
+        "defense": 84,
+        "playmaking": 87,
+        "athleticism": 95,
+        "clutch": 89,
+        "chemistry": 90
       },
-      "tags": []
+      "tags": ["Slasher", "High-Flyer", "All-Around"]
     },
     {
       "name": "Tim Duncan",
       "position": "PF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/duncati01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 95,
+        "defense": 98,
+        "playmaking": 85,
+        "athleticism": 86,
+        "clutch": 97,
+        "chemistry": 99
       },
-      "tags": []
+      "tags": ["The Big Fundamental", "High IQ", "Post Scorer", "Lockdown Defender", "MVP"]
     },
     {
       "name": "Kevin Durant",
-      "position": "PF",
+      "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/duranke01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 99,
+        "defense": 87,
+        "playmaking": 88,
+        "athleticism": 90,
+        "clutch": 96,
+        "chemistry": 89
       },
-      "tags": []
+      "tags": ["3-Level Scorer", "Shot Creator", "Clutch Shooter", "MVP"]
     },
     {
       "name": "Julius Erving",
       "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/ervinju01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 95,
+        "defense": 86,
+        "playmaking": 84,
+        "athleticism": 97,
+        "clutch": 92,
+        "chemistry": 93
       },
-      "tags": []
+      "tags": ["High-Flyer", "Slasher", "Transition Threat", "MVP"]
     },
     {
       "name": "Patrick Ewing",
       "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/ewingpa01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 92,
+        "defense": 93,
+        "playmaking": 75,
+        "athleticism": 88,
+        "clutch": 88,
+        "chemistry": 87
       },
-      "tags": []
+      "tags": ["Dominant Big", "Mid-Range Assassin", "Rim Protector"]
     },
     {
       "name": "Walt Frazier",
       "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/fraziwa01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 89,
+        "defense": 95,
+        "playmaking": 91,
+        "athleticism": 86,
+        "clutch": 93,
+        "chemistry": 94
       },
-      "tags": []
+      "tags": ["Lockdown Defender", "Floor General", "Smooth Operator"]
     },
     {
       "name": "Kevin Garnett",
       "position": "PF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/garneke01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 91,
+        "defense": 98,
+        "playmaking": 86,
+        "athleticism": 92,
+        "clutch": 90,
+        "chemistry": 96
       },
-      "tags": []
+      "tags": ["DPOY Candidate", "Mid-Range Assassin", "Intensity", "MVP"]
     },
     {
       "name": "George Gervin",
-      "position": "SF",
+      "position": "SG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/gervige01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 97,
+        "defense": 74,
+        "playmaking": 80,
+        "athleticism": 88,
+        "clutch": 91,
+        "chemistry": 85
       },
-      "tags": []
+      "tags": ["Scoring Machine", "Finger Roll", "Shot Creator"]
     },
     {
       "name": "Hal Greer",
       "position": "SG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/greerha01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 90,
+        "defense": 82,
+        "playmaking": 85,
+        "athleticism": 84,
+        "clutch": 88,
+        "chemistry": 91
       },
-      "tags": []
+      "tags": ["Jump Shooter", "Durable"]
     },
     {
       "name": "James Harden",
-      "position": "SG",
+      "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 98,
+        "defense": 77,
+        "playmaking": 97,
+        "athleticism": 89,
+        "clutch": 88,
+        "chemistry": 86
       },
-      "tags": []
+      "tags": ["Isolation Scorer", "Floor General", "Step-Back", "MVP"]
     },
     {
       "name": "John Havlicek",
       "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/havlijo01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 92,
+        "defense": 90,
+        "playmaking": 87,
+        "athleticism": 88,
+        "clutch": 94,
+        "chemistry": 98
       },
-      "tags": []
+      "tags": ["Hustle Player", "All-Around", "Stamina", "6th Man"]
     },
     {
       "name": "Elvin Hayes",
       "position": "PF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/hayesel01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 93,
+        "defense": 88,
+        "playmaking": 74,
+        "athleticism": 87,
+        "clutch": 86,
+        "chemistry": 81
       },
-      "tags": []
+      "tags": ["Rebounder", "Turnaround Jumper", "Scoring Big"]
     },
     {
       "name": "Allen Iverson",
       "position": "SG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/iversal01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 97,
+        "defense": 78,
+        "playmaking": 85,
+        "athleticism": 96,
+        "clutch": 92,
+        "chemistry": 80
       },
-      "tags": []
+      "tags": ["Slasher", "Shot Creator", "Crossover", "MVP"]
     },
     {
       "name": "LeBron James",
       "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/jamesle01.jpg",
       "stats": {
-        "offense": 97,
-        "defense": 90,
+        "offense": 98,
+        "defense": 92,
         "playmaking": 99,
-        "athleticism": 96,
+        "athleticism": 97,
         "clutch": 96,
         "chemistry": 98
       },
-      "tags": ["Floor General", "All-Around", "High IQ"]
+      "tags": ["Floor General", "All-Around", "High IQ", "MVP"]
     },
     {
       "name": "Magic Johnson",
       "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/johnsma02.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 95,
+        "defense": 85,
+        "playmaking": 99,
+        "athleticism": 90,
+        "clutch": 98,
+        "chemistry": 99
       },
-      "tags": []
+      "tags": ["Floor General", "Showtime Passer", "High IQ", "MVP"]
     },
     {
       "name": "Sam Jones",
       "position": "SG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/jonessa01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 91,
+        "defense": 84,
+        "playmaking": 78,
+        "athleticism": 85,
+        "clutch": 95,
+        "chemistry": 96
       },
-      "tags": []
+      "tags": ["Clutch Shooter", "Bank Shot", "Scoring Guard"]
     },
     {
       "name": "Michael Jordan",
@@ -526,571 +526,571 @@
         "offense": 99,
         "defense": 98,
         "playmaking": 91,
-        "athleticism": 97,
+        "athleticism": 98,
         "clutch": 99,
         "chemistry": 93
       },
-      "tags": ["Slasher", "Mid-Range Assassin", "Lockdown Defender"]
+      "tags": ["Slasher", "Mid-Range Assassin", "Lockdown Defender", "MVP"]
     },
     {
       "name": "Jason Kidd",
       "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/kiddja01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 85,
+        "defense": 92,
+        "playmaking": 97,
+        "athleticism": 87,
+        "clutch": 88,
+        "chemistry": 95
       },
-      "tags": []
+      "tags": ["Floor General", "High IQ", "Rebounding Guard", "Lockdown Defender"]
     },
     {
       "name": "Kawhi Leonard",
       "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/leonaka01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 95,
+        "defense": 99,
+        "playmaking": 84,
+        "athleticism": 90,
+        "clutch": 97,
+        "chemistry": 88
       },
-      "tags": []
+      "tags": ["Lockdown Defender", "Mid-Range Assassin", "DPOY Candidate", "Clutch"]
     },
     {
       "name": "Damian Lillard",
       "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/lillada01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 97,
+        "defense": 74,
+        "playmaking": 90,
+        "athleticism": 89,
+        "clutch": 99,
+        "chemistry": 92
       },
-      "tags": []
+      "tags": ["Clutch Shooter", "3PT Specialist", "Logo Lillard"]
     },
     {
       "name": "Jerry Lucas",
       "position": "PF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/lucasje01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 88,
+        "defense": 85,
+        "playmaking": 82,
+        "athleticism": 83,
+        "clutch": 86,
+        "chemistry": 90
       },
-      "tags": []
+      "tags": ["Rebounder", "High IQ", "Shooting Big"]
     },
     {
       "name": "Karl Malone",
       "position": "PF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/malonka01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 97,
+        "defense": 86,
+        "playmaking": 82,
+        "athleticism": 94,
+        "clutch": 89,
+        "chemistry": 84
       },
-      "tags": []
+      "tags": ["Post Scorer", "Mid-Range Assassin", "Durable", "MVP"]
     },
     {
       "name": "Moses Malone",
       "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/malonmo01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 94,
+        "defense": 85,
+        "playmaking": 72,
+        "athleticism": 89,
+        "clutch": 91,
+        "chemistry": 87
       },
-      "tags": []
+      "tags": ["Rebounder", "Offensive Rebounds", "Dominant Big", "MVP"]
     },
     {
       "name": "Pete Maravich",
       "position": "SG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/maravpe01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 96,
+        "defense": 72,
+        "playmaking": 95,
+        "athleticism": 88,
+        "clutch": 87,
+        "chemistry": 80
       },
-      "tags": []
+      "tags": ["Showtime Passer", "Shot Creator", "Scoring Machine"]
     },
     {
       "name": "Bob McAdoo",
       "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/mcadobo01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 94,
+        "defense": 80,
+        "playmaking": 78,
+        "athleticism": 86,
+        "clutch": 88,
+        "chemistry": 84
       },
-      "tags": []
+      "tags": ["Shooting Big", "Scoring Machine", "MVP"]
     },
     {
       "name": "Kevin McHale",
       "position": "PF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/mchalke01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 92,
+        "defense": 93,
+        "playmaking": 76,
+        "athleticism": 85,
+        "clutch": 89,
+        "chemistry": 95
       },
-      "tags": []
+      "tags": ["Post Scorer", "Footwork", "Lockdown Defender", "6th Man"]
     },
     {
       "name": "George Mikan",
       "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/mikange01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 93,
+        "defense": 90,
+        "playmaking": 75,
+        "athleticism": 80,
+        "clutch": 92,
+        "chemistry": 94
       },
-      "tags": []
+      "tags": ["First Superstar", "Dominant Big", "Mikan Drill"]
     },
     {
       "name": "Reggie Miller",
       "position": "SG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/millere01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 94,
+        "defense": 75,
+        "playmaking": 80,
+        "athleticism": 84,
+        "clutch": 98,
+        "chemistry": 88
       },
-      "tags": []
+      "tags": ["Clutch Shooter", "3PT Specialist", "Off-Ball Threat", "Trash Talker"]
     },
     {
       "name": "Earl Monroe",
       "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/monroea01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 91,
+        "defense": 78,
+        "playmaking": 86,
+        "athleticism": 87,
+        "clutch": 89,
+        "chemistry": 90
       },
-      "tags": []
+      "tags": ["The Pearl", "Spin Move", "Shot Creator"]
     },
     {
       "name": "Steve Nash",
       "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/nashst01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 92,
+        "defense": 70,
+        "playmaking": 98,
+        "athleticism": 85,
+        "clutch": 89,
+        "chemistry": 97
       },
-      "tags": []
+      "tags": ["Floor General", "High IQ", "3PT Specialist", "MVP"]
     },
     {
       "name": "Dirk Nowitzki",
       "position": "PF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/nowitdi01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 98,
+        "defense": 76,
+        "playmaking": 80,
+        "athleticism": 82,
+        "clutch": 96,
+        "chemistry": 95
       },
-      "tags": []
+      "tags": ["Shooting Big", "One-Legged Fadeaway", "Clutch Shooter", "MVP"]
     },
     {
       "name": "Shaquille O'Neal",
       "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/onealsh01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 98,
+        "defense": 88,
+        "playmaking": 79,
+        "athleticism": 95,
+        "clutch": 88,
+        "chemistry": 91
       },
-      "tags": []
+      "tags": ["Dominant Big", "Post Scorer", "Physicality", "MVP"]
     },
     {
       "name": "Hakeem Olajuwon",
       "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/olajuha01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 96,
+        "defense": 99,
+        "playmaking": 81,
+        "athleticism": 93,
+        "clutch": 95,
+        "chemistry": 92
       },
-      "tags": []
+      "tags": ["Dream Shake", "Footwork", "DPOY Candidate", "MVP"]
     },
     {
       "name": "Robert Parish",
       "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/parisro01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 86,
+        "defense": 90,
+        "playmaking": 74,
+        "athleticism": 82,
+        "clutch": 87,
+        "chemistry": 96
       },
-      "tags": []
+      "tags": ["The Chief", "High-Arc Jumper", "Durable"]
     },
     {
       "name": "Chris Paul",
       "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/paulch01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 90,
+        "defense": 88,
+        "playmaking": 98,
+        "athleticism": 86,
+        "clutch": 94,
+        "chemistry": 95
       },
-      "tags": []
+      "tags": ["Point God", "Floor General", "High IQ", "Mid-Range Assassin"]
     },
     {
       "name": "Gary Payton",
       "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/paytoga01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 88,
+        "defense": 98,
+        "playmaking": 92,
+        "athleticism": 89,
+        "clutch": 90,
+        "chemistry": 88
       },
-      "tags": []
+      "tags": ["The Glove", "Lockdown Defender", "DPOY Candidate", "Trash Talker"]
     },
     {
       "name": "Bob Pettit",
       "position": "PF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/pettibo01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 95,
+        "defense": 86,
+        "playmaking": 78,
+        "athleticism": 88,
+        "clutch": 93,
+        "chemistry": 91
       },
-      "tags": []
+      "tags": ["Rebounder", "Scoring Big", "First MVP"]
     },
     {
       "name": "Paul Pierce",
       "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/piercpa01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 94,
+        "defense": 80,
+        "playmaking": 84,
+        "athleticism": 83,
+        "clutch": 97,
+        "chemistry": 92
       },
-      "tags": []
+      "tags": ["The Truth", "Clutch Shooter", "Shot Creator"]
     },
     {
       "name": "Scottie Pippen",
       "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/pippesc01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 88,
+        "defense": 99,
+        "playmaking": 93,
+        "athleticism": 94,
+        "clutch": 89,
+        "chemistry": 96
       },
-      "tags": []
+      "tags": ["Lockdown Defender", "Point Forward", "All-Around"]
     },
     {
       "name": "Willis Reed",
       "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/reedwi01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 89,
+        "defense": 92,
+        "playmaking": 76,
+        "athleticism": 85,
+        "clutch": 96,
+        "chemistry": 98
       },
-      "tags": []
+      "tags": ["The Captain", "Leadership", "Toughness", "MVP"]
     },
     {
       "name": "Oscar Robertson",
       "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/roberos01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 96,
+        "defense": 87,
+        "playmaking": 98,
+        "athleticism": 89,
+        "clutch": 94,
+        "chemistry": 93
       },
-      "tags": []
+      "tags": ["The Big O", "Triple-Double", "All-Around", "MVP"]
     },
     {
       "name": "David Robinson",
       "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/robinda01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 94,
+        "defense": 96,
+        "playmaking": 80,
+        "athleticism": 95,
+        "clutch": 90,
+        "chemistry": 97
       },
-      "tags": []
+      "tags": ["The Admiral", "DPOY Candidate", "Athletic Big", "MVP"]
     },
     {
       "name": "Dennis Rodman",
       "position": "PF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/rodmade01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 65,
+        "defense": 99,
+        "playmaking": 70,
+        "athleticism": 91,
+        "clutch": 80,
+        "chemistry": 85
       },
-      "tags": []
+      "tags": ["Rebounder", "Lockdown Defender", "Hustle Player", "DPOY Candidate"]
     },
     {
       "name": "Bill Russell",
       "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/russebi01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 82,
+        "defense": 99,
+        "playmaking": 85,
+        "athleticism": 92,
+        "clutch": 98,
+        "chemistry": 99
       },
-      "tags": []
+      "tags": ["Winner", "Lockdown Defender", "Rebounder", "MVP"]
     },
     {
       "name": "Dolph Schayes",
       "position": "PF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/schaydo01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 90,
+        "defense": 84,
+        "playmaking": 81,
+        "athleticism": 83,
+        "clutch": 88,
+        "chemistry": 92
       },
-      "tags": []
+      "tags": ["Rebounder", "Shooting Big", "Durable"]
     },
     {
       "name": "Bill Sharman",
       "position": "SG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/sharmbi01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 89,
+        "defense": 85,
+        "playmaking": 82,
+        "athleticism": 84,
+        "clutch": 91,
+        "chemistry": 95
       },
-      "tags": []
+      "tags": ["Shooting Guard", "Free Throw Expert"]
     },
     {
       "name": "John Stockton",
       "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/stockjo01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 87,
+        "defense": 90,
+        "playmaking": 99,
+        "athleticism": 85,
+        "clutch": 92,
+        "chemistry": 98
       },
-      "tags": []
+      "tags": ["Floor General", "All-Time Assists", "High IQ", "Toughness"]
     },
     {
       "name": "Isiah Thomas",
       "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/thomais01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 93,
+        "defense": 84,
+        "playmaking": 94,
+        "athleticism": 91,
+        "clutch": 96,
+        "chemistry": 90
       },
-      "tags": []
+      "tags": ["Floor General", "Toughness", "Clutch Performer"]
     },
     {
       "name": "Nate Thurmond",
       "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/thurmna01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 85,
+        "defense": 95,
+        "playmaking": 78,
+        "athleticism": 88,
+        "clutch": 86,
+        "chemistry": 89
       },
-      "tags": []
+      "tags": ["Rebounder", "Rim Protector", "Quadruple-Double"]
     },
     {
       "name": "Wes Unseld",
       "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/unselwe01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 80,
+        "defense": 92,
+        "playmaking": 88,
+        "athleticism": 86,
+        "clutch": 90,
+        "chemistry": 97
       },
-      "tags": []
+      "tags": ["Outlet Passer", "Rebounder", "High IQ", "MVP"]
     },
     {
       "name": "Dwyane Wade",
       "position": "SG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/wadedw01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 96,
+        "defense": 90,
+        "playmaking": 88,
+        "athleticism": 95,
+        "clutch": 97,
+        "chemistry": 94
       },
-      "tags": []
+      "tags": ["Slasher", "Shot-Blocking Guard", "Clutch Performer"]
     },
     {
       "name": "Bill Walton",
       "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/waltobi01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 88,
+        "defense": 94,
+        "playmaking": 92,
+        "athleticism": 85,
+        "clutch": 90,
+        "chemistry": 96
       },
-      "tags": []
+      "tags": ["Passing Big", "High IQ", "Rim Protector", "MVP"]
     },
     {
       "name": "Jerry West",
       "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/westje01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 97,
+        "defense": 91,
+        "playmaking": 93,
+        "athleticism": 90,
+        "clutch": 99,
+        "chemistry": 94
       },
-      "tags": []
+      "tags": ["The Logo", "Clutch Shooter", "Scoring Guard", "Lockdown Defender"]
     },
     {
       "name": "Russell Westbrook",
       "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/westbru01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 92,
+        "defense": 80,
+        "playmaking": 94,
+        "athleticism": 98,
+        "clutch": 88,
+        "chemistry": 82
       },
-      "tags": []
+      "tags": ["Triple-Double", "Transition Threat", "Athletic Guard", "MVP"]
     },
     {
       "name": "Lenny Wilkens",
       "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/wilkele01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 88,
+        "defense": 82,
+        "playmaking": 91,
+        "athleticism": 86,
+        "clutch": 87,
+        "chemistry": 95
       },
-      "tags": []
+      "tags": ["Floor General", "Player-Coach"]
     },
     {
       "name": "Dominique Wilkins",
       "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/wilkido01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 96,
+        "defense": 76,
+        "playmaking": 78,
+        "athleticism": 98,
+        "clutch": 90,
+        "chemistry": 84
       },
-      "tags": []
+      "tags": ["Human Highlight Film", "High-Flyer", "Slasher", "Scoring Machine"]
     },
     {
       "name": "James Worthy",
-      "position": "PF",
+      "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/worthja01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 90,
+        "defense": 82,
+        "playmaking": 83,
+        "athleticism": 91,
+        "clutch": 93,
+        "chemistry": 94
       },
-      "tags": []
+      "tags": ["Big Game James", "Transition Threat", "Clutch Performer"]
     }
   ]
 }

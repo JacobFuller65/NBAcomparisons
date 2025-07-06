@@ -16,6 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectionGrid = document.getElementById('selectionGrid');
     const selectionTitle = document.getElementById('selectionTitle');
     
+    // Results Modal Elements
+    const resultsModal = document.getElementById('resultsModal');
+    const simulationLog = document.getElementById('simulationLog');
+    const finalScoreEl = document.getElementById('finalScore');
+    const userBoxScoreTable = document.querySelector('#userBoxScore table');
+    const cpuBoxScoreTable = document.querySelector('#cpuBoxScore table');
+    const playAgainButton = document.getElementById('playAgainButton');
+
     // Hide reroll button as it's not used in this flow
     const rerollButton = document.getElementById('rerollButton');
     if (rerollButton) rerollButton.style.display = 'none';
@@ -242,7 +250,174 @@ document.addEventListener('DOMContentLoaded', () => {
         if (Object.keys(userTeam).length === positions.length) {
             gameMessage.textContent = "Your team is ready! Hit Start Battle!";
             battleButton.disabled = false;
+            draftArea.style.display = 'none'; // Hide draft area when done
         }
+    }
+
+    battleButton.addEventListener('click', startBattle);
+    playAgainButton.addEventListener('click', () => {
+        resultsModal.style.display = 'none';
+        initializeGame();
+    });
+
+    function calculateTeamRatings(team) {
+        let offense = 0, defense = 0, chemistry = 0;
+        Object.values(team).forEach(p => {
+            if (p && p.stats) {
+                offense += p.stats.offense + p.stats.playmaking;
+                defense += p.stats.defense + p.stats.athleticism;
+                chemistry += p.stats.chemistry;
+            }
+        });
+        return { offense, defense, chemistry };
+    }
+
+    function startBattle() {
+        battleButton.disabled = true;
+        const userRatings = calculateTeamRatings(userTeam);
+        const cpuRatings = calculateTeamRatings(cpuTeam);
+
+        // --- Game Simulation Logic ---
+        const baseScore = 70;
+        const offenseFactor = 0.15;
+        const defenseFactor = 0.12;
+        const chemBonus = userRatings.chemistry / 50; // Chemistry bonus
+
+        let userScore = baseScore + (userRatings.offense * offenseFactor) - (cpuRatings.defense * defenseFactor) + chemBonus;
+        let cpuScore = baseScore + (cpuRatings.offense * offenseFactor) - (userRatings.defense * defenseFactor);
+
+        // Add clutch randomness
+        const userClutch = Object.values(userTeam).reduce((sum, p) => sum + (p.stats.clutch || 0), 0);
+        const cpuClutch = Object.values(cpuTeam).reduce((sum, p) => sum + (p.stats.clutch || 0), 0);
+        userScore += (Math.random() * userClutch / 50);
+        cpuScore += (Math.random() * cpuClutch / 50);
+
+        userScore = Math.round(userScore);
+        cpuScore = Math.round(cpuScore);
+
+        const winner = userScore > cpuScore ? 'user' : 'cpu';
+
+        // --- Display Simulation ---
+        simulationLog.innerHTML = '';
+        finalScoreEl.innerHTML = '';
+        resultsModal.style.display = 'flex';
+
+        const logMessages = [
+            "The game is underway!",
+            userScore > cpuScore ? "Your team starts strong with a scoring run!" : "The CPU team comes out firing on all cylinders.",
+            "Both teams are trading baskets in a tight contest.",
+            "A key defensive stop shifts the momentum.",
+            "Down to the wire... every possession counts!",
+            `And the final buzzer sounds!`
+        ];
+
+        logMessages.forEach((msg, i) => {
+            setTimeout(() => {
+                const p = document.createElement('p');
+                p.textContent = msg;
+                simulationLog.appendChild(p);
+                simulationLog.scrollTop = simulationLog.scrollHeight;
+            }, i * 1200);
+        });
+
+        setTimeout(() => {
+            displayFinalResults(userScore, cpuScore, winner);
+        }, logMessages.length * 1200);
+    }
+
+    function displayFinalResults(userScore, cpuScore, winner) {
+        const userScoreSpan = `<span class="${winner === 'user' ? 'winner' : 'loser'}">${userScore}</span>`;
+        const cpuScoreSpan = `<span class="${winner === 'cpu' ? 'winner' : 'loser'}">${cpuScore}</span>`;
+        finalScoreEl.innerHTML = `Your Team: ${userScoreSpan} - CPU Team: ${cpuScoreSpan}`;
+
+        // Generate and display box scores
+        generateBoxScore(userBoxScoreTable, userTeam, userScore);
+        generateBoxScore(cpuBoxScoreTable, cpuTeam, cpuScore);
+    }
+
+    function generateBoxScore(table, team, teamScore) {
+        const players = Object.values(team).filter(p => p);
+        if (players.length === 0) return;
+
+        // Positional multipliers to generate more realistic stat lines
+        const positionalMultipliers = {
+            rebounds: { PG: 0.6, SG: 0.8, SF: 1.0, PF: 1.3, C: 1.5 },
+            assists:  { PG: 1.4, SG: 1.1, SF: 1.0, PF: 0.8, C: 0.7 }
+        };
+
+        let playerStats = [];
+        let totalTeamPlaymaking = 0;
+        let totalTeamOffense = 0;
+
+        players.forEach(p => {
+            totalTeamPlaymaking += p.stats.playmaking;
+            totalTeamOffense += p.stats.offense;
+        });
+
+        // 1. Generate Assists and Rebounds for each player first
+        let totalTeamAssists = 0;
+        players.forEach(p => {
+            const playerPosition = p.position;
+            const rebMultiplier = positionalMultipliers.rebounds[playerPosition] || 1.0;
+            const astMultiplier = positionalMultipliers.assists[playerPosition] || 1.0;
+
+            const reb = Math.round(((p.stats.defense / 100) * 10 + (p.stats.athleticism / 100) * 3 + Math.random() * 3) * rebMultiplier);
+            // Assists based on player's share of team's total playmaking, modified by position
+            const ast = Math.round((((p.stats.playmaking / totalTeamPlaymaking) * (teamScore * 0.22)) + Math.random() * 2) * astMultiplier);
+            
+            playerStats.push({ player: p, pts: 0, reb, ast });
+            totalTeamAssists += ast;
+        });
+
+        // 2. Calculate points generated from assists
+        let pointsFromAssists = 0;
+        for (let i = 0; i < totalTeamAssists; i++) {
+            pointsFromAssists += (Math.random() < 0.3) ? 3 : 2; // 30% chance of an assist being for a 3-pointer
+        }
+
+        // 3. Distribute all points (assisted and unassisted) based on offense rating
+        let pointsToDistribute = teamScore;
+        let distributedPoints = 0;
+        
+        playerStats.forEach((stat, index) => {
+            const shareOfOffense = stat.player.stats.offense / totalTeamOffense;
+            let calculatedPoints = 0;
+            // Ensure the last player gets the remaining points to match the total score
+            if (index === playerStats.length - 1) {
+                calculatedPoints = pointsToDistribute - distributedPoints;
+            } else {
+                calculatedPoints = Math.round(pointsToDistribute * shareOfOffense);
+            }
+            stat.pts = calculatedPoints;
+            distributedPoints += calculatedPoints;
+        });
+
+        // 4. Calculate totals and build the table body
+        let totalPts = 0, totalReb = 0, totalAst = 0;
+        let tableBodyHtml = '';
+        playerStats.forEach(s => {
+            tableBodyHtml += `<tr><td>${s.player.name}</td><td>${s.pts}</td><td>${s.reb}</td><td>${s.ast}</td></tr>`;
+            totalPts += s.pts;
+            totalReb += s.reb;
+            totalAst += s.ast;
+        });
+
+        table.innerHTML = `
+            <thead>
+                <tr><th>Player</th><th>PTS</th><th>REB</th><th>AST</th></tr>
+            </thead>
+            <tbody>
+                ${tableBodyHtml}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><strong>Totals</strong></td>
+                    <td><strong>${totalPts}</strong></td>
+                    <td><strong>${totalReb}</strong></td>
+                    <td><strong>${totalAst}</strong></td>
+                </tr>
+            </tfoot>
+        `;
     }
 });
 
