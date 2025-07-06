@@ -1,43 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
     let playerPool = [];
-    let userTeam = {}; // { PG: player, SG: player, ... }
+    let userTeam = {};
     let cpuTeam = {};
-    let userPlayerOptions = {}; // { PG: [p1, p2], SG: [p1, p2] ...}
-
+    let currentDraftPositionIndex = 0;
     const positions = ["PG", "SG", "SF", "PF", "C", "6th"];
 
+    // DOM Elements
     const userGrid = document.getElementById('userPlayerGrid');
     const cpuGrid = document.getElementById('cpuPlayerGrid');
-    const rerollButton = document.getElementById('rerollButton');
     const battleButton = document.getElementById('battleButton');
     const gameMessage = document.getElementById('gameMessage');
+    const selectionModal = document.getElementById('selectionModal');
+    const selectionGrid = document.getElementById('selectionGrid');
+    const selectionTitle = document.getElementById('selectionTitle');
+    // Hide reroll button as it's not used in this flow
+    document.getElementById('rerollButton').style.display = 'none';
 
-    // Fetch player data from the JSON file
     fetch('playerAttributes.json')
         .then(response => response.json())
         .then(data => {
-            playerPool = data.players;
+            playerPool = data.players.filter(p => p && p.name); // Ensure players are valid
             if (playerPool.length > 0) {
                 initializeGame();
             } else {
-                gameMessage.textContent = "Failed to load player data.";
+                gameMessage.textContent = "Failed to load valid player data.";
             }
         })
-        .catch(error => {
-            console.error('Error fetching player data:', error);
-            gameMessage.textContent = 'Error loading player data.';
-        });
+        .catch(error => console.error('Error fetching player data:', error));
 
     function initializeGame() {
+        userTeam = {};
+        cpuTeam = {};
+        currentDraftPositionIndex = 0;
         generateCpuTeam();
-        generateUserOptions();
-        renderAllGrids();
-        rerollButton.addEventListener('click', () => {
-             if (Object.keys(userTeam).length < positions.length) {
-                generateUserOptions();
-                renderUserGrid();
-             }
-        });
+        renderCpuGrid();
+        renderUserGrid(); // Render empty slots initially
+        startDraftForPosition(currentDraftPositionIndex);
     }
 
     function getRandomPlayer(pos, exclude = []) {
@@ -54,111 +52,90 @@ document.addEventListener('DOMContentLoaded', () => {
         positions.forEach(pos => {
             const player = getRandomPlayer(pos, excludedForCpu);
             cpuTeam[pos] = player;
-            if(player) excludedForCpu.push(player);
+            if (player) excludedForCpu.push(player);
         });
     }
 
-    function generateUserOptions() {
-        const excludedForUser = Object.values(userTeam).concat(Object.values(cpuTeam));
-        positions.forEach(pos => {
-            // Only generate new options for unselected positions
-            if (!userTeam[pos]) {
-                // Provide 2-3 options per slot
-                const option1 = getRandomPlayer(pos, excludedForUser);
-                if(option1) excludedForUser.push(option1);
+    function startDraftForPosition(index) {
+        if (index >= positions.length) {
+            checkCompletion();
+            return;
+        }
 
-                const option2 = getRandomPlayer(pos, excludedForUser);
-                if(option2) excludedForUser.push(option2);
-                
-                userPlayerOptions[pos] = [option1, option2].filter(p => p); // Filter out nulls
-            }
+        const pos = positions[index];
+        selectionTitle.textContent = `Choose Your ${pos}`;
+        gameMessage.textContent = `Select one of the five players for the ${pos} position.`;
+        selectionGrid.innerHTML = '';
+
+        const excludedForDraft = [...Object.values(userTeam), ...Object.values(cpuTeam)];
+        const options = [];
+        for (let i = 0; i < 5; i++) {
+            const option = getRandomPlayer(pos, [...excludedForDraft, ...options]);
+            if (option) options.push(option);
+        }
+
+        options.forEach(player => {
+            const card = createPlayerCard(player, pos);
+            card.onclick = () => selectPlayer(pos, player);
+            selectionGrid.appendChild(card);
         });
+
+        selectionModal.style.display = 'flex';
     }
 
-    function renderAllGrids() {
+    function selectPlayer(pos, player) {
+        userTeam[pos] = player;
+        selectionModal.style.display = 'none';
         renderUserGrid();
-        renderCpuGrid();
+        
+        currentDraftPositionIndex++;
+        startDraftForPosition(currentDraftPositionIndex);
     }
 
-    function renderGrid(container, team, title) {
-        container.innerHTML = '';
-        positions.forEach(pos => {
-            const player = team[pos];
-            const card = document.createElement('div');
-            card.className = 'player-card selected'; // All CPU cards are "selected"
-            card.innerHTML = `
-                <div class="card-title">${pos}</div>
-                <img src="${player?.photo || ''}" alt="${player?.name || 'N/A'}">
-                <div>${player?.name || 'N/A'}</div>
-            `;
-            container.appendChild(card);
-        });
+    function createPlayerCard(player, title) {
+        const card = document.createElement('div');
+        card.className = 'player-card';
+        card.innerHTML = `
+            <div class="card-title">${title}</div>
+            <img src="${player?.photo || 'placeholder.jpg'}" alt="${player?.name || 'N/A'}" style="width:120px; height:auto;">
+            <div>${player?.name || 'N/A'}</div>
+        `;
+        return card;
     }
 
     function renderUserGrid() {
         userGrid.innerHTML = '';
         positions.forEach(pos => {
-            if (userTeam[pos]) {
-                // Render the selected player
-                const player = userTeam[pos];
-                const card = document.createElement('div');
-                card.className = 'player-card selected';
-                card.innerHTML = `
-                    <div class="card-title">${pos}</div>
-                    <img src="${player.photo}" alt="${player.name}">
-                    <div>${player.name}</div>
-                `;
+            const player = userTeam[pos];
+            if (player) {
+                const card = createPlayerCard(player, pos);
+                card.classList.add('selected');
                 userGrid.appendChild(card);
             } else {
-                // Render the options for an unselected position
-                const optionsContainer = document.createElement('div');
-                optionsContainer.className = 'options-container';
-                userPlayerOptions[pos].forEach(playerOption => {
-                    if (!playerOption) return;
-                    const card = document.createElement('div');
-                    card.className = 'player-card';
-                    card.innerHTML = `
-                        <div class="card-title">${pos}</div>
-                        <img src="${playerOption.photo}" alt="${playerOption.name}">
-                        <div>${playerOption.name}</div>
-                    `;
-                    card.onclick = () => selectPlayer(pos, playerOption);
-                    optionsContainer.appendChild(card);
-                });
-                userGrid.appendChild(optionsContainer);
+                // Render a placeholder for empty slots
+                const placeholderCard = document.createElement('div');
+                placeholderCard.className = 'player-card';
+                placeholderCard.innerHTML = `<div class="card-title">${pos}</div>`;
+                userGrid.appendChild(placeholderCard);
             }
         });
     }
 
     function renderCpuGrid() {
-        renderGrid(cpuGrid, cpuTeam, "CPU's Team");
-    }
-
-    function selectPlayer(pos, player) {
-        userTeam[pos] = player;
-        // Remove selected player from other options to prevent duplicates
-        Object.keys(userPlayerOptions).forEach(p => {
-            if (p !== pos) {
-                userPlayerOptions[p] = userPlayerOptions[p].filter(opt => opt.name !== player.name);
-            }
+        cpuGrid.innerHTML = '';
+        positions.forEach(pos => {
+            const player = cpuTeam[pos];
+            const card = createPlayerCard(player, pos);
+            card.classList.add('selected');
+            cpuGrid.appendChild(card);
         });
-        renderUserGrid();
-        checkCompletion();
     }
 
     function checkCompletion() {
         if (Object.keys(userTeam).length === positions.length) {
             gameMessage.textContent = "Your team is ready! Hit Start Battle!";
             battleButton.disabled = false;
-        } else {
-            gameMessage.textContent = "Select a player for each position.";
-            battleButton.disabled = true;
         }
     }
-
-    battleButton.addEventListener('click', () => {
-        // Implement battle logic here
-        gameMessage.textContent = "Battle started! (not implemented)";
-    });
 });
 

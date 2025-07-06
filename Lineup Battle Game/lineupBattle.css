@@ -183,3 +183,40 @@ body {
     cursor: pointer;
     margin: 0 10px;
 }
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #1e1e1e;
+    padding: 20px 40px;
+    border-radius: 15px;
+    border: 2px solid #00aaff;
+    text-align: center;
+}
+
+#selectionGrid {
+    display: flex;
+    gap: 20px;
+}
+
+#selectionGrid .player-card {
+    cursor: pointer;
+    border: 2px solid #444;
+}
+
+#selectionGrid .player-card:hover {
+    border-color: #00aaff;
+    transform: scale(1.05);
+}
