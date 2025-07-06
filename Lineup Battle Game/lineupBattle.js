@@ -262,13 +262,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function calculateTeamRatings(team) {
         let offense = 0, defense = 0, chemistry = 0;
-        Object.values(team).forEach(p => {
+        const players = Object.values(team).filter(p => p); // Get a clean list of players
+
+        // Base stat calculation
+        players.forEach(p => {
             if (p && p.stats) {
                 offense += p.stats.offense + p.stats.playmaking;
                 defense += p.stats.defense + p.stats.athleticism;
                 chemistry += p.stats.chemistry;
             }
         });
+
+        // --- Teammate Chemistry Boost Logic ---
+        const teamAffiliations = {};
+        players.forEach(p => {
+            if (p && p.teams) {
+                p.teams.forEach(teamName => {
+                    if (!teamAffiliations[teamName]) {
+                        teamAffiliations[teamName] = 0;
+                    }
+                    teamAffiliations[teamName]++;
+                });
+            }
+        });
+
+        let chemistryBoost = 0;
+        const duoBonus = 10;    // Bonus for a pair of teammates
+        const trioBonus = 25;   // Bonus for a trio
+
+        for (const teamName in teamAffiliations) {
+            const playerCount = teamAffiliations[teamName];
+            if (playerCount === 2) {
+                chemistryBoost += duoBonus;
+            } else if (playerCount >= 3) {
+                // A trio gets a larger, flat bonus.
+                chemistryBoost += trioBonus;
+            }
+        }
+
+        // Add the boost to the total chemistry
+        chemistry += chemistryBoost;
+        if (chemistryBoost > 0) {
+            console.log(`Team synergy detected! Applying chemistry boost of ${chemistryBoost}.`);
+        }
+        // --- End of Boost Logic ---
+
         return { offense, defense, chemistry };
     }
 
