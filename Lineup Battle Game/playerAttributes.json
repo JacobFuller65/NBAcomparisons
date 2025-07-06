@@ -257,14 +257,14 @@
       "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/curryst01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 98,
+        "defense": 75,
+        "playmaking": 92,
+        "athleticism": 88,
+        "clutch": 95,
+        "chemistry": 94
       },
-      "tags": []
+      "tags": ["3PT Specialist", "Off-Ball Threat", "Gravity"]
     },
     {
       "name": "Anthony Davis",
@@ -481,14 +481,14 @@
       "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/jamesle01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 97,
+        "defense": 90,
+        "playmaking": 99,
+        "athleticism": 96,
+        "clutch": 96,
+        "chemistry": 98
       },
-      "tags": []
+      "tags": ["Floor General", "All-Around", "High IQ"]
     },
     {
       "name": "Magic Johnson",
@@ -523,14 +523,14 @@
       "position": "SG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/jordami01.jpg",
       "stats": {
-        "offense": 0,
-        "defense": 0,
-        "playmaking": 0,
-        "athleticism": 0,
-        "clutch": 0,
-        "chemistry": 0
+        "offense": 99,
+        "defense": 98,
+        "playmaking": 91,
+        "athleticism": 97,
+        "clutch": 99,
+        "chemistry": 93
       },
-      "tags": []
+      "tags": ["Slasher", "Mid-Range Assassin", "Lockdown Defender"]
     },
     {
       "name": "Jason Kidd",

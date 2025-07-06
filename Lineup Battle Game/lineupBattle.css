@@ -150,6 +150,28 @@ body {
     padding: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
+    position: relative; /* Required for positioning the icons */
+    overflow: hidden; /* Keeps icons from spilling out */
+}
+
+.archetype-icons {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 1.2em;
+}
+
+.archetype-icons i {
+    color: #ffd700;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    transition: transform 0.2s;
+}
+
+.archetype-icons i:hover {
+    transform: scale(1.2);
 }
 
 .player-card.selected {
@@ -160,6 +182,45 @@ body {
 
 .player-card:not(.selected):hover {
     border-color: #777;
+}
+
+.player-card .player-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    padding: 8px 0;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.player-card .stat-item {
+    background-color: #3a3a3a;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.player-card .stat-name {
+    display: block;
+    font-weight: bold;
+    color: #00aaff;
+}
+
+.player-card .player-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 8px;
+    min-height: 20px; /* Reserve space for tags */
+}
+
+.player-card .tag-badge {
+    background-color: #ffd700;
+    color: #1a1a1a;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 0.7em;
+    font-weight: bold;
 }
 
 /* Remove old modal styles if they exist */
@@ -214,6 +275,22 @@ body {
     }
 }
 
+/* Animation for the selected card's glow effect */
+@keyframes selected-glow {
+    0% {
+        transform: scale(1.0);
+        box-shadow: 0 0 0 rgba(0, 170, 255, 0);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 170, 255, 0.8), 0 0 35px rgba(0, 170, 255, 0.6);
+    }
+    100% {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(0, 170, 255, 0.7), 0 0 20px rgba(0, 170, 255, 0.5);
+    }
+}
+
 #game-controls {
     margin: 20px;
 }
@@ -223,4 +300,18 @@ body {
     font-size: 1em;
     cursor: pointer;
     margin: 0 10px;
+}
+
+.team-container h2 {
+    margin-bottom: 15px;
+}
+
+.player-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: nowrap; /* Prevents cards from wrapping to the next line */
+    overflow-x: auto;  /* Adds a scrollbar if cards overflow the container */
+    padding: 10px;     /* Ensures cards don't touch the container edges */
+    min-height: 280px; /* Prevents layout shifts while cards are loading */
 }
