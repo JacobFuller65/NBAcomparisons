@@ -2,17 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GOAT Lineup Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lineup Battle</title>
     <link rel="stylesheet" href="lineupBattle.css">
 </head>
 <body>
-    <h1>Lineup Battle: Build Your Squad!</h1>
-    <div id="lineupContainer"></div>
-    <div class="goal-message" id="goalMessage">Select one player for each position to build your dream team!</div>
-    <button id="retry-btn" onclick="restartGame()" style="display:block;margin:24px auto 0 auto;padding:10px 24px;font-size:1em;border-radius:8px;background:#ffd700;color:#232323;border:none;cursor:pointer;">Play Again</button>
+    <header>
+        <h1>Lineup Battle</h1>
+    </header>
+
+    <main>
+        <div class="team-container" id="userTeamContainer">
+            <h2>Your Team</h2>
+            <div class="player-grid" id="userPlayerGrid">
+                <!-- User's player cards will be generated here -->
+            </div>
+        </div>
+
+        <div id="game-controls">
+            <button id="rerollButton">Reroll Players</button>
+            <button id="battleButton" disabled>Start Battle</button>
+            <div id="gameMessage">Build your team by selecting a player for each position.</div>
+        </div>
+
+        <div class="team-container" id="cpuTeamContainer">
+            <h2>CPU's Team</h2>
+            <div class="player-grid" id="cpuPlayerGrid">
+                <!-- CPU's player cards will be generated here -->
+            </div>
+        </div>
+    </main>
+
     <script src="lineupBattle.js"></script>
-    <a href="../index.html" id="home-btn" title="Home">🏠
-    
 </body>
 </html>
