@@ -19,8 +19,15 @@
             </div>
         </div>
 
+        <!-- Draft Selection Area -->
+        <div id="draft-selection-area" style="display: none;">
+            <h2 id="selectionTitle">Choose a Player</h2>
+            <div class="player-grid" id="selectionGrid">
+                <!-- 5 player options will be generated here -->
+            </div>
+        </div>
+
         <div id="game-controls">
-            <button id="rerollButton">Reroll Players</button>
             <button id="battleButton" disabled>Start Battle</button>
             <div id="gameMessage">Build your team by selecting a player for each position.</div>
         </div>
@@ -32,16 +39,6 @@
             </div>
         </div>
     </main>
-
-    <!-- Selection Modal -->
-    <div id="selectionModal" class="modal-overlay" style="display: none;">
-        <div class="modal-content">
-            <h2 id="selectionTitle">Choose a Player</h2>
-            <div class="player-grid" id="selectionGrid">
-                <!-- 5 player options will be generated here -->
-            </div>
-        </div>
-    </div>
 
     <script src="lineupBattle.js"></script>
 </body>

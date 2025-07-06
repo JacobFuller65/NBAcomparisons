@@ -10,16 +10,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const cpuGrid = document.getElementById('cpuPlayerGrid');
     const battleButton = document.getElementById('battleButton');
     const gameMessage = document.getElementById('gameMessage');
-    const selectionModal = document.getElementById('selectionModal');
+    
+    // New draft area elements
+    const draftArea = document.getElementById('draft-selection-area');
     const selectionGrid = document.getElementById('selectionGrid');
     const selectionTitle = document.getElementById('selectionTitle');
+    
     // Hide reroll button as it's not used in this flow
-    document.getElementById('rerollButton').style.display = 'none';
+    const rerollButton = document.getElementById('rerollButton');
+    if (rerollButton) rerollButton.style.display = 'none';
 
     fetch('playerAttributes.json')
         .then(response => response.json())
         .then(data => {
-            playerPool = data.players.filter(p => p && p.name); // Ensure players are valid
+            playerPool = data.players.filter(p => p && p.name);
             if (playerPool.length > 0) {
                 initializeGame();
             } else {
@@ -32,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         userTeam = {};
         cpuTeam = {};
         currentDraftPositionIndex = 0;
+        battleButton.disabled = true;
         generateCpuTeam();
         renderCpuGrid();
         renderUserGrid(); // Render empty slots initially
@@ -64,8 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const pos = positions[index];
         selectionTitle.textContent = `Choose Your ${pos}`;
-        gameMessage.textContent = `Select one of the five players for the ${pos} position.`;
-        selectionGrid.innerHTML = '';
+        gameMessage.textContent = `Select a player for the ${pos} position.`;
+        selectionGrid.innerHTML = ''; // Clear previous options
 
         const excludedForDraft = [...Object.values(userTeam), ...Object.values(cpuTeam)];
         const options = [];
@@ -80,12 +85,11 @@ document.addEventListener('DOMContentLoaded', () => {
             selectionGrid.appendChild(card);
         });
 
-        selectionModal.style.display = 'flex';
+        draftArea.style.display = 'block'; // Show the draft area
     }
 
     function selectPlayer(pos, player) {
         userTeam[pos] = player;
-        selectionModal.style.display = 'none';
         renderUserGrid();
         
         currentDraftPositionIndex++;
@@ -107,17 +111,11 @@ document.addEventListener('DOMContentLoaded', () => {
         userGrid.innerHTML = '';
         positions.forEach(pos => {
             const player = userTeam[pos];
+            const card = createPlayerCard(player, pos);
             if (player) {
-                const card = createPlayerCard(player, pos);
                 card.classList.add('selected');
-                userGrid.appendChild(card);
-            } else {
-                // Render a placeholder for empty slots
-                const placeholderCard = document.createElement('div');
-                placeholderCard.className = 'player-card';
-                placeholderCard.innerHTML = `<div class="card-title">${pos}</div>`;
-                userGrid.appendChild(placeholderCard);
             }
+            userGrid.appendChild(card);
         });
     }
 

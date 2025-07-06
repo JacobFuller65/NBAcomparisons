@@ -2,7 +2,7 @@
   "players": [
     {
       "name": "Kareem Abdul-Jabbar",
-      "position": "",
+      "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/abdulka01.jpg",
       "stats": {
         "offense": 0,
@@ -16,7 +16,7 @@
     },
     {
       "name": "Ray Allen",
-      "position": "",
+      "position": "SG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/allenra02.jpg",
       "stats": {
         "offense": 0,
@@ -58,7 +58,7 @@
     },
     {
       "name": "Giannis Antetokounmpo",
-      "position": "",
+      "position": "PF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/antetgi01.jpg",
       "stats": {
         "offense": 0,
@@ -72,7 +72,7 @@
     },
     {
       "name": "Carmelo Anthony",
-      "position": "",
+      "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/anthoca01.jpg",
       "stats": {
         "offense": 0,
@@ -86,7 +86,7 @@
     },
     {
       "name": "Tiny Archibald",
-      "position": "",
+      "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/architi01.jpg",
       "stats": {
         "offense": 0,
@@ -100,7 +100,7 @@
     },
     {
       "name": "Paul Arizin",
-      "position": "",
+      "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/arizipa01.jpg",
       "stats": {
         "offense": 0,
@@ -114,7 +114,7 @@
     },
     {
       "name": "Charles Barkley",
-      "position": "",
+      "position": "PF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/barklch01.jpg",
       "stats": {
         "offense": 0,
@@ -128,7 +128,7 @@
     },
     {
       "name": "Rick Barry",
-      "position": "",
+      "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/barryri01.jpg",
       "stats": {
         "offense": 0,
@@ -142,7 +142,7 @@
     },
     {
       "name": "Elgin Baylor",
-      "position": "",
+      "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/bayloel01.jpg",
       "stats": {
         "offense": 0,
@@ -156,7 +156,7 @@
     },
     {
       "name": "Dave Bing",
-      "position": "",
+      "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/bingda01.jpg",
       "stats": {
         "offense": 0,
@@ -170,7 +170,7 @@
     },
     {
       "name": "Larry Bird",
-      "position": "",
+      "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/birdla01.jpg",
       "stats": {
         "offense": 0,
@@ -184,7 +184,7 @@
     },
     {
       "name": "Kobe Bryant",
-      "position": "",
+      "position": "SG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/bryanko01.jpg",
       "stats": {
         "offense": 0,
@@ -198,7 +198,7 @@
     },
     {
       "name": "Wilt Chamberlain",
-      "position": "",
+      "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/chambwi01.jpg",
       "stats": {
         "offense": 0,
@@ -212,7 +212,7 @@
     },
     {
       "name": "Bob Cousy",
-      "position": "",
+      "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/cousybo01.jpg",
       "stats": {
         "offense": 0,
@@ -226,7 +226,7 @@
     },
     {
       "name": "Dave Cowens",
-      "position": "",
+      "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/cowenda01.jpg",
       "stats": {
         "offense": 0,
@@ -240,7 +240,7 @@
     },
     {
       "name": "Billy Cunningham",
-      "position": "",
+      "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/cunnibi01.jpg",
       "stats": {
         "offense": 0,
@@ -254,7 +254,7 @@
     },
     {
       "name": "Stephen Curry",
-      "position": "",
+      "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/curryst01.jpg",
       "stats": {
         "offense": 0,
@@ -268,7 +268,7 @@
     },
     {
       "name": "Anthony Davis",
-      "position": "",
+      "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/davisan01.jpg",
       "stats": {
         "offense": 0,
@@ -282,7 +282,7 @@
     },
     {
       "name": "Dave DeBusschere",
-      "position": "",
+      "position": "PF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/debusda01.jpg",
       "stats": {
         "offense": 0,
@@ -296,7 +296,7 @@
     },
     {
       "name": "Clyde Drexler",
-      "position": "",
+      "position": "SG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/drexlcl01.jpg",
       "stats": {
         "offense": 0,
@@ -310,7 +310,7 @@
     },
     {
       "name": "Tim Duncan",
-      "position": "",
+      "position": "PF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/duncati01.jpg",
       "stats": {
         "offense": 0,
@@ -324,7 +324,7 @@
     },
     {
       "name": "Kevin Durant",
-      "position": "",
+      "position": "PF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/duranke01.jpg",
       "stats": {
         "offense": 0,
@@ -338,7 +338,7 @@
     },
     {
       "name": "Julius Erving",
-      "position": "",
+      "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/ervinju01.jpg",
       "stats": {
         "offense": 0,
@@ -352,7 +352,7 @@
     },
     {
       "name": "Patrick Ewing",
-      "position": "",
+      "position": "C",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/ewingpa01.jpg",
       "stats": {
         "offense": 0,
@@ -366,7 +366,7 @@
     },
     {
       "name": "Walt Frazier",
-      "position": "",
+      "position": "PG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/fraziwa01.jpg",
       "stats": {
         "offense": 0,
@@ -380,7 +380,7 @@
     },
     {
       "name": "Kevin Garnett",
-      "position": "",
+      "position": "PF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/garneke01.jpg",
       "stats": {
         "offense": 0,
@@ -394,7 +394,7 @@
     },
     {
       "name": "George Gervin",
-      "position": "",
+      "position": "SF",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/gervige01.jpg",
       "stats": {
         "offense": 0,
@@ -408,7 +408,7 @@
     },
     {
       "name": "Hal Greer",
-      "position": "",
+      "position": "SG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/greerha01.jpg",
       "stats": {
         "offense": 0,
@@ -422,8 +422,666 @@
     },
     {
       "name": "James Harden",
-      "position": "",
+      "position": "SG",
       "photo": "https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "John Havlicek",
+      "position": "SF",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/havlijo01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Elvin Hayes",
+      "position": "PF",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/hayesel01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Allen Iverson",
+      "position": "SG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/iversal01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "LeBron James",
+      "position": "SF",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/jamesle01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Magic Johnson",
+      "position": "PG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/johnsma02.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Sam Jones",
+      "position": "SG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/jonessa01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Michael Jordan",
+      "position": "SG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/jordami01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Jason Kidd",
+      "position": "PG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/kiddja01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Kawhi Leonard",
+      "position": "SF",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/leonaka01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Damian Lillard",
+      "position": "PG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/lillada01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Jerry Lucas",
+      "position": "PF",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/lucasje01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Karl Malone",
+      "position": "PF",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/malonka01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Moses Malone",
+      "position": "C",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/malonmo01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Pete Maravich",
+      "position": "SG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/maravpe01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Bob McAdoo",
+      "position": "C",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/mcadobo01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Kevin McHale",
+      "position": "PF",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/mchalke01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "George Mikan",
+      "position": "C",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/mikange01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Reggie Miller",
+      "position": "SG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/millere01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Earl Monroe",
+      "position": "PG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/monroea01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Steve Nash",
+      "position": "PG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/nashst01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Dirk Nowitzki",
+      "position": "PF",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/nowitdi01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Shaquille O'Neal",
+      "position": "C",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/onealsh01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Hakeem Olajuwon",
+      "position": "C",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/olajuha01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Robert Parish",
+      "position": "C",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/parisro01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Chris Paul",
+      "position": "PG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/paulch01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Gary Payton",
+      "position": "PG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/paytoga01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Bob Pettit",
+      "position": "PF",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/pettibo01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Paul Pierce",
+      "position": "SF",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/piercpa01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Scottie Pippen",
+      "position": "SF",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/pippesc01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Willis Reed",
+      "position": "C",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/reedwi01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Oscar Robertson",
+      "position": "PG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/roberos01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "David Robinson",
+      "position": "C",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/robinda01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Dennis Rodman",
+      "position": "PF",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/rodmade01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Bill Russell",
+      "position": "C",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/russebi01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Dolph Schayes",
+      "position": "PF",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/schaydo01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Bill Sharman",
+      "position": "SG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/sharmbi01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "John Stockton",
+      "position": "PG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/stockjo01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Isiah Thomas",
+      "position": "PG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/thomais01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Nate Thurmond",
+      "position": "C",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/thurmna01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Wes Unseld",
+      "position": "C",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/unselwe01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Dwyane Wade",
+      "position": "SG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/wadedw01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Bill Walton",
+      "position": "C",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/waltobi01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Jerry West",
+      "position": "PG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/westje01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Russell Westbrook",
+      "position": "PG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/westbru01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Lenny Wilkens",
+      "position": "PG",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/wilkele01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "Dominique Wilkins",
+      "position": "SF",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/wilkido01.jpg",
+      "stats": {
+        "offense": 0,
+        "defense": 0,
+        "playmaking": 0,
+        "athleticism": 0,
+        "clutch": 0,
+        "chemistry": 0
+      },
+      "tags": []
+    },
+    {
+      "name": "James Worthy",
+      "position": "PF",
+      "photo": "https://www.basketball-reference.com/req/202106291/images/players/worthja01.jpg",
       "stats": {
         "offense": 0,
         "defense": 0,
