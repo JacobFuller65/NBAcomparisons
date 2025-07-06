@@ -1,0 +1,686 @@
+[
+  {
+    "name": "Kareem Abdul-Jabbar",
+    "tier": "Legend",
+    "score": 16,
+    "pos": [
+      "C"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/abdulka01.jpg"
+  },
+  {
+    "name": "Ray Allen",
+    "tier": "Good",
+    "score": 12,
+    "pos": [
+      "SG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/allenra02.jpg"
+  },
+  {
+    "name": "Giannis Antetokounmpo",
+    "tier": "Great",
+    "score": 14,
+    "pos": [
+      "PF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/antetgi01.jpg"
+  },
+  {
+    "name": "Carmelo Anthony",
+    "tier": "Good",
+    "score": 12,
+    "pos": [
+      "SF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/anthoca01.jpg"
+  },
+  {
+    "name": "Tiny Archibald",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "PG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/architi01.jpg"
+  },
+  {
+    "name": "Paul Arizin",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "SF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/arizipa01.jpg"
+  },
+  {
+    "name": "Charles Barkley",
+    "tier": "Good",
+    "score": 12,
+    "pos": [
+      "PF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/barklch01.jpg"
+  },
+  {
+    "name": "Rick Barry",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "SF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/barryri01.jpg"
+  },
+  {
+    "name": "Elgin Baylor",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "SF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/bayloel01.jpg"
+  },
+  {
+    "name": "Dave Bing",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "PG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/bingda01.jpg"
+  },
+  {
+    "name": "Larry Bird",
+    "tier": "Legend",
+    "score": 16,
+    "pos": [
+      "SF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/birdla01.jpg"
+  },
+  {
+    "name": "Kobe Bryant",
+    "tier": "GOAT",
+    "score": 18,
+    "pos": [
+      "SG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/bryanko01.jpg"
+  },
+  {
+    "name": "Wilt Chamberlain",
+    "tier": "Legend",
+    "score": 16,
+    "pos": [
+      "C"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/chambwi01.jpg"
+  },
+  {
+    "name": "Bob Cousy",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "PG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/cousybo01.jpg"
+  },
+  {
+    "name": "Dave Cowens",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "C"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/cowenda01.jpg"
+  },
+  {
+    "name": "Billy Cunningham",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "SF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/cunnibi01.jpg"
+  },
+  {
+    "name": "Stephen Curry",
+    "tier": "Legend",
+    "score": 16,
+    "pos": [
+      "PG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/curryst01.jpg"
+  },
+  {
+    "name": "Anthony Davis",
+    "tier": "Good",
+    "score": 12,
+    "pos": [
+      "C"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/davisan01.jpg"
+  },
+  {
+    "name": "Dave DeBusschere",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "PF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/debusda01.jpg"
+  },
+  {
+    "name": "Clyde Drexler",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "SG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/drexlcl01.jpg"
+  },
+  {
+    "name": "Tim Duncan",
+    "tier": "Legend",
+    "score": 16,
+    "pos": [
+      "PF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/duncati01.jpg"
+  },
+  {
+    "name": "Kevin Durant",
+    "tier": "Great",
+    "score": 14,
+    "pos": [
+      "PF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/duranke01.jpg"
+  },
+  {
+    "name": "Julius Erving",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "SF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/ervinju01.jpg"
+  },
+  {
+    "name": "Patrick Ewing",
+    "tier": "Great",
+    "score": 14,
+    "pos": [
+      "C"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/ewingpa01.jpg"
+  },
+  {
+    "name": "Walt Frazier",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "PG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/fraziwa01.jpg"
+  },
+  {
+    "name": "Kevin Garnett",
+    "tier": "Legend",
+    "score": 16,
+    "pos": [
+      "PF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/garneke01.jpg"
+  },
+  {
+    "name": "George Gervin",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "SF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/gervige01.jpg"
+  },
+  {
+    "name": "Hal Greer",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "SG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/greerha01.jpg"
+  },
+  {
+    "name": "James Harden",
+    "tier": "Great",
+    "score": 14,
+    "pos": [
+      "SG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg"
+  },
+  {
+    "name": "John Havlicek",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "SF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/havlijo01.jpg"
+  },
+  {
+    "name": "Elvin Hayes",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "PF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/hayesel01.jpg"
+  },
+  {
+    "name": "Allen Iverson",
+    "tier": "Good",
+    "score": 12,
+    "pos": [
+      "SG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/iversal01.jpg"
+  },
+  {
+    "name": "LeBron James",
+    "tier": "GOAT",
+    "score": 18,
+    "pos": [
+      "SF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/jamesle01.jpg"
+  },
+  {
+    "name": "Magic Johnson",
+    "tier": "Legend",
+    "score": 16,
+    "pos": [
+      "PG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/johnsma02.jpg"
+  },
+  {
+    "name": "Sam Jones",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "SG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/jonessa01.jpg"
+  },
+  {
+    "name": "Michael Jordan",
+    "tier": "GOAT",
+    "score": 18,
+    "pos": [
+      "SG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/jordami01.jpg"
+  },
+  {
+    "name": "Jason Kidd",
+    "tier": "Good",
+    "score": 12,
+    "pos": [
+      "PG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/kiddja01.jpg"
+  },
+  {
+    "name": "Kawhi Leonard",
+    "tier": "Good",
+    "score": 12,
+    "pos": [
+      "SF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/leonaka01.jpg"
+  },
+  {
+    "name": "Damian Lillard",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "PG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/lillada01.jpg"
+  },
+  {
+    "name": "Jerry Lucas",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "PF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/lucasje01.jpg"
+  },
+  {
+    "name": "Karl Malone",
+    "tier": "Good",
+    "score": 12,
+    "pos": [
+      "PF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/malonka01.jpg"
+  },
+  {
+    "name": "Moses Malone",
+    "tier": "Good",
+    "score": 12,
+    "pos": [
+      "C"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/malonmo01.jpg"
+  },
+  {
+    "name": "Pete Maravich",
+    "tier": "Good",
+    "score": 12,
+    "pos": [
+      "SG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/maravpe01.jpg"
+  },
+  {
+    "name": "Bob McAdoo",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "C"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/mcadobo01.jpg"
+  },
+  {
+    "name": "Kevin McHale",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "PF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/mchalke01.jpg"
+  },
+  {
+    "name": "George Mikan",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "C"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/mikange01.jpg"
+  },
+  {
+    "name": "Reggie Miller",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "SG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/millere01.jpg"
+  },
+  {
+    "name": "Earl Monroe",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "PG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/monroea01.jpg"
+  },
+  {
+    "name": "Steve Nash",
+    "tier": "Great",
+    "score": 14,
+    "pos": [
+      "PG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/nashst01.jpg"
+  },
+  {
+    "name": "Dirk Nowitzki",
+    "tier": "Great",
+    "score": 14,
+    "pos": [
+      "PF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/nowitdi01.jpg"
+  },
+  {
+    "name": "Shaquille O'Neal",
+    "tier": "GOAT",
+    "score": 18,
+    "pos": [
+      "C"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/onealsh01.jpg"
+  },
+  {
+    "name": "Hakeem Olajuwon",
+    "tier": "Great",
+    "score": 14,
+    "pos": [
+      "C"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/olajuha01.jpg"
+  },
+  {
+    "name": "Robert Parish",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "C"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/parisro01.jpg"
+  },
+  {
+    "name": "Chris Paul",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "PG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/paulch01.jpg"
+  },
+  {
+    "name": "Gary Payton",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "PG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/paytoga01.jpg"
+  },
+  {
+    "name": "Bob Pettit",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "PF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/pettibo01.jpg"
+  },
+  {
+    "name": "Paul Pierce",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "SF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/piercpa01.jpg"
+  },
+  {
+    "name": "Scottie Pippen",
+    "tier": "Good",
+    "score": 12,
+    "pos": [
+      "SF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/pippesc01.jpg"
+  },
+  {
+    "name": "Willis Reed",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "C"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/reedwi01.jpg"
+  },
+  {
+    "name": "Oscar Robertson",
+    "tier": "Great",
+    "score": 14,
+    "pos": [
+      "PG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/roberos01.jpg"
+  },
+  {
+    "name": "David Robinson",
+    "tier": "Great",
+    "score": 14,
+    "pos": [
+      "C"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/robinda01.jpg"
+  },
+  {
+    "name": "Dennis Rodman",
+    "tier": "Good",
+    "score": 12,
+    "pos": [
+      "PF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/rodmade01.jpg"
+  },
+  {
+    "name": "Bill Russell",
+    "tier": "Great",
+    "score": 14,
+    "pos": [
+      "C"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/russebi01.jpg"
+  },
+  {
+    "name": "Dolph Schayes",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "PF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/schaydo01.jpg"
+  },
+  {
+    "name": "Bill Sharman",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "SG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/sharmbi01.jpg"
+  },
+  {
+    "name": "John Stockton",
+    "tier": "Great",
+    "score": 14,
+    "pos": [
+      "PG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/stockjo01.jpg"
+  },
+  {
+    "name": "Isiah Thomas",
+    "tier": "Good",
+    "score": 12,
+    "pos": [
+      "PG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/thomais01.jpg"
+  },
+  {
+    "name": "Nate Thurmond",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "C"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/thurmna01.jpg"
+  },
+  {
+    "name": "Wes Unseld",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "C"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/unselwe01.jpg"
+  },
+  {
+    "name": "Dwyane Wade",
+    "tier": "Good",
+    "score": 12,
+    "pos": [
+      "SG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/wadedw01.jpg"
+  },
+  {
+    "name": "Bill Walton",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "C"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/waltobi01.jpg"
+  },
+  {
+    "name": "Jerry West",
+    "tier": "Good",
+    "score": 12,
+    "pos": [
+      "PG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/westje01.jpg"
+  },
+  {
+    "name": "Russell Westbrook",
+    "tier": "Good",
+    "score": 12,
+    "pos": [
+      "PG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/westbru01.jpg"
+  },
+  {
+    "name": "Lenny Wilkens",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "PG"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/wilkele01.jpg"
+  },
+  {
+    "name": "Dominique Wilkins",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "SF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/wilkido01.jpg"
+  },
+  {
+    "name": "James Worthy",
+    "tier": "Alright",
+    "score": 8,
+    "pos": [
+      "PF"
+    ],
+    "img": "https://www.basketball-reference.com/req/202106291/images/players/worthja01.jpg"
+  }
+]
