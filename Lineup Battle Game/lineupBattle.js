@@ -341,31 +341,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Positional multipliers to generate more realistic stat lines
         const positionalMultipliers = {
-            rebounds: { PG: 0.6, SG: 0.8, SF: 1.0, PF: 1.3, C: 1.5 },
-            assists:  { PG: 1.4, SG: 1.1, SF: 1.0, PF: 0.8, C: 0.7 }
+            rebounds: { PG: 0.6, SG: 0.8, SF: 1.0, PF: 1.3, C: 1.5, '6th': 0.9 },
+            assists:  { PG: 1.4, SG: 1.1, SF: 1.0, PF: 0.8, C: 0.7, '6th': 0.9 }
         };
 
         let playerStats = [];
         let totalTeamPlaymaking = 0;
         let totalTeamOffense = 0;
+        let totalReboundPotential = 0;
 
         players.forEach(p => {
             totalTeamPlaymaking += p.stats.playmaking;
             totalTeamOffense += p.stats.offense;
+            
+            // Calculate individual rebound potential to be used for distribution
+            const playerPosition = p.position || '6th';
+            const rebMultiplier = positionalMultipliers.rebounds[playerPosition] || 1.0;
+            const reboundScore = (p.stats.defense * 0.7 + p.stats.athleticism * 0.3) * rebMultiplier;
+            playerStats.push({ player: p, pts: 0, reb: 0, ast: 0, reboundScore: reboundScore });
+            totalReboundPotential += reboundScore;
         });
 
         // 1. Generate Assists and Rebounds for each player first
         let totalTeamAssists = 0;
-        players.forEach(p => {
-            const playerPosition = p.position;
-            const rebMultiplier = positionalMultipliers.rebounds[playerPosition] || 1.0;
+        const targetTeamRebounds = 42 + Math.floor(Math.random() * 7); // Target ~45 rebounds
+
+        playerStats.forEach(stat => {
+            const p = stat.player;
+            const playerPosition = p.position || '6th';
             const astMultiplier = positionalMultipliers.assists[playerPosition] || 1.0;
 
-            const reb = Math.round(((p.stats.defense / 100) * 10 + (p.stats.athleticism / 100) * 3 + Math.random() * 3) * rebMultiplier);
+            // Distribute rebounds based on each player's share of the team's total rebound potential
+            const shareOfRebounds = stat.reboundScore / totalReboundPotential;
+            stat.reb = Math.round(targetTeamRebounds * shareOfRebounds);
+
             // Assists based on player's share of team's total playmaking, modified by position
             const ast = Math.round((((p.stats.playmaking / totalTeamPlaymaking) * (teamScore * 0.22)) + Math.random() * 2) * astMultiplier);
-            
-            playerStats.push({ player: p, pts: 0, reb, ast });
+            stat.ast = ast;
             totalTeamAssists += ast;
         });
 
