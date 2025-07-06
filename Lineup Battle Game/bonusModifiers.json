@@ -1,0 +1,90 @@
+[
+  {
+    "id": "hot_streak",
+    "name": "Hot Streak",
+    "description": "All players gain +5 offense for this game.",
+    "effects": {
+      "team": {
+        "offense": 5
+      }
+    }
+  },
+  {
+    "id": "lockdown",
+    "name": "Lockdown",
+    "description": "All players gain +5 defense for this game.",
+    "effects": {
+      "team": {
+        "defense": 5
+      }
+    }
+  },
+  {
+    "id": "floor_general",
+    "name": "Floor General",
+    "description": "Point Guard gains +10 playmaking and +5 chemistry.",
+    "effects": {
+      "player": {
+        "position": "PG",
+        "playmaking": 10,
+        "chemistry": 5
+      }
+    }
+  },
+  {
+    "id": "sixth_man",
+    "name": "Sixth Man Spark",
+    "description": "Your 6th man gains +10 offense and +10 athleticism.",
+    "effects": {
+      "player": {
+        "position": "6th",
+        "offense": 10,
+        "athleticism": 10
+      }
+    }
+  },
+  {
+    "id": "clutch_time",
+    "name": "Clutch Time",
+    "description": "All players gain +7 clutch for this game.",
+    "effects": {
+      "team": {
+        "clutch": 7
+      }
+    }
+  },
+  {
+    "id": "chemistry_boost",
+    "name": "Team Chemistry",
+    "description": "All players gain +5 chemistry for this game.",
+    "effects": {
+      "team": {
+        "chemistry": 5
+      }
+    }
+  },
+  {
+    "id": "wild_card",
+    "name": "Wild Card",
+    "description": "You may play any player at any position for this game.",
+    "effects": {
+      "special": "ignore_position_restrictions"
+    }
+  },
+  {
+    "id": "swap_card",
+    "name": "Trade Deadline",
+    "description": "Swap one player from your team with one player from the CPU's team before the game.",
+    "effects": {
+      "special": "allow_player_swap"
+    }
+  },
+  {
+    "id": "redraft_position",
+    "name": "Position Redraft",
+    "description": "Completely redraft all players at a specific position of your choice before the game.",
+    "effects": {
+      "special": "allow_position_redraft"
+    }
+  }
+]
