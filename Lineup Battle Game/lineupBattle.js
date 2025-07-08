@@ -258,10 +258,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function checkCompletion() {
         if (Object.keys(userTeam).length === positions.length) {
             // Let the user pick a modifier card (or skip)
-            showModifierCardModal(bonusModifiers, function(drawnCard) {
-                if (drawnCard) {
-                    applyModifier(userTeam, drawnCard);
-                    gameMessage.innerHTML = `You picked a bonus card: <strong>${drawnCard.name}</strong> - ${drawnCard.description}`;
+            showModifierCardModal(bonusModifiers, function(selectedCards) {
+                if (selectedCards && selectedCards.length) {
+                    selectedCards.forEach(card => applyModifier(userTeam, card));
+                    gameMessage.innerHTML = `You picked bonus cards:<br>` +
+                        selectedCards.map(card => `<strong>${card.name}</strong> - ${card.description}`).join('<br>');
                 } else {
                     gameMessage.textContent = "Your team is ready! Hit Start Battle!";
                 }
@@ -628,16 +629,35 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        cardsToShow.forEach(card => {
+        let selected = [];
+        cardsToShow.forEach((card, i) => {
             const div = document.createElement('div');
             div.className = 'modifier-card';
             div.innerHTML = `<h3>${card.name}</h3><p>${card.description}</p>`;
             div.onclick = () => {
-                modal.style.display = 'none';
-                onPick(card);
+                if (div.classList.contains('selected')) {
+                    div.classList.remove('selected');
+                    selected = selected.filter(c => c !== card);
+                } else if (selected.length < 2) {
+                    div.classList.add('selected');
+                    selected.push(card);
+                }
+                // Enable confirm button if 2 are selected
+                confirmBtn.disabled = selected.length !== 2;
             };
             grid.appendChild(div);
         });
+
+        // Add a confirm button
+        let confirmBtn = document.createElement('button');
+        confirmBtn.textContent = "Confirm Selection";
+        confirmBtn.disabled = true;
+        confirmBtn.onclick = () => {
+            modal.style.display = 'none';
+            onPick(selected);
+        };
+        grid.parentElement.appendChild(confirmBtn);
+
         modal.style.display = 'flex';
     }
 });

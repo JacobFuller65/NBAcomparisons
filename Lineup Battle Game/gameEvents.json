@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Cold Shooting Night",
+    "type": "debuff",
+    "target": "SG",
+    "stat": "offense",
+    "amount": -10,
+    "message": "{player} couldn't buy a bucket tonight. Offense -10."
+  },
+  {
+    "name": "Locked In",
+    "type": "buff",
+    "target": "PG",
+    "stat": "playmaking",
+    "amount": 15,
+    "message": "{player} was in full control. Playmaking +15."
+  },
+  {
+    "name": "Cramped Up",
+    "type": "injury",
+    "target": "random",
+    "stat": "athleticism",
+    "amount": -20,
+    "message": "{player} limped off. Athleticism -20."
+  },
+  {
+    "name": "Clutch Mode",
+    "type": "buff",
+    "target": "playerWithHighestClutch",
+    "stat": "clutch",
+    "amount": 10,
+    "message": "{player} turned it up in the 4th. Clutch +10."
+  },
+  {
+    "name": "Locker Room Speech",
+    "type": "teamBuff",
+    "stat": "chemistry",
+    "amount": 5,
+    "message": "Coach’s speech fired them up. Team Chemistry +5."
+  }
+]
