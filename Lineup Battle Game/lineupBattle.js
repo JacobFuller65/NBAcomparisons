@@ -257,16 +257,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function checkCompletion() {
         if (Object.keys(userTeam).length === positions.length) {
-            // Try to draw a modifier card
-            const drawnCard = maybeDrawModifierCard();
-            if (drawnCard) {
-                applyModifier(userTeam, drawnCard);
-                gameMessage.innerHTML = `Lucky you! You drew a bonus card: <strong>${drawnCard.name}</strong> - ${drawnCard.description}`;
-            } else {
-                gameMessage.textContent = "Your team is ready! Hit Start Battle!";
-            }
-            battleButton.disabled = false;
-            draftArea.style.display = 'none'; // Hide draft area when done
+            // Let the user pick a modifier card (or skip)
+            showModifierCardModal(bonusModifiers, function(drawnCard) {
+                if (drawnCard) {
+                    applyModifier(userTeam, drawnCard);
+                    gameMessage.innerHTML = `You picked a bonus card: <strong>${drawnCard.name}</strong> - ${drawnCard.description}`;
+                } else {
+                    gameMessage.textContent = "Your team is ready! Hit Start Battle!";
+                }
+                battleButton.disabled = false;
+                draftArea.style.display = 'none';
+            });
         }
     }
 
@@ -558,13 +559,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // Optionally: applyModifier(cpuTeam, cpuSelectedModifier);
 
     function maybeDrawModifierCard() {
-        const chance = 0.10; // 10% chance
+        const chance = 0.99; // 10% chance
         if (Math.random() < chance && bonusModifiers.length > 0) {
             // Draw a random card
             const card = bonusModifiers[Math.floor(Math.random() * bonusModifiers.length)];
             return card;
         }
         return null;
+    }
+
+    function showModifierCardModal(cards, onPick) {
+        const modal = document.getElementById('modifierCardModal');
+        const grid = document.getElementById('modifierCardGrid');
+        grid.innerHTML = '';
+        cards.forEach(card => {
+            const div = document.createElement('div');
+            div.className = 'modifier-card';
+            div.innerHTML = `<h3>${card.name}</h3><p>${card.description}</p>`;
+            div.onclick = () => {
+                modal.style.display = 'none';
+                onPick(card);
+            };
+            grid.appendChild(div);
+        });
+        modal.style.display = 'flex';
     }
 });
 

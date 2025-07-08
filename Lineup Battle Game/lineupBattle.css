@@ -380,3 +380,34 @@ body {
     padding: 10px;     /* Ensures cards don't touch the container edges */
     min-height: 280px; /* Prevents layout shifts while cards are loading */
 }
+
+/* Modifier Card Modal Styles */
+.modifier-card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin: 20px 0;
+}
+.modifier-card {
+    background: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 16px;
+    width: 180px;
+    box-shadow: 2px 2px 8px #0002;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+.modifier-card:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 16px #0003;
+}
+.modifier-card h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.1em;
+}
+.modifier-card p {
+    font-size: 0.95em;
+    margin: 0;
+}
