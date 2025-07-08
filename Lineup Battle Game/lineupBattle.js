@@ -568,7 +568,23 @@ document.addEventListener('DOMContentLoaded', () => {
         const modal = document.getElementById('modifierCardModal');
         const grid = document.getElementById('modifierCardGrid');
         grid.innerHTML = '';
-        cards.forEach(card => {
+
+        // Pick 3 random unique cards to show
+        let cardsToShow = [];
+        if (cards.length <= 3) {
+            cardsToShow = [...cards];
+        } else {
+            const usedIndexes = new Set();
+            while (cardsToShow.length < 3) {
+                const idx = Math.floor(Math.random() * cards.length);
+                if (!usedIndexes.has(idx)) {
+                    usedIndexes.add(idx);
+                    cardsToShow.push(cards[idx]);
+                }
+            }
+        }
+
+        cardsToShow.forEach(card => {
             const div = document.createElement('div');
             div.className = 'modifier-card';
             div.innerHTML = `<h3>${card.name}</h3><p>${card.description}</p>`;
