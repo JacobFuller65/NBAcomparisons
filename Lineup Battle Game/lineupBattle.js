@@ -40,6 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error fetching player data:', error));
 
+    let bonusModifiers = [];
+
+    fetch('bonusModifiers.json')
+        .then(response => response.json())
+        .then(data => {
+            bonusModifiers = data;
+            // ...existing player fetch/init logic...
+        });
+
     function initializeGame() {
         userTeam = {};
         cpuTeam = {};
@@ -498,6 +507,43 @@ document.addEventListener('DOMContentLoaded', () => {
                 </tr>
             </tfoot>
         `;
+    }
+
+    function applyModifier(team, modifier) {
+        if (!modifier || !modifier.effects) return;
+
+        // Team-wide effects
+        if (modifier.effects.team) {
+            Object.keys(modifier.effects.team).forEach(stat => {
+                Object.values(team).forEach(player => {
+                    if (player && player.stats[stat] !== undefined) {
+                        player.stats[stat] += modifier.effects.team[stat];
+                    }
+                });
+            });
+        }
+
+        // Player-specific effects
+        if (modifier.effects.player) {
+            Object.values(team).forEach(player => {
+                if (
+                    player &&
+                    ((modifier.effects.player.position === "6th" && player.position === "6th") ||
+                    (player.position === modifier.effects.player.position))
+                ) {
+                    Object.keys(modifier.effects.player).forEach(stat => {
+                        if (stat !== "position" && player.stats[stat] !== undefined) {
+                            player.stats[stat] += modifier.effects.player[stat];
+                        }
+                    });
+                }
+            });
+        }
+
+        // Special effects (handle in your game logic)
+        if (modifier.effects.special) {
+            // e.g. set a flag: ignorePositionRestrictions = true;
+        }
     }
 });
 
