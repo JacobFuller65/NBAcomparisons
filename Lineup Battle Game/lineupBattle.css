@@ -503,6 +503,9 @@ body {
     gap: 28px; /* Increased gap for more space between cards */
     justify-content: center;
     margin: 20px 0;
+    max-height: 350px;      /* Set a max height for the grid */
+    overflow-y: auto;       /* Enable vertical scrolling if needed */
+    padding-right: 10px;    /* Prevents scrollbar from covering content */
 }
 
 .modifier-card {
