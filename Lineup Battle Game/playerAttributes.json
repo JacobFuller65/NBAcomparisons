@@ -13,7 +13,8 @@
         "chemistry": 94
       },
       "teams": ["Lakers", "Bucks"],
-      "tags": ["Post Scorer", "Skyhook", "Dominant Big", "MVP"]
+      "tags": ["Post Scorer", "Skyhook", "Dominant Big", "MVP"],
+      "career": [1969, 1989]
     },
     {
       "name": "Ray Allen",
@@ -28,7 +29,8 @@
         "chemistry": 92
       },
       "teams": ["Celtics", "SuperSonics", "Bucks", "Heat"],
-      "tags": ["3PT Specialist", "Off-Ball Threat", "Clutch Shooter"]
+      "tags": ["3PT Specialist", "Off-Ball Threat", "Clutch Shooter"],
+      "career": [1996, 2014]
     },
     {
       "name": "Victor Wembanyama",
@@ -42,7 +44,8 @@
         "clutch": 88,
         "chemistry": 90
       },
-      "tags": ["Unicorn", "Rim Protector", "Shot Creator"]
+      "tags": ["Unicorn", "Rim Protector", "Shot Creator"],
+      "career": [2023, 2025]
     },
     {
       "name": "Tyrese Maxey",
@@ -56,7 +59,8 @@
         "clutch": 89,
         "chemistry": 93
       },
-      "tags": ["Speedy Guard", "Scoring Threat", "3-Level Scorer"]
+      "tags": ["Speedy Guard", "Scoring Threat", "3-Level Scorer"],
+      "career": [2020, 2025]
     },
     {
       "name": "Giannis Antetokounmpo",
@@ -70,7 +74,8 @@
         "clutch": 90,
         "chemistry": 95
       },
-      "tags": ["Slasher", "Transition Threat", "DPOY Candidate", "MVP"]
+      "tags": ["Slasher", "Transition Threat", "DPOY Candidate", "MVP"],
+      "career": [2013, 2025]
     },
     {
       "name": "Carmelo Anthony",
@@ -84,7 +89,8 @@
         "clutch": 92,
         "chemistry": 80
       },
-      "tags": ["Isolation Scorer", "Mid-Range Assassin", "Clutch Shooter"]
+      "tags": ["Isolation Scorer", "Mid-Range Assassin", "Clutch Shooter"],
+      "career": [2003, 2022]
     },
     {
       "name": "Tiny Archibald",
@@ -98,7 +104,8 @@
         "clutch": 88,
         "chemistry": 90
       },
-      "tags": ["Floor General", "Speedy Guard", "Scoring PG"]
+      "tags": ["Floor General", "Speedy Guard", "Scoring PG"],
+      "career": [1970, 1984]
     },
     {
       "name": "Paul Arizin",
@@ -112,7 +119,8 @@
         "clutch": 87,
         "chemistry": 88
       },
-      "tags": ["Jump Shot Pioneer", "Scoring Wing"]
+      "tags": ["Jump Shot Pioneer", "Scoring Wing"],
+      "career": [1950, 1962]
     },
     {
       "name": "Charles Barkley",
@@ -126,7 +134,8 @@
         "clutch": 90,
         "chemistry": 85
       },
-      "tags": ["Rebounder", "Inside Scorer", "MVP"]
+      "tags": ["Rebounder", "Inside Scorer", "MVP"],
+      "career": [1984, 2000]
     },
     {
       "name": "Rick Barry",
@@ -140,7 +149,8 @@
         "clutch": 91,
         "chemistry": 83
       },
-      "tags": ["All-Around", "Scoring Wing", "Free Throw Expert"]
+      "tags": ["All-Around", "Scoring Wing", "Free Throw Expert"],
+      "career": [1965, 1980]
     },
     {
       "name": "Elgin Baylor",
@@ -154,7 +164,8 @@
         "clutch": 90,
         "chemistry": 88
       },
-      "tags": ["Slasher", "Hanging Jumpers", "Scoring Machine"]
+      "tags": ["Slasher", "Hanging Jumpers", "Scoring Machine"],
+      "career": [1958, 1972]
     },
     {
       "name": "Dave Bing",
@@ -168,7 +179,8 @@
         "clutch": 88,
         "chemistry": 92
       },
-      "tags": ["Scoring PG", "Floor General"]
+      "tags": ["Scoring PG", "Floor General"],
+      "career": [1966, 1978]
     },
     {
       "name": "Larry Bird",
@@ -183,7 +195,8 @@
         "chemistry": 97
       },
       "teams": ["Celtics"],
-      "tags": ["All-Around", "High IQ", "Clutch Shooter", "MVP"]
+      "tags": ["All-Around", "High IQ", "Clutch Shooter", "MVP"],
+      "career": [1979, 1992]
     },
     {
       "name": "Kobe Bryant",
@@ -198,7 +211,8 @@
         "chemistry": 90
       },
       "teams": ["Lakers"],
-      "tags": ["Mid-Range Assassin", "Clutch Shooter", "Lockdown Defender", "MVP"]
+      "tags": ["Mid-Range Assassin", "Clutch Shooter", "Lockdown Defender", "MVP"],
+      "career": [1996, 2016]
     },
     {
       "name": "Wilt Chamberlain",
@@ -212,7 +226,8 @@
         "clutch": 85,
         "chemistry": 82
       },
-      "tags": ["Dominant Big", "Rebounder", "Scoring Machine", "MVP"]
+      "tags": ["Dominant Big", "Rebounder", "Scoring Machine", "MVP"],
+      "career": [1959, 1973]
     },
     {
       "name": "Bob Cousy",
@@ -226,7 +241,8 @@
         "clutch": 90,
         "chemistry": 96
       },
-      "tags": ["Floor General", "Showtime Passer", "High IQ"]
+      "tags": ["Floor General", "Showtime Passer", "High IQ"],
+      "career": [1950, 1963]
     },
     {
       "name": "Dave Cowens",
@@ -240,7 +256,8 @@
         "clutch": 88,
         "chemistry": 95
       },
-      "tags": ["Hustle Player", "Rebounder", "Versatile Big"]
+      "tags": ["Hustle Player", "Rebounder", "Versatile Big"],
+      "career": [1970, 1983]
     },
     {
       "name": "Billy Cunningham",
@@ -254,7 +271,8 @@
         "clutch": 87,
         "chemistry": 89
       },
-      "tags": ["Kangaroo Kid", "Rebounding Forward"]
+      "tags": ["Kangaroo Kid", "Rebounding Forward"],
+      "career": [1965, 1976]
     },
     {
       "name": "Stephen Curry",
@@ -268,7 +286,8 @@
         "clutch": 95,
         "chemistry": 96
       },
-      "tags": ["3PT Specialist", "Off-Ball Threat", "Gravity", "MVP"]
+      "tags": ["3PT Specialist", "Off-Ball Threat", "Gravity", "MVP"],
+      "career": [2009, 2025]
     },
     {
       "name": "Anthony Davis",
@@ -282,7 +301,8 @@
         "clutch": 87,
         "chemistry": 88
       },
-      "tags": ["Versatile Big", "Rim Protector", "Mid-Range Assassin"]
+      "tags": ["Versatile Big", "Rim Protector", "Mid-Range Assassin"],
+      "career": [2012, 2025]
     },
     {
       "name": "Dave DeBusschere",
@@ -296,7 +316,8 @@
         "clutch": 88,
         "chemistry": 95
       },
-      "tags": ["Lockdown Defender", "Hustle Player", "Rebounder"]
+      "tags": ["Lockdown Defender", "Hustle Player", "Rebounder"],
+      "career": [1962, 1974]
     },
     {
       "name": "Clyde Drexler",
@@ -310,7 +331,8 @@
         "clutch": 89,
         "chemistry": 90
       },
-      "tags": ["Slasher", "High-Flyer", "All-Around"]
+      "tags": ["Slasher", "High-Flyer", "All-Around"],
+      "career": [1983, 1998]
     },
     {
       "name": "Tim Duncan",
@@ -325,7 +347,8 @@
         "chemistry": 99
       },
       "teams": ["Spurs"],
-      "tags": ["The Big Fundamental", "High IQ", "Post Scorer", "Lockdown Defender", "MVP"]
+      "tags": ["The Big Fundamental", "High IQ", "Post Scorer", "Lockdown Defender", "MVP"],
+      "career": [1997, 2016]
     },
     {
       "name": "Kevin Durant",
@@ -339,7 +362,8 @@
         "clutch": 96,
         "chemistry": 89
       },
-      "tags": ["3-Level Scorer", "Shot Creator", "Clutch Shooter", "MVP"]
+      "tags": ["3-Level Scorer", "Shot Creator", "Clutch Shooter", "MVP"],
+      "career": [2007, 2025]
     },
     {
       "name": "Julius Erving",
@@ -353,7 +377,8 @@
         "clutch": 92,
         "chemistry": 93
       },
-      "tags": ["High-Flyer", "Slasher", "Transition Threat", "MVP"]
+      "tags": ["High-Flyer", "Slasher", "Transition Threat", "MVP"],
+      "career": [1971, 1987]
     },
     {
       "name": "Patrick Ewing",
@@ -367,7 +392,8 @@
         "clutch": 88,
         "chemistry": 87
       },
-      "tags": ["Dominant Big", "Mid-Range Assassin", "Rim Protector"]
+      "tags": ["Dominant Big", "Mid-Range Assassin", "Rim Protector"],
+      "career": [1985, 2002]
     },
     {
       "name": "Walt Frazier",
@@ -381,7 +407,8 @@
         "clutch": 93,
         "chemistry": 94
       },
-      "tags": ["Lockdown Defender", "Floor General", "Smooth Operator"]
+      "tags": ["Lockdown Defender", "Floor General", "Smooth Operator"],
+      "career": [1967, 1980]
     },
     {
       "name": "Kevin Garnett",
@@ -395,7 +422,8 @@
         "clutch": 90,
         "chemistry": 96
       },
-      "tags": ["DPOY Candidate", "Mid-Range Assassin", "Intensity", "MVP"]
+      "tags": ["DPOY Candidate", "Mid-Range Assassin", "Intensity", "MVP"],
+      "career": [1995, 2016]
     },
     {
       "name": "George Gervin",
@@ -409,7 +437,8 @@
         "clutch": 91,
         "chemistry": 85
       },
-      "tags": ["Scoring Machine", "Finger Roll", "Shot Creator"]
+      "tags": ["Scoring Machine", "Finger Roll", "Shot Creator"],
+      "career": [1972, 1986]
     },
     {
       "name": "Hal Greer",
@@ -423,7 +452,8 @@
         "clutch": 88,
         "chemistry": 91
       },
-      "tags": ["Jump Shooter", "Durable"]
+      "tags": ["Jump Shooter", "Durable"],
+      "career": [1958, 1973]
     },
     {
       "name": "James Harden",
@@ -437,7 +467,8 @@
         "clutch": 88,
         "chemistry": 86
       },
-      "tags": ["Isolation Scorer", "Floor General", "Step-Back", "MVP"]
+      "tags": ["Isolation Scorer", "Floor General", "Step-Back", "MVP"],
+      "career": [2009, 2025]
     },
     {
       "name": "John Havlicek",
@@ -451,7 +482,8 @@
         "clutch": 94,
         "chemistry": 98
       },
-      "tags": ["Hustle Player", "All-Around", "Stamina", "6th Man"]
+      "tags": ["Hustle Player", "All-Around", "Stamina", "6th Man"],
+      "career": [1962, 1978]
     },
     {
       "name": "Elvin Hayes",
@@ -465,7 +497,8 @@
         "clutch": 86,
         "chemistry": 81
       },
-      "tags": ["Rebounder", "Turnaround Jumper", "Scoring Big"]
+      "tags": ["Rebounder", "Turnaround Jumper", "Scoring Big"],
+      "career": [1968, 1984]
     },
     {
       "name": "Allen Iverson",
@@ -479,7 +512,8 @@
         "clutch": 92,
         "chemistry": 80
       },
-      "tags": ["Slasher", "Shot Creator", "Crossover", "MVP"]
+      "tags": ["Slasher", "Shot Creator", "Crossover", "MVP"],
+      "career": [1996, 2010]
     },
     {
       "name": "LeBron James",
@@ -494,7 +528,8 @@
         "chemistry": 98
       },
       "teams": ["Heat", "Bulls", "Cavaliers"],
-      "tags": ["Floor General", "All-Around", "High IQ", "MVP"]
+      "tags": ["Floor General", "All-Around", "High IQ", "MVP"],
+      "career": [2003, 2025]
     },
     {
       "name": "Magic Johnson",
@@ -509,7 +544,8 @@
         "chemistry": 99
       },
       "teams": ["Lakers"],
-      "tags": ["Floor General", "Showtime Passer", "High IQ", "MVP"]
+      "tags": ["Floor General", "Showtime Passer", "High IQ", "MVP"],
+      "career": [1979, 1996]
     },
     {
       "name": "Sam Jones",
@@ -523,7 +559,8 @@
         "clutch": 95,
         "chemistry": 96
       },
-      "tags": ["Clutch Shooter", "Bank Shot", "Scoring Guard"]
+      "tags": ["Clutch Shooter", "Bank Shot", "Scoring Guard"],
+      "career": [1957, 1969]
     },
     {
       "name": "Michael Jordan",
@@ -538,7 +575,8 @@
         "chemistry": 93
       },
       "teams": ["Bulls", "Wizards"],
-      "tags": ["Slasher", "Mid-Range Assassin", "Lockdown Defender", "MVP"]
+      "tags": ["Slasher", "Mid-Range Assassin", "Lockdown Defender", "MVP"],
+      "career": [1984, 2003]
     },
     {
       "name": "Jason Kidd",
@@ -552,7 +590,8 @@
         "clutch": 88,
         "chemistry": 95
       },
-      "tags": ["Floor General", "High IQ", "Rebounding Guard", "Lockdown Defender"]
+      "tags": ["Floor General", "High IQ", "Rebounding Guard", "Lockdown Defender"],
+      "career": [1994, 2013]
     },
     {
       "name": "Kawhi Leonard",
@@ -566,7 +605,8 @@
         "clutch": 97,
         "chemistry": 88
       },
-      "tags": ["Lockdown Defender", "Mid-Range Assassin", "DPOY Candidate", "Clutch"]
+      "tags": ["Lockdown Defender", "Mid-Range Assassin", "DPOY Candidate", "Clutch"],
+      "career": [2011, 2025]
     },
     {
       "name": "Damian Lillard",
@@ -580,7 +620,8 @@
         "clutch": 99,
         "chemistry": 92
       },
-      "tags": ["Clutch Shooter", "3PT Specialist", "Logo Lillard"]
+      "tags": ["Clutch Shooter", "3PT Specialist", "Logo Lillard"],
+      "career": [2012, 2025]
     },
     {
       "name": "Jerry Lucas",
@@ -594,7 +635,8 @@
         "clutch": 86,
         "chemistry": 90
       },
-      "tags": ["Rebounder", "High IQ", "Shooting Big"]
+      "tags": ["Rebounder", "High IQ", "Shooting Big"],
+      "career": [1963, 1974]
     },
     {
       "name": "Karl Malone",
@@ -608,7 +650,8 @@
         "clutch": 89,
         "chemistry": 84
       },
-      "tags": ["Post Scorer", "Mid-Range Assassin", "Durable", "MVP"]
+      "tags": ["Post Scorer", "Mid-Range Assassin", "Durable", "MVP"],
+      "career": [1985, 2004]
     },
     {
       "name": "Moses Malone",
@@ -623,7 +666,8 @@
         "chemistry": 87
       },
       "teams": ["Rockets", "76ers"],
-      "tags": ["Rebounder", "Offensive Rebounds", "Dominant Big", "MVP"]
+      "tags": ["Rebounder", "Offensive Rebounds", "Dominant Big", "MVP"],
+      "career": [1974, 1995]
     },
     {
       "name": "Pete Maravich",
@@ -637,7 +681,8 @@
         "clutch": 87,
         "chemistry": 80
       },
-      "tags": ["Showtime Passer", "Shot Creator", "Scoring Machine"]
+      "tags": ["Showtime Passer", "Shot Creator", "Scoring Machine"],
+      "career": [1970, 1980]
     },
     {
       "name": "Bob McAdoo",
@@ -651,7 +696,8 @@
         "clutch": 88,
         "chemistry": 84
       },
-      "tags": ["Shooting Big", "Scoring Machine", "MVP"]
+      "tags": ["Shooting Big", "Scoring Machine", "MVP"],
+      "career": [1972, 1986]
     },
     {
       "name": "Kevin McHale",
@@ -666,7 +712,8 @@
         "chemistry": 95
       },
       "teams": ["Celtics"],
-      "tags": ["Post Scorer", "Footwork", "Lockdown Defender", "6th Man"]
+      "tags": ["Post Scorer", "Footwork", "Lockdown Defender", "6th Man"],
+      "career": [1980, 1993]
     },
     {
       "name": "George Mikan",
@@ -680,7 +727,8 @@
         "clutch": 92,
         "chemistry": 94
       },
-      "tags": ["First Superstar", "Dominant Big", "Mikan Drill"]
+      "tags": ["First Superstar", "Dominant Big", "Mikan Drill"],
+      "career": [1946, 1956]
     },
     {
       "name": "Reggie Miller",
@@ -694,7 +742,8 @@
         "clutch": 98,
         "chemistry": 88
       },
-      "tags": ["Clutch Shooter", "3PT Specialist", "Off-Ball Threat", "Trash Talker"]
+      "tags": ["Clutch Shooter", "3PT Specialist", "Off-Ball Threat", "Trash Talker"],
+      "career": [1987, 2005]
     },
     {
       "name": "Earl Monroe",
@@ -708,7 +757,8 @@
         "clutch": 89,
         "chemistry": 90
       },
-      "tags": ["The Pearl", "Spin Move", "Shot Creator"]
+      "tags": ["The Pearl", "Spin Move", "Shot Creator"],
+      "career": [1967, 1980]
     },
     {
       "name": "Steve Nash",
@@ -722,7 +772,8 @@
         "clutch": 89,
         "chemistry": 97
       },
-      "tags": ["Floor General", "High IQ", "3PT Specialist", "MVP"]
+      "tags": ["Floor General", "High IQ", "3PT Specialist", "MVP"],
+      "career": [1996, 2015]
     },
     {
       "name": "Dirk Nowitzki",
@@ -736,7 +787,8 @@
         "clutch": 96,
         "chemistry": 95
       },
-      "tags": ["Shooting Big", "One-Legged Fadeaway", "Clutch Shooter", "MVP"]
+      "tags": ["Shooting Big", "One-Legged Fadeaway", "Clutch Shooter", "MVP"],
+      "career": [1998, 2019]
     },
     {
       "name": "Shaquille O'Neal",
@@ -751,7 +803,8 @@
         "chemistry": 91
       },
       "teams": ["Lakers"],
-      "tags": ["Dominant Big", "Post Scorer", "Physicality", "MVP"]
+      "tags": ["Dominant Big", "Post Scorer", "Physicality", "MVP"],
+      "career": [1992, 2011]
     },
     {
       "name": "Hakeem Olajuwon",
@@ -765,7 +818,8 @@
         "clutch": 95,
         "chemistry": 92
       },
-      "tags": ["Dream Shake", "Footwork", "DPOY Candidate", "MVP"]
+      "tags": ["Dream Shake", "Footwork", "DPOY Candidate", "MVP"],
+      "career": [1984, 2002]
     },
     {
       "name": "Robert Parish",
@@ -780,7 +834,8 @@
         "chemistry": 96
       },
       "teams": ["Celtics"],
-      "tags": ["The Chief", "High-Arc Jumper", "Durable"]
+      "tags": ["The Chief", "High-Arc Jumper", "Durable"],
+      "career": [1976, 1997]
     },
     {
       "name": "Chris Paul",
@@ -794,7 +849,8 @@
         "clutch": 94,
         "chemistry": 95
       },
-      "tags": ["Point God", "Floor General", "High IQ", "Mid-Range Assassin"]
+      "tags": ["Point God", "Floor General", "High IQ", "Mid-Range Assassin"],
+      "career": [2005, 2025]
     },
     {
       "name": "Gary Payton",
@@ -808,7 +864,8 @@
         "clutch": 90,
         "chemistry": 88
       },
-      "tags": ["The Glove", "Lockdown Defender", "DPOY Candidate", "Trash Talker"]
+      "tags": ["The Glove", "Lockdown Defender", "DPOY Candidate", "Trash Talker"],
+      "career": [1990, 2007]
     },
     {
       "name": "Bob Pettit",
@@ -822,7 +879,8 @@
         "clutch": 93,
         "chemistry": 91
       },
-      "tags": ["Rebounder", "Scoring Big", "First MVP"]
+      "tags": ["Rebounder", "Scoring Big", "First MVP"],
+      "career": [1954, 1965]
     },
     {
       "name": "Paul Pierce",
@@ -836,7 +894,8 @@
         "clutch": 97,
         "chemistry": 92
       },
-      "tags": ["The Truth", "Clutch Shooter", "Shot Creator"]
+      "tags": ["The Truth", "Clutch Shooter", "Shot Creator"],
+      "career": [1998, 2017]
     },
     {
       "name": "Scottie Pippen",
@@ -851,7 +910,8 @@
         "chemistry": 96
       },
       "teams": ["Bulls"],
-      "tags": ["Lockdown Defender", "Point Forward", "All-Around"]
+      "tags": ["Lockdown Defender", "Point Forward", "All-Around"],
+      "career": [1987, 2004]
     },
     {
       "name": "Willis Reed",
@@ -865,7 +925,8 @@
         "clutch": 96,
         "chemistry": 98
       },
-      "tags": ["The Captain", "Leadership", "Toughness", "MVP"]
+      "tags": ["The Captain", "Leadership", "Toughness", "MVP"],
+      "career": [1964, 1974]
     },
     {
       "name": "Oscar Robertson",
@@ -879,7 +940,8 @@
         "clutch": 94,
         "chemistry": 93
       },
-      "tags": ["The Big O", "Triple-Double", "All-Around", "MVP"]
+      "tags": ["The Big O", "Triple-Double", "All-Around", "MVP"],
+      "career": [1960, 1974]
     },
     {
       "name": "David Robinson",
@@ -894,7 +956,8 @@
         "chemistry": 97
       },
       "teams": ["Spurs"],
-      "tags": ["The Admiral", "DPOY Candidate", "Athletic Big", "MVP"]
+      "tags": ["The Admiral", "DPOY Candidate", "Athletic Big", "MVP"],
+      "career": [1989, 2003]
     },
     {
       "name": "Dennis Rodman",
@@ -909,7 +972,8 @@
         "chemistry": 85
       },
       "teams": ["Pistons", "Bulls", "Spurs"],
-      "tags": ["Rebounder", "Lockdown Defender", "Hustle Player", "DPOY Candidate"]
+      "tags": ["Rebounder", "Lockdown Defender", "Hustle Player", "DPOY Candidate"],
+      "career": [1986, 2000]
     },
     {
       "name": "Bill Russell",
@@ -924,7 +988,8 @@
         "chemistry": 99
       },
       "teams": ["Celtics"],
-      "tags": ["Winner", "Lockdown Defender", "Rebounder", "MVP"]
+      "tags": ["Winner", "Lockdown Defender", "Rebounder", "MVP"],
+      "career": [1956, 1969]
     },
     {
       "name": "Dolph Schayes",
@@ -938,7 +1003,8 @@
         "clutch": 88,
         "chemistry": 92
       },
-      "tags": ["Rebounder", "Shooting Big", "Durable"]
+      "tags": ["Rebounder", "Shooting Big", "Durable"],
+      "career": [1948, 1964]
     },
     {
       "name": "Bill Sharman",
@@ -952,7 +1018,8 @@
         "clutch": 91,
         "chemistry": 95
       },
-      "tags": ["Shooting Guard", "Free Throw Expert"]
+      "tags": ["Shooting Guard", "Free Throw Expert"],
+      "career": [1950, 1961]
     },
     {
       "name": "John Stockton",
@@ -966,7 +1033,8 @@
         "clutch": 92,
         "chemistry": 98
       },
-      "tags": ["Floor General", "All-Time Assists", "High IQ", "Toughness"]
+      "tags": ["Floor General", "All-Time Assists", "High IQ", "Toughness"],
+      "career": [1984, 2003]
     },
     {
       "name": "Isiah Thomas",
@@ -980,7 +1048,8 @@
         "clutch": 96,
         "chemistry": 90
       },
-      "tags": ["Floor General", "Toughness", "Clutch Performer"]
+      "tags": ["Floor General", "Toughness", "Clutch Performer"],
+      "career": [1981, 1994]
     },
     {
       "name": "Nate Thurmond",
@@ -994,7 +1063,8 @@
         "clutch": 86,
         "chemistry": 89
       },
-      "tags": ["Rebounder", "Rim Protector", "Quadruple-Double"]
+      "tags": ["Rebounder", "Rim Protector", "Quadruple-Double"],
+      "career": [1963, 1977]
     },
     {
       "name": "Wes Unseld",
@@ -1008,7 +1078,8 @@
         "clutch": 90,
         "chemistry": 97
       },
-      "tags": ["Outlet Passer", "Rebounder", "High IQ", "MVP"]
+      "tags": ["Outlet Passer", "Rebounder", "High IQ", "MVP"],
+      "career": [1968, 1981]
     },
     {
       "name": "Dwyane Wade",
@@ -1023,7 +1094,8 @@
         "chemistry": 94
       },
       "teams": ["Heat", "Bulls", "Cavaliers"],
-      "tags": ["Slasher", "Shot-Blocking Guard", "Clutch Performer"]
+      "tags": ["Slasher", "Shot-Blocking Guard", "Clutch Performer"],
+      "career": [2003, 2019]
     },
     {
       "name": "Bill Walton",
@@ -1037,7 +1109,8 @@
         "clutch": 90,
         "chemistry": 96
       },
-      "tags": ["Passing Big", "High IQ", "Rim Protector", "MVP"]
+      "tags": ["Passing Big", "High IQ", "Rim Protector", "MVP"],
+      "career": [1974, 1988]
     },
     {
       "name": "Jerry West",
@@ -1051,7 +1124,8 @@
         "clutch": 99,
         "chemistry": 94
       },
-      "tags": ["The Logo", "Clutch Shooter", "Scoring Guard", "Lockdown Defender"]
+      "tags": ["The Logo", "Clutch Shooter", "Scoring Guard", "Lockdown Defender"],
+      "career": [1960, 1974]
     },
     {
       "name": "Russell Westbrook",
@@ -1065,7 +1139,8 @@
         "clutch": 88,
         "chemistry": 82
       },
-      "tags": ["Triple-Double", "Transition Threat", "Athletic Guard", "MVP"]
+      "tags": ["Triple-Double", "Transition Threat", "Athletic Guard", "MVP"],
+      "career": [2008, 2025]
     },
     {
       "name": "Lenny Wilkens",
@@ -1079,7 +1154,8 @@
         "clutch": 87,
         "chemistry": 95
       },
-      "tags": ["Floor General", "Player-Coach"]
+      "tags": ["Floor General", "Player-Coach"],
+      "career": [1960, 1975]
     },
     {
       "name": "Dominique Wilkins",
@@ -1093,7 +1169,8 @@
         "clutch": 90,
         "chemistry": 84
       },
-      "tags": ["Human Highlight Film", "High-Flyer", "Slasher", "Scoring Machine"]
+      "tags": ["Human Highlight Film", "High-Flyer", "Slasher", "Scoring Machine"],
+      "career": [1982, 1999]
     },
     {
       "name": "James Worthy",
@@ -1107,7 +1184,8 @@
         "clutch": 93,
         "chemistry": 94
       },
-      "tags": ["Big Game James", "Clutch Performer", "Transition Threat"]
+      "tags": ["Big Game James", "Clutch Performer", "Transition Threat"],
+      "career": [1982, 1994]
     }
   ]
 }
