@@ -333,19 +333,45 @@ document.addEventListener('DOMContentLoaded', () => {
         userScore = Math.round(userScore);
         cpuScore = Math.round(cpuScore);
 
-        const winner = userScore > cpuScore ? 'user' : 'cpu';
+        // --- Quarter Simulation ---
+        const quarters = 4;
+        let userQuarterScores = [];
+        let cpuQuarterScores = [];
+        let userRunning = 0;
+        let cpuRunning = 0;
 
-        // --- Display Simulation ---
+        // Randomly distribute points per quarter, but keep total accurate
+        let userRemaining = userScore;
+        let cpuRemaining = cpuScore;
+        for (let q = 0; q < quarters; q++) {
+            let userQ, cpuQ;
+            if (q < quarters - 1) {
+                // Give a random portion, but ensure enough left for last quarter
+                userQ = Math.round((userRemaining / (quarters - q)) * (0.8 + Math.random() * 0.4));
+                cpuQ = Math.round((cpuRemaining / (quarters - q)) * (0.8 + Math.random() * 0.4));
+            } else {
+                userQ = userRemaining;
+                cpuQ = cpuRemaining;
+            }
+            userQuarterScores.push(userQ);
+            cpuQuarterScores.push(cpuQ);
+            userRemaining -= userQ;
+            cpuRemaining -= cpuQ;
+        }
+
         simulationLog.innerHTML = '';
         finalScoreEl.innerHTML = '';
         resultsModal.style.display = 'flex';
 
         const logMessages = [
             "The game is underway!",
-            userScore > cpuScore ? "Your team starts strong with a scoring run!" : "The CPU team comes out firing on all cylinders.",
-            "Both teams are trading baskets in a tight contest.",
-            "A key defensive stop shifts the momentum.",
-            "Down to the wire... every possession counts!",
+            "End of 1st Quarter: " +
+                `You ${userQuarterScores[0]} - CPU ${cpuQuarterScores[0]}`,
+            "Halftime! 2nd Quarter: " +
+                `You ${userQuarterScores[1]} (Total: ${userQuarterScores[0] + userQuarterScores[1]}) - CPU ${cpuQuarterScores[1]} (Total: ${cpuQuarterScores[0] + cpuQuarterScores[1]})`,
+            "3rd Quarter in the books: " +
+                `You ${userQuarterScores[2]} (Total: ${userQuarterScores.slice(0,3).reduce((a,b)=>a+b,0)}) - CPU ${cpuQuarterScores[2]} (Total: ${cpuQuarterScores.slice(0,3).reduce((a,b)=>a+b,0)})`,
+            "Final Quarter! Down to the wire...",
             `And the final buzzer sounds!`
         ];
 
@@ -359,7 +385,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         setTimeout(() => {
-            displayFinalResults(userScore, cpuScore, winner);
+            displayFinalResults(
+                userQuarterScores.reduce((a, b) => a + b, 0),
+                cpuQuarterScores.reduce((a, b) => a + b, 0),
+                userQuarterScores.reduce((a, b) => a + b, 0) > cpuQuarterScores.reduce((a, b) => a + b, 0) ? 'user' : 'cpu'
+            );
         }, logMessages.length * 1200);
     }
 
