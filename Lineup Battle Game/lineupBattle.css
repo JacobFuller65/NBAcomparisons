@@ -382,32 +382,82 @@ body {
 }
 
 /* Modifier Card Modal Styles */
-.modifier-card-grid {
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6);
     display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+    align-items: center;
     justify-content: center;
-    margin: 20px 0;
+    z-index: 1000;
 }
-.modifier-card {
+.modal-content {
     background: #fff;
-    border: 2px solid #333;
     border-radius: 10px;
-    padding: 16px;
-    width: 180px;
-    box-shadow: 2px 2px 8px #0002;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.modal-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.modal-close {
+    background: transparent;
+    border: none;
+    font-size: 1.2em;
     cursor: pointer;
-    transition: transform 0.15s, box-shadow 0.15s;
+    color: #666;
+    transition: color 0.2s;
 }
-.modifier-card:hover {
-    transform: scale(1.05);
-    box-shadow: 4px 4px 16px #0003;
+
+.modal-close:hover {
+    color: #333;
 }
-.modifier-card h3 {
-    margin: 0 0 8px 0;
-    font-size: 1.1em;
+
+.modal-body {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px; /* Prevents scrollbar from covering content */
 }
-.modifier-card p {
-    font-size: 0.95em;
-    margin: 0;
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
 }
+
+.btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.btn:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+/* End of Modifier Card Modal Styles */
