@@ -410,6 +410,46 @@ document.addEventListener('DOMContentLoaded', () => {
         }, logMessages.length * 1200);
     }
 
+    function displayTeamTotals(team, containerId) {
+        const players = Object.values(team).filter(p => p);
+        if (players.length === 0) return;
+
+        // Sum up each attribute
+        const totals = {
+            offense: 0,
+            defense: 0,
+            playmaking: 0,
+            athleticism: 0,
+            clutch: 0,
+            chemistry: 0
+        };
+
+        players.forEach(p => {
+            if (p.stats) {
+                Object.keys(totals).forEach(attr => {
+                    totals[attr] += p.stats[attr] || 0;
+                });
+            }
+        });
+
+        // Create HTML output
+        let html = `<div class="team-totals"><strong>Team Attribute Totals:</strong><br>`;
+        Object.entries(totals).forEach(([attr, val]) => {
+            html += `<span class="team-total-attr">${attr.charAt(0).toUpperCase() + attr.slice(1)}: <b>${val}</b></span><br>`;
+        });
+        html += `</div>`;
+
+        // Output to the container
+        const container = document.getElementById(containerId);
+        if (container) {
+            // Remove any previous totals
+            let prev = container.querySelector('.team-totals');
+            if (prev) prev.remove();
+            container.insertAdjacentHTML('beforeend', html);
+        }
+    }
+
+    // Call this in displayFinalResults after generating box scores:
     function displayFinalResults(userScore, cpuScore, winner) {
         const userScoreSpan = `<span class="${winner === 'user' ? 'winner' : 'loser'}">${userScore}</span>`;
         const cpuScoreSpan = `<span class="${winner === 'cpu' ? 'winner' : 'loser'}">${cpuScore}</span>`;
@@ -418,6 +458,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Generate and display box scores
         generateBoxScore(userBoxScoreTable, userTeam, userScore);
         generateBoxScore(cpuBoxScoreTable, cpuTeam, cpuScore);
+
+        // Show team attribute totals
+        displayTeamTotals(userTeam, 'userBoxScore');
+        displayTeamTotals(cpuTeam, 'cpuBoxScore');
     }
 
     function generateBoxScore(table, team, teamScore) {
