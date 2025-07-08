@@ -1,90 +1,164 @@
 [
   {
+    "id": "adrenaline_rush",
+    "name": "Adrenaline Rush",
+    "description": "+10 to Athleticism and Clutch.",
+    "effects": {
+      "athleticism": 10,
+      "clutch": 10
+    }
+  },
+  {
     "id": "hot_streak",
     "name": "Hot Streak",
-    "description": "All players gain +5 offense for this game.",
+    "description": "+15 Offense, -5 Defense.",
     "effects": {
-      "team": {
-        "offense": 5
+      "offense": 15,
+      "defense": -5
+    }
+  },
+  {
+    "id": "locker_room_leader",
+    "name": "Locker Room Leader",
+    "description": "+10 Chemistry, +5 Playmaking.",
+    "effects": {
+      "chemistry": 10,
+      "playmaking": 5
+    }
+  },
+  {
+    "id": "gameplan_mastery",
+    "name": "Gameplan Mastery",
+    "description": "+10 Defense, +10 Playmaking.",
+    "effects": {
+      "defense": 10,
+      "playmaking": 10
+    }
+  },
+  {
+    "id": "iron_will",
+    "name": "Iron Will",
+    "description": "+8 to all stats if Clutch is already 95 or higher.",
+    "effects": {
+      "conditional": {
+        "requirement": {
+          "clutch": ">=95"
+        },
+        "modifiers": {
+          "offense": 8,
+          "defense": 8,
+          "playmaking": 8,
+          "athleticism": 8,
+          "clutch": 8,
+          "chemistry": 8
+        }
       }
     }
   },
   {
-    "id": "lockdown",
-    "name": "Lockdown",
-    "description": "All players gain +5 defense for this game.",
+    "id": "cold_feet",
+    "name": "Cold Feet",
+    "description": "-15 Clutch.",
     "effects": {
-      "team": {
-        "defense": 5
+      "clutch": -15
+    }
+  },
+  {
+    "id": "injury_scare",
+    "name": "Injury Scare",
+    "description": "-10 Athleticism, -5 Offense.",
+    "effects": {
+      "athleticism": -10,
+      "offense": -5
+    }
+  },
+  {
+    "id": "locker_room_drama",
+    "name": "Locker Room Drama",
+    "description": "-20 Chemistry.",
+    "effects": {
+      "chemistry": -20
+    }
+  },
+  {
+    "id": "double_teams",
+    "name": "Double-Teams Everywhere",
+    "description": "-10 Offense, -5 Playmaking.",
+    "effects": {
+      "offense": -10,
+      "playmaking": -5
+    }
+  },
+  {
+    "id": "overthinker",
+    "name": "Overthinker",
+    "description": "-10 Playmaking, +5 Defense.",
+    "effects": {
+      "playmaking": -10,
+      "defense": 5
+    }
+  },
+  {
+    "id": "all_or_nothing",
+    "name": "All or Nothing",
+    "description": "+20 Offense, -20 Defense.",
+    "effects": {
+      "offense": 20,
+      "defense": -20
+    }
+  },
+  {
+    "id": "momentum_swing",
+    "name": "Momentum Swing",
+    "description": "Swap your highest and lowest stat.",
+    "effects": {
+      "special": "swap_highest_lowest_stat"
+    }
+  },
+  {
+    "id": "team_player",
+    "name": "Team Player",
+    "description": "+15 Chemistry, -10 Clutch.",
+    "effects": {
+      "chemistry": 15,
+      "clutch": -10
+    }
+  },
+  {
+    "id": "fourth_quarter_king",
+    "name": "Fourth Quarter King",
+    "description": "Double Clutch if score is tied or trailing.",
+    "effects": {
+      "conditional": {
+        "requirement": {
+          "game_state": "tied_or_trailing"
+        },
+        "modifiers": {
+          "clutch": "x2"
+        }
       }
     }
   },
   {
-    "id": "floor_general",
-    "name": "Floor General",
-    "description": "Point Guard gains +10 playmaking and +5 chemistry.",
+    "id": "versatile_weapon",
+    "name": "Versatile Weapon",
+    "description": "+5 to all stats if none are below 80.",
     "effects": {
-      "player": {
-        "position": "PG",
-        "playmaking": 10,
-        "chemistry": 5
+      "conditional": {
+        "requirement": {
+          "min_stat_value": 80
+        },
+        "modifiers": {
+          "offense": 5,
+          "defense": 5,
+          "playmaking": 5,
+          "athleticism": 5,
+          "clutch": 5,
+          "chemistry": 5
+        }
       }
-    }
-  },
-  {
-    "id": "sixth_man",
-    "name": "Sixth Man Spark",
-    "description": "Your 6th man gains +10 offense and +10 athleticism.",
-    "effects": {
-      "player": {
-        "position": "6th",
-        "offense": 10,
-        "athleticism": 10
-      }
-    }
-  },
-  {
-    "id": "clutch_time",
-    "name": "Clutch Time",
-    "description": "All players gain +7 clutch for this game.",
-    "effects": {
-      "team": {
-        "clutch": 7
-      }
-    }
-  },
-  {
-    "id": "chemistry_boost",
-    "name": "Team Chemistry",
-    "description": "All players gain +5 chemistry for this game.",
-    "effects": {
-      "team": {
-        "chemistry": 5
-      }
-    }
-  },
-  {
-    "id": "wild_card",
-    "name": "Wild Card",
-    "description": "You may play any player at any position for this game.",
-    "effects": {
-      "special": "ignore_position_restrictions"
-    }
-  },
-  {
-    "id": "swap_card",
-    "name": "Trade Deadline",
-    "description": "Swap one player from your team with one player from the CPU's team before the game.",
-    "effects": {
-      "special": "allow_player_swap"
-    }
-  },
-  {
-    "id": "redraft_position",
-    "name": "Position Redraft",
-    "description": "Completely redraft all players at a specific position of your choice before the game.",
-    "effects": {
-      "special": "allow_position_redraft"
     }
   }
+
+
 ]
