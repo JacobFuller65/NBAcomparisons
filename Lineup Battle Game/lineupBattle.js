@@ -49,6 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // ...existing player fetch/init logic...
         });
 
+    let gameEvents = [];
+
+    fetch('gameEvents.json')
+        .then(response => response.json())
+        .then(data => {
+            gameEvents = data;
+        });
+
     function initializeGame() {
         userTeam = {};
         cpuTeam = {};
@@ -357,14 +365,25 @@ document.addEventListener('DOMContentLoaded', () => {
         let cpuQuarterScores = [];
         let userRunning = 0;
         let cpuRunning = 0;
+        let eventLogs = []; // Collect event messages
 
-        // Randomly distribute points per quarter, but keep total accurate
         let userRemaining = userScore;
         let cpuRemaining = cpuScore;
         for (let q = 0; q < quarters; q++) {
+            // --- In-game events ---
+            if (gameEvents.length > 0) {
+                // User event
+                const userEvent = gameEvents[Math.floor(Math.random() * gameEvents.length)];
+                applyGameEvent(userTeam, userEvent, eventLogs);
+
+                // CPU event
+                const cpuEvent = gameEvents[Math.floor(Math.random() * gameEvents.length)];
+                applyGameEvent(cpuTeam, cpuEvent, eventLogs);
+            }
+
+            // ...existing quarter scoring logic...
             let userQ, cpuQ;
             if (q < quarters - 1) {
-                // Give a random portion, but ensure enough left for last quarter
                 userQ = Math.round((userRemaining / (quarters - q)) * (0.8 + Math.random() * 0.4));
                 cpuQ = Math.round((cpuRemaining / (quarters - q)) * (0.8 + Math.random() * 0.4));
             } else {
@@ -659,6 +678,38 @@ document.addEventListener('DOMContentLoaded', () => {
         grid.parentElement.appendChild(confirmBtn);
 
         modal.style.display = 'flex';
+    }
+
+    function applyGameEvent(team, event, logArr) {
+        let affectedPlayer = null;
+        let message = event.message;
+
+        // Determine target player
+        if (event.target === "random") {
+            const players = Object.values(team).filter(p => p);
+            affectedPlayer = players[Math.floor(Math.random() * players.length)];
+        } else if (event.target === "playerWithHighestClutch") {
+            const players = Object.values(team).filter(p => p);
+            affectedPlayer = players.reduce((max, p) => (p.stats.clutch > (max?.stats.clutch || -Infinity) ? p : max), null);
+        } else if (["PG", "SG", "SF", "PF", "C", "6th"].includes(event.target)) {
+            affectedPlayer = team[event.target];
+        }
+
+        // Apply stat change
+        if (affectedPlayer && event.stat && affectedPlayer.stats[event.stat] !== undefined) {
+            affectedPlayer.stats[event.stat] += event.amount;
+            message = message.replace("{player}", affectedPlayer.name);
+        } else if (event.type === "teamBuff" && event.stat) {
+            // Team-wide stat change
+            Object.values(team).forEach(p => {
+                if (p && p.stats[event.stat] !== undefined) {
+                    p.stats[event.stat] += event.amount;
+                }
+            });
+        }
+
+        // Log the event
+        if (logArr && message) logArr.push(message);
     }
 });
 
