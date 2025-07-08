@@ -554,10 +554,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Example of applying a modifier after team selection
-    // applyModifier(userTeam, selectedModifier);
-    // Optionally: applyModifier(cpuTeam, cpuSelectedModifier);
-
     function maybeDrawModifierCard() {
         const chance = 0.99; // 10% chance
         if (Math.random() < chance && bonusModifiers.length > 0) {

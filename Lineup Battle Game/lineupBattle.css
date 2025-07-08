@@ -317,15 +317,19 @@ body {
 @keyframes fadeIn {
     to { opacity: 1; }
 }
-
+.winner{
+    color: #00ff04;
+    font-weight: bold;
+}
 .final-score {
+    color: #111 !important;
     font-size: 2.5em;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-.final-score .winner { color: #ffd700; }
-.final-score .loser { color: #aaa; }
+.final-score .winner { color: #25ba0f; }
+.final-score .loser { color: #a90606; }
 
 .box-scores {
     display: flex;
@@ -369,6 +373,7 @@ body {
     letter-spacing: 2px;
     margin-bottom: 24px;
     box-shadow: 0 2px 12px #0002;
+    
 }
 
 /* Simulation log: make text more readable */
@@ -411,7 +416,7 @@ body {
     min-height: 280px; /* Prevents layout shifts while cards are loading */
 }
 
-/* Modifier Card Modal Styles */
+
 .modal-overlay {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -461,7 +466,7 @@ body {
 .modal-body {
     max-height: 400px;
     overflow-y: auto;
-    padding-right: 10px; /* Prevents scrollbar from covering content */
+    padding-right: 10px; 
 }
 
 .modal-footer {
