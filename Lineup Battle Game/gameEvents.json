@@ -37,5 +37,196 @@
     "stat": "chemistry",
     "amount": 5,
     "message": "Coach’s speech fired them up. Team Chemistry +5."
+  },
+  {
+    "name": "Choked Under Pressure",
+    "type": "debuff",
+    "target": "playerWithHighestClutch",
+    "stat": "clutch",
+    "amount": -15,
+    "message": "{player} shrank in the big moment. Clutch -15."
+  },
+  {
+    "name": "Exposed on Defense",
+    "type": "debuff",
+    "target": "SG",
+    "stat": "defense",
+    "amount": -12,
+    "message": "{player} got torched all night. Defense -12."
+  },
+  {
+    "name": "Shaky Handles",
+    "type": "debuff",
+    "target": "PG",
+    "stat": "playmaking",
+    "amount": -10,
+    "message": "{player} kept coughing it up. Playmaking -10."
+  },
+  {
+    "name": "Flat Start",
+    "type": "debuff",
+    "target": "team",
+    "stat": "offense",
+    "amount": -5,
+    "message": "The whole squad came out sluggish. Team Offense -5."
+  },
+  {
+    "name": "Out of Sync",
+    "type": "teamDebuff",
+    "stat": "chemistry",
+    "amount": -7,
+    "message": "Nothing was clicking. Team Chemistry -7."
+  },
+  {
+    "name": "Momentum Boost",
+    "type": "buff",
+    "target": "random",
+    "stat": "athleticism",
+    "amount": 12,
+    "message": "{player} found another gear. Athleticism +12."
+  },
+  {
+    "name": "Defensive Anchor",
+    "type": "buff",
+    "target": "C",
+    "stat": "defense",
+    "amount": 15,
+    "message": "{player} was a brick wall. Defense +15."
+  },
+  {
+    "name": "Takeover Mode",
+    "type": "buff",
+    "target": "playerWithHighestOffense",
+    "stat": "offense",
+    "amount": 20,
+    "message": "{player} completely took over. Offense +20."
+  },
+  {
+    "name": "Court Vision",
+    "type": "buff",
+    "target": "PG",
+    "stat": "playmaking",
+    "amount": 10,
+    "message": "{player} saw the whole floor tonight. Playmaking +10."
+  },
+  {
+    "name": "Clutch Stopper",
+    "type": "buff",
+    "target": "SF",
+    "stat": "defense",
+    "amount": 10,
+    "message": "{player} shut down the opposing star. Defense +10."
+  },
+  {
+    "name": "Tweaked Knee",
+    "type": "injury",
+    "target": "random",
+    "stat": "athleticism",
+    "amount": -10,
+    "message": "{player} tweaked their knee driving to the rim. Athleticism -10."
+  },
+  {
+    "name": "Back Spasms",
+    "type": "injury",
+    "target": "C",
+    "stat": "defense",
+    "amount": -12,
+    "message": "{player} struggled to move laterally. Defense -12."
+  },
+  {
+    "name": "Hamstring Pull",
+    "type": "injury",
+    "target": "random",
+    "stat": "offense",
+    "amount": -10,
+    "message": "{player} lost a step. Offense -10."
+  },
+  {
+    "name": "Dislocated Finger",
+    "type": "injury",
+    "target": "SG",
+    "stat": "playmaking",
+    "amount": -8,
+    "message": "{player} couldn’t control the ball cleanly. Playmaking -8."
+  },
+  {
+    "name": "Winded Early",
+    "type": "injury",
+    "target": "SF",
+    "stat": "athleticism",
+    "amount": -12,
+    "message": "{player} ran out of gas early. Athleticism -12."
+  },
+  {
+    "name": "Rivalry Fuel",
+    "type": "teamBuff",
+    "stat": "clutch",
+    "amount": 8,
+    "message": "They brought it for the rivalry game. Team Clutch +8."
+  },
+  {
+    "name": "All Business",
+    "type": "teamBuff",
+    "stat": "defense",
+    "amount": 10,
+    "message": "Locked in from tip to buzzer. Team Defense +10."
+  },
+  {
+    "name": "Bench Mob Explosion",
+    "type": "teamBuff",
+    "stat": "offense",
+    "amount": 7,
+    "message": "The bench delivered a spark. Team Offense +7."
+  },
+  {
+    "name": "Silent Night",
+    "type": "teamDebuff",
+    "stat": "offense",
+    "amount": -8,
+    "message": "Nobody could get going. Team Offense -8."
+  },
+  {
+    "name": "Defensive Collapse",
+    "type": "teamDebuff",
+    "stat": "defense",
+    "amount": -10,
+    "message": "The D fell apart late. Team Defense -10."
+  },
+  {
+    "name": "Big Game Energy",
+    "type": "buff",
+    "target": "playerWithHighestChemistry",
+    "stat": "clutch",
+    "amount": 10,
+    "message": "{player} showed up for the big one. Clutch +10."
+  },
+  {
+    "name": "Underdog Mentality",
+    "type": "teamBuff",
+    "stat": "playmaking",
+    "amount": 6,
+    "message": "They played like they had something to prove. Team Playmaking +6."
+  },
+  {
+    "name": "Home Court Edge",
+    "type": "teamBuff",
+    "stat": "chemistry",
+    "amount": 5,
+    "message": "The crowd had their back. Team Chemistry +5."
+  },
+  {
+    "name": "Postgame Blow-Up",
+    "type": "teamDebuff",
+    "stat": "chemistry",
+    "amount": -12,
+    "message": "A shouting match erupted in the locker room. Team Chemistry -12."
+  },
+  {
+    "name": "Star Power Surge",
+    "type": "buff",
+    "target": "playerWithHighestOffense",
+    "stat": "clutch",
+    "amount": 15,
+    "message": "{player} delivered when it mattered. Clutch +15."
   }
 ]
