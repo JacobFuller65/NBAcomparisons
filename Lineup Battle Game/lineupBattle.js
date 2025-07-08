@@ -549,5 +549,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Example of applying a modifier after team selection
     // applyModifier(userTeam, selectedModifier);
     // Optionally: applyModifier(cpuTeam, cpuSelectedModifier);
+
+    function maybeDrawModifierCard() {
+        const chance = 0.10; // 10% chance
+        if (Math.random() < chance && bonusModifiers.length > 0) {
+            // Draw a random card
+            const card = bonusModifiers[Math.floor(Math.random() * bonusModifiers.length)];
+            return card;
+        }
+        return null;
+    }
 });
 
