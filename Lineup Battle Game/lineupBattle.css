@@ -425,6 +425,8 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 1000;
+    overflow-y: auto;         /* Enable vertical scrolling for the overlay */
+    scrollbar-width: thin;    /* For Firefox */
 }
 .modal-content {
     background: #fff;
@@ -542,12 +544,20 @@ body {
     font-size: 1.08em;
     box-shadow: 0 2px 8px #ffd70033;
     text-align: left;
+    max-height: 200px;      /* Set a max height for the summary */
+    overflow-y: auto;       /* Enable vertical scrolling if needed */
+    scrollbar-width: thin;  /* For Firefox */
 }
 
-.team-totals strong {
-    color: #b8860b;
-    font-size: 1.12em;
-    letter-spacing: 1px;
+/* Optional: Custom scrollbar styling for Webkit browsers */
+.team-totals::-webkit-scrollbar {
+    width: 8px;
+    background: #eee;
+    border-radius: 8px;
+}
+.team-totals::-webkit-scrollbar-thumb {
+    background: #ffd700;
+    border-radius: 8px;
 }
 
 .team-total-attr {
