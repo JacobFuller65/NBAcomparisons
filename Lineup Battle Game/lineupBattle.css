@@ -460,4 +460,8 @@ body {
     cursor: not-allowed;
 }
 
-/* End of Modifier Card Modal Styles */
+/* Make all text in the modifier card modal black */
+#modifierCardModal,
+#modifierCardModal * {
+    color: #111 !important;
+}
