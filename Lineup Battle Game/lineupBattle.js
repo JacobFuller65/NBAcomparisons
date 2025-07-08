@@ -400,19 +400,22 @@ document.addEventListener('DOMContentLoaded', () => {
         finalScoreEl.innerHTML = '';
         resultsModal.style.display = 'flex';
 
+        // Build log messages with event logs after each quarter
         const logMessages = [
-            "The game is underway!",
-            "End of 1st Quarter: " +
-                `You ${userQuarterScores[0]} - CPU ${cpuQuarterScores[0]}`,
-            "Halftime! 2nd Quarter: " +
-                `You ${userQuarterScores[1]} (Total: ${userQuarterScores[0] + userQuarterScores[1]}) - CPU ${cpuQuarterScores[1]} (Total: ${cpuQuarterScores[0] + cpuQuarterScores[1]})`,
-            "3rd Quarter in the books: " +
-                `You ${userQuarterScores[2]} (Total: ${userQuarterScores.slice(0,3).reduce((a,b)=>a+b,0)}) - CPU ${cpuQuarterScores[2]} (Total: ${cpuQuarterScores.slice(0,3).reduce((a,b)=>a+b,0)})`,
-            "Final Quarter! Down to the wire...",
-            `And the final buzzer sounds!`
+            `End of 1st Quarter: You ${userQuarterScores[0]} - CPU ${cpuQuarterScores[0]}`,
+            eventLogs[0] || "",
+            eventLogs[1] || "",
+            `Halftime (2nd Quarter): You ${userQuarterScores[0] + userQuarterScores[1]} - CPU ${cpuQuarterScores[0] + cpuQuarterScores[1]}`,
+            eventLogs[2] || "",
+            eventLogs[3] || "",
+            `End of 3rd Quarter: You ${userQuarterScores.slice(0,3).reduce((a,b)=>a+b,0)} - CPU ${cpuQuarterScores.slice(0,3).reduce((a,b)=>a+b,0)}`,
+            eventLogs[4] || "",
+            eventLogs[5] || "",
+            `Final Score: You ${userQuarterScores.reduce((a,b)=>a+b,0)} - CPU ${cpuQuarterScores.reduce((a,b)=>a+b,0)}`
         ];
 
         logMessages.forEach((msg, i) => {
+            if (!msg) return; // Skip empty messages
             setTimeout(() => {
                 const p = document.createElement('p');
                 p.textContent = msg;
