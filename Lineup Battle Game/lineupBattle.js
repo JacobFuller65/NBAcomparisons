@@ -545,5 +545,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // e.g. set a flag: ignorePositionRestrictions = true;
         }
     }
+
+    // Example of applying a modifier after team selection
+    // applyModifier(userTeam, selectedModifier);
+    // Optionally: applyModifier(cpuTeam, cpuSelectedModifier);
 });
 
