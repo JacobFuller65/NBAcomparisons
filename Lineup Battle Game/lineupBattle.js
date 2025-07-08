@@ -257,7 +257,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function checkCompletion() {
         if (Object.keys(userTeam).length === positions.length) {
-            gameMessage.textContent = "Your team is ready! Hit Start Battle!";
+            // Try to draw a modifier card
+            const drawnCard = maybeDrawModifierCard();
+            if (drawnCard) {
+                applyModifier(userTeam, drawnCard);
+                gameMessage.innerHTML = `Lucky you! You drew a bonus card: <strong>${drawnCard.name}</strong> - ${drawnCard.description}`;
+            } else {
+                gameMessage.textContent = "Your team is ready! Hit Start Battle!";
+            }
             battleButton.disabled = false;
             draftArea.style.display = 'none'; // Hide draft area when done
         }
