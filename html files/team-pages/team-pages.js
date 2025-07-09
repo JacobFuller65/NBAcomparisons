@@ -96,7 +96,8 @@ function loadTeamListing() {
     Object.entries(NBA_TEAMS).forEach(([teamName, teamInfo]) => {
         const teamCard = document.createElement('a');
         teamCard.className = 'team-card';
-        teamCard.href = `./team-pages/${teamName.replace(/\s+/g, '-').toLowerCase()}.html`;
+        // Use correct relative path for team pages
+        teamCard.href = `./${teamName.replace(/\s+/g, '-').toLowerCase()}.html`;
         
         teamCard.innerHTML = `
             <div class="team-name">${teamName}</div>
@@ -222,7 +223,25 @@ function loadScoresWidget() {
 function getTeamNameFromUrl() {
     const pathname = window.location.pathname;
     const filename = pathname.split('/').pop().replace('.html', '');
-    return filename.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    // Fix: handle dashes and capitalization for all NBA team names
+    // Special cases for teams with multiple dashes (e.g., trail-blazers, 76ers)
+    let name = filename
+        .replace(/-/g, ' ')
+        .replace(/\b(\d+)/g, match => match) // keep numbers as is
+        .replace(/\b\w/g, l => l.toUpperCase());
+    // Handle special cases for team names
+    if (name === '76Ers') name = '76ers';
+    if (name === 'Trail Blazers') name = 'Trail Blazers';
+    if (name === 'Timberwolves') name = 'Timberwolves';
+    if (name === 'Pelicans') name = 'Pelicans';
+    // Try to match to NBA_TEAMS key
+    let found = Object.keys(NBA_TEAMS).find(team => team.toLowerCase() === name.toLowerCase());
+    if (found) return found;
+    // Fallback: try to match by abbreviation
+    found = Object.entries(NBA_TEAMS).find(([team, info]) => info.abbreviation.toLowerCase() === filename.toLowerCase());
+    if (found) return found[0];
+    // Fallback: return name as is
+    return name;
 }
 
 // Initialize page based on type
