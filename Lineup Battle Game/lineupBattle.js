@@ -802,4 +802,3 @@ document.addEventListener('DOMContentLoaded', () => {
         if (logArr && message) logArr.push(`${teamLabel}${message}`);
     }
 });
-
