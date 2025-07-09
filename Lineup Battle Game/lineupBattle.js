@@ -364,16 +364,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const userRatings = calculateTeamRatings(userTeam);
         const cpuRatings = calculateTeamRatings(cpuTeam);
 
-        // Use weighted totals for scoring
-        const baseScore = 60; // Lower base, so attributes matter more
-        const scalingFactor = 8; // Lower scaling, so attributes have a bigger effect
-        const clamp = (val, min, max) => Math.max(min, Math.min(max, val));
-        const userScoreRaw = baseScore + userRatings.weightedTotal / scalingFactor + Math.random() * userRatings.clutch / 80;
-        const cpuScoreRaw = baseScore + cpuRatings.weightedTotal / scalingFactor + Math.random() * cpuRatings.clutch / 80;
-
-        // Add a little randomness to avoid ties
-        const userScore = clamp(Math.round(userScoreRaw + (Math.random() * 4 - 2)), 70, 170);
-        const cpuScore = clamp(Math.round(cpuScoreRaw + (Math.random() * 4 - 2)), 70, 170);
+        // Pure stat-based scoring: sum of weighted stats, scaled to NBA range
+        // You can tune the divisor (e.g., 2.5) to get typical NBA scores
+        const userScore = Math.round(userRatings.weightedTotal / 2.5);
+        const cpuScore = Math.round(cpuRatings.weightedTotal / 2.5);
 
         // --- Quarter Simulation ---
         const quarters = 4;
@@ -382,6 +376,10 @@ document.addEventListener('DOMContentLoaded', () => {
         let userRunning = userScore;
         let cpuRunning = cpuScore;
         let eventLogs = []; // Collect event messages
+
+        // NBA teams often have higher 2nd/3rd quarter, so use a profile
+        // Example: [0.23, 0.27, 0.27, 0.23] (percent of total per quarter)
+        const quarterProfile = [0.23, 0.27, 0.27, 0.23];
 
         for (let q = 0; q < quarters; q++) {
             // --- In-game events ---
@@ -395,29 +393,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 applyGameEvent(cpuTeam, cpuEvent, eventLogs, "CPU Team: ");
             }
 
-            let userQ, cpuQ;
-            if (q < quarters - 1) {
-                // Add more variance: random multiplier between 0.7 and 1.3
-                const userRand = 0.7 + Math.random() * 0.6;
-                const cpuRand = 0.7 + Math.random() * 0.6;
-                userQ = Math.round(Math.max(10, Math.min(45, (userRunning / (quarters - q)) * userRand)));
-                cpuQ = Math.round(Math.max(10, Math.min(45, (cpuRunning / (quarters - q)) * cpuRand)));
-                userRunning -= userQ;
-                cpuRunning -= cpuQ;
-            } else {
-                // Last quarter: assign all remaining points, plus a small random fuzz
-                userQ = userRunning + Math.floor(Math.random() * 5) - 2; // -2 to +2
-                cpuQ = cpuRunning + Math.floor(Math.random() * 5) - 2;
-                // Clamp to minimum 10, maximum 50 for realism
-                userQ = Math.max(10, Math.min(50, userQ));
-                cpuQ = Math.max(10, Math.min(50, cpuQ));
-                // Adjust totals so sum matches original score
-                userQ += (userScore - (userQuarterScores.reduce((a, b) => a + b, 0) + userQ));
-                cpuQ += (cpuScore - (cpuQuarterScores.reduce((a, b) => a + b, 0) + cpuQ));
-            }
+            // Calculate quarter score based on profile and add a little variance
+            let userQ = Math.round(userScore * quarterProfile[q] + (Math.random() * 4 - 2));
+            let cpuQ = Math.round(cpuScore * quarterProfile[q] + (Math.random() * 4 - 2));
+
+            // Ensure no negative quarters
+            userQ = Math.max(0, userQ);
+            cpuQ = Math.max(0, cpuQ);
+
             userQuarterScores.push(userQ);
             cpuQuarterScores.push(cpuQ);
         }
+
+        // Adjust last quarter so totals match exactly
+        const userSoFar = userQuarterScores.reduce((a, b) => a + b, 0);
+        const cpuSoFar = cpuQuarterScores.reduce((a, b) => a + b, 0);
+        userQuarterScores[3] += userScore - userSoFar;
+        cpuQuarterScores[3] += cpuScore - cpuSoFar;
 
         // Tiebreaker: if still tied, randomly add 1 point to one team
         let userTotal = userQuarterScores.reduce((a, b) => a + b, 0);
