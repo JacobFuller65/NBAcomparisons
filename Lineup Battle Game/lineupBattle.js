@@ -86,9 +86,30 @@ document.addEventListener('DOMContentLoaded', () => {
     function generateCpuTeam() {
         const excludedForCpu = [];
         positions.forEach(pos => {
-            const player = getRandomPlayer(pos, excludedForCpu);
-            cpuTeam[pos] = player;
-            if (player) excludedForCpu.push(player);
+            // Find the best available player for this position
+            const eligiblePlayers = playerPool.filter(p => {
+                const isCorrectPosition = pos === 'ANY' || pos === '6th' || (p.position && p.position.includes(pos));
+                return isCorrectPosition && !excludedForCpu.some(ex => ex && ex.name === p.name);
+            });
+            if (eligiblePlayers.length === 0) return;
+
+            // After sorting by score, pick from the top 2-3
+            const sorted = eligiblePlayers
+                .map(p => {
+                    let score = 0;
+                    if (p.stats) {
+                        Object.keys(STAT_WEIGHTS).forEach(attr => {
+                            score += (p.stats[attr] || 0) * (STAT_WEIGHTS[attr] || 1);
+                        });
+                    }
+                    return { player: p, score };
+                })
+                .sort((a, b) => b.score - a.score);
+
+            const pickFromTop = Math.min(3, sorted.length);
+            const bestPlayer = sorted[Math.floor(Math.random() * pickFromTop)].player;
+            cpuTeam[pos] = bestPlayer;
+            excludedForCpu.push(bestPlayer);
         });
     }
 
@@ -286,7 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
         initializeGame();
     });
 
-    // Define your stat weights (adjust as desired)
+    // Define your stat weights (adjust as needed, further testing planned)
     const STAT_WEIGHTS = {
         offense: 1.0,
         defense: 1.2,
