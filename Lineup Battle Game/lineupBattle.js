@@ -372,8 +372,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const cpuScoreRaw = baseScore + cpuRatings.weightedTotal / scalingFactor + Math.random() * cpuRatings.clutch / 80;
 
         // Add a little randomness to avoid ties
-        const userScore = clamp(Math.round(userScoreRaw + (Math.random() * 4 - 2)), 80, 130);
-        const cpuScore = clamp(Math.round(cpuScoreRaw + (Math.random() * 4 - 2)), 80, 130);
+        const userScore = clamp(Math.round(userScoreRaw + (Math.random() * 4 - 2)), 70, 170);
+        const cpuScore = clamp(Math.round(cpuScoreRaw + (Math.random() * 4 - 2)), 70, 170);
 
         // --- Quarter Simulation ---
         const quarters = 4;
