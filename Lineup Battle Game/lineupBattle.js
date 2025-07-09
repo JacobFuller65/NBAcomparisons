@@ -366,8 +366,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Pure stat-based scoring: sum of weighted stats, scaled to NBA range
         // You can tune the divisor (e.g., 2.5) to get typical NBA scores
-        const userScore = Math.round(userRatings.weightedTotal / 2.5);
-        const cpuScore = Math.round(cpuRatings.weightedTotal / 2.5);
+        const baseScore = 80; // NBA teams rarely score less than 80
+        const scalingFactor = 12; // Increase to lower scores, decrease to raise scores
+        const clamp = (val, min, max) => Math.max(min, Math.min(max, val));
+
+        const userScoreRaw = baseScore + userRatings.weightedTotal / scalingFactor;
+        const cpuScoreRaw = baseScore + cpuRatings.weightedTotal / scalingFactor;
+
+        // Add a little randomness for realism
+        const userScore = clamp(Math.round(userScoreRaw + (Math.random() * 6 - 3)), 80, 130);
+        const cpuScore = clamp(Math.round(cpuScoreRaw + (Math.random() * 6 - 3)), 80, 130);
 
         // --- Quarter Simulation ---
         const quarters = 4;
