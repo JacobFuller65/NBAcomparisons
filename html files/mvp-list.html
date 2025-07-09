@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,59 +12,70 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+
         header {
             background-color: #333;
             color: white;
             padding: 1rem 0;
             text-align: center;
         }
+
         .content {
             padding: 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .filters {
             background-color: white;
             padding: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin-bottom: 2rem;
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
             align-items: center;
         }
+
         .filter-group {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
         }
+
         .filter-group label {
             font-weight: bold;
             font-size: 0.9rem;
         }
-        select, input {
+
+        select,
+        input {
             padding: 0.5rem;
             border: 1px solid #ddd;
             border-radius: 4px;
             font-size: 1rem;
         }
+
         .mvp-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 1.5rem;
         }
+
         .mvp-card {
             background-color: white;
             padding: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s;
         }
+
         .mvp-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
+
         .mvp-header {
             display: flex;
             justify-content: space-between;
@@ -72,11 +84,13 @@
             border-bottom: 2px solid #d17a22;
             padding-bottom: 0.5rem;
         }
+
         .season {
             font-size: 1.2rem;
             font-weight: bold;
             color: #d17a22;
         }
+
         .position-badge {
             background-color: #333;
             color: white;
@@ -85,54 +99,64 @@
             font-size: 0.8rem;
             font-weight: bold;
         }
+
         .player-name {
             font-size: 1.3rem;
             font-weight: bold;
             margin-bottom: 0.5rem;
             color: #333;
         }
+
         .team-age {
             color: #666;
             margin-bottom: 1rem;
         }
+
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 0.5rem;
             margin-bottom: 1rem;
         }
+
         .stat-item {
             text-align: center;
             padding: 0.5rem;
             background-color: #f8f9fa;
             border-radius: 4px;
         }
+
         .stat-value {
             font-size: 1.1rem;
             font-weight: bold;
             color: #d17a22;
         }
+
         .stat-label {
             font-size: 0.8rem;
             color: #666;
         }
+
         .advanced-stats {
             display: flex;
             justify-content: space-between;
             font-size: 0.9rem;
             color: #666;
         }
+
         .no-results {
             text-align: center;
             padding: 3rem;
             color: #666;
             font-size: 1.2rem;
         }
+
         .results-count {
             margin-bottom: 1rem;
             color: #666;
             font-style: italic;
         }
+
         .clear-filters {
             background-color: #d17a22;
             color: white;
@@ -142,17 +166,19 @@
             cursor: pointer;
             font-size: 1rem;
         }
+
         .clear-filters:hover {
             background-color: #b8651a;
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>NBA MVP List (1955-2024)</h1>
         <p>Complete list of NBA Most Valuable Player winners with filtering options</p>
     </header>
-    
+
     <div class="content">
         <div class="filters">
             <div class="filter-group">
@@ -161,7 +187,7 @@
                     <option value="">All Years</option>
                 </select>
             </div>
-            
+
             <div class="filter-group">
                 <label for="position-filter">Filter by Position:</label>
                 <select id="position-filter">
@@ -173,21 +199,21 @@
                     <option value="C">Center (C)</option>
                 </select>
             </div>
-            
+
             <div class="filter-group">
                 <label for="player-search">Search Player:</label>
                 <input type="text" id="player-search" placeholder="Enter player name...">
             </div>
-            
+
             <button class="clear-filters" onclick="clearFilters()">Clear Filters</button>
         </div>
-        
+
         <div class="results-count" id="results-count"></div>
-        
+
         <div class="mvp-grid" id="mvp-grid">
             <!-- MVP cards will be populated here -->
         </div>
-        
+
         <div class="no-results" id="no-results" style="display: none;">
             No MVP results found matching your filters.
         </div>
@@ -206,10 +232,11 @@
             border-radius: 20px;
             font-size: 14px;
             text-decoration: none;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
             z-index: 1000;
             transition: background 0.2s, color 0.2s;
         }
+
         #home-btn:hover {
             background: #d17a22;
             color: #fff;
@@ -220,7 +247,7 @@
         let mvpData = [];
         let filteredData = [];
 
-        // Load MVP data
+        // Load MVP data from player pages file
         async function loadMVPData() {
             try {
                 const response = await fetch('../Player Pages/mvp-data-enhanced.json');
@@ -231,7 +258,8 @@
                 updateResultsCount();
             } catch (error) {
                 console.error('Error loading MVP data:', error);
-                document.getElementById('mvp-grid').innerHTML = '<p>Error loading MVP data. Please try again later.</p>';
+                document.getElementById('mvp-grid').innerHTML =
+                    '<p>Error loading MVP data. Please try again later.</p>';
             }
         }
 
@@ -239,7 +267,7 @@
         function populateYearFilter() {
             const yearFilter = document.getElementById('year-filter');
             const seasons = [...new Set(mvpData.map(mvp => mvp.Season))].sort().reverse();
-            
+
             seasons.forEach(season => {
                 const option = document.createElement('option');
                 option.value = season;
@@ -252,24 +280,24 @@
         function displayMVPs() {
             const mvpGrid = document.getElementById('mvp-grid');
             const noResults = document.getElementById('no-results');
-            
+
             if (filteredData.length === 0) {
                 mvpGrid.style.display = 'none';
                 noResults.style.display = 'block';
                 return;
             }
-            
+
             mvpGrid.style.display = 'grid';
             noResults.style.display = 'none';
-            
+
             mvpGrid.innerHTML = filteredData.map(mvp => createMVPCard(mvp)).join('');
         }
 
         // Create individual MVP card
         function createMVPCard(mvp) {
-            const positionBadge = mvp.Position !== 'Unknown' ? 
+            const positionBadge = mvp.Position !== 'Unknown' ?
                 `<span class="position-badge">${mvp.Position}</span>` : '';
-            
+
             return `
                 <div class="mvp-card">
                     <div class="mvp-header">
@@ -320,15 +348,15 @@
             const yearFilter = document.getElementById('year-filter').value;
             const positionFilter = document.getElementById('position-filter').value;
             const playerSearch = document.getElementById('player-search').value.toLowerCase();
-            
+
             filteredData = mvpData.filter(mvp => {
                 const matchesYear = !yearFilter || mvp.Season === yearFilter;
                 const matchesPosition = !positionFilter || mvp.Position === positionFilter;
                 const matchesPlayer = !playerSearch || mvp.Player.toLowerCase().includes(playerSearch);
-                
+
                 return matchesYear && matchesPosition && matchesPlayer;
             });
-            
+
             displayMVPs();
             updateResultsCount();
         }
@@ -338,7 +366,7 @@
             const count = filteredData.length;
             const total = mvpData.length;
             const resultsCount = document.getElementById('results-count');
-            
+
             if (count === total) {
                 resultsCount.textContent = `Showing all ${total} MVP winners`;
             } else {
@@ -351,7 +379,7 @@
             document.getElementById('year-filter').value = '';
             document.getElementById('position-filter').value = '';
             document.getElementById('player-search').value = '';
-            
+
             filteredData = [...mvpData];
             displayMVPs();
             updateResultsCount();
@@ -366,4 +394,5 @@
         loadMVPData();
     </script>
 </body>
+
 </html>
