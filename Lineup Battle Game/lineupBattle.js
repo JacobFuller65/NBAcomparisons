@@ -448,6 +448,45 @@ document.addEventListener('DOMContentLoaded', () => {
         finalScoreEl.innerHTML = '';
         resultsModal.style.display = 'flex';
 
+        // Remove any previous chart instance
+        if (window.quarterPointsChartInstance) {
+            window.quarterPointsChartInstance.destroy();
+        }
+
+        // Render the quarter points chart
+        const ctx = document.getElementById('quarterPointsChart').getContext('2d');
+        window.quarterPointsChartInstance = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+                datasets: [
+                    {
+                        label: 'Your Team',
+                        data: userQuarterScores,
+                        backgroundColor: 'rgba(54, 162, 235, 0.7)'
+                    },
+                    {
+                        label: 'CPU Team',
+                        data: cpuQuarterScores,
+                        backgroundColor: 'rgba(255, 99, 132, 0.7)'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'top' },
+                    title: { display: true, text: 'Points by Quarter' }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Points' }
+                    }
+                }
+            }
+        });
+
         // Build log messages with event logs after each quarter
         const logMessages = [
             `End of 1st Quarter: You ${userQuarterScores[0]} - CPU ${cpuQuarterScores[0]}`,
