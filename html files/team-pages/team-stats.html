@@ -2,22 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NBA Teams</title>
-    <link rel="stylesheet" href="team-pages.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./team-pages.css">
+    <style>
+        .teams-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .team-link {
+            display: block;
+            background: #fff;
+            color: #222;
+            border-radius: 10px;
+            padding: 1.2rem 1rem;
+            text-decoration: none;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+            text-align: center;
+        }
+        .team-link:hover {
+            background: #d17a22;
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+        }
+        h1 {
+            text-align: center;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>NBA Teams</h1>
-    </header>
-    <div class="content">
-        <p>Select a team below to view detailed information including roster, stats, and current standings.</p>
-        <div id="teams-container">
-            <!-- Teams will be loaded here by JavaScript -->
-        </div>
+    <h1>NBA Teams</h1>
+    <div class="teams-list">
+        <a class="team-link" href="./atlanta-hawks.html">Atlanta Hawks</a>
+        <a class="team-link" href="./boston-celtics.html">Boston Celtics</a>
+        <a class="team-link" href="./brooklyn-nets.html">Brooklyn Nets</a>
+        <a class="team-link" href="./charlotte-hornets.html">Charlotte Hornets</a>
+        <a class="team-link" href="./chicago-bulls.html">Chicago Bulls</a>
+        <a class="team-link" href="./cleveland-cavaliers.html">Cleveland Cavaliers</a>
+        <a class="team-link" href="./dallas-mavericks.html">Dallas Mavericks</a>
+        <a class="team-link" href="./denver-nuggets.html">Denver Nuggets</a>
+        <a class="team-link" href="./detroit-pistons.html">Detroit Pistons</a>
+        <a class="team-link" href="./golden-state-warriors.html">Golden State Warriors</a>
+        <a class="team-link" href="./houston-rockets.html">Houston Rockets</a>
+        <a class="team-link" href="./indiana-pacers.html">Indiana Pacers</a>
+        <a class="team-link" href="./los-angeles-clippers.html">Los Angeles Clippers</a>
+        <a class="team-link" href="./los-angeles-lakers.html">Los Angeles Lakers</a>
+        <a class="team-link" href="./memphis-grizzlies.html">Memphis Grizzlies</a>
+        <a class="team-link" href="./miami-heat.html">Miami Heat</a>
+        <a class="team-link" href="./milwaukee-bucks.html">Milwaukee Bucks</a>
+        <a class="team-link" href="./minnesota-timberwolves.html">Minnesota Timberwolves</a>
+        <a class="team-link" href="./new-orleans-pelicans.html">New Orleans Pelicans</a>
+        <a class="team-link" href="./new-york-knicks.html">New York Knicks</a>
+        <a class="team-link" href="./oklahoma-city-thunder.html">Oklahoma City Thunder</a>
+        <a class="team-link" href="./orlando-magic.html">Orlando Magic</a>
+        <a class="team-link" href="./philadelphia-76ers.html">Philadelphia 76ers</a>
+        <a class="team-link" href="./phoenix-suns.html">Phoenix Suns</a>
+        <a class="team-link" href="./portland-trail-blazers.html">Portland Trail Blazers</a>
+        <a class="team-link" href="./sacramento-kings.html">Sacramento Kings</a>
+        <a class="team-link" href="./san-antonio-spurs.html">San Antonio Spurs</a>
+        <a class="team-link" href="./toronto-raptors.html">Toronto Raptors</a>
+        <a class="team-link" href="./utah-jazz.html">Utah Jazz</a>
+        <a class="team-link" href="./washington-wizards.html">Washington Wizards</a>
     </div>
-    
-    <a href="../index.html" id="home-btn" title="Home">🏠 Home</a>
-    <script src="team-pages.js"></script>
+    <a href="../../index.html" id="home-btn" title="Home">🏠 Home</a>
 </body>
 </html>
