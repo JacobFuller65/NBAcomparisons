@@ -397,18 +397,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let userQ, cpuQ;
             if (q < quarters - 1) {
-                // Calculate a base quarter score, then clamp so no quarter is too high/low
-                userQ = Math.round(Math.max(10, Math.min(45, (userRunning / (quarters - q)) * (0.85 + Math.random() * 0.3))));
-                cpuQ = Math.round(Math.max(10, Math.min(45, (cpuRunning / (quarters - q)) * (0.85 + Math.random() * 0.3))));
+                // Add more variance: random multiplier between 0.7 and 1.3
+                const userRand = 0.7 + Math.random() * 0.6;
+                const cpuRand = 0.7 + Math.random() * 0.6;
+                userQ = Math.round(Math.max(10, Math.min(45, (userRunning / (quarters - q)) * userRand)));
+                cpuQ = Math.round(Math.max(10, Math.min(45, (cpuRunning / (quarters - q)) * cpuRand)));
                 userRunning -= userQ;
                 cpuRunning -= cpuQ;
             } else {
-                // Last quarter: assign all remaining points, plus a small random fuzz to break ties
-                userQ = userRunning + Math.floor(Math.random() * 3) - 1; // -1, 0, or +1
-                cpuQ = cpuRunning + Math.floor(Math.random() * 3) - 1;
-                // Clamp to minimum 15, maximum 50 for realism
-                userQ = Math.max(15, Math.min(50, userQ));
-                cpuQ = Math.max(15, Math.min(50, cpuQ));
+                // Last quarter: assign all remaining points, plus a small random fuzz
+                userQ = userRunning + Math.floor(Math.random() * 5) - 2; // -2 to +2
+                cpuQ = cpuRunning + Math.floor(Math.random() * 5) - 2;
+                // Clamp to minimum 10, maximum 50 for realism
+                userQ = Math.max(10, Math.min(50, userQ));
+                cpuQ = Math.max(10, Math.min(50, cpuQ));
                 // Adjust totals so sum matches original score
                 userQ += (userScore - (userQuarterScores.reduce((a, b) => a + b, 0) + userQ));
                 cpuQ += (cpuScore - (cpuQuarterScores.reduce((a, b) => a + b, 0) + cpuQ));
