@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const cpuGrid = document.getElementById('cpuPlayerGrid');
     const battleButton = document.getElementById('battleButton');
     const gameMessage = document.getElementById('gameMessage');
-    
+
     // New draft area elements
     const draftArea = document.getElementById('draft-selection-area');
     const selectionGrid = document.getElementById('selectionGrid');
     const selectionTitle = document.getElementById('selectionTitle');
-    
+
     // Results Modal Elements
     const resultsModal = document.getElementById('resultsModal');
     const simulationLog = document.getElementById('simulationLog');
@@ -102,7 +102,10 @@ document.addEventListener('DOMContentLoaded', () => {
                             score += (p.stats[attr] || 0) * (STAT_WEIGHTS[attr] || 1);
                         });
                     }
-                    return { player: p, score };
+                    return {
+                        player: p,
+                        score
+                    };
                 })
                 .sort((a, b) => b.score - a.score);
 
@@ -125,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const excludedForDraft = [...Object.values(userTeam), ...Object.values(cpuTeam)];
         const options = [];
-        
+
         const corePositions = ["PG", "SG", "SF", "PF", "C"];
         const userTeamPositions = Object.values(userTeam).map(p => p.position);
         const neededPositions = corePositions.filter(p => !userTeamPositions.includes(p));
@@ -168,11 +171,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Check if the player's primary position is available
         if (primaryPos && !userTeam[primaryPos]) {
             userTeam[primaryPos] = player;
-        } 
+        }
         // If primary position is taken or doesn't exist, try the 6th man slot
         else if (!userTeam['6th']) {
             userTeam['6th'] = player;
-        } 
+        }
         // If both are taken, find the first available empty slot from the core positions
         else {
             const openSlot = positions.find(p => p !== '6th' && !userTeam[p]);
@@ -181,15 +184,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             // If no slots are open, the pick can't be made (this is a fallback)
             else {
-                 console.error("No available slot for this player.");
-                 // Don't advance the draft if no slot is found
-                 return;
+                console.error("No available slot for this player.");
+                // Don't advance the draft if no slot is found
+                return;
             }
         }
 
         renderUserGrid();
         renderCpuGrid();
-        
+
         currentDraftPositionIndex++;
         startDraftForPosition(currentDraftPositionIndex);
     }
@@ -287,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function checkCompletion() {
         if (Object.keys(userTeam).length === positions.length) {
             // Let the user pick a modifier card (or skip)
-            showModifierCardModal(bonusModifiers, function(selectedCards) {
+            showModifierCardModal(bonusModifiers, function (selectedCards) {
                 if (selectedCards && selectedCards.length) {
                     selectedCards.forEach(card => applyModifier(userTeam, card));
                     gameMessage.innerHTML = `You picked bonus cards:<br>` +
@@ -319,7 +322,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function calculateTeamRatings(team) {
         let totals = {
-            offense: 0, defense: 0, playmaking: 0, athleticism: 0, clutch: 0, chemistry: 0
+            offense: 0,
+            defense: 0,
+            playmaking: 0,
+            athleticism: 0,
+            clutch: 0,
+            chemistry: 0
         };
         const players = Object.values(team).filter(p => p);
 
@@ -342,7 +350,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         let chemistryBoost = 0;
-        const duoBonus = 10, trioBonus = 25;
+        const duoBonus = 10,
+            trioBonus = 25;
         for (const teamName in teamAffiliations) {
             const playerCount = teamAffiliations[teamName];
             if (playerCount === 2) chemistryBoost += duoBonus;
@@ -356,7 +365,10 @@ document.addEventListener('DOMContentLoaded', () => {
             weightedTotal += (totals[attr] || 0) * (STAT_WEIGHTS[attr] || 1);
         });
 
-        return { ...totals, weightedTotal };
+        return {
+            ...totals,
+            weightedTotal
+        };
     }
 
     function startBattle() {
@@ -459,8 +471,7 @@ document.addEventListener('DOMContentLoaded', () => {
             type: 'bar',
             data: {
                 labels: ['Q1', 'Q2', 'Q3', 'Q4'],
-                datasets: [
-                    {
+                datasets: [{
                         label: 'Your Team',
                         data: userQuarterScores,
                         backgroundColor: 'rgba(54, 162, 235, 0.7)'
@@ -475,13 +486,21 @@ document.addEventListener('DOMContentLoaded', () => {
             options: {
                 responsive: true,
                 plugins: {
-                    legend: { position: 'top' },
-                    title: { display: true, text: 'Points by Quarter' }
+                    legend: {
+                        position: 'top'
+                    },
+                    title: {
+                        display: true,
+                        text: 'Points by Quarter'
+                    }
                 },
                 scales: {
                     y: {
                         beginAtZero: true,
-                        title: { display: true, text: 'Points' }
+                        title: {
+                            display: true,
+                            text: 'Points'
+                        }
                     }
                 }
             }
@@ -580,8 +599,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Positional multipliers to generate more realistic stat lines
         const positionalMultipliers = {
-            rebounds: { PG: 0.6, SG: 0.8, SF: 1.0, PF: 1.3, C: 1.5, '6th': 0.9 },
-            assists:  { PG: 1.4, SG: 1.1, SF: 1.0, PF: 0.8, C: 0.7, '6th': 0.9 }
+            rebounds: {
+                PG: 0.6,
+                SG: 0.8,
+                SF: 1.0,
+                PF: 1.3,
+                C: 1.5,
+                '6th': 0.9
+            },
+            assists: {
+                PG: 1.4,
+                SG: 1.1,
+                SF: 1.0,
+                PF: 0.8,
+                C: 0.7,
+                '6th': 0.9
+            }
         };
 
         let playerStats = [];
@@ -592,12 +625,18 @@ document.addEventListener('DOMContentLoaded', () => {
         players.forEach(p => {
             totalTeamPlaymaking += p.stats.playmaking;
             totalTeamOffense += p.stats.offense;
-            
+
             // Calculate individual rebound potential to be used for distribution
             const playerPosition = p.position || '6th';
             const rebMultiplier = positionalMultipliers.rebounds[playerPosition] || 1.0;
             const reboundScore = (p.stats.defense * 0.7 + p.stats.athleticism * 0.3) * rebMultiplier;
-            playerStats.push({ player: p, pts: 0, reb: 0, ast: 0, reboundScore: reboundScore });
+            playerStats.push({
+                player: p,
+                pts: 0,
+                reb: 0,
+                ast: 0,
+                reboundScore: reboundScore
+            });
             totalReboundPotential += reboundScore;
         });
 
@@ -629,7 +668,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // 3. Distribute all points (assisted and unassisted) based on offense rating
         let pointsToDistribute = teamScore;
         let distributedPoints = 0;
-        
+
         playerStats.forEach((stat, index) => {
             const shareOfOffense = stat.player.stats.offense / totalTeamOffense;
             let calculatedPoints = 0;
@@ -644,7 +683,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // 4. Calculate totals and build the table body
-        let totalPts = 0, totalReb = 0, totalAst = 0;
+        let totalPts = 0,
+            totalReb = 0,
+            totalAst = 0;
         let tableBodyHtml = '';
         playerStats.forEach(s => {
             tableBodyHtml += `<tr><td>${s.player.name}</td><td>${s.pts}</td><td>${s.reb}</td><td>${s.ast}</td></tr>`;
@@ -691,7 +732,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (
                     player &&
                     ((modifier.effects.player.position === "6th" && player.position === "6th") ||
-                    (player.position === modifier.effects.player.position))
+                        (player.position === modifier.effects.player.position))
                 ) {
                     Object.keys(modifier.effects.player).forEach(stat => {
                         if (stat !== "position" && player.stats[stat] !== undefined) {
@@ -780,7 +821,7 @@ document.addEventListener('DOMContentLoaded', () => {
             affectedPlayer = players[Math.floor(Math.random() * players.length)];
         } else if (event.target === "playerWithHighestClutch") {
             const players = Object.values(team).filter(p => p);
-            affectedPlayer = players.reduce((max, p) => (p.stats.clutch > (max?.stats.clutch || -Infinity) ? p : max), null);
+            affectedPlayer = players.reduce((max, p) => (p.stats.clutch > (max ? max.stats.clutch : -Infinity) ? p : max), null);
         } else if (["PG", "SG", "SF", "PF", "C", "6th"].includes(event.target)) {
             affectedPlayer = team[event.target];
         }
