@@ -388,11 +388,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (gameEvents.length > 0) {
                 // User event
                 const userEvent = gameEvents[Math.floor(Math.random() * gameEvents.length)];
-                applyGameEvent(userTeam, userEvent, eventLogs);
+                applyGameEvent(userTeam, userEvent, eventLogs, "Your Team: ");
 
                 // CPU event
                 const cpuEvent = gameEvents[Math.floor(Math.random() * gameEvents.length)];
-                applyGameEvent(cpuTeam, cpuEvent, eventLogs);
+                applyGameEvent(cpuTeam, cpuEvent, eventLogs, "CPU Team: ");
             }
 
             let userQ, cpuQ;
@@ -717,7 +717,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.style.display = 'flex';
     }
 
-    function applyGameEvent(team, event, logArr) {
+    function applyGameEvent(team, event, logArr, teamLabel = "") {
         let affectedPlayer = null;
         let message = event.message;
 
@@ -745,8 +745,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Log the event
-        if (logArr && message) logArr.push(message);
+        // Prefix the message with the team label if provided
+        if (logArr && message) logArr.push(`${teamLabel}${message}`);
     }
 });
 
