@@ -4,35 +4,198 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Player Stats</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../Player Comparison/playercomparison.css">
+    <script src="player-stats.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Player Stats</h1>
     </header>
     <div class="content">
-        <p>Content for Player Stats will go here.</p>
-    </div>
-</body>
-<a href="../index.html" id="home-btn" title="Home">🏠 Home</a>
+        <div class="dropdowns">
+            <h3>Select Player</h3>
+            <label for="player-select">Choose Player:</label>
+            <select id="player-select" style="width:300px">
+                <option value="">--Select a Player--</option>
+            </select>
+        </div>
 
-<style>
-  #home-btn {
-    position: absolute;
-    top: 16px;
-    right: 24px;
-    background: #fff;
-    color: #d17a22;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 14px;
-    text-decoration: none;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    z-index: 1000;
-    transition: background 0.2s, color 0.2s;
-  }
-  #home-btn:hover {
-    background: #d17a22;
-    color: #fff;
-  }
-</style>
+        <div id="player-info" class="player-info" style="display: none;">
+            <div class="player-header">
+                <img id="player-image" class="player-image" alt="Player Image" />
+                <div class="player-details">
+                    <h2 id="player-name"></h2>
+                    <div id="player-career-summary"></div>
+                </div>
+            </div>
+
+            <div class="awards-section">
+                <h3>Career Awards</h3>
+                <div class="award-icons">
+                    <div class="award-category">
+                        <span class="award-label">Championships:</span>
+                        <div id="championship-icons" class="award-icons-container"></div>
+                        <span id="championship-count" class="award-count"></span>
+                    </div>
+                    <div class="award-category">
+                        <span class="award-label">MVP:</span>
+                        <div id="mvp-icons" class="award-icons-container"></div>
+                        <span id="mvp-count" class="award-count"></span>
+                    </div>
+                    <div class="award-category">
+                        <span class="award-label">All-NBA:</span>
+                        <div id="allnba-icons" class="award-icons-container"></div>
+                        <span id="allnba-count" class="award-count"></span>
+                    </div>
+                    <div class="award-category">
+                        <span class="award-label">All-Star:</span>
+                        <div id="allstar-icons" class="award-icons-container"></div>
+                        <span id="allstar-count" class="award-count"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <h3>Career Statistics</h3>
+                <div id="career-stats" class="career-stats"></div>
+            </div>
+
+            <div class="seasons-section">
+                <h3>Season by Season</h3>
+                <div id="seasons-table" class="seasons-table"></div>
+            </div>
+        </div>
+    </div>
+
+    <a href="../index.html" id="home-btn" title="Home">🏠 Home</a>
+
+    <style>
+        #home-btn {
+            position: absolute;
+            top: 16px;
+            right: 24px;
+            background: #fff;
+            color: #d17a22;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            text-decoration: none;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            z-index: 1000;
+            transition: background 0.2s, color 0.2s;
+        }
+        #home-btn:hover {
+            background: #d17a22;
+            color: #fff;
+        }
+        
+        .player-info {
+            margin-top: 20px;
+        }
+        
+        .player-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .player-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        
+        .player-details h2 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        
+        .awards-section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .award-category {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        
+        .award-label {
+            font-weight: bold;
+            min-width: 120px;
+        }
+        
+        .award-icons-container {
+            margin: 0 10px;
+        }
+        
+        .award-count {
+            font-weight: bold;
+            color: #d17a22;
+        }
+        
+        .stats-section {
+            margin: 20px 0;
+        }
+        
+        .career-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-box {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d17a22;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .seasons-table {
+            overflow-x: auto;
+        }
+        
+        .seasons-table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        
+        .seasons-table th,
+        .seasons-table td {
+            padding: 8px 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .seasons-table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        
+        .seasons-table tr:hover {
+            background-color: #f8f9fa;
+        }
+    </style>
+</body>
 </html>
