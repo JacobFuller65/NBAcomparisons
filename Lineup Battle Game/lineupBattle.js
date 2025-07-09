@@ -286,54 +286,56 @@ document.addEventListener('DOMContentLoaded', () => {
         initializeGame();
     });
 
-    function calculateTeamRatings(team) {
-        let offense = 0, defense = 0, chemistry = 0;
-        const players = Object.values(team).filter(p => p); // Get a clean list of players
+    // Define your stat weights (adjust as desired)
+    const STAT_WEIGHTS = {
+        offense: 1.0,
+        defense: 1.2,
+        playmaking: 0.8,
+        athleticism: 0.7,
+        clutch: 0.5,
+        chemistry: 1.0
+    };
 
-        // Base stat calculation
+    function calculateTeamRatings(team) {
+        let totals = {
+            offense: 0, defense: 0, playmaking: 0, athleticism: 0, clutch: 0, chemistry: 0
+        };
+        const players = Object.values(team).filter(p => p);
+
         players.forEach(p => {
             if (p && p.stats) {
-                offense += p.stats.offense + p.stats.playmaking;
-                defense += p.stats.defense + p.stats.athleticism;
-                chemistry += p.stats.chemistry;
-            }
-        });
-
-        // --- Teammate Chemistry Boost Logic ---
-        const teamAffiliations = {};
-        players.forEach(p => {
-            if (p && p.teams) {
-                p.teams.forEach(teamName => {
-                    if (!teamAffiliations[teamName]) {
-                        teamAffiliations[teamName] = 0;
-                    }
-                    teamAffiliations[teamName]++;
+                Object.keys(totals).forEach(attr => {
+                    totals[attr] += p.stats[attr] || 0;
                 });
             }
         });
 
+        // Chemistry boost logic (unchanged)
+        const teamAffiliations = {};
+        players.forEach(p => {
+            if (p && p.teams) {
+                p.teams.forEach(teamName => {
+                    if (!teamAffiliations[teamName]) teamAffiliations[teamName] = 0;
+                    teamAffiliations[teamName]++;
+                });
+            }
+        });
         let chemistryBoost = 0;
-        const duoBonus = 10;    // Bonus for a pair of teammates
-        const trioBonus = 25;   // Bonus for a trio
-
+        const duoBonus = 10, trioBonus = 25;
         for (const teamName in teamAffiliations) {
             const playerCount = teamAffiliations[teamName];
-            if (playerCount === 2) {
-                chemistryBoost += duoBonus;
-            } else if (playerCount >= 3) {
-                // A trio gets a larger, flat bonus.
-                chemistryBoost += trioBonus;
-            }
+            if (playerCount === 2) chemistryBoost += duoBonus;
+            else if (playerCount >= 3) chemistryBoost += trioBonus;
         }
+        totals.chemistry += chemistryBoost;
 
-        // Add the boost to the total chemistry
-        chemistry += chemistryBoost;
-        if (chemistryBoost > 0) {
-            console.log(`Team synergy detected! Applying chemistry boost of ${chemistryBoost}.`);
-        }
-        // --- End of Boost Logic ---
+        // Calculate weighted team rating
+        let weightedTotal = 0;
+        Object.keys(totals).forEach(attr => {
+            weightedTotal += (totals[attr] || 0) * (STAT_WEIGHTS[attr] || 1);
+        });
 
-        return { offense, defense, chemistry };
+        return { ...totals, weightedTotal };
     }
 
     function startBattle() {
@@ -341,23 +343,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const userRatings = calculateTeamRatings(userTeam);
         const cpuRatings = calculateTeamRatings(cpuTeam);
 
-        // --- Game Simulation Logic ---
+        // Use weighted totals for scoring
         const baseScore = 70;
-        const offenseFactor = 0.15;
-        const defenseFactor = 0.12;
-        const chemBonus = userRatings.chemistry / 50; // Chemistry bonus
-
-        let userScore = baseScore + (userRatings.offense * offenseFactor) - (cpuRatings.defense * defenseFactor) + chemBonus;
-        let cpuScore = baseScore + (cpuRatings.offense * offenseFactor) - (userRatings.defense * defenseFactor);
-
-        // Add clutch randomness
-        const userClutch = Object.values(userTeam).reduce((sum, p) => sum + (p.stats.clutch || 0), 0);
-        const cpuClutch = Object.values(cpuTeam).reduce((sum, p) => sum + (p.stats.clutch || 0), 0);
-        userScore += (Math.random() * userClutch / 50);
-        cpuScore += (Math.random() * cpuClutch / 50);
-
-        userScore = Math.round(userScore);
-        cpuScore = Math.round(cpuScore);
+        const userScore = Math.round(baseScore + userRatings.weightedTotal / 5 + Math.random() * userRatings.clutch / 50);
+        const cpuScore = Math.round(baseScore + cpuRatings.weightedTotal / 5 + Math.random() * cpuRatings.clutch / 50);
 
         // --- Quarter Simulation ---
         const quarters = 4;
