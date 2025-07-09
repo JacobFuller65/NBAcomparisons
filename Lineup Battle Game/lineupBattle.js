@@ -398,8 +398,8 @@ document.addEventListener('DOMContentLoaded', () => {
             let userQ, cpuQ;
             if (q < quarters - 1) {
                 // Calculate a base quarter score, then clamp so no quarter is too high/low
-                userQ = Math.round(Math.max(20, Math.min(45, (userRunning / (quarters - q)) * (0.85 + Math.random() * 0.3))));
-                cpuQ = Math.round(Math.max(20, Math.min(45, (cpuRunning / (quarters - q)) * (0.85 + Math.random() * 0.3))));
+                userQ = Math.round(Math.max(10, Math.min(45, (userRunning / (quarters - q)) * (0.85 + Math.random() * 0.3))));
+                cpuQ = Math.round(Math.max(10, Math.min(45, (cpuRunning / (quarters - q)) * (0.85 + Math.random() * 0.3))));
                 userRunning -= userQ;
                 cpuRunning -= cpuQ;
             } else {
