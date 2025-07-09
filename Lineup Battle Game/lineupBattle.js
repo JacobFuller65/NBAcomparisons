@@ -365,20 +365,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const cpuRatings = calculateTeamRatings(cpuTeam);
 
         // Use weighted totals for scoring
-        const baseScore = 70;
-        const userScore = Math.round(baseScore + userRatings.weightedTotal / 5 + Math.random() * userRatings.clutch / 50);
-        const cpuScore = Math.round(baseScore + cpuRatings.weightedTotal / 5 + Math.random() * cpuRatings.clutch / 50);
+        const baseScore = 90;
+        const scalingFactor = 12;
+        const clamp = (val, min, max) => Math.max(min, Math.min(max, val));
+        const userScore = clamp(Math.round(baseScore + userRatings.weightedTotal / scalingFactor + Math.random() * userRatings.clutch / 60), 80, 150);
+        const cpuScore = clamp(Math.round(baseScore + cpuRatings.weightedTotal / scalingFactor + Math.random() * cpuRatings.clutch / 60), 80, 150);
 
         // --- Quarter Simulation ---
         const quarters = 4;
         let userQuarterScores = [];
         let cpuQuarterScores = [];
-        let userRunning = 0;
-        let cpuRunning = 0;
+        let userRunning = userScore;
+        let cpuRunning = cpuScore;
         let eventLogs = []; // Collect event messages
 
-        let userRemaining = userScore;
-        let cpuRemaining = cpuScore;
         for (let q = 0; q < quarters; q++) {
             // --- In-game events ---
             if (gameEvents.length > 0) {
@@ -391,19 +391,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 applyGameEvent(cpuTeam, cpuEvent, eventLogs);
             }
 
-            // ...existing quarter scoring logic...
+            // Distribute points per quarter: 22-32 for Q1/Q2/Q3, remainder for Q4
             let userQ, cpuQ;
             if (q < quarters - 1) {
-                userQ = Math.round((userRemaining / (quarters - q)) * (0.8 + Math.random() * 0.4));
-                cpuQ = Math.round((cpuRemaining / (quarters - q)) * (0.8 + Math.random() * 0.4));
+                // Calculate a base quarter score, then clamp so no quarter is too high/low
+                userQ = Math.round(Math.max(20, Math.min(45, (userRunning / (quarters - q)) * (0.85 + Math.random() * 0.3))));
+                cpuQ = Math.round(Math.max(20, Math.min(45, (cpuRunning / (quarters - q)) * (0.85 + Math.random() * 0.3))));
             } else {
-                userQ = userRemaining;
-                cpuQ = cpuRemaining;
+                // Last quarter: assign all remaining points
+                userQ = userRunning;
+                cpuQ = cpuRunning;
             }
             userQuarterScores.push(userQ);
             cpuQuarterScores.push(cpuQ);
-            userRemaining -= userQ;
-            cpuRemaining -= cpuQ;
+            userRunning -= userQ;
+            cpuRunning -= cpuQ;
         }
 
         simulationLog.innerHTML = '';
