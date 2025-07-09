@@ -365,11 +365,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const cpuRatings = calculateTeamRatings(cpuTeam);
 
         // Use weighted totals for scoring
-        const baseScore = 90;
-        const scalingFactor = 12;
+        const baseScore = 60; // Lower base, so attributes matter more
+        const scalingFactor = 8; // Lower scaling, so attributes have a bigger effect
         const clamp = (val, min, max) => Math.max(min, Math.min(max, val));
-        const userScore = clamp(Math.round(baseScore + userRatings.weightedTotal / scalingFactor + Math.random() * userRatings.clutch / 60), 80, 150);
-        const cpuScore = clamp(Math.round(baseScore + cpuRatings.weightedTotal / scalingFactor + Math.random() * cpuRatings.clutch / 60), 80, 150);
+        const userScoreRaw = baseScore + userRatings.weightedTotal / scalingFactor + Math.random() * userRatings.clutch / 80;
+        const cpuScoreRaw = baseScore + cpuRatings.weightedTotal / scalingFactor + Math.random() * cpuRatings.clutch / 80;
+
+        // Add a little randomness to avoid ties
+        const userScore = clamp(Math.round(userScoreRaw + (Math.random() * 4 - 2)), 80, 130);
+        const cpuScore = clamp(Math.round(cpuScoreRaw + (Math.random() * 4 - 2)), 80, 130);
 
         // --- Quarter Simulation ---
         const quarters = 4;
@@ -391,21 +395,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 applyGameEvent(cpuTeam, cpuEvent, eventLogs);
             }
 
-            // Distribute points per quarter: 22-32 for Q1/Q2/Q3, remainder for Q4
             let userQ, cpuQ;
             if (q < quarters - 1) {
                 // Calculate a base quarter score, then clamp so no quarter is too high/low
                 userQ = Math.round(Math.max(20, Math.min(45, (userRunning / (quarters - q)) * (0.85 + Math.random() * 0.3))));
                 cpuQ = Math.round(Math.max(20, Math.min(45, (cpuRunning / (quarters - q)) * (0.85 + Math.random() * 0.3))));
+                userRunning -= userQ;
+                cpuRunning -= cpuQ;
             } else {
-                // Last quarter: assign all remaining points
-                userQ = userRunning;
-                cpuQ = cpuRunning;
+                // Last quarter: assign all remaining points, plus a small random fuzz to break ties
+                userQ = userRunning + Math.floor(Math.random() * 3) - 1; // -1, 0, or +1
+                cpuQ = cpuRunning + Math.floor(Math.random() * 3) - 1;
+                // Clamp to minimum 15, maximum 50 for realism
+                userQ = Math.max(15, Math.min(50, userQ));
+                cpuQ = Math.max(15, Math.min(50, cpuQ));
+                // Adjust totals so sum matches original score
+                userQ += (userScore - (userQuarterScores.reduce((a, b) => a + b, 0) + userQ));
+                cpuQ += (cpuScore - (cpuQuarterScores.reduce((a, b) => a + b, 0) + cpuQ));
             }
             userQuarterScores.push(userQ);
             cpuQuarterScores.push(cpuQ);
-            userRunning -= userQ;
-            cpuRunning -= cpuQ;
+        }
+
+        // Tiebreaker: if still tied, randomly add 1 point to one team
+        let userTotal = userQuarterScores.reduce((a, b) => a + b, 0);
+        let cpuTotal = cpuQuarterScores.reduce((a, b) => a + b, 0);
+        if (userTotal === cpuTotal) {
+            if (Math.random() < 0.5) {
+                userQuarterScores[3]++;
+                userTotal++;
+            } else {
+                cpuQuarterScores[3]++;
+                cpuTotal++;
+            }
         }
 
         simulationLog.innerHTML = '';
