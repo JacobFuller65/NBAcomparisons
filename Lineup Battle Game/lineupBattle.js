@@ -381,12 +381,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const quarters = 4;
         let userQuarterScores = [];
         let cpuQuarterScores = [];
-        let userRunning = userScore;
-        let cpuRunning = cpuScore;
         let eventLogs = []; // Collect event messages
 
         // NBA teams often have higher 2nd/3rd quarter, so use a profile
-        // Example: [0.23, 0.27, 0.27, 0.23] (percent of total per quarter)
         const quarterProfile = [0.23, 0.27, 0.27, 0.23];
 
         for (let q = 0; q < quarters; q++) {
@@ -401,9 +398,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 applyGameEvent(cpuTeam, cpuEvent, eventLogs, "CPU Team: ");
             }
 
-            // Calculate quarter score based on profile and add a little variance
-            let userQ = Math.round(userScore * quarterProfile[q] + (Math.random() * 4 - 2));
-            let cpuQ = Math.round(cpuScore * quarterProfile[q] + (Math.random() * 4 - 2));
+            let userRand = 0.75 + Math.random() * 0.5;
+            let cpuRand = 0.75 + Math.random() * 0.5;
+
+            // 10% chance for a hot quarter (1.35x) or cold quarter (0.65x)
+            if (Math.random() < 0.10) userRand *= (Math.random() < 0.5 ? 1.35 : 0.65);
+            if (Math.random() < 0.10) cpuRand *= (Math.random() < 0.5 ? 1.35 : 0.65);
+
+            let userQ, cpuQ;
+            if (q === 3) {
+                // 4th quarter: add clutch impact
+                const clutchImpactUser = userRatings.clutch * (0.15 + Math.random() * 0.10); // 15-25% of clutch
+                const clutchImpactCpu = cpuRatings.clutch * (0.15 + Math.random() * 0.10);
+                userQ = Math.round(userScore * quarterProfile[q] * userRand + clutchImpactUser);
+                cpuQ = Math.round(cpuScore * quarterProfile[q] * cpuRand + clutchImpactCpu);
+            } else {
+                userQ = Math.round(userScore * quarterProfile[q] * userRand);
+                cpuQ = Math.round(cpuScore * quarterProfile[q] * cpuRand);
+            }
 
             // Ensure no negative quarters
             userQ = Math.max(0, userQ);
@@ -413,22 +425,22 @@ document.addEventListener('DOMContentLoaded', () => {
             cpuQuarterScores.push(cpuQ);
         }
 
-        // Adjust last quarter so totals match exactly
+        // Adjust last quarter so totals match exactly (including clutch)
         const userSoFar = userQuarterScores.reduce((a, b) => a + b, 0);
         const cpuSoFar = cpuQuarterScores.reduce((a, b) => a + b, 0);
         userQuarterScores[3] += userScore - userSoFar;
         cpuQuarterScores[3] += cpuScore - cpuSoFar;
 
-        // Tiebreaker: if still tied, randomly add 1 point to one team
+        // Tiebreaker: if still tied, randomly add 1-2 points to one team
         let userTotal = userQuarterScores.reduce((a, b) => a + b, 0);
         let cpuTotal = cpuQuarterScores.reduce((a, b) => a + b, 0);
         if (userTotal === cpuTotal) {
             if (Math.random() < 0.5) {
-                userQuarterScores[3]++;
-                userTotal++;
+                userQuarterScores[3] += Math.floor(Math.random() * 2) + 1;
+                userTotal += 1;
             } else {
-                cpuQuarterScores[3]++;
-                cpuTotal++;
+                cpuQuarterScores[3] += Math.floor(Math.random() * 2) + 1;
+                cpuTotal += 1;
             }
         }
 
