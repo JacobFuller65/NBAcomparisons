@@ -1,0 +1,337 @@
+/* Team Comparison Tool Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+#home-btn {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    background: #fff;
+    color: #d17a22;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    z-index: 1000;
+    transition: background 0.2s, color 0.2s;
+}
+
+#home-btn:hover {
+    background: #d17a22;
+    color: #fff;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.team-selectors {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.team-selector {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+}
+
+.team-selector h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.team-selector label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.team-selector select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f8fafc;
+    transition: border-color 0.2s;
+}
+
+.team-selector select:focus {
+    border-color: #6366f1;
+    outline: none;
+}
+
+#compare-btn {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#compare-btn:hover {
+    background: #4338ca;
+}
+
+.comparison-results {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team-info-section {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.team-info {
+    flex: 1;
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.team-info h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    text-align: center;
+    border-bottom: 2px solid #6366f1;
+    padding-bottom: 0.5rem;
+}
+
+.team-stats {
+    margin-top: 1rem;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding: 0.25rem 0;
+}
+
+.stat-label {
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.stat-value {
+    font-weight: 700;
+    color: #2d3748;
+}
+
+.rosters-section {
+    margin-bottom: 2rem;
+}
+
+.rosters-section h3 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.rosters-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.roster {
+    flex: 1;
+}
+
+.roster h4 {
+    text-align: center;
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+.roster-table-container {
+    overflow-x: auto;
+}
+
+.roster-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.roster-table th,
+.roster-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.roster-table th {
+    background: #6366f1;
+    color: white;
+    font-weight: 600;
+}
+
+.roster-table tr:hover {
+    background: #f8fafc;
+}
+
+.stats-comparison-section {
+    margin-bottom: 2rem;
+}
+
+.stats-comparison-section h3 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stats-table th,
+.stats-table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.stats-table th {
+    background: #6366f1;
+    color: white;
+    font-weight: 600;
+}
+
+.stats-table tr:hover {
+    background: #f8fafc;
+}
+
+.better-stat {
+    background: #d1fae5;
+    font-weight: 600;
+    color: #065f46;
+}
+
+.charts-section {
+    margin-top: 2rem;
+}
+
+.charts-section h3 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.charts-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.chart-container {
+    flex: 1;
+    min-width: 400px;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container canvas {
+    max-height: 400px;
+}
+
+.achievements-list {
+    margin-top: 1rem;
+}
+
+.achievements-list li {
+    padding: 0.25rem 0;
+    color: #4a5568;
+}
+
+.achievements-list li:before {
+    content: "🏆 ";
+    margin-right: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-selectors {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .team-selector {
+        min-width: auto;
+    }
+    
+    .team-info-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .rosters-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .charts-container {
+        flex-direction: column;
+    }
+    
+    .chart-container {
+        min-width: auto;
+    }
+}

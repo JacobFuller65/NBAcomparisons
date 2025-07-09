@@ -4,35 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Comparison Tool</title>
+    <link rel="stylesheet" href="team-comparison.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="team-comparison.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Team Comparison Tool</h1>
+        <a href="../index.html" id="home-btn" title="Home">🏠 Home</a>
     </header>
+    
     <div class="content">
-        <p>Content for the Team Comparison Tool will go here.</p>
+        <div class="team-selectors">
+            <div class="team-selector">
+                <h3>Team 1</h3>
+                <label for="team1-select">Select Team:</label>
+                <select id="team1-select">
+                    <option value="">--Choose a Team--</option>
+                </select>
+            </div>
+            
+            <div class="team-selector">
+                <h3>Team 2</h3>
+                <label for="team2-select">Select Team:</label>
+                <select id="team2-select">
+                    <option value="">--Choose a Team--</option>
+                </select>
+            </div>
+        </div>
+        
+        <button id="compare-btn" onclick="compareTeams()">Compare Teams</button>
+        
+        <div class="comparison-results" id="comparison-results" style="display: none;">
+            <div class="team-info-section">
+                <div class="team-info" id="team1-info">
+                    <h3>Team 1</h3>
+                    <div class="team-stats"></div>
+                </div>
+                <div class="team-info" id="team2-info">
+                    <h3>Team 2</h3>
+                    <div class="team-stats"></div>
+                </div>
+            </div>
+            
+            <div class="rosters-section">
+                <h3>Rosters Comparison</h3>
+                <div class="rosters-container">
+                    <div class="roster" id="team1-roster">
+                        <h4>Team 1 Roster</h4>
+                        <div class="roster-table-container">
+                            <table class="roster-table">
+                                <thead>
+                                    <tr>
+                                        <th>Player</th>
+                                        <th>Pos</th>
+                                        <th>Age</th>
+                                        <th>PPG</th>
+                                        <th>RPG</th>
+                                        <th>APG</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="team1-roster-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="roster" id="team2-roster">
+                        <h4>Team 2 Roster</h4>
+                        <div class="roster-table-container">
+                            <table class="roster-table">
+                                <thead>
+                                    <tr>
+                                        <th>Player</th>
+                                        <th>Pos</th>
+                                        <th>Age</th>
+                                        <th>PPG</th>
+                                        <th>RPG</th>
+                                        <th>APG</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="team2-roster-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats-comparison-section">
+                <h3>Team Stats Comparison</h3>
+                <div class="stats-tables">
+                    <table class="stats-table">
+                        <thead>
+                            <tr>
+                                <th>Statistic</th>
+                                <th id="team1-header">Team 1</th>
+                                <th id="team2-header">Team 2</th>
+                                <th>Difference</th>
+                            </tr>
+                        </thead>
+                        <tbody id="stats-comparison-body"></tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="charts-section">
+                <h3>Visual Comparison</h3>
+                <div class="charts-container">
+                    <div class="chart-container">
+                        <canvas id="team-stats-chart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="win-loss-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
-<a href="../index.html" id="home-btn" title="Home">🏠 Home</a>
-
-<style>
-  #home-btn {
-    position: absolute;
-    top: 16px;
-    right: 24px;
-    background: #fff;
-    color: #d17a22;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 14px;
-    text-decoration: none;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    z-index: 1000;
-    transition: background 0.2s, color 0.2s;
-  }
-  #home-btn:hover {
-    background: #d17a22;
-    color: #fff;
-  }
-</style>
 </html>
