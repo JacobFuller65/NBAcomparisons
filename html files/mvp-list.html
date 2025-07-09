@@ -223,7 +223,7 @@
         // Load MVP data
         async function loadMVPData() {
             try {
-                const response = await fetch('../Player%20Data/mvp-data-enhanced.json');
+                const response = await fetch('../Player Pages/mvp-data-enhanced.json');
                 mvpData = await response.json();
                 filteredData = [...mvpData];
                 populateYearFilter();
