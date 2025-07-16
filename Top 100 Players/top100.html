@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 100 NBA Players of All Time</title>
+    <link rel="stylesheet" href="top100.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="top100.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Top 100 NBA Players of All Time</h1>
+        <nav class="header-nav">
+            <a href="../index.html">← Back to Home</a>
+        </nav>
+    </header>
+    
+    <div class="content">
+        <div class="filters-section">
+            <h2>Ranking Criteria & Filters</h2>
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="ranking-method">Ranking Method:</label>
+                    <select id="ranking-method">
+                        <option value="original">Bleacher Report Original</option>
+                        <option value="ppg">Points Per Game</option>
+                        <option value="efficiency">True Shooting %</option>
+                        <option value="championships">Championships</option>
+                        <option value="mvps">MVP Awards</option>
+                        <option value="longevity">Career Length</option>
+                        <option value="allstar">All-Star Selections</option>
+                        <option value="custom">Custom Weighted</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="era-filter">Era Filter:</label>
+                    <select id="era-filter">
+                        <option value="all">All Eras</option>
+                        <option value="1946-1959">Pioneer Era (1946-1959)</option>
+                        <option value="1960-1979">Classic Era (1960-1979)</option>
+                        <option value="1980-1999">Golden Era (1980-1999)</option>
+                        <option value="2000-2019">Modern Era (2000-2019)</option>
+                        <option value="2020+">Current Era (2020+)</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="position-filter">Position Filter:</label>
+                    <select id="position-filter">
+                        <option value="all">All Positions</option>
+                        <option value="PG">Point Guard</option>
+                        <option value="SG">Shooting Guard</option>
+                        <option value="SF">Small Forward</option>
+                        <option value="PF">Power Forward</option>
+                        <option value="C">Center</option>
+                    </select>
+                </div>
+                
+                <button id="apply-filters">Apply Filters</button>
+                <button id="reset-filters">Reset to Original</button>
+            </div>
+            
+            <!-- Custom weighting controls (shown when custom is selected) -->
+            <div id="custom-weights" class="custom-weights" style="display: none;">
+                <h3>Custom Ranking Weights</h3>
+                <div class="weight-controls">
+                    <div class="weight-item">
+                        <label for="ppg-weight">Points Per Game:</label>
+                        <input type="range" id="ppg-weight" min="0" max="100" value="20">
+                        <span class="weight-value">20%</span>
+                    </div>
+                    <div class="weight-item">
+                        <label for="efficiency-weight">Efficiency (TS%):</label>
+                        <input type="range" id="efficiency-weight" min="0" max="100" value="15">
+                        <span class="weight-value">15%</span>
+                    </div>
+                    <div class="weight-item">
+                        <label for="championships-weight">Championships:</label>
+                        <input type="range" id="championships-weight" min="0" max="100" value="25">
+                        <span class="weight-value">25%</span>
+                    </div>
+                    <div class="weight-item">
+                        <label for="mvps-weight">MVP Awards:</label>
+                        <input type="range" id="mvps-weight" min="0" max="100" value="20">
+                        <span class="weight-value">20%</span>
+                    </div>
+                    <div class="weight-item">
+                        <label for="longevity-weight">Career Length:</label>
+                        <input type="range" id="longevity-weight" min="0" max="100" value="10">
+                        <span class="weight-value">10%</span>
+                    </div>
+                    <div class="weight-item">
+                        <label for="allstar-weight">All-Star Selections:</label>
+                        <input type="range" id="allstar-weight" min="0" max="100" value="10">
+                        <span class="weight-value">10%</span>
+                    </div>
+                </div>
+                <div class="weight-total">Total Weight: <span id="total-weight">100%</span></div>
+            </div>
+        </div>
+        
+        <div class="analysis-section">
+            <h2>Statistical Analysis</h2>
+            <div class="chart-container">
+                <canvas id="rankings-chart"></canvas>
+            </div>
+            <div class="stats-summary">
+                <div class="stat-card">
+                    <h3>Era Distribution</h3>
+                    <div id="era-distribution"></div>
+                </div>
+                <div class="stat-card">
+                    <h3>Position Distribution</h3>
+                    <div id="position-distribution"></div>
+                </div>
+                <div class="stat-card">
+                    <h3>Average Stats</h3>
+                    <div id="average-stats"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="rankings-section">
+            <h2>Rankings</h2>
+            <div class="view-controls">
+                <button id="list-view" class="view-btn active">List View</button>
+                <button id="card-view" class="view-btn">Card View</button>
+                <button id="comparison-view" class="view-btn">Comparison View</button>
+            </div>
+            
+            <div id="players-container" class="players-list">
+                <!-- Players will be dynamically inserted here -->
+            </div>
+        </div>
+        
+        <!-- Comparison Modal -->
+        <div id="comparison-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Player Comparison</h2>
+                <div id="comparison-content">
+                    <!-- Comparison content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
